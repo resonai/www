@@ -1,0 +1,35 @@
+<h1 class="popup-h1">CONTACT US</h1>
+<form name="userForm" novalidate ng-submit="insertData(userForm.$valid)" ng-controller="contactFormPopupDemo">
+    <label class="text-success" ng-show="successInsert">{{successInsert}}</label>
+    <div>
+        <label for="username" >Name</label>
+        <input type="text" name="userName" ng-model="insert.user_name" class="form-control" ng-class="{ 'has-error' : 
+        userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }" required>
+        <span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>
+    </div> 
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" ng-model="insert.email" class="form-control" ng-class="{ 'has-error' : userForm.email.$invalid 
+        && userForm.$submitted && userForm.email.$pristine }" required>
+        <span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>
+    </div>
+    <div>
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" ng-model="insert.phone" class="form-control" ng-class="{ 'has-error' : userForm.phone.$invalid 
+        && userForm.$submitted && userForm.phone.$pristine }" required>
+        <span class="text-danger" ng-show="errorPhone">{{errorPhone}}</span>
+    </div>  
+    <div>
+        <label for="companyName">Company name</label>
+        <input type="text" name="companyName" ng-model="insert.company_name" class="form-control" ng-class="{ 'has-error' : 
+        userForm.companyName.$invalid && userForm.$submitted && userForm.companyName.$pristine }" required>
+        <span class="text-danger" ng-show="errorCompanyname">{{errorCompanyname}}</span>
+    </div> 
+    <div>
+        <label for="message">Message</label>
+        <textarea name="message" ng-model="insert.message" class="form-control" cols="30" rows="4" ng-class="{ 'has-error' : 
+        userForm.message.$invalid && userForm.$submitted && userForm.message.$pristine }" required></textarea>
+        <span class="text-danger" ng-show="errorMessage">{{errorMessage}}</span>
+    </div> 
+    <input type="submit" name="insert" class="button-style-pop-up" value="Send">
+</form>         

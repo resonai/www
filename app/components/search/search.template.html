@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="./css/search.css">
+        <link type="text/css" rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/searchslider.css">
+        <link rel="stylesheet" type="text/css" href="./css/dollhouse_popup.css"/>
+    </head>
+    <body> 
+        <div class="search-page resonai-content">
+            <div class="container mobile-img">
+                <div class="row row-padding">
+                    <div class="col-sm-6 col-xs-12">
+                        <h1>RESONAI SEARCH</h1>
+                        <p class="search-text search-text-para-1">With the immersive computing revolution and proliferation of 3D 
+                        content comes a need to manage vast amounts of content, make it discoverable, monetized and easy to access.
+                        </p>
+                        <p class="search-text">Resonai’s AI powered visual search engine utilizes 3D information, resulting in a robust 
+                        semantic understanding of objects and retrieval of content that was previously inaccessible.</p>
+                    </div>    
+                    <div class="col-sm-6 col-xs-12 link-section">
+                       <p class="search-text right-para-text">
+                        By focusing on shapes, structures and other visual cues, Resonai makes search natural, enabling people to 
+                        communicate their thoughts and ideas intuitively.</p>
+                        <p class="search-text right-para-text">
+                        Resonai search supports all types of 3D content including scanned content, CAD and sketched models. 
+                        </p>
+                        <div ng-controller="popupContactus">
+                            <button ng-click="openContactForm()" class="btn btn-default contact-us-link">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider" ng-controller="search">
+                <div class="container ">
+                    <div><img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+                    ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+                    ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}"></div>
+                    <div class="arrow-nav">
+                        <a class="arrow prev" href="" ng-click="nextSlide()"></a>
+                        <a class="arrow next" href="" ng-click="prevSlide()"></a>
+                    </div>
+                    <nav class="slider-nav">
+                        <div class="wrapper">
+                            <ul class="dots">
+                                <li class="dot" ng-repeat="slide in slides">
+                                    <a href="" ng-class="{'active':isCurrentSlideIndex($index)}"
+                                    ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>       
+    </body>
+</html>

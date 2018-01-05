@@ -1,0 +1,6 @@
+{
+    "require": {
+        "google/cloud-bigquery": "^0.3.1",
+        "google/appengine-php-sdk": "^1.9"
+    }
+}

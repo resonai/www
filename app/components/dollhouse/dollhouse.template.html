@@ -1,0 +1,67 @@
+<!--<!DOCTYPE html>
+<html id="ng-app">
+    <head>
+        <link rel="stylesheet" href="./css/fontAwesome/css/font-awesome.min.css"/>
+        <link type="text/css" rel="stylesheet" href="./css/dollhouse.css">
+        <link type="text/css" rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" type="text/css" href="./css/dollhouseslider.css" />
+        <link rel="stylesheet" type="text/css" href="./css/dollhouse_popup.css"/>
+    </head>
+    <body>
+-->
+        <link rel="stylesheet" href="./css/fontAwesome/css/font-awesome.min.css"/>
+        <link type="text/css" rel="stylesheet" href="./css/dollhouse.css">
+        <link type="text/css" rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" type="text/css" href="./css/dollhouseslider.css" />
+        <link rel="stylesheet" type="text/css" href="./css/dollhouse_popup.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/revealer.css"/>
+        <div class="dollhouse-page resonai-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12 left-para">
+                        <h1>RESONAI DOLLHOUSE</h1>
+                        <p class="dollhouse-text">
+                        <span class="bold">it's already there - why create it again?</span><br>
+                        The Resonai Dollhouse App transforms the real world, in real time,
+                        into 3D VR content, enabling the most user-friendly content creation
+                        platform imaginable.<br><br>
+                        Use your mobile devices to scan and upload any setting to the
+                        Resonai Dollhouse App.
+                        </p>
+                    </div> 
+                    <div class="col-sm-5 col-xs-12 right-para">
+                        <p class="dollhouse-text right-para-text">
+                        The objects in the scene are recognized and replaced with 3D
+                        assets that match their shape and functionality, creating a VR scene
+                        that's a mirror of the physical setting. Move, remove, replace and
+                        add content to create the exact experience you desire. 
+                        </p>
+                        <div ng-controller="popupContactus">
+                            <button ng-click="openContactForm()" class="btn btn-default contact-us-link">Contact us</button>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+            <div class="desktop-slider">
+                <div class="container slider" ng-controller="dollhouse">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <revealer top-image="images/doll_DSC7689_18May17_Screen2.jpg" 
+                            bottom-image="images/doll_DSC7689_18May17_Screen1.jpg"></revealer>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="bkg-img tablet-slider">
+                <div class="container slider" ng-controller="dollhouse">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <slide-image-comparison info="images"></slide-image-comparison>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+<!--
+    </body>
+</html>-->

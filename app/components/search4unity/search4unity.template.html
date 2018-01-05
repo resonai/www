@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="./css/search4unity.css">
+        <link type="text/css" rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/sliderunity.css">
+        <link rel="stylesheet" type="text/css" href="./css/dollhouse_popup.css"/>
+    </head>
+    <body> 
+        <div class="search-page resonai-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12 mobile-img">
+                        <h1>RESONAI SEARCH FOR UNITY</h1>
+                        <p class="search-text search-text-para-1">Resonai Visual Search is now available to Unity developers!<br> 
+                        Resonai Visual Search is a search engine that is powered by
+                         machine understanding of geometry and structure. <br>
+                         It allows you to discover the content you need,
+                          quickly and intuitively. </p>
+                        <p class="search-text search-text-para-2 bold ">Features:</p>
+                        <p class="search-text">	
+                        <span>•</span>	Visual search for 3D assets</p>
+                        <p class="search-text"><span>•</span>	Easy access to a vast dataset  of content</p>
+                        <p class="search-text"><span>•</span>	Integration to Unity’s Asset store</p>
+                        <p class="search-text"><span>•</span>	Preview of assets in your project <br><span class="search-text-para-2-l-2"> before 
+                        you download them</span></p>
+                        <p class="search-text"><span>•</span>	Advanced search filters such as<br><span class="search-text-para-2-l-2"> 
+                        polycount</span></p>
+                        <p class="search-text"><span>•</span>	Runs on Unity Editor and coming soon -<br><span class="search-text-para-2-l-2"> 
+                        support for Unity’s Editor VR</span></p>
+                        <p class="search-text"><span>•</span>	Free</p> 
+                    </div>    
+                    <div class="col-sm-6 col-xs-12 link-section">
+                        <div class="col-lg-11 col-sm-12 col-xs-12">  
+                            <p class="contact-us-para"><span class="bold">Unity Developers -</span><br> 
+                            Find the content you need, now
+                            </p>
+                            <div class="button-stl">
+                                <a href="https://assetstore.unity.com/packages/tools/utilities/beta-resonai-visual-search-104059" 
+                                target="_blank" class="btn btn-default contact-us-link">Join the Beta</a>
+                            </div>
+                            <!--<div ng-controller="popupBeta" class="button-stl">
+                                <button ng-click="openContactForm()" class="btn btn-default contact-us-link">Join the Beta</button>
+                            </div>-->
+                        </div>
+                        <div class="col-lg-11 col-sm-12 col-xs-12">   
+                            <p class="contact-us-para contact-us-para-2">
+                            <span class="bold">Designers and publishers -</span><br> 
+                            Have beautiful content that should be 
+                            seen by the world? We can help you be 
+                            discovered and monetize your assets.</p>
+                            <p class="p-sec">Make your content discoverable
+                            </p>
+                            <div ng-controller="popupContactus" class="button-stl">
+                                <button ng-click="openContactForm()" class="btn btn-default contact-us-link beta-link">Contact us 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider" ng-controller="search4unity">
+                <div class="container">
+                    <div><img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+                    ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+                    ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}"></div>
+                    <div class="arrow-nav">
+                        <a class="arrow prev" href="" ng-click="nextSlide()"></a>
+                        <a class="arrow next" href="" ng-click="prevSlide()"></a>
+                    </div>
+                    <nav class="slider-nav">
+                        <div class="wrapper">
+                            <ul class="dots">
+                                <li class="dot" ng-repeat="slide in slides">
+                                    <a href="" ng-class="{'active':isCurrentSlideIndex($index)}"
+                                    ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>       
+    </body>
+</html>

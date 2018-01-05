@@ -1,0 +1,188 @@
+.slider {
+    background-image: url(../images/dollhouse/_smbdeleteAAA30e30c.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1920px !important;
+    height: 1045px;
+    background-position: center center;
+    padding: 82px 506px;;
+    margin-top: 160px;
+}
+
+.revealer__container {
+	width: 933px;
+	height: 695px;
+	position: relative;
+	overflow: hidden;
+}
+.revealer__container img {
+	width: 100%;
+	height: 100%;
+}
+.revealer__top-image .revealer__image{
+    left: -100px !important;
+    width: 1138px !important;
+}
+.revealer__handle{
+    background-image: url(../images/dollhouse/slider.svg) !important;
+    height: 100% !important;
+    width: 98px !important;
+    top: 7% !important;
+    margin-left: -5.5% !important;
+    margin-top: -5.5% !important;
+    border-color: transparent;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    z-index: 40;
+    cursor: pointer !important;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1568px){
+    .slider{
+        width: 1568px !important;
+        padding: 82px 329px;
+    }
+}
+
+@media screen and (max-width: 1567px) {
+    .slider{
+        margin-top: 282px;
+        width: 1440px !important;
+        height: 760px;
+        padding: 57px 388px;
+    }
+    .revealer__container {
+        width: 682px;
+        height: 509px;
+    }
+    .revealer__top-image .revealer__image{
+        left: -83px !important;
+        width: 850px !important;
+    }
+    .revealer__handle{
+        margin-left: -6% !important;
+        background-size: contain !important;
+        width: 80px !important;
+    }
+}
+
+@media screen and (max-width: 1438px) {
+    .slider{
+        margin-top: 160px;
+        width: 965px !important;
+        height: 640px;
+        padding: 50px 204px;
+    }
+    .revealer__container {
+        width: 571px;
+        height: 425px;
+    }
+    .revealer__top-image .revealer__image{
+        left: -65px !important;
+        width: 705px !important;
+    }
+    .revealer__handle{
+        margin-left: -5.5% !important;
+        width: 62px !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .slider{
+        margin-top: 160px;
+        width: 768px !important;
+        height: 473px;
+        padding: 37px 178px;
+    }
+    div.slide-comb {
+        width: 424px;
+        height: 316px;
+        position: relative;
+	    overflow: hidden;
+    }
+    div.slide-comb img {
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        max-width: none !important;
+    }
+    div.slide-comb .resized {
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        overflow: hidden;
+    }
+    div.slide-comb .resized> img{
+        margin-left: -50px !important;
+        width: 530px !important;
+    }
+    div.slide-comb .divider{
+        height: 14.5%;
+        width: 10.8%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -5.5%;
+        margin-top: -5.5%;
+        border: 3px solid #007f8c;
+        background: #007f8c;
+        -webkit-border-radius: 1000px;
+        -moz-border-radius: 1000px;
+        border-radius: 1000px;
+        -webkit-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+        -moz-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+        box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+        z-index: 40;
+        cursor: pointer;
+    }
+    .line{
+        width: 0.5em;
+        height: 800px;
+        margin-left: 45%;
+        margin-top: -317%;
+        background: #007f8c;
+    }
+    .fa{
+        color: white;
+        font-size: 1.5em;
+        padding-top: 342%;
+        position: absolute;
+    }
+    .fa-angle-left{
+        left: 50%;
+        margin-left: -30%;
+    }
+    .fa-angle-right{
+        right: 50%;
+        margin-right: -30%;
+    }
+}
+
+@media (max-width: 767px) {
+    .slider{
+        margin-top: 0px;
+        width: 320px !important;
+        height: 178px;
+        padding: 13px 95px;
+    }
+	div.slide-comb{
+		width: 162px;
+		height: 120px;
+	}
+    div.slide-comb .resized> img{
+        margin-left: -9px !important;
+        width: 181px !important;
+    }
+    .line{
+        width: 0.2em;
+        margin-top: -467%;
+    }
+    .fa{
+        font-size: 0.5em;
+            padding-top: 486%;
+        margin-left: -33%;
+    }
+}

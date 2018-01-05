@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="112px" height="112px" viewBox="0 0 112 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="HP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-904.000000, -2306.000000)" id="Section-3-text">
+            <g transform="translate(651.000000, 2309.000000)">
+                <g id="Group-3">
+                    <g id="Play" transform="translate(256.000000, 0.000000)">
+                        <circle id="Oval" stroke="#FFFFFF" stroke-width="5" cx="53" cy="53" r="53"></circle>
+                        <polygon id="Triangle" fill="#FFFFFF" transform="translate(57.500000, 55.000000) rotate(90.000000) translate(-57.500000, -55.000000) " points="57.5 40 79 70 36 70"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

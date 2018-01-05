@@ -1,0 +1,28 @@
+<form name="userForm" novalidate ng-submit="insertData(userForm.$valid)" enctype="multipart/form-data" method="post"
+ng-controller="contactFormJobs">
+	<label class="text-danger" ng-show="errorMessage">{{errorMessage}}</label>
+	<label class="text-success" ng-show="successInsert">{{successInsert}}</label>
+	<div>
+	    <label for="username" >Name</label>
+	    <input type="text" name="userName" ng-model="insert.user_name" class="form-control" ng-class="{    
+	    'has-error' : userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }"  
+	    required>
+	    <span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>
+	</div>
+	<div>
+	    <label for="email">Email</label>
+	    <input type="email" name="email" ng-model="insert.email" class="form-control" ng-class="{
+	    'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
+	    <span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>
+	</div>
+	<div class="upload-file">
+	    <label class="custom-file-upload">
+		<input type="file" name="filecv" value="{{fileToUpload}}" ng-value="fileToUpload" file-model="testfile" set-file-data="fileToUpload=value;" />
+		<i class="fa fa-paperclip" aria-hidden="true"></i>
+		<p class="upload-cv">Upload CV</p>
+		<p class="upload-cv-selected" ng-if="fileToUpload.name">Selected file: <span>{{fileToUpload.name}}</span></p>
+	    </label>
+	    <span class="text-danger" ng-show="errorFilecv">{{errorFilecv}}</span>
+	</div>
+	<input type="submit" name="insert" class="jobs-button-style" value="Send">
+</form>

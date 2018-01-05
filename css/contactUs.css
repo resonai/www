@@ -1,0 +1,146 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    width: 72%;
+}
+.contact-us-page{
+    background-image: url('../images/contact/contact.jpg');
+    background-repeat: no-repeat;
+    background-size:cover; 
+    top: 0px;
+    bottom: 0px;
+    position: relative;
+    background-position: center center;
+    left: 0px;
+    right: 0px;
+    min-height: 950px;
+}
+.contact-us-menu{
+    border-bottom: solid 1px white;
+}
+.form-control{
+    background-color: transparent;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+}
+.has-error {
+  border: solid 1px red;
+}
+label{
+    height: 24px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 100;
+    margin-top: 23px;
+    margin-bottom: 11px;
+}
+h1{
+    height: 98px;
+    margin-top: 0;
+    color: #00c7df;
+    padding-top: 80px;
+    padding-bottom: 117px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 2.45;
+}
+.button-style{
+    float: right;
+    margin-top: 56px;
+    width: 40%;
+    height: 49px;
+    background-color: #007f8c;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+}
+.button-style:hover{
+    background: #00c7df;
+    color: white;
+}
+.button-style:focus{
+    background-color: #007f8c;
+    color: #23527c;
+    text-decoration: underline;
+}
+.col-sm-4{
+    padding: 0;
+}
+.col-xs-12{
+    padding: 0;
+}
+.mobile-img{
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 82%;
+    }
+    .contact-us-page{
+        min-height: 598px;
+    }
+    h1{
+        font-size: 30px;
+        height: 41px;
+        padding-top: 66px;
+        padding-bottom: 75px;
+    }
+    label{
+        height: 22px;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 11px;
+    }
+    .form-control{
+        width: 91%;
+    }
+    .button-style{
+        margin-top: 47px;
+        margin-right: 9%;
+        width: 55%;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90% !important;
+    }
+    .contact-us-menu{
+        border-bottom: 0;
+    }
+    .mobile-img{
+        display: block;
+    }
+    .mobile-img>img{
+        height: 237px;
+        width: 100%;
+    }
+    .contact-us-page{
+        background-image: none;
+        background-color: black;
+        min-height: 850px;
+    }
+    h1{
+        padding-top: 35px;
+        padding-bottom: 54px;
+        height: 33px;
+        font-size: 24px;
+    }
+    label{
+        height: 19px;
+        font-size: 14px;
+    }
+    .form-control{
+        width: 100%;
+    }
+    .button-style{
+        margin-top: 44px;
+        margin-right: 0;
+        width: 62%;
+    }
+}

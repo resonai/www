@@ -1,0 +1,351 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+.container {
+    width: 72%;
+}
+.jobs-page{
+    background-image: url('../images/jobs/Jobs.jpg');
+    background-repeat: no-repeat;
+	background-size:cover;  
+    min-height: 1538px;
+    top: 0px;
+    bottom: 0px;
+    position: relative;
+    background-position: center center;
+    left: 0px;
+    right: 0px;
+}
+.jobs-menu{
+    border-bottom: solid 1px white;
+}
+h1{
+    height: 98px;
+    margin-top: 0;
+    color: #00c7df;
+    padding: 80px 0 110px 0;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+.h1-right-para{
+    margin-left: 0;
+}
+h2{
+    height: 41px;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 37px;
+    padding-bottom: 20px;
+}
+section> p{
+    width: 92%;
+    font-size: 18px;
+    line-height: 1.56;
+    color: #ffffff;
+}
+.contact{
+    color: #00c7df;
+}
+.mail-send, .mail-send:focus, .mail-send:hover{
+    color: white;
+}
+.right-para-text{
+    height: 140px;
+}
+.positions-style{
+    height: 24px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+    margin-top: 25px;
+}
+.math-position-link{
+    margin-top: 0 !important;
+}
+.position-etc{
+    float: right;
+    margin-top: 2px;
+}
+.line{
+    width: 80%;
+    border-bottom: solid 1px #ffffff;
+    padding-bottom: 53px;
+}
+.line-spc{
+    padding-bottom: 70px;
+}
+.jobs-form{
+    background-color: #007f8c;
+    width: 67%;
+    height: 547px;
+    margin-top: 38px;
+}
+.jobs-form-3-se{
+    margin-top: 100px;
+}
+.form-control{
+    background-color: transparent;
+    width: 80%;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    text-align: left;
+    margin-left: 10%;
+}
+label{
+    height: 24px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 100;
+    margin-top: 27px;
+    margin-left: 10%;
+}
+.upload-file{
+    margin-top: 20px;
+    height: 24px;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 0;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.upload-cv{
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding-left: 10px;
+}
+.fa{
+    font-size: 130%;
+}
+.jobs-button-style{
+    margin-top: 108px;
+    width: 80%;
+    height: 49px !important;
+    background-color: #ffffff;
+    margin-left: 10%;
+    height: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #000000;
+}
+.positions-back-style{
+    font-size: 18px;
+    margin-top: 13px;
+    border: 0;
+    border-bottom: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+.col-xs-6{
+    padding: 0;
+}
+.mobile-sec-1{
+    display: none;
+}
+.desktop-sec-1{
+    padding: 0;
+}
+.has-error {
+  border: solid 1px red;
+}
+
+@media screen and (max-width: 1440px) {
+    .jobs-form{
+        width: 83%;
+        height: 540px;
+        margin-top: 92px;
+    }
+    .jobs-form-3-se{
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .jobs-form-3-se{
+        margin-top: 145px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 82%;
+    }
+    .jobs-page{
+        min-height: 883px;
+    }
+    h1{
+        height: 41px;
+        font-size: 30px;
+        padding-bottom: 60px;
+        padding-top: 108px;
+    }
+    section> p{
+        font-size: 16px;
+        width: 100%;
+    }
+    .positions-style{
+        font-size: 16px;
+    }
+    .sec-2, .sec-3, .sec-4, .sec-5, .sec-6 {
+        padding-left: 60px;
+    }
+    .line{
+        width: 100%;
+    }
+    .h1-right-para{
+        width: 100%;
+    }
+    .jobs-form{
+        height: 380px;
+        width: 80%;
+    }
+    .jobs-form-3-se{
+        margin-top: 130px;
+    }
+    h2{
+        font-size: 19.2px;
+        height: 27px;
+        padding-top: 23px;
+    }
+    label{
+        font-size: 16px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    .form-control{
+        height: 26px;
+    }
+    .upload-file{
+        margin-top: 8px;
+    }
+    .fa{
+        font-size: 106%;
+    }
+    .upload-cv{
+        font-size: 16px;
+    }
+    .jobs-button-style{
+        margin-top: 60px;
+        height: 31.4px !important;
+        font-size: 16px;
+        border: 0;
+    }
+    .positions-back-style{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .jobs-page{
+        min-height: 1000px;
+    }
+    .jobs-form{
+        margin-top: 165px;
+    }
+    .jobs-form-3-se{
+        margin-top: 210px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+    .jobs-menu{
+        border-bottom: 0px;
+    }
+    .jobs-page{
+        background-image: none;
+        background-color: black;
+    }
+    .desktop-sec-1{
+        display: none;
+    }
+    .mobile-sec-1{
+        display: block;
+        padding: 0;
+    }
+    .bkg-img{
+        background-image: url('../images/jobs/Jobs.jpg');
+        background-repeat: no-repeat;
+	    background-size:cover;
+        position: relative;
+        background-position: left;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0;
+        padding: 0 5%;
+        padding-bottom: 102px;
+        height: 560px;
+    }
+    .sec-2, .sec-3, .sec-4, .sec-5, .sec-6 {
+        padding-left: 0px;
+    }
+    h1{
+        padding: 0 5%;
+        margin-top: 48px;
+        margin-bottom: 38px;
+        font-size: 24px;
+        height: 20px;
+    }
+    .mobile-sec-1-h1{
+        margin-top: 63px;
+    }
+    .positions-style{
+        font-size: 14px;
+        height: 19px;
+    }
+    .line{
+        width: 95%;
+        margin-left: 5%;
+    }
+    .h1-right-para{
+        padding: 0 5%;
+    }
+    .jobs-form{
+        margin: 92px 5% 0 5%;
+        width: 95%;
+        height: 425px;
+    }
+    .jobs-form-3-se{
+        margin-top: 120px;
+    }
+    section> p{
+        font-size: 14px;
+    }
+    h2{
+        font-size: 24px;
+        height: 33px;
+        padding-top: 35px;
+        margin-bottom: 20px;
+    }
+    .form-control{
+        height: 40px;
+    }
+    .upload-file{
+        margin-top: 14px;
+    }
+    .jobs-button-style{
+        margin-top: 50px;
+    }
+    .positions-back-style{
+        margin: 15px 5%;
+    }
+    .navbar-header{
+        padding: 0 5%;
+    }
+}
