@@ -151,7 +151,7 @@ h1{
         width: 83%;
     }
     .search-page{
-        min-height: 1330px;
+        min-height: 1200px;
     }
     .slider {
         min-height: 270px !important;
@@ -186,7 +186,7 @@ h1{
 
 @media screen and (max-width: 1024px) {
     .search-page{
-        min-height: 1180px;
+        min-height: 1120px;
     }
     .link-section{
         margin-top: 182px;
@@ -214,11 +214,9 @@ h1{
         padding: 11px 0;
         width: 62%;
     }
-}
-
-@media screen and (max-width: 810px) {
-    .search-page{
-        min-height: 1246px;
+    .dots .dot a {
+        width: 11px !important;
+        height: 11px !important;
     }
 }
 
@@ -231,8 +229,8 @@ h1{
     }
     .search-page{
         background-image: none;
-        background-color: white;
-        min-height: 1460px;
+        background-color: black;
+        min-height: 1425px;
     }
     .mobile-img{
         background-image: url('../images/Search4unity/search.jpg');
@@ -266,7 +264,7 @@ h1{
         width: 100%;
     }
     .bold{
-        color: #000000;
+        color: #ffffff;
         font-weight: 600;
     }
     .search-text> span{
@@ -279,7 +277,7 @@ h1{
         color: white;
     }
     .contact-us-para{
-        color: #000000;
+        color: #ffffff;
         margin-left: 0;
         margin-top: 40px;
         margin-bottom: 25px;
@@ -290,7 +288,7 @@ h1{
         width: 100%;
     }
     .p-sec{
-        color: #000000;
+        color: #ffffff;
         margin-left: 0;
         font-size: 14px;
         padding: 0 5%;
@@ -340,13 +338,13 @@ h1{
     .dots .dot a {
         width: 9px !important;
         height: 9px !important;
-        border: 1px solid #4a4a4a !important;
+        border: 1px solid #fffcfc !important;
         top: -28px !important;
         left: 0 !important;
     }
     .dots .dot a.active {
-        border-color: #4a4a4a !important;
-        background-color: #4a4a4a !important;
+        border-color: #fffcfc !important;
+        background-color: #fffcfc !important;
     }
     .navbar-header{
         padding: 0 5%;

@@ -109,7 +109,7 @@ header.header{
     color: #00a9bd;
 }
 .fa-caret-down{
-    display: block;
+    display: block !important;
     font-size: 30px !important;
     text-align: center;
 }

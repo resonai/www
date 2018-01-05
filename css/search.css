@@ -11,7 +11,7 @@ body{
     background-image: url('../images/search/search.jpg');
     background-repeat: no-repeat;
 	background-size:cover;  
-    min-height: 1730px;
+    min-height: 1520px;
     top: 0px;
     bottom: 0px;
     position: relative;
@@ -154,7 +154,7 @@ h1{
 
 @media screen and (max-width: 1024px) {
     .search-page{
-        min-height: 1110px;
+        min-height: 915px;
     }
     .link-section{
         margin-top: 67px;
@@ -232,8 +232,8 @@ h1{
     }
     .search-page{
         background-image: none;
-        background-color: white;
-        min-height: 1044px;
+        background-color: black;
+        min-height: 1005px;
     }
     .mobile-img{
         background-image: url('../images/search/search.jpg');
@@ -301,11 +301,11 @@ h1{
         margin: 17px 10px !important;
     }
     .dots .dot a {
-        border: 1px solid #4a4a4a !important;
+        border: 1px solid #fffcfc !important;
     }
     .dots .dot a.active {
-        border-color: #4a4a4a !important;
-        background-color: #4a4a4a !important;
+        border-color: #fffcfc !important;
+        background-color: #fffcfc !important;
     }
     .navbar-header{
         padding: 0 5%;
