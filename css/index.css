@@ -531,6 +531,9 @@ label{
     .navbar-nav>li>.dropdown-menu{
         left: -55px;
     }
+    .section-2-h1{
+        width: 116%;
+    }
     .section-4{
         padding-bottom: 81px;
     }
