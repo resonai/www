@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once("sendviabigquery.php");
 
-$sender = "noreply@burnished-data-183409.appspotmail.com";
+$sender = "noreply@yowza3d.appspotmail.com";
 
 function sendMail($to, $subject, $message, $replyto) {
 	global $sender;
@@ -14,8 +14,8 @@ function sendMail($to, $subject, $message, $replyto) {
 }
 
 function sendContactForm($name, $companyname, $email, $phone) {
-	$query = 'insert into test1.cf (user_name, company_name, email, phone) values ("' . $name . '", "' . $companyname . '", "' . $email 
-	. '", "' . $phone . '")'; //MUST add escape
+	$query = 'insert into resosite.cf (user_name, company_name, email, phone) values ("' . $name . '", "' . $companyname . '", 
+    "' . $email . '", "' . $phone . '")'; //MUST add escape
 
 	$result = sendViaBigQuery($query);
 	//email
@@ -32,8 +32,8 @@ function sendContactForm($name, $companyname, $email, $phone) {
 }
 
 function sendHpContactForm($name, $email, $companyname, $message) {
-	$query = 'insert into test1.cf_hp (user_name, email, company_name,  message) values ("' . $name . '", "' . $email . '", "' . 
-	$companyname . '", "' . $message . '")'; //MUST add escape
+	$query = 'insert into resosite.cf_hp (user_name, email, company_name,  message) values ("' . $name . '", "' . $email . '", 
+    "' . $companyname . '", "' . $message . '")'; //MUST add escape
 
 	$result = sendViaBigQuery($query);
 
@@ -53,8 +53,8 @@ function sendHpContactForm($name, $email, $companyname, $message) {
 }
 
 function sendPopupContactForm($name, $email, $phone, $companyname, $message) {
-    $query = 'insert into test1.cf_popup (user_name, email, phone, company_name,  message) values ("' . $name . '", "' . $email . '", "' 
-    . $phone . '", "' . $companyname . '", "' . $message . '")'; //MUST add escape
+    $query = 'insert into resosite.cf_popup (user_name, email, phone, company_name,  message) values ("' . $name . '", 
+    "' . $email . '", "' . $phone . '", "' . $companyname . '", "' . $message . '")'; //MUST add escape
     
     $result = sendViaBigQuery($query);
 
@@ -75,8 +75,8 @@ function sendPopupContactForm($name, $email, $phone, $companyname, $message) {
 }
 
 function sendPopupDemoContactForm($name, $email, $phone, $companyname, $message) {
-    $query = 'insert into test1.cf_popup_demo (user_name, email, phone, company_name,  message) values ("' . $name . '", "' . $email . 
-    '", "' . $phone . '", "' . $companyname . '", "' . $message . '")'; //MUST add escape
+    $query = 'insert into resosite.cf_popup (user_name, email, phone, company_name,  message) values ("' . $name . '", 
+    "' . $email . '", "' . $phone . '", "' . $companyname . '", "' . $message . '")'; //MUST add escape
     
     $result = sendViaBigQuery($query);
 
@@ -97,14 +97,14 @@ function sendPopupDemoContactForm($name, $email, $phone, $companyname, $message)
 }
 
 function sendJobsContactForm($name, $email, $fileLink) {
-    $query = 'insert into test1.cf_file (user_name, email, filecv) values ("' . $name . '", "' . $email . 
-    '", "' . $fileLink . '")'; //MUST add escape
+    $query = 'insert into resosite.cf_file (user_name, email, filecv) values ("' . $name . '", 
+    "' . $email . '", "' . $fileLink . '")'; //MUST add escape
     
     $result = sendViaBigQuery($query);
 
 	//email
 
-	$email_to = "simongold79@gmail.com";
+	$email_to = "einathazout@gmail.com";
 	$email_subject = "Resonai-Contact Form";
 	$email_message = "Name: ".($name)."\n";
 	$email_message .= "Email: ".($email)."\n";
