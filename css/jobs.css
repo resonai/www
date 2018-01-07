@@ -169,7 +169,6 @@
 @media screen and (max-width: 1440px) {
     .jobs-page .jobs-form{
         width: 83%;
-        height: 540px;
         margin-top: 92px;
     }
     .jobs-page .jobs-form-3-se{
@@ -178,6 +177,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .jobs-page .jobs-form{
+        margin-top: 110px;
+    }
     .jobs-page .jobs-form-3-se{
         margin-top: 145px;
     }
@@ -328,7 +330,7 @@
         padding: 0 5%;
     }
     .jobs-page .jobs-form{
-        margin: 92px 6% 0 6%;
+        margin: 66px 6% 0 6%;
         width: 88%;
     }
     .jobs-page .jobs-form-3-se{
