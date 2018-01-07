@@ -405,6 +405,7 @@ label{
     height: 40px;
     border: 1px solid #ffffff;
     border-radius: 0;
+    color: white;
 }
 .button-style{
     float: right;
