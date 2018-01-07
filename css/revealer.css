@@ -1,8 +1,8 @@
-img {
+.dollhouse-page img {
   max-width: 100%;
 }
 
-.revealer__container {
+.dollhouse-page .revealer__container {
   position: relative;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -12,11 +12,11 @@ img {
   user-select: none;
 }
 
-.revealer__image {
+.dollhouse-page .revealer__image {
   display: block;
 }
 
-.revealer__top-image {
+.dollhouse-page .revealer__top-image {
   position: absolute;
   left: 0;
   top: 0;
@@ -26,7 +26,7 @@ img {
   transform: translateZ(0);
 }
 
-.revealer__top-image .revealer__image {
+.dollhouse-page .revealer__top-image .revealer__image {
   position: absolute;
   left: 0;
   top: 0;
@@ -36,7 +36,7 @@ img {
   max-width: none;
 }
 
-.revealer__handle {
+.dollhouse-page .revealer__handle {
   width: 50px;
   height: 50px;
   background: #e74c3c;
@@ -53,21 +53,21 @@ img {
   background-position: center;
 }
 
-.revealer__handle--drag {
+.dollhouse-page .revealer__handle--drag {
   background-color: #c0392b;
 }
 
-.revealer__label {
+.dollhouse-page .revealer__label {
   position: absolute;
   bottom: 0;
   padding: 1em;
 }
 
-.revealer__label--right {
+.dollhouse-page .revealer__label--right {
   right: 0;
 }
 
-.revealer__label--left {
+.dollhouse-page .revealer__label--left {
   left: 0;
 }
 

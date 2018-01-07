@@ -1023,7 +1023,7 @@ label{
         margin-left: 0;
     }
     .section-4-para-2>.section-4-h1-1{
-        margin-top: 576px;
+        margin-top: 644px;
     }
     .section-4-img-2>img{
         width: 100%;
@@ -1113,20 +1113,20 @@ label{
 
 @media screen and (max-width: 600px) {
     .section-4-img-2{
-        top: -59rem !important;
+        top: -60rem !important;
         margin-bottom: -314px;
     }
     .section-4-para-2>.section-4-h1-1{
-        margin-top: 450px;
+        margin-top: 524px;
     }
 }
 
 @media screen and (max-width: 460px) {
     .section-4-img-2{
-        top: -47rem !important;
+        top: -49rem !important;
         margin-bottom: -217px;
     }
     .section-4-para-2>.section-4-h1-1{
-        margin-top: 340px;
+        margin-top: 409px;
     }
 }

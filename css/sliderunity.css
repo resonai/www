@@ -1,4 +1,4 @@
-.slider {
+.search4unity-page .slider {
     background-image: url(../images/Search4unity/MacBook_Pro.png);
     background-repeat: no-repeat;
     min-height: 830px;
@@ -7,16 +7,16 @@
     margin-top: -100px;
 }
 
-.slide {
+.search4unity-page .slide {
     margin-top: 40px;
     margin-left: -3.5%;
     width: 107%;
 }
 
-.arrow-nav{
+.search4unity-page .arrow-nav{
     position: relative;
 }
-.arrow {
+.search4unity-page .arrow {
     z-index: 1002;
     display: block;
     margin-top: -290px;
@@ -27,14 +27,14 @@
     background: url(../images/search/blank.gif) no-repeat;
 }
 
-.arrow.prev {
+.search4unity-page .arrow.prev {
     position: absolute;
     left: -170px;
     background-image: url(../images/search/back.svg);
     transition: 0.2s linear all;
 }
 
-.arrow.next {
+.search4unity-page .arrow.next {
     position: absolute;
     right: -180px;
     background-image: url(../images/search/next.svg);
@@ -49,7 +49,7 @@
 NAV
 ---------------------------------------------------------*/
 
-.slider-nav {
+.search4unity-page .slider-nav {
     text-align: center;
     display: block;
     position: absolute;
@@ -60,35 +60,35 @@ NAV
     height: 48px;
 }
 
-.nonDraggableImage{
+.search4unity-page .nonDraggableImage{
     -webkit-user-drag: none;
 }
 
-.slider-nav .wrapper {
+.search4unity-page .slider-nav .wrapper {
     margin: 0 auto;
     width: 100%;
     padding: 1em 0 .8em;
 }
 
-.slider-nav ul {
+.search4unity-page .slider-nav ul {
     margin: 0;
     width: 100%;
     padding-left: 0;
 }
 
-.slider-nav .dot, .slider-nav .dot a {
+.search4unity-page .slider-nav .dot, .slider-nav .dot a {
     display: inline-block;
     zoom: 1;
 }
 
-.dots .dot {
+.search4unity-page .dots .dot {
     position: relative;
     margin: 0 5px;
     width: 15px;
     height: 15px;
 }
 
-.dots .dot a {
+.search4unity-page .dots .dot a {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -111,7 +111,7 @@ NAV
     transition: background-color 0.25s, border-color 0.25s;
 }
 
-.dots .dot a.active {
+.search4unity-page .dots .dot a.active {
     border-color: #FFF;
     background-color: #FFF;
 }

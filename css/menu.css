@@ -1,6 +1,3 @@
-body{
-    font-family: 'Open Sans', sans-serif;
-}
 header{
     position: fixed;
     width: 100%;
@@ -169,7 +166,8 @@ header.header{
     .navbar-nav>li>a{
         height: 24px;
     }
-    .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:active, .navbar-default .navbar-nav>li>a:visited, .navbar-default .navbar-nav>li>a:focus{
+    .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:active, 
+    .navbar-default .navbar-nav>li>a:visited, .navbar-default .navbar-nav>li>a:focus{
         padding: 0;
         text-align: center;
     }
