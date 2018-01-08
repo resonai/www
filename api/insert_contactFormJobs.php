@@ -71,8 +71,8 @@ else
     }
     catch(Exception $e) {
         $data["error"] = "We had internal error";
-	throw $e;
-	$data["data"] = json_encode($e);
+	syslog(LOG_ERROR, $e->getMessage());
+	//$data["data"] = json_encode($e);
     }
 //    var_dump($result);
     
