@@ -3,11 +3,14 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 # Imports the Google Cloud client library
 use Google\Cloud\BigQuery\BigQueryClient;
+use google\appengine\api\app_identity\AppIdentityService;
 
 function sendViaBigQuery($query)
 {
     # Your Google Cloud Platform project ID
-    $projectId = 'burnished-data-183409';
+    //$projectId = 'burnished-data-183409';
+    $projectId = AppIdentityService::getServiceAccountName();
+    echo $projectId;
 
     # Instantiates a client
     $bigquery = new BigQueryClient([
