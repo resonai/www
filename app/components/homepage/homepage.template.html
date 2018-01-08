@@ -143,20 +143,30 @@
                                 <label for="username" >Name</label>
                                 <input type="text" name="userName" ng-model="insert.user_name" class="form-control" ng-class="{ 
                                 'has-error' : userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }" required>
-                                <span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>
+                                <!--<span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>-->
+                                <span class="valid-text" ng-show="userForm.userName.$dirty && userForm.userName.$invalid">
+                                    <span ng-show="userForm.userName.$error.required">Name is required.</span>
+                                </span>
                             </div> 
                             <div>
                                 <label for="email">Email</label>
                                 <input type="email" name="email" ng-model="insert.email" class="form-control" ng-class="{ 
                                 'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
-                                <span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>
+                                <!--<span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>-->
+                                <span class="valid-text" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+                                    <span ng-show="userForm.email.$error.required">Email is required.</span>
+                                    <span ng-show="userForm.email.$error.email">Invalid email address.</span>
+                                </span>
                             </div>
                             <div>
                                 <label for="companyName">Company name</label>
                                 <input type="text" name="companyName" ng-model="insert.company_name" class="form-control" ng-class="{ 
                                 'has-error' : userForm.companyName.$invalid && userForm.$submitted && userForm.companyName.$pristine }" 
                                 required>
-                                <span class="text-danger" ng-show="errorCompanyname">{{errorCompanyname}}</span>
+                                <!--<span class="text-danger" ng-show="errorCompanyname">{{errorCompanyname}}</span>-->
+                                <span class="valid-text" ng-show="userForm.companyName.$dirty && userForm.companyName.$invalid">
+                                    <span ng-show="userForm.companyName.$error.required">Company name is required.</span>
+                                </span>
                             </div> 
                             <div>
                                 <label for="message">Message</label>
@@ -164,6 +174,9 @@
                                 'has-error' : userForm.message.$invalid && userForm.$submitted && userForm.message.$pristine }"     
                                 required></textarea>
                                 <!--<span class="text-danger" ng-show="errorMessageF">{{errorMessageF}}</span>-->
+                                <span class="valid-text" ng-show="userForm.message.$dirty && userForm.message.$invalid">
+                                    <span ng-show="userForm.message.$error.required">Message is required.</span>
+                                </span>
                             </div> 
                             <input type="submit" name="insert" class="btnajs button-style button-style-sec-5" value="Send">
                         </form>   

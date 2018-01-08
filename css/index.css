@@ -484,6 +484,10 @@ label{
 .text-success {
     color: #ffffff;
 }
+.valid-text{
+    color: red;
+    font-size: 16px;
+}
 
 @media screen and (max-width: 1920px) {
     .section-4-container{

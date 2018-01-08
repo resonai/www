@@ -169,6 +169,12 @@
     margin-top: -50px !important;
     color: red !important;
 }
+.jobs-page .text-success{
+    margin-top: -5px !important;
+}
+.jobs-page .valid-text{
+    margin-left: 10%;
+}
 
 @media screen and (max-width: 1440px) {
     .jobs-page .jobs-form{
@@ -262,6 +268,10 @@
     .jobs-page .positions-back-style{
         font-size: 16px;
     }
+    .jobs-page .valid-text{
+        margin-left: 5%;
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 920px) {
@@ -276,6 +286,9 @@
     }
     .jobs-page .text-danger{
         margin-top: -8px !important;
+    }
+    .jobs-page .text-success{
+        margin-top: -10px !important;
     }
 }
 
@@ -368,5 +381,8 @@
     }
     .jobs-page .navbar-header{
         padding: 0 5%;
+    }
+    .jobs-page .text-success{
+        margin-top: -21px !important;
     }
 }

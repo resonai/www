@@ -16,26 +16,43 @@
                                     <input type="text" name="userName" ng-model="insert.user_name" class="form-control" ng-class="{  
                                     'has-error': userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }" 
                                     required>
-                                    <span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>
+                                    <!--<span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>-->
+                                    <span class="valid-text" ng-show="userForm.userName.$dirty && userForm.userName.$invalid">
+                                        <span ng-show="userForm.userName.$error.required">Name is required.</span>
+                                    </span>
                                 </div> 
                                 <div>
                                     <label for="companyName">Company name</label>
                                     <input type="text" name="companyName" ng-model="insert.company_name" class="form-control" 
                                     ng-class="{'has-error' : userForm.companyName.$invalid && userForm.$submitted && 
                                     userForm.companyName.$pristine }" required>
-                                    <span class="text-danger" ng-show="errorCompanyname">{{errorCompanyname}}</span>
+                                    <!--<span class="text-danger" ng-show="errorCompanyname">{{errorCompanyname}}</span>-->
+                                    <span class="valid-text" ng-show="userForm.companyName.$dirty && userForm.companyName.$invalid">
+                                        <span ng-show="userForm.companyName.$error.required">Company name is required.</span>
+                                    </span>
                                 </div> 
                                 <div>
                                     <label for="email">Email</label>
                                     <input type="email" name="email" ng-model="insert.email" class="form-control" ng-class="{ 
                                     'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
-                                    <span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>
+                                    <!--<span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>-->
+                                    <span class="valid-text" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+                                        <span ng-show="userForm.email.$error.required">Email is required.</span>
+                                        <span ng-show="userForm.email.$error.email">Invalid email address.</span>
+                                    </span>
                                 </div> 
                                 <div>
                                     <label for="phone">Phone</label>
-                                    <input type="text" name="phone" ng-model="insert.phone" class="form-control" ng-class="{ 
+                                    <input type="number" name="phone" ng-model="insert.phone" ng-minlength="10" 
+                                    ng-maxlength="10" class="form-control" ng-class="{ 
                                     'has-error' : userForm.phone.$invalid && userForm.$submitted && userForm.phone.$pristine }" required>
-                                    <span class="text-danger" ng-show="errorPhone">{{errorPhone}}</span>
+                                    <!--<span class="text-danger" ng-show="errorPhone">{{errorPhone}}</span>-->
+                                    <span class="valid-text" ng-show="userForm.phone.$dirty && userForm.phone.$invalid">
+                                        <span ng-show="userForm.phone.$error.required">Phone is required.</span>
+                                        <span ng-show="userForm.phone.$error.number">Valid phone number is required.</span>
+                                        <span ng-show="userForm.phone.$error.minlength">Phone no not less that 10 char.</span>
+                                        <span ng-show="userForm.phone.$error.maxlength">Phone no not more than 10 char.</span>
+                                    </span>
                                 </div>   
                                 <input type="submit" name="insert" class="button-style" value="Send">
                             </form>      

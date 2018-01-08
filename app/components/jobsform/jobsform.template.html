@@ -7,13 +7,20 @@ ng-controller="contactFormJobs">
 	    <input type="text" name="userName" placeholder="Name" ng-model="insert.user_name" class="form-control" ng-class="{    
 	    'has-error' : userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }"  
 	    required>
-	    <span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>
+	    <!--<span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>-->
+	    <span class="valid-text" ng-show="userForm.userName.$dirty && userForm.userName.$invalid">
+            <span ng-show="userForm.userName.$error.required">Name is required.</span>
+        </span>
 	</div>
 	<div>
 	    <!--<label for="email">Email</label>-->
 	    <input type="email" name="email" placeholder="Email" ng-model="insert.email" class="form-control" ng-class="{
 	    'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
-	    <span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>
+	    <!--<span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>-->
+	    <span class="valid-text" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+            <span ng-show="userForm.email.$error.required">Email is required.</span>
+            <span ng-show="userForm.email.$error.email">Invalid email address.</span>
+        </span>
 	</div>
 	<div class="upload-file">
 	    <label class="custom-file-upload">
@@ -22,7 +29,10 @@ ng-controller="contactFormJobs">
 		<p class="upload-cv">Upload CV</p>
 		<p class="upload-cv-selected" ng-if="fileToUpload.name">Selected file: <span>{{fileToUpload.name}}</span></p>
 	    </label>
-	    <span class="text-danger" ng-show="errorFilecv">{{errorFilecv}}</span>
+	    <!--<span class="text-danger" ng-show="errorFilecv">{{errorFilecv}}</span>-->
+	    <span class="valid-text" ng-show="userForm.filecv.$dirty && userForm.filecv.$invalid">
+            <span ng-show="userForm.filecv.$error.required">File Upload is required.</span>
+        </span>
 	</div>
 	<input type="submit" name="insert" class="jobs-button-style" value="Send">
 </form>
