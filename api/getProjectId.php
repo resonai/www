@@ -8,3 +8,7 @@ function getProjectId() {
 	$projectId=$parts[0];
 	return $projectId;
 }
+
+function getAppName(){
+	return AppIdentityService::getApplicationId();
+}

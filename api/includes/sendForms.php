@@ -5,6 +5,9 @@ require_once("sendviabigquery.php");
 require_once 'getProjectId.php';
 
 $sender = "noreply@yowza3d.appspotmail.com";
+$sender = "noreply@" . getAppName() . ".appspotmail.com";
+syslog(LOG_INFO, getAppName());
+
 
 function sendMail($to, $subject, $message, $replyto) {
 	global $sender;
@@ -119,6 +122,6 @@ function sendJobsContactForm($name, $email, $fileLink) {
 	$mailResult = sendMail($email_to, $email_subject, $email_message, $email);
 
 	echo json_encode(["mail" => $mailResult, "bigquery" => $result]);
-    return $result;
+    return $mailResult && $result->isComplete();
 }
 ?>
