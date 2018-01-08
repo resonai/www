@@ -24,7 +24,7 @@ function getConfig() {
 
 	$result["forms"] = [
 		"jobs" => [
-			"email" => "einathazout@gmail.com",
+			"email" => "jobs@resonai.com",
 			"subject" => "Resonai-Contact Form",
 			"table" => $isDev ? "test1.cf_file" : "resosite.cf_file"
 		],
