@@ -31,7 +31,7 @@ function getConfig() {
 		"popupdemo" => [
 			"email" => $isDev ? "aryeklt+popupdemo@gmail.com" : "Dollhouse_demo@resonai.com",
 			"subject" => "Resonai-Contact Form - popup demo",
-			"table" => $isDev ? "test1.cf_popupdemo" : "resosite.cf_popup"
+			"table" => $isDev ? "test1.cf_popup_demo" : "resosite.cf_popup"
 		],
 		"popup" => [
 			"email" =>  $isDev ? "aryeklt+beta@gmail.com" : "joinbeta@resonai.com",
@@ -44,6 +44,7 @@ function getConfig() {
 			"table" => $isDev ? "test1.cf_hp" : "resosite.cf_hp"
 		],
 		"contact" => [
+	syslog(LOG_WARNING, $e->getMessage());
 			"email" => $isDev ? "aryeklt+info-contact@gmail.com" : "info@resonai.com",
 			"subject" => "Resonai-Contact Form - contact",
 			"table" => $isDev ? "test1.cf" : "resosite.cf"
