@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once("sendviabigquery.php");
+require_once 'getProjectId.php';
 
 $sender = "noreply@yowza3d.appspotmail.com";
 
@@ -97,8 +98,11 @@ function sendPopupDemoContactForm($name, $email, $phone, $companyname, $message)
 }
 
 function sendJobsContactForm($name, $email, $fileLink) {
+	$projectId = getProjectId();
 	$tblname = "resosite.cf_file";
-	$tblname = "test1.cf_file";
+	if($projectId == "burnished-data-183409"){
+		$tblname = "test1.cf_file";
+	}
 	$query = 'insert into ' . $tblname . ' (user_name, email, filecv) values ("' . $name . '", 
 	"' . $email . '", "' . $fileLink . '")'; //MUST add escape
     

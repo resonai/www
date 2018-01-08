@@ -1,9 +1,9 @@
 <?php
 require_once __DIR__ . '/../../vendor/autoload.php';
+require_once 'getProjectId.php';
 
 # Imports the Google Cloud client library
 use Google\Cloud\BigQuery\BigQueryClient;
-use google\appengine\api\app_identity\AppIdentityService;
 
 function sendViaBigQuery($query)
 {
@@ -11,11 +11,7 @@ function sendViaBigQuery($query)
     //$projectId = 'burnished-data-183409';
 
 	//Get the service account name
-    $projectId = AppIdentityService::getServiceAccountName();
-    	//Take the user part of the email, it is the project id
-    $parts = explode("@", $projectId);
-    $projectId=$parts[0];
-
+    $projectId = getProjectId();
     # Instantiates a client
     $bigquery = new BigQueryClient([
         'projectId' => $projectId
