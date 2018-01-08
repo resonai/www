@@ -2,6 +2,7 @@
 //insert_contactFormHp.php
 
 require_once("includes/includes.php");
+require_once("includes/randomstring.php");
 require_once("../vendor/autoload.php");
 
 use google\appengine\api\cloud_storage\CloudStorageTools;
@@ -28,7 +29,7 @@ $temp_name = $file["tmp_name"];
 if(substr($temp_name, 0, 2) === "gs") {
 	$my_bucket = CloudStorageTools::getDefaultGoogleStorageBucketName();
 
-	$file_name = time() . "_" . $file_name;
+	$file_name = time() . "_" . generateRandomString(10);
 
 	$storeAt = "gs://${my_bucket}/${file_name}";
 
