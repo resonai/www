@@ -44,7 +44,6 @@ function getConfig() {
 			"table" => $isDev ? "test1.cf_hp" : "resosite.cf_hp"
 		],
 		"contact" => [
-	syslog(LOG_WARNING, $e->getMessage());
 			"email" => $isDev ? "aryeklt+info-contact@gmail.com" : "info@resonai.com",
 			"subject" => "Resonai-Contact Form - contact",
 			"table" => $isDev ? "test1.cf" : "resosite.cf"
