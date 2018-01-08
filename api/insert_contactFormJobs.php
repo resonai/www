@@ -23,6 +23,7 @@ if(empty($_POST["email"]))
 
 
 
+log_error("Before file things");
 $file = $_FILES["filecv"];
 $file_name = $file["name"];
 $temp_name = $file["tmp_name"];
@@ -39,8 +40,10 @@ if(substr($temp_name, 0, 2) === "gs") {
 			'Content-Type' => $file['type']
 		]
 	];
+	log_error("After set options array");
 
 	$ctx = stream_context_create($options);
+	log_error("Context created");
 	$saved = file_put_contents($storeAt, file_get_contents($temp_name), 0, $ctx);
 
 	//move_uploaded_file($temp_name, $storeAt);
@@ -57,7 +60,8 @@ if(empty($_POST["filecv"]))
 */
 if(!empty($error))
 {
- $data["error"] = $error;
+	log_error($error);
+	$data["error"] = $error;
 }
 else
 {
