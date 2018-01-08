@@ -6,7 +6,7 @@ require_once 'getProjectId.php';
 
 $sender = "noreply@yowza3d.appspotmail.com";
 $sender = "noreply@" . getAppName() . ".appspotmail.com";
-syslog(LOG_INFO, getAppName());
+syslog(LOG_INFO, getAppName() . " is app name");
 
 
 function sendMail($to, $subject, $message, $replyto) {
@@ -14,7 +14,7 @@ function sendMail($to, $subject, $message, $replyto) {
 	$headers = 'From: '.$sender."\r\n".
 	'Reply-To: '.$replyto."\r\n";
 
-	mail($to, $subject, $message, $headers);
+	return mail($to, $subject, $message, $headers);
 }
 
 function sendContactForm($name, $companyname, $email, $phone) {
@@ -122,6 +122,6 @@ function sendJobsContactForm($name, $email, $fileLink) {
 	$mailResult = sendMail($email_to, $email_subject, $email_message, $email);
 
 	syslog(LOG_INFO, json_encode(["mail" => $mailResult, "bigquery" => $result]));
-    return $mailResult && $result->isComplete();
+	return $mailResult && $result->isComplete();
 }
 ?>
