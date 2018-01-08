@@ -12,7 +12,7 @@ function sendViaBigQuery($query)
     # Instantiates a client
     $bigquery = new BigQueryClient([
         'projectId' => $projectId,
-        'keyFilePath' => __DIR__ . '/../../key.json'
+#        'keyFilePath' => __DIR__ . '/../../key.json'
     ]);
     # [START run_query]
     
