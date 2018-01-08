@@ -2,12 +2,10 @@
 //insert_contactFormHp.php
 
 require_once("includes/includes.php");
-require_once("includes/randomstring.php");
 require_once("../vendor/autoload.php");
 
 use google\appengine\api\cloud_storage\CloudStorageTools;
 
-//$form_data = json_decode(file_get_contents("php://input"));
 $data = array();
 $error = array();
 
@@ -22,12 +20,11 @@ if(empty($_POST["email"]))
 }
 
 
-
 $file = $_FILES["filecv"];
 $file_name = $file["name"];
 $temp_name = $file["tmp_name"];
 if(substr($temp_name, 0, 2) === "gs") {
-	$my_bucket = CloudStorageTools::getDefaultGoogleStorageBucketName();
+	$my_bucket = getConfig()["bucketName"];
 
 	$file_name = time() . "_" . generateRandomString(10);
 
@@ -63,7 +60,7 @@ else
 {
     try{
         $result = sendJobsContactForm($_POST["user_name"], $_POST["email"], $public_url);
-        if($result->isComplete()){
+        if($result){
                 $data["message"] = "Thank you. We will contact you soon!";
         }
         else {
@@ -72,6 +69,8 @@ else
     }
     catch(Exception $e) {
         $data["error"] = "We had internal error";
+	syslog(LOG_WARNING, $e->getMessage());
+	//$data["data"] = json_encode($e);
     }
 //    var_dump($result);
     

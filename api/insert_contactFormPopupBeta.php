@@ -41,7 +41,7 @@ else
     try{
         $result = sendPopupContactForm($form_data->user_name, $form_data->email, $form_data->phone, $form_data->company_name,  
         $form_data->message);
-        if($result->isComplete()){
+        if($result){
             $data["message"] = "Thank you. We will contact you soon!";
         }
         else {
@@ -49,6 +49,7 @@ else
         }
     }
     catch(Exception $e) {
+	syslog(LOG_WARNING, $e->getMessage());
         $data["error"] = "We had internal error";
     }
 //    var_dump($result);

@@ -7,12 +7,11 @@ use Google\Cloud\BigQuery\BigQueryClient;
 function sendViaBigQuery($query)
 {
     # Your Google Cloud Platform project ID
-    $projectId = 'yowza3d';
+    //$projectId = 'burnished-data-183409';
 
     # Instantiates a client
     $bigquery = new BigQueryClient([
-        'projectId' => $projectId,
-#        'keyFilePath' => __DIR__ . '/../../key.json'
+        'projectId' => getConfig()["projectId"]
     ]);
     # [START run_query]
     
