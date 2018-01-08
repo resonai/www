@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../../vendor/autoload.php';
-require_once 'getProjectId.php';
 
 # Imports the Google Cloud client library
 use Google\Cloud\BigQuery\BigQueryClient;
@@ -10,11 +9,9 @@ function sendViaBigQuery($query)
     # Your Google Cloud Platform project ID
     //$projectId = 'burnished-data-183409';
 
-	//Get the service account name
-    $projectId = getProjectId();
     # Instantiates a client
     $bigquery = new BigQueryClient([
-        'projectId' => $projectId
+        'projectId' => getConfig()["projectId"]
     ]);
     # [START run_query]
     

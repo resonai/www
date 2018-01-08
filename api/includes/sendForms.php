@@ -2,15 +2,9 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once("sendviabigquery.php");
-require_once 'getProjectId.php';
-
-$sender = "noreply@yowza3d.appspotmail.com";
-$sender = "noreply@" . getAppName() . ".appspotmail.com";
-syslog(LOG_INFO, getAppName() . " is app name");
-
 
 function sendMail($to, $subject, $message, $replyto) {
-	global $sender;
+	$sender = getConfig()["emailSender"];
 	$headers = 'From: '.$sender."\r\n".
 	'Reply-To: '.$replyto."\r\n";
 
@@ -18,54 +12,56 @@ function sendMail($to, $subject, $message, $replyto) {
 }
 
 function sendContactForm($name, $companyname, $email, $phone) {
-	$query = 'insert into resosite.cf (user_name, company_name, email, phone) values ("' . $name . '", "' . $companyname . '", 
+	$conf = getConfig()["forms"]["contact"];
+	$query = 'insert into ' . $conf["table"] . ' (user_name, company_name, email, phone) values ("' . $name . '", "' . $companyname . '", 
     "' . $email . '", "' . $phone . '")'; //MUST add escape
 
 	$result = sendViaBigQuery($query);
 	//email
-	$sendTo = "info@resonai.com";
-	$email_subject = "Resonai-Contact Form";
+	$sendTo = $conf["email"];
+	$email_subject = $conf["subject"];
 
 	$email_message = "Name: ".($name)."\n";
 	$email_message .= "Company Name: ".($companyname)."\n";
 	$email_message .= "Email: ".($email)."\n";
 	$email_message .= "Phone: ".($phone)."\n";
-	sendMail($sendTo, $email_subject, $email_message, $email);
 
-	return $result;
+	$mailResult = sendMail($sendTo, $email_subject, $email_message, $email);
+	return $mailResult && $result->isComplete();
 }
 
 function sendHpContactForm($name, $email, $companyname, $message) {
-	$query = 'insert into resosite.cf_hp (user_name, email, company_name,  message) values ("' . $name . '", "' . $email . '", 
+	$conf = getConfig()["forms"]["hp"];
+	$query = 'insert into ' . $conf["table"] . ' (user_name, email, company_name,  message) values ("' . $name . '", "' . $email . '", 
     "' . $companyname . '", "' . $message . '")'; //MUST add escape
 
 	$result = sendViaBigQuery($query);
 
 	//email
 
-	$email_to = "info@resonai.com";
-	$email_subject = "Resonai - Contact Form";
+	$email_to = $conf["email"];
+	$email_subject = $conf["subject"];
 	$email_message = "Name: ".($name)."\n";
 	$email_message .= "Email: ".($email)."\n";
 	$email_message .= "Company Name: ".($companyname)."\n";
 	$email_message .= "Message: ".($message)."\n";
 
 
-	sendMail($email_to, $email_subject, $email_message, $email);
-
-	return $result;
+	$mailResult = sendMail($email_to, $email_subject, $email_message, $email);
+	return $mailResult && $result->isComplete();
 }
 
 function sendPopupContactForm($name, $email, $phone, $companyname, $message) {
-    $query = 'insert into resosite.cf_popup (user_name, email, phone, company_name,  message) values ("' . $name . '", 
+	$conf = getConfig()["forms"]["popup"];
+    $query = 'insert into ' . $conf["table"] . ' (user_name, email, phone, company_name,  message) values ("' . $name . '", 
     "' . $email . '", "' . $phone . '", "' . $companyname . '", "' . $message . '")'; //MUST add escape
     
     $result = sendViaBigQuery($query);
 
 	//email
 
-	$email_to = "joinbeta@resonai.com";
-	$email_subject = "Resonai - Contact Form";
+	$email_to = $conf["email"];
+	$email_subject = $conf["subject"];
 	$email_message = "Name: ".($name)."\n";
 	$email_message .= "Email: ".($email)."\n";
 	$email_message .= "Phone: ".($phone)."\n";
@@ -73,21 +69,22 @@ function sendPopupContactForm($name, $email, $phone, $companyname, $message) {
 	$email_message .= "Message: ".($message)."\n";
 
 
-	sendMail($email_to, $email_subject, $email_message, $email);
-
-    return $result;
+	$mailResult = sendMail($email_to, $email_subject, $email_message, $email);
+	return $mailResult && $result->isComplete();
 }
 
 function sendPopupDemoContactForm($name, $email, $phone, $companyname, $message) {
-    $query = 'insert into resosite.cf_popup (user_name, email, phone, company_name,  message) values ("' . $name . '", 
+	$conf = getConfig()["forms"]["popupdemo"];
+
+    $query = 'insert into ' . $conf["table"] . ' (user_name, email, phone, company_name,  message) values ("' . $name . '", 
     "' . $email . '", "' . $phone . '", "' . $companyname . '", "' . $message . '")'; //MUST add escape
     
     $result = sendViaBigQuery($query);
 
 	//email
 
-	$email_to = " Dollhouse_demo@resonai.com";
-	$email_subject = "Resonai - Contact Form";
+	$email_to = $conf["email"];
+	$email_subject = $conf["subject"];
 	$email_message = "Name: ".($name)."\n";
 	$email_message .= "Email: ".($email)."\n";
 	$email_message .= "Phone: ".($phone)."\n";
@@ -95,33 +92,28 @@ function sendPopupDemoContactForm($name, $email, $phone, $companyname, $message)
 	$email_message .= "Message: ".($message)."\n";
 
 
-	sendMail($email_to, $email_subject, $email_message, $email);
-
-    return $result;
+	$mailResult = sendMail($email_to, $email_subject, $email_message, $email);
+	return $mailResult && $result->isComplete();
 }
 
 function sendJobsContactForm($name, $email, $fileLink) {
-	$projectId = getProjectId();
-	$tblname = "resosite.cf_file";
-	if($projectId == "burnished-data-183409"){
-		$tblname = "test1.cf_file";
-	}
+	$conf = getConfig()["forms"]["jobs"];
+	$tblname = $conf["table"];
 	$query = 'insert into ' . $tblname . ' (user_name, email, filecv) values ("' . $name . '", 
 	"' . $email . '", "' . $fileLink . '")'; //MUST add escape
     
-    $result = sendViaBigQuery($query);
+	$result = sendViaBigQuery($query);
 
 	//email
 
-	$email_to = "einathazout@gmail.com";
-	$email_subject = "Resonai-Contact Form";
+	$email_to = getConfig()["forms"]["jobs"]["email"];
+	$email_subject = getConfig()["forms"]["jobs"]["subject"];
 	$email_message = "Name: ".($name)."\n";
 	$email_message .= "Email: ".($email)."\n";
 	$email_message .= "File: $fileLink\n";
 
 	$mailResult = sendMail($email_to, $email_subject, $email_message, $email);
 
-	syslog(LOG_INFO, json_encode(["mail" => $mailResult, "bigquery" => $result]));
 	return $mailResult && $result->isComplete();
 }
 ?>

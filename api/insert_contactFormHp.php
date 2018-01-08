@@ -34,7 +34,7 @@ else
 {
     try{
         $result = sendHpContactForm($form_data->user_name, $form_data->email, $form_data->company_name,  $form_data->message);
-        if($result->isComplete()){
+        if($result){
 		$data["message"] = "Thank you. We will contact you soon!";
         }
         else {
