@@ -116,8 +116,9 @@ function sendJobsContactForm($name, $email, $fileLink) {
 	$email_message .= "Email: ".($email)."\n";
 	$email_message .= "File: $fileLink\n";
 
-	sendMail($email_to, $email_subject, $email_message, $email);
+	$mailResult = sendMail($email_to, $email_subject, $email_message, $email);
 
+	echo json_encode(["mail" => $mailResult, "bigquery" => $result]);
     return $result;
 }
 ?>
