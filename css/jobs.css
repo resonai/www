@@ -165,6 +165,10 @@
 .jobs-page .has-error {
   border: solid 1px red;
 }
+.jobs-page .text-danger{
+    margin-top: -50px !important;
+    color: red !important;
+}
 
 @media screen and (max-width: 1440px) {
     .jobs-page .jobs-form{
@@ -269,6 +273,9 @@
     }
     .jobs-page .jobs-form-3-se{
         margin-top: 210px;
+    }
+    .jobs-page .text-danger{
+        margin-top: -8px !important;
     }
 }
 
