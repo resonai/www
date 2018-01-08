@@ -22,7 +22,6 @@ if(empty($_POST["email"]))
 }
 
 
-echo(__LINE__);
 $file = $_FILES["filecv"];
 $file_name = $file["name"];
 $temp_name = $file["tmp_name"];
@@ -39,13 +38,10 @@ if(substr($temp_name, 0, 2) === "gs") {
 			'Content-Type' => $file['type']
 		]
 	];
-echo(__LINE__);
 
 	$ctx = stream_context_create($options);
-echo(__LINE__);
 	$saved = file_put_contents($storeAt, file_get_contents($temp_name), 0, $ctx);
 
-echo(__LINE__);
 	//move_uploaded_file($temp_name, $storeAt);
 	$public_url = CloudStorageTools::getPublicUrl($storeAt, true);
 }
@@ -60,8 +56,6 @@ if(empty($_POST["filecv"]))
 */
 if(!empty($error))
 {
-echo(__LINE__);
-var_dump($error);
  $data["error"] = $error;
 }
 else
@@ -77,6 +71,7 @@ else
     }
     catch(Exception $e) {
         $data["error"] = "We had internal error";
+	$data["data"] = json_encode($e);
     }
 //    var_dump($result);
     
