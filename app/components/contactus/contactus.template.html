@@ -9,6 +9,7 @@
                         <div class="col-lg-4 col-sm-5 col-xs-12">
                             <h1>CONTACT US</h1>
                             <form name="userForm" novalidate ng-submit="insertData(userForm.$valid)">
+                               <label class="text-danger" ng-show="errorMessage">{{errorMessage}}</label>
                                <label class="text-success" ng-show="successInsert">{{successInsert}}</label>
                                 <div>
                                     <label for="username" >Name</label>

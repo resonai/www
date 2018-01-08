@@ -288,7 +288,7 @@
         margin-left: 19%;
         margin-top: 56px !important;
     }
-    .search-page .arrow.next, .arrow.prev {
+    .search-page .arrow.next, .search-page .arrow.prev {
         display: none;
     }
     .search-page .slider-nav{

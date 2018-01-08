@@ -137,7 +137,8 @@
                     <div ng-controller="contactFormHp" class="section-5-para col-md-5 col-sm-6 col-xs-12">
                         <h1 class="section-5-h1 section-5-h1-2">WE'D LIKE TO HEAR FROM YOU</h1>
                         <form name="userForm" novalidate ng-submit="insertData(userForm.$valid)" class="mobile-pad">
-                           <label class="text-success" ng-show="successInsert">{{successInsert}}</label>
+                            <label class="text-danger" ng-show="errorMessage">{{errorMessage}}</label>
+                            <label class="text-success" ng-show="successInsert">{{successInsert}}</label>
                             <div>
                                 <label for="username" >Name</label>
                                 <input type="text" name="userName" ng-model="insert.user_name" class="form-control" ng-class="{ 
@@ -162,7 +163,7 @@
                                 <textarea name="message" ng-model="insert.message" class="form-control" cols="30" rows="6" ng-class="{ 
                                 'has-error' : userForm.message.$invalid && userForm.$submitted && userForm.message.$pristine }"     
                                 required></textarea>
-                                <span class="text-danger" ng-show="errorMessage">{{errorMessage}}</span>
+                                <!--<span class="text-danger" ng-show="errorMessageF">{{errorMessageF}}</span>-->
                             </div> 
                             <input type="submit" name="insert" class="btnajs button-style button-style-sec-5" value="Send">
                         </form>   
