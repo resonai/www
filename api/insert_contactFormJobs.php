@@ -62,7 +62,7 @@ else
 {
     try{
         $result = sendJobsContactForm($_POST["user_name"], $_POST["email"], $public_url);
-        if($result->isComplete()){
+        if($result){
                 $data["message"] = "Thank you. We will contact you soon!";
         }
         else {
