@@ -97,8 +97,10 @@ function sendPopupDemoContactForm($name, $email, $phone, $companyname, $message)
 }
 
 function sendJobsContactForm($name, $email, $fileLink) {
-    $query = 'insert into resosite.cf_file (user_name, email, filecv) values ("' . $name . '", 
-    "' . $email . '", "' . $fileLink . '")'; //MUST add escape
+	$tblname = "resosite.cf_file";
+	$tblname = "test1.cf_file";
+	$query = 'insert into ' . $tblname . ' (user_name, email, filecv) values ("' . $name . '", 
+	"' . $email . '", "' . $fileLink . '")'; //MUST add escape
     
     $result = sendViaBigQuery($query);
 
