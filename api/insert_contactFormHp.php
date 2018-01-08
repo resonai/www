@@ -42,7 +42,8 @@ else
         }
     }
     catch(Exception $e) {
-        $data["error"] = "We had internal error";
+	syslog(LOG_WARNING, $e->getMessage());
+	$data["error"] = "We had internal error";
     }
 //    var_dump($result);
     
