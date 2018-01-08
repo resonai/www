@@ -17,7 +17,7 @@ function getAppName(){
 function getConfig() {
 	$result = [];
 	$app = getAppName();
-	$isDev = $app != "burnished-data-183409";
+	$isDev = $app == "burnished-data-183409";
 	$result["projectId"] = getProjectId();
 	$result["bucketName"] = CloudStorageTools::getDefaultGoogleStorageBucketName();
 	$result["emailSender"] = "noreply@" . getAppName() . ".appspotmail.com";
@@ -29,24 +29,24 @@ function getConfig() {
 			"table" => $isDev ? "test1.cf_file" : "resosite.cf_file"
 		],
 		"popupdemo" => [
-			"email" => "Dollhouse_demo@resonai.com",
-			"subject" => "Resonai-Contact Form",
-			"table" => "resosite.cf_popup"
+			"email" => $isDev ? "aryeklt+popupdemo@gmail.com" : "Dollhouse_demo@resonai.com",
+			"subject" => "Resonai-Contact Form - popup demo",
+			"table" => $isDev ? "test1.cf_popupdemo" : "resosite.cf_popup"
 		],
 		"popup" => [
-			"email" =>  "joinbeta@resonai.com",
-			"subject" => "Resonai-Contact Form",
-			"table" => "resosite.cf_popup"
+			"email" =>  $isDev ? "aryeklt+beta@gmail.com" : "joinbeta@resonai.com",
+			"subject" => "Resonai-Contact Form - popup beta",
+			"table" => $isDev ? "test1.cf_popup" : "resosite.cf_popup"
 		],
 		"hp" => [
-			"email" =>  "info@resonai.com",
-			"subject" => "Resonai-Contact Form",
-			"table" => "resosite.cf_hp"
+			"email" => $isDev ? "aryeklt+info@gmail.com" : "info@resonai.com",
+			"subject" => "Resonai-Contact Form - homepage",
+			"table" => $isDev ? "test1.cf_hp" : "resosite.cf_hp"
 		],
 		"contact" => [
-			"email" =>  "info@resonai.com",
-			"subject" => "Resonai-Contact Form",
-			"table" => "resosite.cf"
+			"email" => $isDev ? "aryeklt+info-contact@gmail.com" : "info@resonai.com",
+			"subject" => "Resonai-Contact Form - contact",
+			"table" => $isDev ? "test1.cf" : "resosite.cf"
 		]
 	];
 	return $result;
