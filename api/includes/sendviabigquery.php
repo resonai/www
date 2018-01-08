@@ -10,6 +10,8 @@ function sendViaBigQuery($query)
     # Your Google Cloud Platform project ID
     //$projectId = 'burnished-data-183409';
     $projectId = AppIdentityService::getServiceAccountName();
+    $parts = explode("@", $projectId);
+    $projectId=$parts[0];
     echo $projectId;
 
     # Instantiates a client
