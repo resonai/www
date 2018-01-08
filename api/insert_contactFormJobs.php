@@ -22,8 +22,7 @@ if(empty($_POST["email"]))
 }
 
 
-
-log_error("Before file things");
+echo(__LINE__);
 $file = $_FILES["filecv"];
 $file_name = $file["name"];
 $temp_name = $file["tmp_name"];
@@ -40,12 +39,13 @@ if(substr($temp_name, 0, 2) === "gs") {
 			'Content-Type' => $file['type']
 		]
 	];
-	log_error("After set options array");
+echo(__LINE__);
 
 	$ctx = stream_context_create($options);
-	log_error("Context created");
+echo(__LINE__);
 	$saved = file_put_contents($storeAt, file_get_contents($temp_name), 0, $ctx);
 
+echo(__LINE__);
 	//move_uploaded_file($temp_name, $storeAt);
 	$public_url = CloudStorageTools::getPublicUrl($storeAt, true);
 }
@@ -60,8 +60,9 @@ if(empty($_POST["filecv"]))
 */
 if(!empty($error))
 {
-	log_error($error);
-	$data["error"] = $error;
+echo(__LINE__);
+var_dump($error);
+ $data["error"] = $error;
 }
 else
 {
