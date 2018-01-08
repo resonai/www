@@ -9,15 +9,16 @@ function sendViaBigQuery($query)
 {
     # Your Google Cloud Platform project ID
     //$projectId = 'burnished-data-183409';
+
+	//Get the service account name
     $projectId = AppIdentityService::getServiceAccountName();
+    	//Take the user part of the email, it is the project id
     $parts = explode("@", $projectId);
     $projectId=$parts[0];
-    echo $projectId;
 
     # Instantiates a client
     $bigquery = new BigQueryClient([
-        'projectId' => $projectId,
-#        'keyFilePath' => __DIR__ . '/../../key.json'
+        'projectId' => $projectId
     ]);
     # [START run_query]
     
