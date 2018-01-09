@@ -115,11 +115,11 @@ header.header{
 }
 .navbar-nav>li>.dropdown-menu{
     margin-top: 35px;
-    left: -40px;
+    left: -62px;
 }
 .dropdown-menu{
     background-color: #000000;
-    width: 200px;
+    width: 241px;
     height: 164px;
 }
 .dropdown-menu>li>a{
@@ -525,6 +525,7 @@ label{
     }
     .section-4-para-1-search{
         margin-top: 420px;
+        width: 521px;
     }
 }
 
@@ -534,7 +535,7 @@ label{
         font-size: 14.8px;
     }
     .navbar-nav>li>.dropdown-menu{
-        left: -55px;
+        left: -78px;
     }
     .section-2-h1{
         width: 116%;
@@ -555,6 +556,7 @@ label{
     }
     .section-4-para-1-search{
         margin-top: 390px;
+        width: 450px;
     }
     .section-4-para-2{
         margin-top: 310px;
@@ -592,6 +594,7 @@ label{
     }
     .section-4-para-1-search{
         margin-top: 350px;
+        width: 390px;
     }
     .section-4-para-2{
         margin-top: 265px;
@@ -781,6 +784,9 @@ label{
     .section-4-video-3{
         top: 69%;
     }
+    .section-4-para-1-search{
+        margin-left: -35px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -879,7 +885,7 @@ label{
     }
     .section-1-h1{
         font-size: 30px;
-        width: 270px;
+        width: 384px;
     }
     .section-1-p{
         font-size: 14px; 
@@ -1005,6 +1011,8 @@ label{
     }
     .section-4-para-1-search{
         margin-top: 350px;
+        margin-left: 0;
+        width: auto;
     }
     .section-4-img-1{
         display: block;
@@ -1127,6 +1135,9 @@ label{
 }
 
 @media screen and (max-width: 460px) {
+    .section-1-h1{
+        width: 290px;
+    }
     .section-4-img-2{
         top: -49rem !important;
         margin-bottom: -217px;

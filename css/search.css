@@ -17,7 +17,7 @@
     right: 0px; 
 }
 .search-page h1{
-    width: 365px;
+    width: 545px;
     height: 55px;
     margin-top: 0;
     color: #00c7df;
@@ -100,7 +100,7 @@
 
 @media screen and (max-width: 1920px) {
     .search-page .row-padding{
-        padding: 81px;
+        padding-bottom: 81px;
     }
     .search-page .search-text{
         width: 100%;
@@ -121,6 +121,10 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .search-page h1{
+        width: 510px;
+        line-height: 1.45;
+    }
     .search-page .link-section{
         margin-bottom: 0;
     }
