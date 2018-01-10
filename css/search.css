@@ -132,15 +132,16 @@
         width: 58%;
     }
     .search-page .slider {
-        padding: 190px 0 !important;
+        padding: 174px 0 !important;
         background-size: contain;
     }
     .search-page .slider-nav{
         bottom: 96px !important;
     }
     .search-page .slide{
-        width: 73%;
-        margin-left: 13.5%;
+        margin-left: 11%;
+        height: 435px !important;
+        width: 677px !important;
     }
     .search-page .arrow {
         margin-top: -230px !important;
@@ -206,8 +207,9 @@
         width: 650px;
     }
     .search-page .slide{
-        width: 75%;
-        margin-left: 12.5%;
+        width: 465px !important;
+        height: 300px !important;
+        margin-left: 14%;
         margin-top: -24px !important;
     }
     .search-page .arrow{
@@ -288,7 +290,8 @@
         width: 320px;
     }
     .search-page .slide{
-        width: 196px;
+        width: 200px !important;
+        height: 126px !important;
         margin-left: 19%;
         margin-top: 56px !important;
     }

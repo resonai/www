@@ -147,16 +147,15 @@ header.header{
     width: 100%;
     margin: 0;
     padding: 0;
-    min-height: 1200px;
+    min-height: 1054px;
 }
 .section-1-para{
-    margin-top: 296px;
+    margin-top: 371px;
 }
 .section-1-h1{
-    font-size: 90px;
-    line-height: 1.09;
+    font-size: 72px;
+    line-height: 1.36;
     color: #00c7df;
-    width: 498px;
 }
 .section-1-p{
     font-size: 18px;
@@ -885,7 +884,6 @@ label{
     }
     .section-1-h1{
         font-size: 30px;
-        width: 384px;
     }
     .section-1-p{
         font-size: 14px; 
@@ -1135,9 +1133,6 @@ label{
 }
 
 @media screen and (max-width: 460px) {
-    .section-1-h1{
-        width: 290px;
-    }
     .section-4-img-2{
         top: -49rem !important;
         margin-bottom: -217px;

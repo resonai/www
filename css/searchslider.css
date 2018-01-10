@@ -9,6 +9,8 @@
 
 .search-page .slide {
     margin-top: 5px;
+    height: 560px;
+    width: 866px;
 }
 .search-page .arrow-nav{
     position: relative;

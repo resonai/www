@@ -219,9 +219,9 @@ app.controller('dollhouse', ['$scope', function($scope) {
 
     app.controller('search', function ($scope) {
         $scope.slides = [
-            {image: 'images/search/scanned_object.png', description: 'Image 00'},
-            {image: 'images/search/sketched_object.png', description: 'Image 01'},
-            {image: 'images/search/CAD model.png', description: 'Image 02'}
+            {image: 'images/search/New_Screens_10Jan18_V1-no-laptop.jpg', description: 'Image 00'},
+            {image: 'images/search/New_Screens_10Jan18_V2-no-laptop.jpg', description: 'Image 01'},
+            {image: 'images/search/New_Screens_10Jan18_V3-no-laptop.jpg', description: 'Image 02'}
         ];
 
         $scope.direction = 'left';
