@@ -330,11 +330,11 @@ app.controller('dollhouse', ['$scope', function($scope) {
 
     app.controller('search4unity', function ($scope) {
         $scope.slides = [
-            {image: 'images/Search4unity/chair.jpg', description: 'Image 00'},
-            {image: 'images/Search4unity/Hammer.jpg', description: 'Image 01'},
-            {image: 'images/Search4unity/Rock.jpg', description: 'Image 02'},
-            {image: 'images/Search4unity/Monster.jpg', description: 'Image 03'},
-            {image: 'images/Search4unity/Ninja.jpg', description: 'Image 04'}
+            {image: 'images/Search4unity/Chair_texture_2.jpg', description: 'Image 00'},
+            {image: 'images/Search4unity/Hammer_texture.jpg', description: 'Image 01'},
+            {image: 'images/Search4unity/Rock_texture.jpg', description: 'Image 02'},
+            {image: 'images/Search4unity/Monster_texture_2.jpg', description: 'Image 03'},
+            {image: 'images/Search4unity/Asset_store_1.jpg', description: 'Image 04'}
         ];
 
         $scope.direction = 'left';

@@ -1,5 +1,5 @@
 .search4unity-page .slider {
-    background-image: url(../images/Search4unity/MacBook_Pro.png);
+    background-image: url(../images/Search4unity/Gaming_Laptop_V2-lowres.png);
     background-repeat: no-repeat;
     min-height: 830px;
     background-position: center center;
@@ -8,9 +8,9 @@
 }
 
 .search4unity-page .slide {
-    margin-top: 40px;
-    margin-left: -3.5%;
-    width: 107%;
+    margin-top: 65px;
+    margin-left: 12.5%;
+    width: 75%;
 }
 
 .search4unity-page .arrow-nav{
@@ -19,7 +19,7 @@
 .search4unity-page .arrow {
     z-index: 1002;
     display: block;
-    margin-top: -290px;
+    margin-top: -190px;
     width: 36px;
     height: 71px;
     outline: none;

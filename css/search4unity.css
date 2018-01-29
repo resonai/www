@@ -162,13 +162,13 @@
         width: 550px;
     }
     .search4unity-page .slide{
-        width: 408px !important;
-        margin-left: 72px !important;
-        margin-top: -82px !important;
+        width: 287px !important;
+        margin-left: 132px !important;
+        margin-top: -73px !important;
         position: absolute;
     }
     .search4unity-page .arrow{
-        margin-top: 28px !important;
+        margin-top: 0px !important;
     }
     .search4unity-page .arrow.prev {
         height: 30px;
@@ -314,9 +314,9 @@
         width: 264px;
     }
     .search4unity-page .slide{
-        width: 243px !important;
-        margin-left: 10px !important;
-        margin-top: 27px !important;
+        width: 168px !important;
+        margin-left: 48px !important;
+        margin-top: 32px !important;
     }
     .search4unity-page .arrow.next, .search4unity-page .arrow.prev {
         display: none;
