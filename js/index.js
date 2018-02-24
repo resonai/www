@@ -425,6 +425,7 @@ app.controller("contactFormContactus", function($scope, $http){
 			$scope.errorCompanyname = error.company_name;
 			$scope.errorEmail = error.email;
 			$scope.errorPhone = error.phone;
+            $scope.errorMessage = error.message;
 			$scope.successInsert = null;
 		},
 		function showSuccess(message) {
@@ -433,6 +434,7 @@ app.controller("contactFormContactus", function($scope, $http){
 			$scope.errorCompanyname = null;
 			$scope.errorEmail = null;
 			$scope.errorPhone = null;
+            $scope.errorMessage = null;
 			$scope.successInsert = message;
 		})
  };

@@ -11,10 +11,10 @@ function sendMail($to, $subject, $message, $replyto) {
 	return mail($to, $subject, $message, $headers);
 }
 
-function sendContactForm($name, $companyname, $email, $phone) {
+function sendContactForm($name, $companyname, $email, $phone, $message) {
 	$conf = getConfig()["forms"]["contact"];
-	$query = 'insert into ' . $conf["table"] . ' (user_name, company_name, email, phone) values ("' . $name . '", "' . $companyname . '", 
-    "' . $email . '", "' . $phone . '")'; //MUST add escape
+	$query = 'insert into ' . $conf["table"] . ' (user_name, company_name, email, phone, message) values ("' . $name . '", 
+    "' . $companyname . '", "' . $email . '", "' . $phone . '", , "' . $message . '")'; //MUST add escape
 
 	$result = sendViaBigQuery($query);
 	//email
@@ -25,6 +25,7 @@ function sendContactForm($name, $companyname, $email, $phone) {
 	$email_message .= "Company Name: ".($companyname)."\n";
 	$email_message .= "Email: ".($email)."\n";
 	$email_message .= "Phone: ".($phone)."\n";
+    $email_message .= "Message: ".($message)."\n";
 
 	$mailResult = sendMail($sendTo, $email_subject, $email_message, $email);
 	return $mailResult && $result->isComplete();
