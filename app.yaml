@@ -1,3 +1,6 @@
+# Test deploy: gcloud app deploy --version test --no-promote
+# Prod deploy: gcloud app deploy --version www
+
 runtime: php55
 api_version: 1
 
