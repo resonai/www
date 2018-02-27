@@ -14,7 +14,7 @@ function sendMail($to, $subject, $message, $replyto) {
 function sendContactForm($name, $companyname, $email, $phone, $message) {
 	$conf = getConfig()["forms"]["contact"];
 	$query = 'insert into ' . $conf["table"] . ' (user_name, company_name, email, phone, message) values ("' . $name . '", 
-    "' . $companyname . '", "' . $email . '", "' . $phone . '", , "' . $message . '")'; //MUST add escape
+    "' . $companyname . '", "' . $email . '", "' . $phone . '", "' . $message . '")'; //MUST add escape
 
 	$result = sendViaBigQuery($query);
 	//email
