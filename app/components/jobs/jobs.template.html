@@ -23,17 +23,20 @@
                         </p>
                     </section>
                     <div ng-controller="jobs">
-                    <section class="sec-2 col-sm-6 col-xs-12" ng-hide="showSec1 || showSec2 || showSec3">
+                    <section class="sec-2 col-sm-6 col-xs-12" ng-hide="showSec1 || showSec2 || showSec3 || showSec4">
                         <h1 class="h1-right-para">OPEN POSITIONS</h1>
                         <div >
                         <button class="positions-style math-position-link line col-xs-12" ng-click="showSec1=true; showSec2=false;
-                        showSec3=false; hideMe()" >Mathematician <span class="position-etc"><img src="images/jobs/arrow.svg"></span>
+                        showSec3=false; showSec4=false; hideMe()" >Mathematician <span class="position-etc"><img src="images/jobs/arrow.svg"></span>
                         </button>
                         <button class="positions-style line col-xs-12" ng-click="showSec2=true; showSec1=false; showSec3=false;
-                        hideMe()">Software developer <span class="position-etc"><img
+                        showSec4=false; hideMe()">Software developer <span class="position-etc"><img
                         src="images/jobs/arrow.svg"></span></button>
                         <button class="positions-style line col-xs-12" ng-click="showSec3=true; showSec1=false; showSec2=false;
-                        hideMe()"> Sales Engineer <span class="position-etc"><img
+                        showSec4=false; hideMe()"> Sales Engineer <span class="position-etc"><img
+                        src="images/jobs/arrow.svg"></span></button>
+                        <button class="positions-style line col-xs-12" ng-click="showSec4=true; showSec1=false; showSec2=false;
+                        showSec3=false; hideMe()"> Full Stack Graphic Designer <span class="position-etc"><img 
                         src="images/jobs/arrow.svg"></span></button>
                         </div>
                     </section>
@@ -75,6 +78,21 @@
 				            <jobsform />
                         </div>
                         <button class="positions-back-style" ng-click="showSec3=false">Back to open positions</button>
+                    </section>
+                    <section class="sec-3 col-sm-6 col-xs-12" ng-show="showSec4">
+                        <h1 class="h1-right-para"> FULL STACK GRAPHIC DESIGNER</h1>
+                        <p class="h1-right-para right-para-text ">We are looking for an experienced full stack graphic designer 
+                        to join our team and lead everything creative. The position includes working on a variety of products 
+                        and projects, including mobile and web applications, UI/UX, websites and landing pages, product branding, 
+                        identity and logos, conferences (swag, booths), marketing presentations, demo videos and everything in between. 
+                        The position includes daily collaboration and hand in hand work with product management, 
+                        business development and software development.
+                        </p>
+                        <div class="jobs-form jobs-form-4-se">
+				            <h2>Apply now</h2>
+				            <jobsform />
+                        </div>
+                        <button class="positions-back-style" ng-click="showSec4=false">Back to open positions</button>
                     </section>
                     </div>
                     <section class="sec-1 mobile-sec-1 col-xs-12">
