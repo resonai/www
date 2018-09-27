@@ -136,6 +136,9 @@
         height: 19px;
         font-size: 14px;
     }
+    .contact-us-page form{
+        height: 630px;
+    }
     .contact-us-page .form-control{
         width: 100%;
     }

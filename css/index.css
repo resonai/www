@@ -487,6 +487,12 @@ label{
     color: red;
     font-size: 16px;
 }
+.ng-submitted.ng-invalid.ng-dirty .cf-field-div{
+    display: none;
+}
+.ng-submitted.ng-invalid.ng-dirty.ng-valid-parse .cf-field-div{
+    display: block;
+}
 
 @media screen and (max-width: 1920px) {
     .section-4-container{

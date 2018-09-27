@@ -1,8 +1,9 @@
-# Test deploy: gcloud app deploy --version test --no-promote
-# Prod deploy: gcloud app deploy --version www
-
 runtime: php55
 api_version: 1
+
+# TODO(shai): seperate upload and this to different services.
+# the following line is copied from yapi/upload/app.yaml so they won't override each other.
+instance_class: F4_1G
 
 handlers:
 # Serve images as static resources.

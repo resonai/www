@@ -52,7 +52,8 @@
     color: white;
 }
 .jobs-page .right-para-text{
-    height: 140px;
+    height: 10vw;
+    overflow-y: scroll;
 }
 .jobs-page .positions-style{
     height: 24px;
@@ -85,7 +86,7 @@
     margin-top: 38px;
 }
 .jobs-page .jobs-form-3-se{
-    margin-top: 100px;
+    margin-top: 3vw;
 }
 .jobs-page .form-control{
     background-color: transparent;
@@ -176,22 +177,34 @@
     margin-left: 10%;
 }
 
+@media screen and (max-width: 1920px) {
+    .jobs-page .right-para-text{
+        height: 12vw;
+    }
+}
+
 @media screen and (max-width: 1440px) {
+    .jobs-page .right-para-text{
+        height: 16vw;
+    }
     .jobs-page .jobs-form{
         width: 83%;
         margin-top: 92px;
     }
     .jobs-page .jobs-form-3-se{
-        margin-top: 120px;
+        margin-top: 3vw;
     }
 }
 
 @media screen and (max-width: 1200px) {
+    .jobs-page .right-para-text{
+        height: 20vw;
+    }
     .jobs-page .jobs-form{
         margin-top: 110px;
     }
     .jobs-page .jobs-form-3-se{
-        margin-top: 145px;
+        margin-top: 3vw;
     }
 }
 
@@ -224,12 +237,15 @@
     .jobs-page .h1-right-para{
         width: 100%;
     }
+    .jobs-page .right-para-text{
+        margin-top: 4vw;
+    }
     .jobs-page .jobs-form{
         height: 390px;
         width: 84%;
     }
     .jobs-page .jobs-form-3-se{
-        margin-top: 130px;
+        margin-top: 3vw;
     }
     .jobs-page h2{
         font-size: 24px;
@@ -278,11 +294,15 @@
     .jobs-page{
         min-height: 1000px;
     }
+    .jobs-page .right-para-text{
+        height: 24vw;
+        margin-top: 4vw;
+    }
     .jobs-page .jobs-form{
         margin-top: 165px;
     }
     .jobs-page .jobs-form-3-se{
-        margin-top: 210px;
+        margin-top: 3vw;
     }
     .jobs-page .text-danger{
         margin-top: -8px !important;
@@ -354,7 +374,7 @@
         width: 88%;
     }
     .jobs-page .jobs-form-3-se{
-        margin-top: 120px;
+        margin-top: 3vw;
     }
     .jobs-page section> p{
         font-size: 14px;
@@ -385,4 +405,21 @@
     .jobs-page .text-success{
         margin-top: -21px !important;
     }
+    .jobs-page .right-para-text{
+        height: 20vw;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .jobs-page .right-para-text{
+            height: 25vw;
+        }
+}
+
+@media screen and (max-width: 425px) {
+    .jobs-page .right-para-text{
+            height: 70vw;
+            margin-top: 20vw;
+        }
 }

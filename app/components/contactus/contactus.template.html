@@ -11,7 +11,7 @@
                             <form name="userForm" novalidate ng-submit="insertData(userForm.$valid)">
                                <label class="text-danger" ng-show="errorMessage">{{errorMessage}}</label>
                                <label class="text-success" ng-show="successInsert">{{successInsert}}</label>
-                                <div>
+                                <div class="cf-field-div">
                                     <label for="username" >Name</label>
                                     <input type="text" name="userName" ng-model="insert.user_name" class="form-control" ng-class="{  
                                     'has-error': userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }" 
@@ -21,7 +21,7 @@
                                         <span ng-show="userForm.userName.$error.required">Name is required.</span>
                                     </span>
                                 </div> 
-                                <div>
+                                <div class="cf-field-div">
                                     <label for="companyName">Company name</label>
                                     <input type="text" name="companyName" ng-model="insert.company_name" class="form-control" 
                                     ng-class="{'has-error' : userForm.companyName.$invalid && userForm.$submitted && 
@@ -31,7 +31,7 @@
                                         <span ng-show="userForm.companyName.$error.required">Company name is required.</span>
                                     </span>
                                 </div> 
-                                <div>
+                                <div class="cf-field-div">
                                     <label for="email">Email</label>
                                     <input type="email" name="email" ng-model="insert.email" class="form-control" ng-class="{ 
                                     'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
@@ -41,20 +41,19 @@
                                         <span ng-show="userForm.email.$error.email">Invalid email address.</span>
                                     </span>
                                 </div> 
-                                <div>
+                                <div class="cf-field-div">
                                     <label for="phone">Phone</label>
-                                    <input type="number" name="phone" ng-model="insert.phone" ng-minlength="10" 
-                                    ng-maxlength="10" class="form-control" ng-class="{ 
+                                    <input type="number" name="phone" ng-model="insert.phone" class="form-control" ng-class="{ 
                                     'has-error' : userForm.phone.$invalid && userForm.$submitted && userForm.phone.$pristine }" required>
                                     <!--<span class="text-danger" ng-show="errorPhone">{{errorPhone}}</span>-->
                                     <span class="valid-text" ng-show="userForm.phone.$dirty && userForm.phone.$invalid">
                                         <span ng-show="userForm.phone.$error.required">Phone is required.</span>
                                         <span ng-show="userForm.phone.$error.number">Valid phone number is required.</span>
-                                        <span ng-show="userForm.phone.$error.minlength">Phone no not less that 10 char.</span>
-                                        <span ng-show="userForm.phone.$error.maxlength">Phone no not more than 10 char.</span>
+                                        <!--<span ng-show="userForm.phone.$error.minlength">Phone no not less that 10 char.</span>
+                                        <span ng-show="userForm.phone.$error.maxlength">Phone no not more than 10 char.</span>-->
                                     </span>
                                 </div> 
-                                <div>
+                                <div class="cf-field-div">
                                     <label for="message">Message</label>
                                     <textarea name="message" ng-model="insert.message" class="form-control form-control-textarea" 
                                     cols="30" rows="4" ng-class="{ 
@@ -65,7 +64,7 @@
                                         <span ng-show="userForm.message.$error.required">Message is required.</span>
                                     </span>
                                 </div>   
-                                <input type="submit" name="insert" class="button-style" value="Send">
+                                <input type="submit" name="insert" class="button-style cf-field-div" value="Send">
                             </form>      
                         </div>  
                     </div>  
