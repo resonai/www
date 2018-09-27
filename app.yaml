@@ -10,21 +10,33 @@ handlers:
   static_files: \1
   upload: .+\.(gif|png|jpg)$
   application_readable: true
+  secure: always
 
 - url: /$
   script: index.php
+  secure: always
 
 # Serve php scripts.
 - url: /(.+\.php)$
   script: \1
+  secure: always
 
 - url: /asset
-  static_dir: asset 
+  static_dir: asset
+  secure: always
+
 - url: /images
-  static_dir: images 
+  static_dir: images
+  secure: always
+
 - url: /js
-  static_dir: js 
+  static_dir: js
+  secure: always
+
 - url: /app
-  static_dir: app 
+  static_dir: app
+  secure: always
+
 - url: /css
-  static_dir: css 
+  static_dir: css
+  secure: always
