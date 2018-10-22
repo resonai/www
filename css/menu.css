@@ -1,3 +1,4 @@
+/*
 .other-menu header{
     position: fixed;
     width: 100%;
@@ -166,9 +167,9 @@
     .other-menu .navbar-nav>li>a{
         height: 24px;
     }
-    .other-menu .navbar-default .navbar-nav>li>a, .other-menu .navbar-default .navbar-nav>li>a:hover, .other-menu .navbar-default .navbar-nav>li>a:active, 
+    .other-menu .navbar-default .navbar-nav>li>a, .other-menu .navbar-default .navbar-nav>li>a:hover, .other-menu .navbar-default .navbar-nav>li>a:active,
     .other-menu .navbar-default .navbar-nav>li>a:visited, .other-menu .navbar-default .navbar-nav>li>a:focus{
         padding: 0;
         text-align: center;
     }
-}
+}*/

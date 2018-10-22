@@ -4,9 +4,12 @@
         <title>Resonai</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+
         <!-- CSS (load bootstrap) -->
-        <script src="js/jquery-3.2.1.min.js"></script> 
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/bootstrap.min.js"></script>
         
@@ -31,21 +34,21 @@
         <script src="js/index.js"></script>
         
         <!-- style css -->
-        <link rel="stylesheet" href="css/fontAwesome/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/fontAwesome/css/all.min.css"/>
         <link rel="stylesheet" href="css/ngDialog.min.css"/>
         <link rel="stylesheet" href="css/ngDialog-theme-default.min.css"/>
         <link type="text/css" rel="stylesheet" href="css/index.css">
-        <link type="text/css" rel="stylesheet" href="css/menu.css">
-        <link type="text/css" rel="stylesheet" href="css/footer.css">
-        <link type="text/css" rel="stylesheet" href="css/dollhouse.css">
-        <link rel="stylesheet" type="text/css" href="css/dollhouseslider.css" />
-        <link rel="stylesheet" type="text/css" href="css/revealer.css"/>
-        <link type="text/css" rel="stylesheet" href="css/search.css">
-        <link rel="stylesheet" href="css/searchslider.css">
-        <link type="text/css" rel="stylesheet" href="css/search4unity.css">
-        <link rel="stylesheet" href="css/sliderunity.css">
-        <link type="text/css" rel="stylesheet" href="css/contactUs.css">
-        <link type="text/css" rel="stylesheet" href="css/jobs.css">
+<!--        <link type="text/css" rel="stylesheet" href="css/menu.css">-->
+<!--        <link type="text/css" rel="stylesheet" href="css/footer.css">-->
+<!--        <link type="text/css" rel="stylesheet" href="css/dollhouse.css">-->
+<!--        <link rel="stylesheet" type="text/css" href="css/dollhouseslider.css" />-->
+<!--        <link rel="stylesheet" type="text/css" href="css/revealer.css"/>-->
+<!--        <link type="text/css" rel="stylesheet" href="css/search.css">-->
+<!--        <link rel="stylesheet" href="css/searchslider.css">-->
+<!--        <link type="text/css" rel="stylesheet" href="css/search4unity.css">-->
+<!--        <link rel="stylesheet" href="css/sliderunity.css">-->
+<!--        <link type="text/css" rel="stylesheet" href="css/contactUs.css">-->
+<!--        <link type="text/css" rel="stylesheet" href="css/jobs.css">-->
         
     </head>
     <body scroll ng-class="{sticky:boolChangeClass}">

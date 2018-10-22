@@ -1,0 +1,213 @@
+@import 'animations';
+
+$colorPrimary: #00717B;
+$colorPrimaryDark: #032225;
+$colorPrimaryLight: #00A8BA;
+$colorAccent1: #627CFF;
+$colorAccent2: #AA8ADB;
+
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.bg-light-o-80 {
+  background-color: rgba(255,255,255, 0.8);
+}
+
+.h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+a,
+a:hover {
+  color: $colorAccent1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.panel {
+  p {
+    font-size: 1.25rem;
+    font-weight: 900;
+    span {
+      display: block;
+      font-size: rem(15);
+      font-weight: 400;
+    }
+  }
+}
+
+.img-overlay {
+  top: 0;
+  left: auto;
+  right: auto;
+}
+
+#discover {
+  background-color: rgba(0, 168, 187, 0.3567);
+}
+
+#how {
+  background-color: $colorPrimaryDark;
+  color: #FFF;
+  .steps {
+    position: relative;
+  }
+  .panel {
+    .describer i {
+      position: absolute;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 300;
+      left: -20px;
+      top: 10px;
+      font-size: 1.3em;
+      opacity: 0.5;
+      span {
+        position: absolute;
+        left: 7px;
+        font-size: 14px;
+        top: 3px;
+      }
+    }
+    p {
+      opacity: 0.5;
+      span {
+        opacity: 0;
+        height: 0;
+        transition: all 500ms;
+      }
+    }
+    &.active {
+      p {
+        opacity: 1.0;
+        span {
+          opacity: 1.0;
+          height: initial;
+        }
+      }
+      i {
+        opacity: 1.0;
+      }
+      .sample {
+        top: 0;
+        opacity: 1.0;
+        visibility: visible;
+      }
+    }
+    .sample {
+      position: absolute;
+      opacity: 0.0;
+      visibility: hidden;
+      transition: all 500ms;
+    }
+  }
+}
+
+#ar,
+#animaker {
+  background-color: #E5F6F8;
+}
+
+#unity {
+  background-color: $colorPrimaryDark;
+  color: #FFF;
+}
+
+#animaker {
+  .h1 {
+    font-size: rem(36);
+  }
+}
+
+#prefooter {
+  color: #FFF;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#032225+50,00717b+50 */
+  background: #032225; /* Old browsers */
+  background: -moz-linear-gradient(left, #032225 50%, #00717b 50%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #032225 50%,#00717b 50%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #032225 50%,#00717b 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032225', endColorstr='#00717b',GradientType=1 ); /* IE6-9 */
+}
+
+/* ---- Bootstrap Override CSS ---- */
+
+/* ---- NavBar ---- */
+
+.navbar {
+  .nav-link {
+    position: relative;
+    color: #7f7f7f;
+    font-weight: bold;
+    transition: color 250ms;
+    &:hover {
+      &:before {
+        opacity: 1.0;
+      }
+    }
+    &.active,
+    &:active {
+      color: $colorAccent1;
+    }
+    &.active,
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      background-color: $colorAccent1;
+      width: calc(100% - 1rem);
+      height: 2px;
+      bottom: 5px;
+      opacity: 0.0;
+      transition: opacity 250ms;
+    }
+  }
+  .navbar-brand {
+    .position-absolute {
+      bottom: -5px;
+    }
+  }
+}
+
+/* ---- End NavBar ---- */
+
+/* ---- Buttons ---- */
+
+.btn {
+  border-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: $colorAccent1;
+  &:hover {
+    background-color: $colorAccent1;
+    color: #000;
+  }
+}
+
+.btn-secondary {
+  background-color: #FFF;
+  color: #000;
+  &:hover {
+    background-color: #FFF;
+    color: #000;
+  }
+}
+
+/* ---- End Buttons ---- */
+
+/* ---- End Bootstrap Override CSS ---- */

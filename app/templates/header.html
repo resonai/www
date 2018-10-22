@@ -1,45 +1,22 @@
 <header class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <nav class="navbar navbar-default mobile-bottom">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" 
-                        aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand logo-desktop" href="index.php#!/home#home" du-smooth-scroll du-scrollspy><img 
-                        alt="Resonai" src="images/logo_haeder.png"></a>
-                        <a class="navbar-brand logo-mobile" href="index.php#!/home#home" du-smooth-scroll du-scrollspy><img 
-                        alt="Resonai" src="images/logo-mobile.png"></a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.php#!/home#about" du-smooth-scroll du-scrollspy>About Resonai</a></li>
-                            <li><a href="index.php#!/home#technology" du-smooth-scroll du-scrollspy>Technology</a></li>
-                            <li class="dropdown">
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                aria-haspopup="true" aria-expanded="false">Products <i class="fa fa-caret-down" 
-                                aria-hidden="true"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a ui-sref="search4unity" class="s4u">Unity Visual Search</a></li>
-                                    <li><a ui-sref="search">Resonai Visual Search</a></li>
-                                    <li><a ui-sref="dollhouse">Resonai Dollhouse</a></li>
-                                </ul>
-                            </li>
-                            <li><a ui-sref="contactUs" class="contact-us-menu">Contact us</a></li>
-                            <li><a ui-sref="jobs" class="jobs-menu">Jobs</a></li>
-                            <li><a href="index.php#!/home#news" du-smooth-scroll du-scrollspy class="news-section">News</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </nav>
-            </div> 
-        </div> 
-    </div> 
+    <nav class="navbar navbar-expand-lg bg-light-o-80 py-2 sticky-top mobile-bottom">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <a class="navbar-brand position-relative" href="index.php#!/home#home" du-smooth-scroll du-scrollspy><img class="position-absolute" alt="Resonai" height="36" with="auto" src="images/logo_header.png"></a>
+            <!--<a class="navbar-brand logo-mobile" href="index.php#!/home#home" du-smooth-scroll du-scrollspy><img alt="Resonai" src="images/logo-mobile.png"></a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item px-4"><a class="nav-link" href="index.php#!/home#about" du-smooth-scroll du-scrollspy>iRocket for AR</a></li>
+                    <li class="nav-item px-4"><a class="nav-link" href="index.php#!/home#technology" du-smooth-scroll du-scrollspy>3D Visual Search</a></li>
+                    <li class="nav-item px-4"><a class="nav-link" href="index.php#!/home#news" du-smooth-scroll du-scrollspy>Jobs</a></li>
+                    <li class="nav-item pl-4"><a class="btn btn-primary" href="#" role="button">Request a demo</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
 </header>
             
