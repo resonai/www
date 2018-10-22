@@ -1,0 +1,9 @@
+@keyframes animation-hover {
+  0% {
+    top: -15px; }
+  50% {
+    top: 0; }
+  100% {
+    top: -15px; } }
+
+/*# sourceMappingURL=animations.css.map */
