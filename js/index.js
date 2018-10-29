@@ -1,5 +1,5 @@
-var app = angular.module('mainApp', ['revealer','ngDialog', 'ngTouch', 'duScroll','ui.router','app.homepage', 'app.contactus', 
-'app.jobs','app.dollhouse','app.search', 'app.search4unity' ]);
+var app = angular.module('mainApp', ['revealer','ngDialog', 'ngTouch', 'duScroll','ui.router','app.homepage', 'app.contactus',
+'app.jobs','app.dollhouse','app.search', 'app.search4unity']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     
@@ -46,6 +46,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 // HOME PAGE ========================================
+
+app.controller('app.homepage', function($scope){
+    $scope.howPanel = 0;
+});
 
  app.controller('smoothScroll', function($scope, $document){
     $scope.toTheTop = function() {
@@ -165,32 +169,6 @@ function handleFormResult(data, showGenericError, showErrorFunc, showSuccessFunc
    }
 
 }
-//home page contact form- section 5
-app.controller("contactFormHp", function($scope, $http){
- $scope.insert = {};
- $scope.insertData = function(isValid){
-	if(!isValid) return false;
-	formRequest($http, "api/insert_contactFormHp.php", $scope.insert, 
-		function showGenericError(error) {
-			$scope.errorMessage = error;
-		},
-		function showError(error) {
-			$scope.errorUsername = error.user_name;
-			$scope.errorCompanyname = error.company_name;
-			$scope.errorEmail = error.email;
-			$scope.errorMessage = error.message;
-			$scope.successInsert = null;
-		},
-		function showSuccess(message) {
-			$scope.insert = null;
-			$scope.errorUsername = null;
-			$scope.errorCompanyname = null;
-			$scope.errorEmail = null;
-			$scope.errorMessage = null;
-			$scope.successInsert = message;
-		})
- }
-});
 
 // JOBS PAGE =================================
 

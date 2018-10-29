@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.328 12.84">
+  <g id="Icon_Close" data-name="Icon/Close" transform="translate(-6.336 -5.35)">
+    <g id="Group" transform="translate(6 5)">
+      <path id="Path" d="M-.772.981A.865.865,0,0,1,0,1.764a.609.609,0,0,1-.665.677l-13.272-.979a.865.865,0,0,1-.77-.783A.609.609,0,0,1-14.044,0Z" transform="translate(9.792 0.35) rotate(-50)"/>
+      <path id="Path-2" data-name="Path" d="M.772.981A.865.865,0,0,0,0,1.764a.609.609,0,0,0,.665.677l13.272-.979a.865.865,0,0,0,.77-.783A.609.609,0,0,0,14.044,0Z" transform="translate(2.208 0.35) rotate(50)"/>
+    </g>
+  </g>
+</svg>
