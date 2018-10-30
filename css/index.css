@@ -71,8 +71,18 @@ a:hover {
     font-size: 0.9375rem;
     font-weight: 400; }
 
+.header {
+  z-index: 9; }
+
+#discover-new-realities .top-0 {
+  top: 0; }
+
 #visual-search {
-  background-color: #80b0ad; }
+  background-color: #80b0ad;
+  background-image: url("../images/Resonai_Web_VisualSearch_Background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
   #visual-search .h3 {
     color: #4a5150; }
   #visual-search .headline-panel {
@@ -218,6 +228,8 @@ a:hover {
 
 footer {
   background-color: #d9e4e5; }
+  footer .social {
+    opacity: 0.5; }
 
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */

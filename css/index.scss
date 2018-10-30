@@ -55,9 +55,24 @@ a:hover {
     }
   }
 }
+.header {
+  z-index: 9;
+}
+
+#discover-new-realities {
+  .top-0 {
+    top: 0;
+  }
+  //background-image: url("../images/Resonai_Hero_R2_full-size.jpg");
+  //background-repeat: no-repeat;
+}
 
 #visual-search {
   background-color: #80b0ad;
+  background-image: url("../images/Resonai_Web_VisualSearch_Background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   .h3 {
     color: #4a5150;
   }
@@ -246,6 +261,9 @@ a:hover {
 
 footer {
   background-color: #d9e4e5;
+  .social {
+    opacity: 0.5;
+  }
 }
 
 /* ---- Bootstrap Override CSS ---- */
