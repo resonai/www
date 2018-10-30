@@ -1,12 +1,9 @@
         <div ng-include='"app/templates/header.html"' class="other-menu"></div>
-        <div class="resonai-content">
-            <div class="contact-us-page">
-                <div class="mobile-img">
-                    <img src="images/contact/contact.jpg" >
-                </div>
-                <div ng-controller="contactFormContactus" class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5 col-xs-12">
+        <div class="resonai-content pt-md-5">
+            <div class="contact-us-page pt-5">
+                <div ng-controller="contactFormContactus" class="container py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-sm-5 col-12">
                             <h1>CONTACT US</h1>
                             <form name="userForm" novalidate ng-submit="insertData(userForm.$valid)">
                                <label class="text-danger" ng-show="errorMessage">{{errorMessage}}</label>
@@ -64,7 +61,7 @@
                                         <span ng-show="userForm.message.$error.required">Message is required.</span>
                                     </span>
                                 </div>   
-                                <input type="submit" name="insert" class="button-style cf-field-div" value="Send">
+                                <input type="submit" name="insert" class="button-style btn btn-primary my-5 cf-field-div" value="Send">
                             </form>      
                         </div>  
                     </div>  

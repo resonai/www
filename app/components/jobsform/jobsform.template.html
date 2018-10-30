@@ -2,7 +2,7 @@
 ng-controller="contactFormJobs">
 	<label class="text-danger" ng-show="errorMessage">{{errorMessage}}</label>
 	<label class="text-success" ng-show="successInsert">{{successInsert}}</label>
-	<div class="cf-field-div">
+	<div class="cf-field-div py-2">
 	    <!--<label for="username" >Name</label>-->
 	    <input type="text" name="userName" placeholder="Name" ng-model="insert.user_name" class="form-control" ng-class="{    
 	    'has-error' : userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }"  
@@ -12,7 +12,7 @@ ng-controller="contactFormJobs">
             <span ng-show="userForm.userName.$error.required">Name is required.</span>
         </span>
 	</div>
-	<div class="cf-field-div">
+	<div class="cf-field-div py-2">
 	    <!--<label for="email">Email</label>-->
 	    <input type="email" name="email" placeholder="Email" ng-model="insert.email" class="form-control" ng-class="{
 	    'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
@@ -22,7 +22,7 @@ ng-controller="contactFormJobs">
             <span ng-show="userForm.email.$error.email">Invalid email address.</span>
         </span>
 	</div>
-	<div class="upload-file cf-field-div">
+	<div class="upload-file cf-field-div py-3">
 	    <label class="custom-file-upload">
 		<input type="file" name="filecv" value="{{fileToUpload}}" ng-value="fileToUpload" file-model="testfile" set-file-data="fileToUpload=value;" />
 		<i class="fa fa-paperclip" aria-hidden="true"></i>
@@ -34,5 +34,5 @@ ng-controller="contactFormJobs">
             <span ng-show="userForm.filecv.$error.required">File Upload is required.</span>
         </span>
 	</div>
-	<input type="submit" name="insert" class="jobs-button-style cf-field-div" value="Send">
+	<input type="submit" name="insert" class="jobs-button-style btn btn-primary mb-4 cf-field-div" value="Send">
 </form>

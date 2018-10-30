@@ -74,6 +74,14 @@ a:hover {
 .header {
   z-index: 9; }
 
+.text-danger,
+.valid-text {
+  display: none;
+  color: red; }
+
+.text-success {
+  display: none; }
+
 #discover-new-realities .top-0 {
   top: 0; }
 
@@ -242,7 +250,7 @@ footer {
     opacity: 1.0; }
   .navbar .nav-link.active, .navbar .nav-link:active {
     color: #00A8BA; }
-  .navbar .nav-link.active, .navbar .nav-link:before {
+  .navbar .nav-link.active:before, .navbar .nav-link:before {
     position: absolute;
     content: "";
     display: block;

@@ -59,6 +59,16 @@ a:hover {
   z-index: 9;
 }
 
+.text-danger,
+.valid-text {
+  display: none;
+  color: red;
+}
+
+.text-success {
+  display: none;
+}
+
 #discover-new-realities {
   .top-0 {
     top: 0;
@@ -285,7 +295,7 @@ footer {
     &:active {
       color: $colorPrimaryLight;
     }
-    &.active,
+    &.active:before,
     &:before {
       position: absolute;
       content: "";
