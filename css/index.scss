@@ -73,6 +73,12 @@ a:hover {
   .top-0 {
     top: 0;
   }
+  @media screen and (max-width: rem(768)) {
+    .img-fluid {
+      min-height: rem(356);
+      object-fit: cover;
+    }
+  }
   //background-image: url("../images/Resonai_Hero_R2_full-size.jpg");
   //background-repeat: no-repeat;
 }

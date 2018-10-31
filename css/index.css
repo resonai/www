@@ -84,6 +84,10 @@ a:hover {
 
 #discover-new-realities .top-0 {
   top: 0; }
+@media screen and (max-width: 48rem) {
+  #discover-new-realities .img-fluid {
+    min-height: 22.25rem;
+    object-fit: cover; } }
 
 #visual-search {
   background-color: #80b0ad;
