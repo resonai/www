@@ -36,6 +36,34 @@
     opacity: 1.0; }
   to {
     opacity: 0.0; } }
+.four-three {
+  position: relative; }
+  .four-three:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 75%; }
+  .four-three > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.twentyfive-seventeen {
+  position: relative; }
+  .twentyfive-seventeen:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 68%; }
+  .twentyfive-seventeen > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
 body {
   font-family: 'Lato', sans-serif; }
 
@@ -82,8 +110,22 @@ a:hover {
 .text-success {
   display: none; }
 
+.scale-0-8 {
+  transform: scale(0.8); }
+
+.scale-0-9 {
+  transform: scale(0.9); }
+
+#discover-new-realities .content {
+  background-image: url("../images/Resonai_Hero_R2_full-size.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center; }
 #discover-new-realities .top-0 {
   top: 0; }
+@media screen and (max-width: 64rem) {
+  #discover-new-realities {
+    background-size: 120%; } }
 @media screen and (max-width: 48rem) {
   #discover-new-realities .img-fluid {
     min-height: 22.25rem;
@@ -105,14 +147,14 @@ a:hover {
 #discover {
   background-color: rgba(0, 168, 187, 0.3567); }
 
-#how-irocket-works {
+#how-vera-works {
   background-color: #032225;
   color: #FFF; }
-  #how-irocket-works .steps {
+  #how-vera-works .steps {
     position: relative; }
-  #how-irocket-works .panel .describer {
+  #how-vera-works .panel .describer {
     cursor: pointer; }
-    #how-irocket-works .panel .describer i {
+    #how-vera-works .panel .describer i {
       position: absolute;
       font-family: "Font Awesome 5 Pro";
       font-weight: 300;
@@ -120,61 +162,61 @@ a:hover {
       top: 10px;
       font-size: 1.3em;
       opacity: 0.5; }
-      #how-irocket-works .panel .describer i span {
+      #how-vera-works .panel .describer i span {
         position: absolute;
         left: 7px;
         font-size: 14px;
         top: 3px; }
-  #how-irocket-works .panel p {
+  #how-vera-works .panel p {
     opacity: 0.5; }
-    #how-irocket-works .panel p span {
+    #how-vera-works .panel p span {
       opacity: 0;
       height: 0;
       transition: all 500ms; }
-  #how-irocket-works .panel.active p {
+  #how-vera-works .panel.active p {
     opacity: 1.0; }
-    #how-irocket-works .panel.active p span {
+    #how-vera-works .panel.active p span {
       opacity: 1.0;
       height: initial; }
-  #how-irocket-works .panel.active i {
+  #how-vera-works .panel.active i {
     opacity: 1.0; }
-  #how-irocket-works .panel.active .sample {
+  #how-vera-works .panel.active .sample {
     opacity: 1.0; }
-  #how-irocket-works .panel .sample {
+  #how-vera-works .panel .sample {
     position: absolute;
     opacity: 0.0;
     top: 0;
     left: 0;
     transition: all 1000ms; }
   @media screen and (max-width: 768px) {
-    #how-irocket-works {
+    #how-vera-works {
       background-color: #E5EAEA;
       color: #032225; }
-      #how-irocket-works .panel {
+      #how-vera-works .panel {
         background-color: #032225;
         color: #FFF;
         -webkit-border-radius: 0.75rem;
         -moz-border-radius: 0.75rem;
         border-radius: 0.75rem;
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); }
-        #how-irocket-works .panel .describer i {
+        #how-vera-works .panel .describer i {
           position: relative;
           left: initial;
           top: initial;
           opacity: 1; }
-        #how-irocket-works .panel p {
+        #how-vera-works .panel p {
           opacity: 1.0; }
-          #how-irocket-works .panel p span {
+          #how-vera-works .panel p span {
             opacity: 1.0;
             height: initial;
             position: relative; }
-        #how-irocket-works .panel .sample {
+        #how-vera-works .panel .sample {
           position: relative;
           opacity: 1.0; }
-          #how-irocket-works .panel .sample.ng-hide {
+          #how-vera-works .panel .sample.ng-hide {
             display: block !important; } }
 
-#ar-with-irocket {
+#ar-with-vera {
   background-color: #E5EAEA; }
 
 #animaker {
@@ -203,7 +245,7 @@ a:hover {
 
 .video-thumb {
   position: relative;
-  display: block; }
+  display: inline-block; }
   .video-thumb::before {
     position: absolute;
     display: block;
