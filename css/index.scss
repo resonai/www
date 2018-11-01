@@ -31,6 +31,12 @@ $browser-context: 16; // Default
   @include aspect-ratio(25,17);
 }
 
+@media screen and (max-width: 768px) {
+  .twentyfive-seventeen:before {
+    padding-top: 152%;
+  }
+}
+
 @function rem($pixels, $context: $browser-context) {
   @return #{$pixels/$context}rem;
 }
@@ -112,13 +118,19 @@ a:hover {
   .top-0 {
     top: 0;
   }
-  @media screen and (max-width: rem(1024)) {
+  @media screen and (max-width: 1024px) {
     background-size: 120%;
+    .w-50 {
+      width: 100%!important;
+    }
   }
-  @media screen and (max-width: rem(768)) {
+  @media screen and (max-width: 768px) {
     .img-fluid {
       min-height: rem(356);
       object-fit: cover;
+    }
+    .content {
+      background-size: 250%;
     }
   }
   //background-image: url("../images/Resonai_Hero_R2_full-size.jpg");
@@ -172,6 +184,7 @@ a:hover {
       }
     }
     p {
+      max-width: rem(270);
       opacity: 0.5;
       span {
         opacity: 0;
@@ -274,6 +287,7 @@ a:hover {
 }
 
 .video-thumb {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   &::before {
@@ -369,7 +383,7 @@ footer {
   .navbar-toggler-icon {
     background-image: url("../images/Icon-Close.svg");
   }
-  @media screen and (max-width: rem(768)) {
+  @media screen and (max-width: 768px) {
     font-size: 1rem;
   }
 }

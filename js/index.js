@@ -1,5 +1,5 @@
 var app = angular.module('mainApp', ['revealer','ngDialog', 'ngTouch', 'duScroll','ui.router','app.homepage', 'app.contactus',
-'app.jobs','app.dollhouse','app.search', 'app.search4unity']);
+'app.jobs','app.dollhouse','app.search', 'app.search4unity','ngMeta']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     
@@ -10,7 +10,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES ========================================
         .state('home', {
             url: '/home',
-            template: '<homepage />'
+            template: '<homepage />',
+            data: {
+                meta: {
+                    'title': 'Resonai: Discover new realities. Vera for AR + 3D visual search.',
+                    'description': 'Resonai is all about visual perception – understanding the digital and physical world in 3D, and applying that to AR, visual search, and more.',
+                    'keywords': 'Resonai, Vera for AR, Visual Search, Unity Visual Search, Animaker'
+                }
+            }
         })
         
         // SEARCH4UNITY PAGE =================================
@@ -34,23 +41,33 @@ app.config(function($stateProvider, $urlRouterProvider) {
         // JOBS PAGE =================================
         .state('jobs', {
             url: '/jobs',
-            template: '<jobs />'
+            template: '<jobs />',
+            data: {
+                meta: {
+                    'title': 'Resonai: Jobs',
+                    'description': 'We’re working on some really cool stuff. If you want in, check out the open positions at Resonai. We’d love to hear from you.',
+                    'keywords': 'Resonai jobs, careers at Resonai, job openings'
+                }
+            }
         }) 
     
         // CONTACTUS PAGE =================================
         .state('contactUs', {
             url: '/contactUs',
-            template: '<contactus />'
+            template: '<contactus />',
+            data: {
+                meta: {
+                    'title': 'Resonai: Contact Us',
+                    'description': 'There’s nothing like a good chat. If you’re interested in a demo of our products, partnerships, or just about anything in between, let us know.',
+                    'keywords': 'Contact Resonai, Resonai demos, Resonai partnerships'
+                }
+            }
         });
-        
+}).run(function(ngMeta) {
+    ngMeta.init();
 });
 
 // HOME PAGE ========================================
-
-app.controller('app.homepage', function($scope){
-    $scope.howPanel = 0;
-});
-
  app.controller('smoothScroll', function($scope, $document){
     $scope.toTheTop = function() {
       $document.scrollTopAnimated(0, 5000).then(function() {
@@ -64,8 +81,12 @@ app.controller('app.homepage', function($scope){
   }
 ).value('duScrollOffset', 30);
 
-app.controller('popupVideo', function ($scope, ngDialog) {
-	$scope.openContactForm = function() {
+app.controller('popupVideo', function ($scope, ngDialog,$sce) {
+	$scope.openContactForm = function($event) {
+        $scope.trustSrc = function(src) {
+            return $sce.trustAsResourceUrl(src);
+        }
+        $scope.movie = {src:$event.target.attributes.data.value};
 		ngDialog.openConfirm({template: 'app/templates/index_popup_video.html',
 		  scope: $scope //Pass the scope object if you need to access in the template
 		}).then(

@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html ng-app="mainApp">
     <head>
-        <title>Resonai</title>
+        <title>{{ngMeta.title}}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="{{ngMeta.keywords}}" />
+
+        <meta property="og:title" content="{{ngMeta.title}}" />
+        <meta property="og:description" content="{{ngMeta.description}}" />
+<!--        <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">-->
+<!--        <meta property="og:url" content="http://euro-travel-example.com/index.htm">-->
+
+        <meta property="og:site_name" content="Resonai">
+<!--        <meta name="twitter:card" content="summary_large_image">-->
+
+<!--        <meta property="fb:app_id" content="your_app_id" />-->
+        <meta name="twitter:site" content="@Resonai_XR">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
@@ -22,6 +34,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch.min.js"></script>
         <script src="js/angular-scroll.min.js"></script>
         <script src="js/revealer.js"></script>
+        <script src="js/ngMeta.min.js"></script>
         
         <!-- components -->
         <script src="app/components/homepage/homepage.component.js"></script>

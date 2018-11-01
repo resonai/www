@@ -1,10 +1,10 @@
     <div ng-include='"app/templates/header.html"' class="other-menu"></div>
-    <div class="resonai-content">
+    <div class="resonai-content py-5">
         <div class="jobs-page py-5">
             <div class="container py-5">
                 <div class="row">
                     <section class="sec-1 desktop-sec-1 col-md-6 col-12">
-                        <h1>ABOUT RESONAI</h1>
+                        <h1>About Resonai</h1>
                         <p>Resonai is dedicated to power the future of visual perception, and
                            any machine that needs to understand its environment in real time. <br><br>
                            We've built a work environment that brings together the best talent
@@ -22,22 +22,22 @@
                            class="mail-send">jobs@resonai.com</a>
                         </p>
                     </section>
-                    <div class="col-md-6 col-12" ng-controller="jobs">
-                    <section class="sec-2 col-12" ng-hide="showSec1 || showSec2 || showSec3 || showSec4 || showSec5">
-                        <h1 class="h1-right-para">OPEN POSITIONS</h1>
+                    <div class="col-md-6 top-0 col-12" ng-controller="jobs">
+                     <section class="sec-2 position-absolute col-12" ng-hide="showSec1 || showSec2 || showSec3 || showSec4 || showSec5">
+                        <h1 class="h1-right-para">Open Positions</h1>
                         <div>
-                          <button class="positions-style my-4 btn btn-primary math-position-link line" ng-click="showSec1=true; showSec2=false;
-                          showSec3=false; showSec4=false; showSec5=false; hideMe()" >Mathematician <span class="position-etc">
+                          <a class="positions-style d-block pt-3 math-position-link line" ng-click="showSec1=true; showSec2=false;
+                          showSec3=false; showSec4=false; showSec5=false; hideMe()" href="javascript:null">Mathematician <span class="position-etc">
                           <!--<img src="images/jobs/arrow.svg"></span>-->
-                          </button><br/>
-                          <button class="positions-style btn btn-primary line" ng-click="showSec2=true; showSec1=false; showSec3=false;
-                          showSec4=false; showSec5=false; hideMe()">Software developer <span class="position-etc">
+                          </a><br/>
+                          <a class="positions-style d-block line" ng-click="showSec2=true; showSec1=false; showSec3=false;
+                          showSec4=false; showSec5=false; hideMe()" href="javascript:null">Software developer <span class="position-etc">
                           <!--<img src="images/jobs/arrow.svg"></span>-->
-                          </button>
+                          </a>
                         </div>
                     </section>
-                    <section class="sec-3 col-12" ng-show="showSec1">
-                        <h1 class="h1-right-para">MATHEMATICIAN</h1>
+                    <section class="sec-3 col-12 ng-hide" ng-show="showSec1">
+                        <h1 class="h1-right-para">Mathematician</h1>
                         <p class="h1-right-para right-para-text">PhD with deep level knowledge in at least one field of math (e.g
                         Ergodic Theory, Algebric topplogy, Probability). High skills in software programming, ability to learn new
                         software languages and development methodologies. Willingness and ability to participate in all aspects of
@@ -46,10 +46,10 @@
                             <h2>Apply now</h2>
 				            <jobsform />
                         </div>
-                        <button class="positions-back-style btn btn-primary" ng-click="showSec1=false">Back to open positions</button>
+                        <a class="positions-back-style" ng-click="showSec1=false" href="javascript:null">Back to open positions</a>
                     </section>
-                    <section class="sec-3 col-12" ng-show="showSec2">
-                        <h1 class="h1-right-para">SOFTWARE DEVELOPER</h1>
+                    <section class="sec-3 col-12 ng-hide" ng-show="showSec2">
+                        <h1 class="h1-right-para">Software Developer</h1>
                         <p class="h1-right-para right-para-text">
                         Passion for math, algorithms and software engineering.
                         Strong background in math and algorithms.
@@ -60,28 +60,28 @@
 				            <h2>Apply now</h2>
 				            <jobsform />
                         </div>
-                        <button class="positions-back-style btn btn-primary" ng-click="showSec2=false">Back to open positions</button>
+                        <a class="positions-back-style" ng-click="showSec2=false" href="javascript:null">Back to open positions</a>
                     </section>
                     </div>
-                    <section class="sec-1 mobile-sec-1 col-12">
-                        <h1 class="mobile-sec-1-h1">ABOUT RESONAI</h1>
-                        <p class="bkg-img">Resonai is dedicated to power the future of visual perception, and
-                           any machine that needs to understand its environment in real time. <br><br>
-                           We've built a work environment that brings together the best talent
-                           from mathematics, physics, brain science, computer science, machine learning, business and management.
-                           Together, we dissolve barriers
-                           between people and technology.
-                           <br><br>
-                           We embrace and encourage intellectual curiosity, collaboration,
-                           hard work, focus on making things happen, challenging of perceptions,
-                           and kindness.
-                           <br><br>
-                           We value the importance of a flexible and healthy work-life balance.
-                           <br><br><br>
-                           <span class="contact">Contact us at</span> <a href="mailto:jobs@resonai.com"
-                           class="mail-send">jobs@resonai.com</a>
-                        </p>
-                    </section>
+                    <!--<section class="sec-1 mobile-sec-1 col-12">-->
+                        <!--<h1 class="mobile-sec-1-h1">ABOUT RESONAI</h1>-->
+                        <!--<p class="bkg-img">Resonai is dedicated to power the future of visual perception, and-->
+                           <!--any machine that needs to understand its environment in real time. <br><br>-->
+                           <!--We've built a work environment that brings together the best talent-->
+                           <!--from mathematics, physics, brain science, computer science, machine learning, business and management.-->
+                           <!--Together, we dissolve barriers-->
+                           <!--between people and technology.-->
+                           <!--<br><br>-->
+                           <!--We embrace and encourage intellectual curiosity, collaboration,-->
+                           <!--hard work, focus on making things happen, challenging of perceptions,-->
+                           <!--and kindness.-->
+                           <!--<br><br>-->
+                           <!--We value the importance of a flexible and healthy work-life balance.-->
+                           <!--<br><br><br>-->
+                           <!--<span class="contact">Contact us at</span> <a href="mailto:jobs@resonai.com"-->
+                           <!--class="mail-send">jobs@resonai.com</a>-->
+                        <!--</p>-->
+                    <!--</section>-->
                 </div>
             </div>
         </div>

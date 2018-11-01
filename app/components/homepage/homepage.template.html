@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col text-center">
                                 <h2 class="h1 mx-auto">Discover new realities.</h2>
-                                <p class="w-50 px-md-5 py-2 mx-auto">
+                                <p class="w-50 px-md-5 mb-md-0 mb-5 py-2 mx-auto">
                                     Resonai brings visual perception to the platforms of today – and tomorrow –
                                     by understanding the digital and physical world in 3D. This unlocks exciting
                                     possibilities for augmented reality, and new realities for all.
@@ -22,7 +22,7 @@
                                         </p>
                                     </a>
                                 </div>
-                                <div class="text-center d-block d-md-none">
+                                <div class="text-center pt-4 d-block d-md-none">
                                     <a class="btn btn-primary" href="index.php#!/contactUs" role="button">Request a demo</a>
                                 </div>
                             </div>
@@ -62,11 +62,11 @@
                     </div>
                     <div ng-init="howPanel = 0" class="col-12 my-md-5 my-4 steps">
                         <div ng-click="howPanel = 0" ng-class="{ active: howPanel === 0 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-4 col-12 py-md-1 offset-md-2 describer">
+                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 describer">
                                 <i class="fal fa-circle"><span>1</span></i>
                                 <p>
                                     Scene scan
-                                    <span class="py-md-2">Scanned environments are indexed in the cloud.</span>
+                                    <span class="py-md-2">Scanned environments are indexed in the cloud.<br /><br /></span>
                                 </p>
                             </div>
                             <div ng-show="howPanel === 0" class="col-md-6 col-12 offset-md-6 sample">
@@ -74,11 +74,11 @@
                             </div>
                         </div>
                         <div ng-click="howPanel = 1" ng-class="{ active: howPanel === 1 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-4 col-12 py-md-1 offset-md-2 describer">
+                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 describer">
                                 <i class="fal fa-circle"><span>2</span></i>
                                 <p>
                                     Segmentation and surface extraction
-                                    <span class="py-2">Scene is analyzed to detect distinct surfaces and objects.</span>
+                                    <span class="py-2">Scene is analyzed to detect distinct surfaces and objects.<br /><br /></span>
                                 </p>
                             </div>
                             <div ng-show="howPanel === 1" class="col-md-6 col-12 offset-md-6 sample">
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div ng-click="howPanel = 2" ng-class="{ active: howPanel === 2 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-4 col-12 py-md-1 offset-md-2 describer">
+                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 describer">
                                 <i class="fal fa-circle"><span>3</span></i>
                                 <p>
                                     Search and recognition
@@ -98,11 +98,14 @@
                             </div>
                         </div>
                         <div ng-click="howPanel = 3" ng-class="{ active: howPanel === 3 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-4 col-12 pb-1 offset-md-2 describer">
+                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 pr-0 describer">
                                 <i class="fal fa-circle"><span>4</span></i>
                                 <p>
                                     Scene reconstruction
-                                    <span class="py-2">A digital version of the space is created to mirror the physical setting. <a href="https://www.youtube.com/watch?v=TDY0KAmspQI">watch video</a></span>
+                                    <span ng-controller="popupVideo" class="py-2">
+                                        A digital version of the space is created to mirror the physical setting. <a class="pointer" ng-click="openContactForm($event)" href="javascript:null" data="https://www.youtube.com/embed/TDY0KAmspQI">watch video</a>
+                                        <br /><br />
+                                    </span>
                                 </p>
                             </div>
                             <div ng-show="howPanel === 3" class="col-md-6 col-12 offset-md-6 sample">
@@ -110,11 +113,11 @@
                             </div>
                         </div>
                         <div ng-click="howPanel = 4" ng-class="{ active: howPanel === 4 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step pb-md-5">
-                            <div class="col-md-4 col-12 offset-md-2 describer">
+                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 describer">
                                 <i class="fal fa-circle"><span>5</span></i>
                                 <p>
                                     Experience unlocks
-                                    <span class="py-2">A digital version of the space is created to mirror the physical setting.</span>
+                                    <span class="py-2">Experiences that comply with the semantics of the space are unlocked.<br /><br /></span>
                                 </p>
                             </div>
                             <div ng-show="howPanel === 4" class="col-md-6 col-12 offset-md-6 sample">
@@ -255,10 +258,10 @@
         <section id="unity">
             <div class="container py-md-5 py-4">
                 <div class="row py-md-5 justify-content-center align-items-center">
-                    <div class="col-md-6 col-12 text-md-left text-center order-1">
-                        <a class="video-thumb" href="https://www.youtube.com/watch?v=RyokevisN6w">
+                    <div ng-controller="popupVideo" class="col-md-6 col-12 text-md-left text-center order-1">
+                        <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/RyokevisN6w">
                             <img class="img-fluid panel-rounded" src="images/unity-search-video-thumb.jpg" alt="placeholder" />
-                        </a>
+                        </span>
                     </div>
                     <div class="col-md-6 col-12 text-md-left text-center order-0">
                         <p><img width="93" class="img-fluid invert" src="images/Unity_Technologies_logo.svg" alt="Unity" /><!--<span>Powered by Resonai</span>--></p>
@@ -286,10 +289,10 @@
                             and AI for the young and the young at heart.
                         </p>
                     </div>
-                    <div class="col-md-6 col-12 text-right">
-                        <a class="video-thumb" href="https://www.youtube.com/watch?v=C1bQQYQn7Vc">
+                    <div ng-controller="popupVideo" class="col-md-6 col-12 text-right">
+                        <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/C1bQQYQn7Vc">
                             <img class="img-fluid panel-rounded" src="images/animaker-video-thumb.jpg" alt="placeholder" />
-                        </a>
+                        </span>
                     </div>
                 </div>
             </div>

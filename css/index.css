@@ -64,6 +64,9 @@
     right: 0;
     bottom: 0; }
 
+@media screen and (max-width: 768px) {
+  .twentyfive-seventeen:before {
+    padding-top: 152%; } }
 body {
   font-family: 'Lato', sans-serif; }
 
@@ -123,13 +126,17 @@ a:hover {
   background-position: top center; }
 #discover-new-realities .top-0 {
   top: 0; }
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 1024px) {
   #discover-new-realities {
-    background-size: 120%; } }
-@media screen and (max-width: 48rem) {
+    background-size: 120%; }
+    #discover-new-realities .w-50 {
+      width: 100% !important; } }
+@media screen and (max-width: 768px) {
   #discover-new-realities .img-fluid {
     min-height: 22.25rem;
-    object-fit: cover; } }
+    object-fit: cover; }
+  #discover-new-realities .content {
+    background-size: 250%; } }
 
 #visual-search {
   background-color: #80b0ad;
@@ -168,6 +175,7 @@ a:hover {
         font-size: 14px;
         top: 3px; }
   #how-vera-works .panel p {
+    max-width: 16.875rem;
     opacity: 0.5; }
     #how-vera-works .panel p span {
       opacity: 0;
@@ -244,6 +252,7 @@ a:hover {
   border-bottom-right-radius: 0.75rem; }
 
 .video-thumb {
+  cursor: pointer;
   position: relative;
   display: inline-block; }
   .video-thumb::before {
@@ -313,7 +322,7 @@ footer {
   background-image: url("../images/Icon-Menu.svg"); }
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("../images/Icon-Close.svg"); }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
   .navbar-toggler {
     font-size: 1rem; } }
 
