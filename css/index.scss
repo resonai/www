@@ -75,6 +75,15 @@ a:hover {
   color: $colorPrimary;
 }
 
+
+.mh-300 {
+ min-height: 300px;
+}
+
+.mh-250 {
+  min-height: 250px;
+}
+
 .panel {
   p {
     font-size: 1.25rem;
@@ -217,6 +226,10 @@ a:hover {
       left: 0;
       transition: all 1000ms;
     }
+    &.noFade .sample {
+      transition: none;
+      animation: none;
+    }
   }
 
   @media screen and (max-width: rem(768)) {
@@ -308,6 +321,11 @@ a:hover {
 #prefooter {
   color: #FFF;
   background-color: #d9e4e5;
+  @media screen and (min-width: rem(991)) and (max-width: rem(1199)) {
+    .panel-rounded {
+      min-height: rem(232);
+    }
+  }
 }
 
 .panel-rounded {
@@ -322,7 +340,7 @@ a:hover {
   width: auto;
   bottom: -6px;
   position: absolute;
-  @media screen and (max-width: rem(768)) {
+  @media screen and (max-width: rem(1024)) {
     height: rem(24);
     &.position-absolute {
       position: relative;

@@ -17,12 +17,12 @@
   100% {
     margin-top: 0; } }
 @media screen and (min-width: 768px) {
-  .ng-hide-add {
+  :not(.noFade) .ng-hide-add {
     animation-name: fade-out;
     animation-duration: 1500ms;
     animation-iteration-count: 1; }
 
-  .ng-hide-remove {
+  :not(.noFade) .ng-hide-remove {
     animation-name: fade-in;
     animation-duration: 1500ms;
     animation-iteration-count: 1; } }
@@ -93,6 +93,12 @@ a:hover {
 
 .primary-color {
   color: #00717B; }
+
+.mh-300 {
+  min-height: 300px; }
+
+.mh-250 {
+  min-height: 250px; }
 
 .panel p {
   font-size: 1.25rem;
@@ -197,6 +203,9 @@ a:hover {
     top: 0;
     left: 0;
     transition: all 1000ms; }
+  #how-vera-works .panel.noFade .sample {
+    transition: none;
+    animation: none; }
   @media screen and (max-width: 48rem) {
     #how-vera-works {
       background-color: #E5EAEA;
@@ -269,6 +278,9 @@ a:hover {
 #prefooter {
   color: #FFF;
   background-color: #d9e4e5; }
+  @media screen and (min-width: 61.9375rem) and (max-width: 74.9375rem) {
+    #prefooter .panel-rounded {
+      min-height: 14.5rem; } }
 
 .panel-rounded {
   -webkit-border-radius: 0.75rem;
@@ -281,7 +293,7 @@ a:hover {
   width: auto;
   bottom: -6px;
   position: absolute; }
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width: 64rem) {
     .nav-logo {
       height: 1.5rem; }
       .nav-logo.position-absolute {

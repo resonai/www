@@ -100,6 +100,14 @@ app.controller('popupVideo', function ($scope, ngDialog,$sce) {
 	};
 });
 
+app.controller('switchSteps', function($scope){
+    $scope.howPanel = 0;
+    $scope.pastPanel = 0;
+    $scope.switchPanel = function(panelNum) {
+        $scope.pastPanel = $scope.howPanel;
+        $scope.howPanel = panelNum;
+    }
+});
 /*app.controller('hpPopupBeta', function ($scope, ngDialog) {
         $scope.openContactForm = function() {
             ngDialog.openConfirm({template: 'app/templates/hp_beta_popup.html',

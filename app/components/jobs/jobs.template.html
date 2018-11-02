@@ -1,9 +1,9 @@
     <div ng-include='"app/templates/header.html"' class="other-menu"></div>
     <div class="resonai-content py-5">
         <div class="jobs-page py-5">
-            <div class="container py-5">
+            <div class="container">
                 <div class="row">
-                    <section class="sec-1 desktop-sec-1 col-md-6 col-12">
+                    <section class="sec-1 desktop-sec-1 py-5 col-md-6 col-12">
                         <h1>About Resonai</h1>
                         <p>Resonai is dedicated to power the future of visual perception, and
                            any machine that needs to understand its environment in real time. <br><br>
@@ -22,8 +22,8 @@
                            class="mail-send">jobs@resonai.com</a>
                         </p>
                     </section>
-                    <div class="col-md-6 top-0 col-12" ng-controller="jobs">
-                     <section class="sec-2 position-absolute col-12" ng-hide="showSec1 || showSec2 || showSec3 || showSec4 || showSec5">
+                    <div class="col-md-6 mh-250 top-0 py-5 col-12" ng-controller="jobs">
+                     <section class="sec-2 position-absolute" ng-hide="showSec1 || showSec2 || showSec3 || showSec4 || showSec5">
                         <h1 class="h1-right-para">Open Positions</h1>
                         <div>
                           <a class="positions-style d-block pt-3 math-position-link line" ng-click="showSec1=true; showSec2=false;
@@ -36,7 +36,7 @@
                           </a>
                         </div>
                     </section>
-                    <section class="sec-3 col-12 ng-hide" ng-show="showSec1">
+                    <section class="sec-3 ng-hide" ng-show="showSec1">
                         <h1 class="h1-right-para">Mathematician</h1>
                         <p class="h1-right-para right-para-text">PhD with deep level knowledge in at least one field of math (e.g
                         Ergodic Theory, Algebric topplogy, Probability). High skills in software programming, ability to learn new
@@ -48,7 +48,7 @@
                         </div>
                         <a class="positions-back-style" ng-click="showSec1=false" href="javascript:null">Back to open positions</a>
                     </section>
-                    <section class="sec-3 col-12 ng-hide" ng-show="showSec2">
+                    <section class="sec-3 ng-hide" ng-show="showSec2">
                         <h1 class="h1-right-para">Software Developer</h1>
                         <p class="h1-right-para right-para-text">
                         Passion for math, algorithms and software engineering.
