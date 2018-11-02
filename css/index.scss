@@ -118,13 +118,15 @@ a:hover {
   .top-0 {
     top: 0;
   }
-  @media screen and (max-width: 1024px) {
-    background-size: 120%;
+  @media screen and (max-width: rem(1025)) {
+    .content {
+      background-size: 120%;
+    }
     .w-50 {
       width: 100%!important;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: rem(768)) {
     .img-fluid {
       min-height: rem(356);
       object-fit: cover;
@@ -177,9 +179,10 @@ a:hover {
         opacity: 0.5;
         span {
           position: absolute;
-          left: 7px;
-          font-size: 14px;
-          top: 3px;
+          left: 6px;
+          font-size: rem(13);
+          top: 4px;
+          font-family: 'Lato', sans-serif;
         }
       }
     }
@@ -216,7 +219,7 @@ a:hover {
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: rem(768)) {
     background-color: #E5EAEA;
     color: $colorPrimaryDark;
     .panel {
@@ -383,7 +386,7 @@ footer {
   .navbar-toggler-icon {
     background-image: url("../images/Icon-Close.svg");
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: rem(768)) {
     font-size: 1rem;
   }
 }
@@ -459,7 +462,7 @@ footer {
 
 /* ---- End Bootstrap Override CSS ---- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: rem(768)) {
   .img-wrapper {
     height: 90px;
   }
