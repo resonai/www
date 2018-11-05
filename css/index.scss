@@ -124,6 +124,10 @@ a:hover,
   transform: scale(0.9);
 }
 
+.img-wrapper {
+  height: 90px;
+}
+
 #discover-new-realities {
   .content {
     background-image: url("../images/Resonai_Hero_R2_full-size.jpg");
@@ -488,8 +492,10 @@ footer {
 /* ---- End Bootstrap Override CSS ---- */
 
 @media screen and (max-width: rem(768)) {
-  .img-wrapper {
-    height: 90px;
+
+  .mx-xs-6 {
+    margin-left: 6rem!important;
+    margin-right: 6rem!important;
   }
 
   .w-50,
