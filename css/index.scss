@@ -64,8 +64,15 @@ body {
   font-size: 1.5rem;
 }
 
+.mimic-anchor {
+  cursor: pointer;
+  display: inline;
+}
+
 a,
-a:hover {
+a:hover,
+.mimic-anchor,
+.mimic-anchor:hover {
   color: $colorPrimaryLight;
   text-decoration: none;
   font-weight: bold;
