@@ -171,7 +171,8 @@ a:hover,
 
 #how-vera-works {
   background-color: #032225;
-  color: #FFF; }
+  color: #FFF;
+  min-height: 48.875rem; }
   #how-vera-works .steps {
     position: relative; }
   #how-vera-works .panel .describer {
@@ -201,7 +202,7 @@ a:hover,
     opacity: 1.0; }
     #how-vera-works .panel.active p span {
       opacity: 1.0;
-      height: initial; }
+      height: 4.375rem; }
   #how-vera-works .panel.active i {
     opacity: 1.0; }
   #how-vera-works .panel.active .sample {
@@ -318,6 +319,9 @@ footer {
 
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
+.navbar .collapsed,
+.navbar .show {
+  transition-duration: 200ms; }
 .navbar .nav-link {
   position: relative;
   color: #7f7f7f;

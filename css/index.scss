@@ -183,6 +183,7 @@ a:hover,
 #how-vera-works {
   background-color: $colorPrimaryDark;
   color: #FFF;
+  min-height: rem(782);
   .steps {
     position: relative;
   }
@@ -220,7 +221,7 @@ a:hover,
         opacity: 1.0;
         span {
           opacity: 1.0;
-          height: initial;
+          height: 4.375rem;
         }
       }
       i {
@@ -375,6 +376,10 @@ footer {
 /* ---- NavBar ---- */
 
 .navbar {
+  .collapsed,
+  .show {
+    transition-duration: 200ms;
+  }
   .nav-link {
     position: relative;
     color: #7f7f7f;

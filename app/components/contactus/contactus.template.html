@@ -40,7 +40,7 @@
                                 </div> 
                                 <div class="cf-field-div">
                                     <label for="phone">Phone</label>
-                                    <input type="number" name="phone" ng-model="insert.phone" class="form-control" ng-class="{ 
+                                    <input type="text" name="phone" ng-model="insert.phone" class="form-control" ng-class="{
                                     'has-error' : userForm.phone.$invalid && userForm.$submitted && userForm.phone.$pristine }" required>
                                     <!--<span class="text-danger" ng-show="errorPhone">{{errorPhone}}</span>-->
                                     <span class="valid-text" ng-show="userForm.phone.$dirty && userForm.phone.$invalid">

@@ -26,17 +26,17 @@
                      <section class="sec-2 position-absolute" ng-hide="showSec1 || showSec2 || showSec3 || showSec4 || showSec5">
                         <h1 class="h1-right-para">Open Positions</h1>
                         <div>
-                          <a class="positions-style d-block pt-3 math-position-link line" ng-click="showSec1=true; showSec2=false;
-                          showSec3=false; showSec4=false; showSec5=false; hideMe()" href="javascript:null">Mathematician <span class="position-etc">
+                          <span class="positions-style d-block pt-3 math-position-link line mimic-anchor" ng-click="showSec1=true; showSec2=false;
+                          showSec3=false; showSec4=false; showSec5=false; hideMe()">Mathematician <span class="position-etc">
                           <!--<img src="images/jobs/arrow.svg"></span>-->
-                          </a><br/>
-                          <a class="positions-style d-block line" ng-click="showSec2=true; showSec1=false; showSec3=false;
-                          showSec4=false; showSec5=false; hideMe()" href="javascript:null">Software developer <span class="position-etc">
+                          </span><br/>
+                          <span class="positions-style d-block pt-3 line mimic-anchor" ng-click="showSec2=true; showSec1=false; showSec3=false;
+                          showSec4=false; showSec5=false; hideMe()">Software developer <span class="position-etc">
                           <!--<img src="images/jobs/arrow.svg"></span>-->
-                          </a>
+                          </span>
                         </div>
                     </section>
-                    <section class="sec-3 ng-hide" ng-show="showSec1">
+                    <section class="sec-3 position-absolute ng-hide" ng-show="showSec1">
                         <h1 class="h1-right-para">Mathematician</h1>
                         <p class="h1-right-para right-para-text">PhD with deep level knowledge in at least one field of math (e.g
                         Ergodic Theory, Algebric topplogy, Probability). High skills in software programming, ability to learn new
@@ -46,9 +46,9 @@
                             <h2>Apply now</h2>
 				            <jobsform />
                         </div>
-                        <a class="positions-back-style" ng-click="showSec1=false" href="javascript:null">Back to open positions</a>
+                        <span class="positions-back-style mimic-anchor" ng-click="showSec1=false">Back to open positions</span>
                     </section>
-                    <section class="sec-3 ng-hide" ng-show="showSec2">
+                    <section class="sec-3 position-absolute ng-hide" ng-show="showSec2">
                         <h1 class="h1-right-para">Software Developer</h1>
                         <p class="h1-right-para right-para-text">
                         Passion for math, algorithms and software engineering.
@@ -60,7 +60,7 @@
 				            <h2>Apply now</h2>
 				            <jobsform />
                         </div>
-                        <a class="positions-back-style" ng-click="showSec2=false" href="javascript:null">Back to open positions</a>
+                        <a class="positions-back-style mimic-anchor" ng-click="showSec2=false">Back to open positions</a>
                     </section>
                     </div>
                     <!--<section class="sec-1 mobile-sec-1 col-12">-->
