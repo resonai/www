@@ -254,6 +254,11 @@ a:hover,
   background-color: #00717B;
   color: #FFF; }
 
+.unity-logo {
+  position: relative;
+  bottom: 1px;
+  width: 8.125rem; }
+
 .primary-background {
   background-color: #00717B; }
 
@@ -409,6 +414,9 @@ footer {
 /* ---- End Buttons ---- */
 /* ---- End Bootstrap Override CSS ---- */
 @media screen and (max-width: 48rem) {
+  .unity-logo {
+    width: 5.125rem; }
+
   .mx-xs-6 {
     margin-left: 6rem !important;
     margin-right: 6rem !important; }
