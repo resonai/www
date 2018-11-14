@@ -69,7 +69,8 @@
     padding-top: 152%; } }
 body {
   font-family: 'Lato', sans-serif;
-  letter-spacing: 0.025rem; }
+  letter-spacing: 0.025rem;
+  line-height: 1.533331; }
 
 .bg-light-o-80 {
   background-color: rgba(255, 255, 255, 0.8); }
@@ -90,10 +91,15 @@ body {
   cursor: pointer;
   display: inline; }
 
+.pt-medium {
+  padding-top: 2.25rem; }
+
 a,
 a:hover,
 .mimic-anchor,
-.mimic-anchor:hover {
+.mimic-anchor:hover,
+a:not([href]):not([tabindex]),
+a:not([href]):not([tabindex]):hover {
   color: #00A8BA;
   text-decoration: none;
   font-weight: bold; }
@@ -193,7 +199,6 @@ a:hover,
         top: 4px;
         font-family: 'Lato', sans-serif; }
   #how-vera-works .panel p {
-    max-width: 16.875rem;
     opacity: 0.5; }
     #how-vera-works .panel p span {
       opacity: 0;

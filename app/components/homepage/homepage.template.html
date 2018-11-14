@@ -6,7 +6,7 @@
                     <div class="container mx-auto py-md-5 py-4">
                         <div class="row">
                             <div class="col text-center">
-                                <h2 class="h1 mx-auto">Discover new realities.</h2>
+                                <h2 class="h1 mx-auto pt-medium mb-3">Discover new realities.</h2>
                                 <p class="w-50 px-md-5 mb-md-0 mb-5 py-2 mx-auto">
                                     Resonai brings visual perception to the platforms of today – and tomorrow –
                                     by understanding the digital and physical world in 3D. This unlocks exciting
@@ -14,7 +14,7 @@
                                 </p>
                                 <div class="d-none d-md-block animate-hover-container">
                                     <a du-smooth-scroll du-scrollspy href="index.php#!/home#vera">
-                                        <p class="text-center">Vera for AR</p>
+                                        <p class="text-center mt-3">Vera for AR</p>
                                         <p class="animate-hover">
                                             <svg width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 1L19 12L37 1" stroke="#00A8BA" stroke-width="2"/>
@@ -62,11 +62,11 @@
                     </div>
                     <div ng-controller="switchSteps" class="col-12 my-md-5 my-4 steps">
                         <div ng-click="switchPanel(0)" ng-class="{ active: howPanel == 0, noFade: howPanel != 1 && howPanel != 0 && howPanel != 3}" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 describer">
+                            <div class="col-md-5 col-12 offset-md-1 describer">
                                 <i class="fal fa-circle"><span>1</span></i>
                                 <p>
                                     Scene scan
-                                    <span class="py-md-2">Scanned environments are indexed in the cloud.<br /><br /></span>
+                                    <span class="py-md-2">Scanned environments are indexed in the cloud.</span>
                                 </p>
                             </div>
                             <div ng-show="howPanel == 0" class="col-md-6 col-12 offset-md-6 sample">
@@ -74,11 +74,11 @@
                             </div>
                         </div>
                         <div ng-click="switchPanel(1)" ng-class="{ active: howPanel == 1, noFade: howPanel != 0 && howPanel != 1 && howPanel != 3 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 describer">
+                            <div class="col-md-5 col-12 offset-md-1 describer">
                                 <i class="fal fa-circle"><span>2</span></i>
                                 <p>
                                     Segmentation and surface extraction
-                                    <span class="py-2">Scene is analyzed to detect distinct surfaces and objects.<br /><br /></span>
+                                    <span class="py-2">Scene is analyzed to detect distinct surfaces and objects.</span>
                                 </p>
                             </div>
                             <div ng-show="howPanel == 1" class="col-md-6 col-12 offset-md-6 sample">
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div ng-click="switchPanel(2)" ng-class="{ active: howPanel == 2 }" class="row noFade p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 describer">
+                            <div class="col-md-5 col-12 offset-md-1 describer">
                                 <i class="fal fa-circle"><span>3</span></i>
                                 <p>
                                     Search and recognition
@@ -98,15 +98,15 @@
                             </div>
                         </div>
                         <div ng-click="switchPanel(3)" ng-class="{ active: howPanel == 3, noFade: pastPanel != 1 && howPanel != 3 && howPanel != 0 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 pr-0 describer">
+                            <div class="col-md-5 col-12 offset-md-1 pr-0 describer">
                                 <i class="fal fa-circle"><span>4</span></i>
                                 <p>
                                     Scene reconstruction
                                     <span ng-controller="popupVideo" class="py-2">
-                                        A digital version of the space is created to mirror the physical setting. <span class="mimic-anchor" ng-click="openContactForm($event)" data="https://www.youtube.com/embed/TDY0KAmspQI">
+                                        A digital version of the space is created to mirror the physical setting.
+                                        <a class="mimic-anchor" ng-click="openContactForm($event)" data="https://www.youtube.com/embed/TDY0KAmspQI">
                                             Watch video
-                                        </span>
-                                        <br /><br />
+                                        </a>
                                     </span>
                                 </p>
                             </div>
@@ -115,11 +115,11 @@
                             </div>
                         </div>
                         <div ng-click="switchPanel(4)" ng-class="{ active: howPanel == 4 }" class="row noFade p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step pb-md-5">
-                            <div class="col-md-5 col-lg-4 col-12 offset-lg-2 offset-md-1 describer">
+                            <div class="col-md-5 col-12 offset-md-1 describer">
                                 <i class="fal fa-circle"><span>5</span></i>
                                 <p>
                                     Experience unlocks
-                                    <span class="py-2">Experiences that comply with the semantics of the space are unlocked.<br /><br /></span>
+                                    <span class="py-2">Experiences that comply with the semantics of the space are unlocked.</span>
                                 </p>
                             </div>
                             <div ng-show="howPanel == 4" class="col-md-6 col-12 offset-md-6 sample">
@@ -305,14 +305,14 @@
                 <div class="row py-4 justify-content-center align-items-center">
                     <div class="col-md-5 col-12">
                         <div class="p-4 panel-rounded primary-dark-background">
-                            <p class="h3">Do big things. Join Resonai.</p>
+                            <p class="h3 mb-3">Do big things. Join Resonai.</p>
                             <p>We’re working on some really cool stuff. If you want in, we want to hear from you.</p>
                             <a class="btn btn-secondary mt-4" href="index.php#!/jobs">Open positions</a>
                         </div>
                     </div>
                     <div class="col-md-5 mt-md-0 mt-4 col-12">
                         <div class="p-4 panel-rounded primary-background">
-                            <p class="h3">Let’s talk.</p>
+                            <p class="h3 mb-3">Let’s talk.</p>
                             <p>Interested in partnering with Resonai? Or just excited and curious about all things AR? Give us a shout. </p>
                             <a class="btn btn-secondary mt-4" href="index.php#!/contactUs">Contact us</a>
                         </div>
