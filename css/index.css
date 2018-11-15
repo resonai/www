@@ -138,7 +138,7 @@ a:not([href]):not([tabindex]):hover {
   height: 90px; }
 
 #discover-new-realities .content {
-  background-image: url("../images/Resonai_Hero_R2_full-size.jpg");
+  background-image: url("../images/Resonai_Hero_R2_full-size-optimize.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top center; }
