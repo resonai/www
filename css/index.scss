@@ -514,6 +514,9 @@ footer {
 /* ---- End Bootstrap Override CSS ---- */
 
 @media screen and (max-width: rem(768)) {
+  .sec-3.position-absolute {
+    position: relative!important;
+  }
   .unity-logo {
     width: 5.125rem;
   }
