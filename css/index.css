@@ -419,8 +419,18 @@ footer {
 .btn-secondary.focus, .btn-secondary:focus {
   box-shadow: none; }
 
+.positions-style.active {
+  border-bottom: 2px solid #80b8bd; }
+
 /* ---- End Buttons ---- */
+.upload-cv,
+.upload-cv-selected {
+  margin-bottom: 0; }
+
 /* ---- End Bootstrap Override CSS ---- */
+@media screen and (max-width: 1199px) {
+  .tablet-break {
+    display: block; } }
 @media screen and (max-width: 48rem) {
   .sec-3.position-absolute {
     position: relative !important; }
