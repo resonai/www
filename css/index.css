@@ -265,7 +265,7 @@ a:not([href]):not([tabindex]):hover {
 .unity-logo {
   position: relative;
   bottom: 1px;
-  width: 8.125rem; }
+  width: 18rem; }
 
 .primary-background {
   background-color: #00717B; }
@@ -436,7 +436,7 @@ footer {
     position: relative !important; }
 
   .unity-logo {
-    width: 5.125rem; }
+    width: 15rem; }
 
   .mx-xs-6 {
     margin-left: 6rem !important;
