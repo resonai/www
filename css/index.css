@@ -253,6 +253,15 @@ a:not([href]):not([tabindex]):hover {
 #ar-with-vera {
   background-color: #E5EAEA; }
 
+#use-cases {
+  background-color: red; }
+
+#full-stack-os {
+  background-color: green; }
+
+#lets-build-together {
+  background-color: orange; }
+
 #animaker {
   background-color: #ECF2F3; }
 
