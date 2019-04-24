@@ -69,7 +69,7 @@
     padding-top: 152%; } }
 body {
   font-family: 'Lato', sans-serif;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.01rem;
   line-height: 1.533331; }
 
 .bg-light-o-80 {
@@ -77,15 +77,18 @@ body {
 
 .h1 {
   font-weight: 900;
-  font-size: 3rem; }
+  font-size: 3rem;
+  letter-spacing: 0.02rem; }
 
 .h2 {
   font-weight: 700;
-  font-size: 2.25rem; }
+  font-size: 2.25rem;
+  letter-spacing: 0.02rem; }
 
 .h3 {
   font-weight: 700;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  letter-spacing: 0.02rem; }
 
 .mimic-anchor {
   cursor: pointer;
@@ -254,13 +257,15 @@ a:not([href]):not([tabindex]):hover {
   background-color: #E5EAEA; }
 
 #use-cases {
-  background-color: lightblue; }
+  background-color: #ECF2F3; }
 
 #full-stack-os {
-  background-color: green; }
+  background-color: #032225;
+  color: #FFF; }
 
 #lets-build-together {
-  background-color: orange; }
+  background-color: #00717B;
+  color: #FFF; }
 
 #animaker {
   background-color: #ECF2F3; }
@@ -301,10 +306,10 @@ a:not([href]):not([tabindex]):hover {
     position: absolute;
     display: block;
     content: "";
-    background-image: url(/images/play-button.png);
+    background-image: url(/images/play-button4.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 30%;
+    background-size: 25%;
     width: 100%;
     height: 100%; }
 
