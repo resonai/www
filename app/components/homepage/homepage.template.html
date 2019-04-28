@@ -37,7 +37,7 @@
         <section id="vera">
             <div class="container py-md-5 py-4">
                 <div class="row no-gutters py-md-5 justify-content-center">
-                    <div class="col-12 mb-md-5 text-center">
+                    <div class="col-12 text-center">
                         <h2 class="h1 mx-auto primary-color">Resonai Vera<sup class="trade">&trade;</sup></h2>
                         <p class="h3 my-3">The OS for commercial spaces</p>
                         <p class="mx-auto w-50">
@@ -49,10 +49,6 @@
                     <div class="p-m-0 col-12 text-center">
                         <img class="" src="images/building.gif" alt="building scan gif" style="width:80%;" />
                     </div>
-                    <!--
-                    <div class="col-6 text-right"><img class="px-2 py-md-0 py-2 img-fluid" src="images/Resonai_iRocket_Steve_Optimized_R2.gif" alt="Steve game: Vera-gif-1" /></div>
-                    <div class="col-6 text-left"><img class="px-2 py-md-0 py-2 img-fluid" src="images/Resonai_iRocket_Car_Optimized_R2.gif" alt="Car game: Vera-gif-2" /></div>
-                    -->
                 </div>
             </div>
         </section>
@@ -123,97 +119,45 @@
 
         <section id="full-stack-os">
             <div class="container py-md-5 py-4">
-                <div class="row no-gutters py-md-5 justify-content-center">
-                    <div class="col-12 mb-md-5 text-center">
+                <div class="row no-gutters py-md-5">
+                    <div class="col-12 mb-md-5">
                         <h2 class="h2 text-center my-3">Full Stack OS</h2>
-                        <p class="mx-auto w-50">
-                            CHART
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <div class="container pt-md-4 pb-md-4">
+                            <div class="row pb-5">
+                                <div class="col-3 panel">
+                                    <div class="row mb-1" style="padding-bottom: 2rem; text-align: left; font-size: 1.25rem; font-weight: bold;">Developers</div>
+                                    <div class="row" style="padding-bottom: 1rem;">
+                                        <span style="font-weight: bold; padding-bottom: 0.5rem;">Platform and SDK</span>
+                                        <span style="text-align: left;">
+                                            Create next-gen AR experiences leveraging:<br>
+                                            <ul>
+                                                <li>Advanced semantics: 3D object recognition and 3D scene reconstruction</li>
+                                                <li>Precise mesh understanding</li>
+                                                <li>Accurate registration and tracking</li>
+                                            </ul>  
+                                        </span>
+                                    </div>
+                                    <div class="row">
+                                            <span style="font-weight: bold; padding-bottom: 0.5rem;">Marketplace</span>
+                                            <span style="text-align: left;">
+                                                Distribute and monetize apps
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-8 offset-1 panel" style="background-color: green;">
+                                        <div class="row mb-1" style="padding-bottom: 2rem; text-align: left; font-size: 1.25rem; font-weight: bold;">Building Owners and Managers</div>
+                                    <div class="full">
 
-        <!--
-        <section id="how-vera-works">
-            <div class="container py-md-5">
-                <div class="row justify-content-center">
-                    <div class="col-12 py-md-5 pt-4">
-                        <h2 class="h2 text-center">
-                            How Vera works
-                        </h2>
-                    </div>
-                    <div ng-controller="switchSteps" class="col-12 my-md-5 my-4 steps">
-                        <div ng-click="switchPanel(0)" ng-class="{ active: howPanel == 0, noFade: howPanel != 1 && howPanel != 0 && howPanel != 3}" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-5 col-12 offset-md-1 describer">
-                                <i class="fal fa-circle"><span>1</span></i>
-                                <p>
-                                    Scene scan
-                                    <span class="py-md-2">Scanned environments are indexed in the cloud.</span>
-                                </p>
-                            </div>
-                            <div ng-show="howPanel == 0" class="col-md-6 col-12 offset-md-6 sample">
-                                <img class="img-fluid" src="images/Resonai_HIW_1x.png" alt="Step 1: Scene-scan">
-                            </div>
-                        </div>
-                        <div ng-click="switchPanel(1)" ng-class="{ active: howPanel == 1, noFade: howPanel != 0 && howPanel != 1 && howPanel != 3 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-5 col-12 offset-md-1 describer">
-                                <i class="fal fa-circle"><span>2</span></i>
-                                <p>
-                                    Segmentation and surface extraction
-                                    <span class="py-2">Scene is analyzed to detect distinct surfaces and objects.</span>
-                                </p>
-                            </div>
-                            <div ng-show="howPanel == 1" class="col-md-6 col-12 offset-md-6 sample">
-                                <img class="img-fluid" src="images/Resonai_HIW_2.png" alt="Step 2: Segmentation-extraction">
-                            </div>
-                        </div>
-                        <div ng-click="switchPanel(2)" ng-class="{ active: howPanel == 2 }" class="row noFade p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-5 col-12 offset-md-1 describer">
-                                <i class="fal fa-circle"><span>3</span></i>
-                                <p>
-                                    Search and recognition
-                                    <span class="py-2">Our visual search engine identifies what objects are present in the scene as well as their precise structure.</span>
-                                </p>
-                            </div>
-                            <div ng-show="howPanel == 2" class="col-md-6 col-12 offset-md-6 sample">
-                                <img class="img-fluid" src="images/Resonai_HIW_3.png" alt="Step 3: Search-and-recognition">
-                            </div>
-                        </div>
-                        <div ng-click="switchPanel(3)" ng-class="{ active: howPanel == 3, noFade: pastPanel != 1 && howPanel != 3 && howPanel != 0 }" class="row p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step">
-                            <div class="col-md-5 col-12 offset-md-1 pr-0 describer">
-                                <i class="fal fa-circle"><span>4</span></i>
-                                <p>
-                                    Scene reconstruction
-                                    <span ng-controller="popupVideo" class="py-2">
-                                        A digital version of the space is created to mirror the physical setting.
-                                        <a class="mimic-anchor" ng-click="openContactForm($event)" data="https://www.youtube.com/embed/TDY0KAmspQI">
-                                            Watch video
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div ng-show="howPanel == 3" class="col-md-6 col-12 offset-md-6 sample">
-                                <img class="img-fluid" src="images/Resonai_HIW_4.png" alt="Step 4: Scene-reconstruction">
-                            </div>
-                        </div>
-                        <div ng-click="switchPanel(4)" ng-class="{ active: howPanel == 4 }" class="row noFade p-md-0 py-4 px-3 m-md-0 mx-1 mb-3 panel step pb-md-5">
-                            <div class="col-md-5 col-12 offset-md-1 describer">
-                                <i class="fal fa-circle"><span>5</span></i>
-                                <p>
-                                    Experience unlocks
-                                    <span class="py-2">Experiences that comply with the semantics of the space are unlocked.</span>
-                                </p>
-                            </div>
-                            <div ng-show="howPanel == 4" class="col-md-6 col-12 offset-md-6 sample">
-                                <img class="m-md-5 img-fluid rounded-12" src="images/Resonai_iRocket_Steve_Optimized_R2.gif" alt="Step 5: Experience-unlocks">
+                                    </div>
+                                    <span>Scanning services
+                                            Professional teams to create full 3D scans of your space.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        -->
 
         <section id="ar-with-vera">
             <div class="container py-md-5">
@@ -276,7 +220,7 @@
         <section id="lets-build-together">
             <div class="container py-md-5 py-4">
                 <div class="row no-gutters py-md-5 justify-content-center">
-                    <div class="col-12 mb-md-5 text-center">
+                    <div class="col-12 text-center">
                         <h2 class="h2 text-center my-3">Let's build something together.</h2>
                         <p class="mx-auto w-50">
                             We want to partner with innovative, forward-thinking commercial real estate 
@@ -284,7 +228,7 @@
                             to realize Vera’s full potential. 
                         </p>
                         <p><a target="_blank" class="btn btn-secondary mb-md-0 my-4" 
-                            href="https://assetstore.unity.com/packages/tools/utilities/unity-visual-search-104059">Contact us</a></p>
+                            href="https://resonai.com/index.php#!/contactUs">Contact us</a></p>
                     </div>
                 </div>
             </div>

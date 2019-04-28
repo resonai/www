@@ -95,7 +95,7 @@ body {
   display: inline; }
 
 .pt-medium {
-  padding-top: 2.25rem; }
+  padding-top: 4rem; } /*2.25rem; }*/
 
 a,
 a:hover,
@@ -253,8 +253,8 @@ a:not([href]):not([tabindex]):hover {
           #how-vera-works .panel .sample.ng-hide {
             display: block !important; } }
 
-#ar-with-vera {
-  background-color: #E5EAEA; }
+#vera {
+  background-color: white; }
 
 #use-cases {
   background-color: #ECF2F3; }
@@ -327,9 +327,9 @@ a:not([href]):not([tabindex]):hover {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); }
 
 .nav-logo {
-  height: 2.25rem;
+  height: 2rem;
   width: auto;
-  bottom: -6px;
+  bottom: -10px;
   position: absolute; }
   @media screen and (max-width: 64rem) {
     .nav-logo {
@@ -347,14 +347,25 @@ footer {
 
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out; /* Safari */ }
+.navbar .btn {
+  font-weight: normal; }
+.navbar.scrolled {
+  background-color: #f8f9fa; }
 .navbar .collapsed,
 .navbar .show {
   transition-duration: 200ms; }
 .navbar .nav-link {
   position: relative;
-  color: #7f7f7f;
-  font-weight: bold;
-  transition: color 250ms; }
+  /*color: #7f7f7f;*/
+  color: black;
+  font-weight: normal; /*bold;*/
+  transition: color 250ms;
+padding-left: 0px;
+padding-right: 0px; }
   .navbar .nav-link:hover:before {
     opacity: 1.0; }
   .navbar .nav-link.active, .navbar .nav-link:active {
