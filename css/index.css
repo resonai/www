@@ -169,8 +169,8 @@ a:not([href]):not([tabindex]):hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  #visual-search .h3 {
-    color: #4a5150; }
+  /*#visual-search .h3 {
+    color: #4a5150; }*/
   #visual-search .headline-panel {
     background-color: rgba(255, 255, 255, 0.8); }
   #visual-search .panel {
@@ -253,28 +253,29 @@ a:not([href]):not([tabindex]):hover {
           #how-vera-works .panel .sample.ng-hide {
             display: block !important; } }
 
-#vera {
-  background-color: white; }
-
 #use-cases {
   background-color: #ECF2F3; }
 
 #full-stack-os {
+  background-color: #E5EAEA; }
+
+#ar-with-vera {
   background-color: #032225;
   color: #FFF; }
 
 #lets-build-together {
-  background-color: #00717B;
-  color: #FFF; }
+  /*background-color: #00717B;
+  color: #FFF; }*/
+  background-color: #ECF2F3; }
+  
+#unity {
+    background-color: #00717B;
+    color: #FFF; }
+    #unity .h2 span {
+      font-size: 1rem; }
 
 #animaker {
   background-color: #ECF2F3; }
-
-#unity {
-  background-color: #00717B;
-  color: #FFF; }
-  #unity .h2 span {
-    font-size: 1rem; }
 
 .unity-logo {
   position: relative;
@@ -348,13 +349,15 @@ footer {
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
 .navbar {
-  background-color: transparent;
-  transition: background-color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out; /* Safari */ }
+  background-color: rgba(255,255,255,0);
+  transition: all 0s;
+  -webkit-transition: all 0s; /* Safari */ 
+  -moz-transition: all 0s;
+  -o-transition: all 0s; }
 .navbar .btn {
   font-weight: normal; }
 .navbar.scrolled {
-  background-color: #f8f9fa; }
+  background-color: rgba(255,255,255,1); }
 .navbar .collapsed,
 .navbar .show {
   transition-duration: 200ms; }
