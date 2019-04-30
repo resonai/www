@@ -258,6 +258,15 @@ a:not([href]):not([tabindex]):hover {
 
 #full-stack-os {
   background-color: #d9e4e5; }
+  #full-stack-os p {
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem; }
+    #full-stack-os .seperator {
+      background-color:white; 
+      height: 2.5px; }
+    #full-stack-os ul {
+      margin-bottom: 0; }
 
 #ar-with-vera {
   background-color: #032225;
