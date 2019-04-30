@@ -264,8 +264,6 @@ a:not([href]):not([tabindex]):hover {
   color: #FFF; }
 
 #lets-build-together {
-  /*background-color: #00717B;
-  color: #FFF; }*/
   background-color: #ECF2F3; }
   
 #unity {
@@ -349,15 +347,15 @@ footer {
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
 .navbar {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
   transition: all 0s;
-  -webkit-transition: all 0s; /* Safari */ 
+  -webkit-transition: all 0s;
   -moz-transition: all 0s;
   -o-transition: all 0s; }
 .navbar .btn {
   font-weight: normal; }
 .navbar.scrolled {
-  background-color: rgba(255,255,255,1); }
+  background-color: rgba(255, 255, 255, 1); }
 .navbar .collapsed,
 .navbar .show {
   transition-duration: 200ms; }
