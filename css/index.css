@@ -361,12 +361,11 @@ footer {
   transition-duration: 200ms; }
 .navbar .nav-link {
   position: relative;
-  /*color: #7f7f7f;*/
   color: black;
-  font-weight: normal; /*bold;*/
+  font-weight: normal;
   transition: color 250ms;
-padding-left: 0px;
-padding-right: 0px; }
+  padding-left: 0px;
+  padding-right: 0px; }
   .navbar .nav-link:hover:before {
     opacity: 1.0; }
   .navbar .nav-link.active, .navbar .nav-link:active {
