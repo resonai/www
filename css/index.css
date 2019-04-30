@@ -253,6 +253,10 @@ a:not([href]):not([tabindex]):hover {
           #how-vera-works .panel .sample.ng-hide {
             display: block !important; } }
 
+#vera img {
+  width: 60%;
+}
+
 #use-cases {
   background-color: #ECF2F3; }
 
