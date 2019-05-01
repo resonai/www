@@ -9,11 +9,16 @@
   min-height: 100px; 
   position: absolute; 
   bottom: 4rem; 
-  left: 50%; }
+  left: calc(50% - 42.5px); }
 
 .animate-hover-container p {
   color: white;
 }
+
+.request-demo {
+  position: absolute; 
+  bottom: 2rem; 
+  left: calc(50% - 74px); }
 
 @keyframes animation-hover {
   0% {
@@ -176,8 +181,6 @@ a:not([href]):not([tabindex]):hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  /*#visual-search .h3 {
-    color: #4a5150; }*/
   #visual-search .headline-panel {
     background-color: rgba(255, 255, 255, 0.8); }
   #visual-search .panel {
@@ -281,21 +284,23 @@ a:not([href]):not([tabindex]):hover {
   }
   @media screen and (max-width: 48rem) {
     #use-cases .grid-container {
-    width: 80%;
+    width: 90%;
     grid-template-columns: repeat(1, 1fr); }
   }
 
 #full-stack-os {
   background-color: #d9e4e5; }
   #full-stack-os p {
-    padding-bottom: 0.5rem;
+    width: 100%;
     font-weight: 600;
     letter-spacing: 0.02rem; }
-    #full-stack-os .seperator {
-      background-color:white; 
-      height: 2.5px; }
-    #full-stack-os ul {
-      margin-bottom: 0; }
+  #full-stack-os span {
+    padding-bottom: 0.5rem; }
+  #full-stack-os .seperator {
+    background-color:white; 
+    height: 2.5px; }
+  #full-stack-os ul {
+    margin-bottom: 0; }
 
 #ar-with-vera {
   background-color: #032225;
