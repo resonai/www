@@ -14,17 +14,23 @@ iframe{
     margin: 0;
     padding: 0;
 }
-.ngdialog.ngdialog-theme-default .ngdialog-close{
+
+.ngdialog.ngdialog-theme-default .ngdialog-close:before{
     border: solid 2px white;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    right: -34px;
+    right: -42px;
     top: -3px;
-    background: black;
+    position: relative;
+    background-color: white;
+    color: black;
 }
-.ngdialog.ngdialog-theme-default .ngdialog-close:before{
-    font-size: 32px;
+
+.ngdialog.ngdialog-theme-default .ngdialog-close:hover:before,
+.ngdialog.ngdialog-theme-default .ngdialog-close:active:before {
+    background-color: white;
+    color: #35c0cf;
 }
 
 @media screen and (max-width: 1200px) {
