@@ -264,8 +264,10 @@ a:not([href]):not([tabindex]):hover {
             display: block !important; } }
 
 #vera img {
-  width: 60%;
-}
+  width: 60%; }
+@media screen and (max-width: 64rem) {
+  #vera img {
+    width: 100%; }}
 
 #use-cases {
   background-color: #ECF2F3; }
