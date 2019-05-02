@@ -160,7 +160,8 @@ a:not([href]):not([tabindex]):hover {
   background-image: url("../images/Resonai_Hero_R2_full-size-optimize.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: top center; }
+  background-position: top left; 
+background-color: orange;}
 #discover-new-realities .top-0 {
   top: 0; 
   height: 100%; }
@@ -168,13 +169,14 @@ a:not([href]):not([tabindex]):hover {
   #discover-new-realities .content {
     background-size: 120%; }
   #discover-new-realities .w-50 {
-    width: 100% !important; } }
+    width: 100% !important; }}
 @media screen and (max-width: 48rem) {
-  #discover-new-realities .img-fluid {
-    min-height: 22.25rem;
-    object-fit: cover; }
   #discover-new-realities .content {
-    background-size: 250%; } }
+    background-size: cover; }}
+@media screen and (max-width: 768px) {
+  #discover-new-realities .content {
+    background-position: top left; }}
+
 
 #visual-search {
   background-color: #80b0ad;
