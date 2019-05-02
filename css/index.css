@@ -503,6 +503,13 @@ footer {
 @media screen and (max-width: 1199px) {
   .tablet-break {
     display: block; } }
+
+@media screen and (max-width: 64rem) {
+  .w-50,
+  .w-75 {
+    width: 100% !important; }
+}
+
 @media screen and (max-width: 48rem) {
   .sec-3.position-absolute {
     position: relative !important; }

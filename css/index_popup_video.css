@@ -51,17 +51,13 @@ iframe{
         width: 100%;
         height: 380px;
     }
-    .ngdialog.ngdialog-theme-default .ngdialog-close{
-        border: solid 1px white;
-        width: 23px;
-        height: 23px;
-        right: 7px;
-        top: 6px;
-    }
-    .ngdialog.ngdialog-theme-default .ngdialog-close:before{
-        font-size: 17px;
+    .ngdialog.ngdialog-theme-default .ngdialog-close:before {
+        width: 30px;
+        height: 30px;
+        right: -1px;
+        top: 5px;
         padding: 0;
-        line-height: 22px;
+        font-size: 20px;
     }
 }
 
@@ -74,8 +70,5 @@ iframe{
 @media screen and (max-width: 400px) {
     iframe{
         height: 200px;
-    }
-    .ngdialog.ngdialog-theme-default .ngdialog-close{
-        top: 5%;
     }
 }
