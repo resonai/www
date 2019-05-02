@@ -392,15 +392,18 @@ footer {
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
 .navbar {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(248, 249, 250, 0);
   transition: all 0s;
   -webkit-transition: all 0s;
   -moz-transition: all 0s;
   -o-transition: all 0s; }
 .navbar .btn {
   font-weight: normal; }
+@media screen and (max-width: 64rem) {
+  .navbar {
+    background-color: rgba(248, 249, 250, 1); }}
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 1); }
+  background-color: rgba(248, 249, 250, 1); }
 .navbar .collapsed,
 .navbar .show {
   transition-duration: 200ms; }
