@@ -387,7 +387,8 @@ a:not([href]):not([tabindex]):hover {
   position: absolute; }
   @media screen and (max-width: 64rem) {
     .nav-logo {
-      height: 1.5rem; }
+      height: 1.5rem;
+      padding-left: .75rem; }
       .nav-logo.position-absolute {
         position: relative; } }
 
