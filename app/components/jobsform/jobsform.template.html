@@ -1,14 +1,14 @@
 <form name="userForm" novalidate ng-submit="insertData(userForm.$valid)" enctype="multipart/form-data" method="post"
 ng-controller="contactFormJobs">
-	<label class="text-danger" ng-show="errorMessage">{{errorMessage}}</label>
-	<label class="text-success" ng-show="successInsert">{{successInsert}}</label>
+	<label class="text-danger ng-hide" ng-show="errorMessage">{{errorMessage}}</label>
+	<label class="text-success ng-hide" ng-show="successInsert">{{successInsert}}</label>
 	<div class="cf-field-div py-2">
 	    <!--<label for="username" >Name</label>-->
 	    <input type="text" name="userName" placeholder="Name" ng-model="insert.user_name" class="form-control" ng-class="{    
 	    'has-error' : userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }"  
 	    required>
 	    <!--<span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>-->
-	    <span class="valid-text" ng-show="userForm.userName.$dirty && userForm.userName.$invalid">
+	    <span class="valid-text ng-hide" ng-show="userForm.userName.$dirty && userForm.userName.$invalid">
             <span ng-show="userForm.userName.$error.required">Name is required.</span>
         </span>
 	</div>
@@ -17,20 +17,20 @@ ng-controller="contactFormJobs">
 	    <input type="email" name="email" placeholder="Email" ng-model="insert.email" class="form-control" ng-class="{
 	    'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
 	    <!--<span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>-->
-	    <span class="valid-text" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+	    <span class="valid-text ng-hide" ng-show="userForm.email.$dirty && userForm.email.$invalid">
             <span ng-show="userForm.email.$error.required">Email is required.</span>
             <span ng-show="userForm.email.$error.email">Invalid email address.</span>
         </span>
 	</div>
 	<div class="upload-file cf-field-div py-3">
-	    <label class="custom-file-upload">
+	    <div class="custom-file-upload p-1 d-inline-block border">
 		<input type="file" name="filecv" value="{{fileToUpload}}" ng-value="fileToUpload" file-model="testfile" set-file-data="fileToUpload=value;" />
 		<i class="fa fa-paperclip" aria-hidden="true"></i>
-		<p class="upload-cv">Upload CV</p>
-		<p class="upload-cv-selected" ng-if="fileToUpload.name">Selected file: <span>{{fileToUpload.name}}</span></p>
-	    </label>
+		<p class="upload-cv py-1">Upload CV</p>
+		<p class="upload-cv-selected py-1" ng-if="fileToUpload.name">Selected file: <span>{{fileToUpload.name}}</span></p>
+	    </div>
 	    <!--<span class="text-danger" ng-show="errorFilecv">{{errorFilecv}}</span>-->
-	    <span class="valid-text" ng-show="userForm.filecv.$dirty && userForm.filecv.$invalid">
+	    <span class="valid-text ng-hide" ng-show="userForm.filecv.$dirty && userForm.filecv.$invalid">
             <span ng-show="userForm.filecv.$error.required">File Upload is required.</span>
         </span>
 	</div>

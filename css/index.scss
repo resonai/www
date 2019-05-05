@@ -43,6 +43,8 @@ $browser-context: 16; // Default
 
 body {
   font-family: 'Lato', sans-serif;
+  letter-spacing: 0.025rem;
+  line-height: 1.533331;
 }
 
 .bg-light-o-80 {
@@ -69,10 +71,16 @@ body {
   display: inline;
 }
 
+.pt-medium {
+  padding-top: 2.25rem;
+}
+
 a,
 a:hover,
 .mimic-anchor,
-.mimic-anchor:hover {
+.mimic-anchor:hover,
+a:not([href]):not([tabindex]),
+a:not([href]):not([tabindex]):hover {
   color: $colorPrimaryLight;
   text-decoration: none;
   font-weight: bold;
@@ -108,12 +116,7 @@ a:hover,
 
 .text-danger,
 .valid-text {
-  display: none;
   color: red;
-}
-
-.text-success {
-  display: none;
 }
 
 .scale-0-8 {
@@ -128,9 +131,14 @@ a:hover,
   height: 90px;
 }
 
+.trade {
+  font-size: 0.5em;
+  top: -1rem;
+}
+
 #discover-new-realities {
   .content {
-    background-image: url("../images/Resonai_Hero_R2_full-size.jpg");
+    background-image: url("../images/Resonai_Hero_R2_full-size-optimize.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top center;
@@ -183,6 +191,7 @@ a:hover,
 #how-vera-works {
   background-color: $colorPrimaryDark;
   color: #FFF;
+  min-height: rem(782);
   .steps {
     position: relative;
   }
@@ -207,7 +216,7 @@ a:hover,
       }
     }
     p {
-      max-width: rem(270);
+      //max-width: rem(270);
       opacity: 0.5;
       span {
         opacity: 0;
@@ -220,7 +229,7 @@ a:hover,
         opacity: 1.0;
         span {
           opacity: 1.0;
-          height: initial;
+          height: 4.375rem;
         }
       }
       i {
@@ -289,6 +298,15 @@ a:hover,
 #unity {
   background-color: $colorPrimary;
   color: #FFF;
+  .h2 span {
+    font-size: 1rem;
+  }
+}
+
+.unity-logo {
+  position: relative;
+  bottom: 1px;
+  width:18rem;
 }
 
 .primary-background {
@@ -375,6 +393,10 @@ footer {
 /* ---- NavBar ---- */
 
 .navbar {
+  .collapsed,
+  .show {
+    transition-duration: 200ms;
+  }
   .nav-link {
     position: relative;
     color: #7f7f7f;
@@ -487,11 +509,32 @@ footer {
   box-shadow: none;
 }
 
+.positions-style.active {
+  border-bottom: 2px solid #80b8bd;
+}
+
 /* ---- End Buttons ---- */
+
+.upload-cv,
+.upload-cv-selected {
+  margin-bottom: 0;
+}
 
 /* ---- End Bootstrap Override CSS ---- */
 
+@media screen and (max-width: 1199px) {
+  .tablet-break {
+    display: block;
+  }
+}
+
 @media screen and (max-width: rem(768)) {
+  .sec-3.position-absolute {
+    position: relative!important;
+  }
+  .unity-logo {
+    width: 15rem;
+  }
 
   .mx-xs-6 {
     margin-left: 6rem!important;

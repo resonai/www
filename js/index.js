@@ -1,71 +1,92 @@
 var app = angular.module('mainApp', ['revealer','ngDialog', 'ngTouch', 'duScroll','ui.router','app.homepage', 'app.contactus',
-'app.jobs','app.dollhouse','app.search', 'app.search4unity','ngMeta']);
+'app.jobs','app.dollhouse','app.search', 'app.search4unity','ui.router.metatags']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
-    
+app.config(function($stateProvider, $urlRouterProvider, UIRouterMetatagsProvider) {
+
+    UIRouterMetatagsProvider
+        .setTitlePrefix('Resonai: ')
+        .setDefaultTitle('Discover new realities. Vera for AR + 3D visual search.')
+        .setDefaultDescription('Resonai is all about visual perception – understanding the digital and physical world in 3D, and applying that to AR, visual search, and more.')
+        .setDefaultKeywords('Resonai, Vera for AR, Visual Search, Unity Visual Search, Animaker')
+        .setDefaultRobots('index')
+        .setStaticProperties({
+            // 'fb:app_id': 'your fb app id',
+            'og:site_name': 'Resonai'
+        })
+        .setOGURL(true);
+
     $urlRouterProvider.otherwise('/home');
-    
+
     $stateProvider
-        
+
         // HOME STATES ========================================
         .state('home', {
             url: '/home',
             template: '<homepage />',
-            data: {
-                meta: {
-                    'title': 'Resonai: Discover new realities. Vera for AR + 3D visual search.',
-                    'description': 'Resonai is all about visual perception – understanding the digital and physical world in 3D, and applying that to AR, visual search, and more.',
-                    'keywords': 'Resonai, Vera for AR, Visual Search, Unity Visual Search, Animaker'
+            metaTags: {
+                title: 'Discover new realities. Vera for AR + 3D visual search.',
+                description: 'Resonai is all about visual perception – understanding the digital and physical world in 3D, and applying that to AR, visual search, and more.',
+                keywords: 'Resonai, Vera for AR, Visual Search, Unity Visual Search, Animaker',
+                properties: {
+                    'og:title': 'Resonai: Discover new realities. Vera for AR + 3D visual search.'
                 }
             }
         })
-        
+
         // SEARCH4UNITY PAGE =================================
         .state('search4unity', {
             url: '/search4unity',
             template: '<search4unity />'
         })
-    
+
         // SEARCH PAGE =================================
         .state('search', {
             url: '/search',
             template: '<search />'
         })
-    
+
         // DOLLHOUSE PAGE =================================
         .state('dollhouse', {
             url: '/dollhouse',
             template: '<dollhouse />'
         })
-    
+
         // JOBS PAGE =================================
         .state('jobs', {
             url: '/jobs',
             template: '<jobs />',
-            data: {
-                meta: {
-                    'title': 'Resonai: Jobs',
-                    'description': 'We’re working on some really cool stuff. If you want in, check out the open positions at Resonai. We’d love to hear from you.',
-                    'keywords': 'Resonai jobs, careers at Resonai, job openings'
+            metaTags: {
+                title: 'Jobs',
+                description: 'We’re working on some really cool stuff. If you want in, check out the open positions at Resonai. We’d love to hear from you.',
+                keywords: 'Resonai jobs, careers at Resonai, job openings',
+                properties: {
+                    'og:title': 'Resonai: Jobs'
                 }
             }
-        }) 
-    
+        })
+
         // CONTACTUS PAGE =================================
         .state('contactUs', {
             url: '/contactUs',
             template: '<contactus />',
-            data: {
-                meta: {
-                    'title': 'Resonai: Contact Us',
-                    'description': 'There’s nothing like a good chat. If you’re interested in a demo of our products, partnerships, or just about anything in between, let us know.',
-                    'keywords': 'Contact Resonai, Resonai demos, Resonai partnerships'
+            metaTags: {
+                title: 'Contact Us',
+                description: 'There’s nothing like a good chat. If you’re interested in a demo of our products, partnerships, or just about anything in between, let us know.',
+                keywords: 'Contact Resonai, Resonai demos, Resonai partnerships',
+                properties: {
+                    'og:title': 'Resonai: Contact Us'
                 }
             }
         });
-}).run(function(ngMeta) {
-    ngMeta.init();
 });
+
+
+
+function runBlock($rootScope, MetaTags) {
+    $rootScope.MetaTags = MetaTags;
+}
+
+app.run(['$rootScope', 'MetaTags', runBlock]);
 
 // HOME PAGE ========================================
  app.controller('smoothScroll', function($scope, $document){

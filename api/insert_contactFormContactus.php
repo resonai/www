@@ -45,12 +45,12 @@ else
                 $data["message"] = "Thank you. We will contact you soon!";
         }
         else {
-            $data["error"] = "We had internal error.";
+            $data["error"] = "We had an internal error.";
         }
     }
     catch(Exception $e) {
 	syslog(LOG_WARNING, $e->getMessage());
-        $data["error"] = "We had internal error";
+        $data["error"] = "We had an internal error";
     }
 //    var_dump($result);
     
