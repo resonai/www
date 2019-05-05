@@ -282,13 +282,19 @@ a:not([href]):not([tabindex]):hover {
     justify-items: center; 
     justify-content: space-between;
   }
+  #use-cases .grid-container .grid-item {
+    width: 100%; }
+  #use-cases .grid-container .grid-item .video-thumb {
+    width: 100%; }
+  #use-cases .grid-container .grid-item .img-fluid {
+    width: 100%; }
+
   @media screen and (max-width: 64rem) {
     #use-cases .grid-container {
     grid-template-columns: repeat(2, 1fr); }
   }
   @media screen and (max-width: 48rem) {
     #use-cases .grid-container {
-    width: 90%;
     grid-template-columns: repeat(1, 1fr); }
   }
 
@@ -388,7 +394,7 @@ a:not([href]):not([tabindex]):hover {
   @media screen and (max-width: 64rem) {
     .nav-logo {
       height: 1.5rem;
-      padding-left: .75rem; }
+      padding-left: .85rem; }
       .nav-logo.position-absolute {
         position: relative; } }
 
@@ -445,7 +451,9 @@ footer {
 .navbar-toggler.collapsed .navbar-toggler-icon {
   background-image: url("../images/Icon-Menu.svg"); }
 .navbar-toggler .navbar-toggler-icon {
-  background-image: url("../images/Icon-Close.svg"); }
+  background-image: url("../images/Icon-Close.svg");
+  height: 1.4rem;
+  width: 1.4rem; }
 @media screen and (max-width: 48rem) {
   .navbar-toggler {
     font-size: 1rem; } }

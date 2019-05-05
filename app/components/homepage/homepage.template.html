@@ -4,7 +4,7 @@
         <div class="position-absolute pt-5 w-100 top-0">
             <div class="container mx-auto py-md-5 py-4 text-center justify-content-center">
                 <div class="row">
-                    <div class="col text-center">
+                    <div class="col-12 text-center">
                         <h2 class="h1 mx-auto pt-md-5 pt-4 mb-3">Discover new realities.</h2>
                         <p class="w-50 px-md-5 mb-md-0 mb-5 py-2 mx-auto">
                             Resonai brings visual perception to the platforms of today – and tomorrow –
@@ -64,56 +64,71 @@
             <div class="col-12 mb-md-5 text-center">
                 <h2 class="h2 text-center my-3">Sample use cases</h2>
             </div>
-            <div class="grid-container mb-md-0 mb-4">
-                <div class="grid-item">
-                    <div ng-controller="popupVideo" class="pb-4">
-                        <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/DiTfJTByFek">
-                            <img class="img-fluid panel-rounded" src="images/vera-video-thumb.jpg" alt="Video: Vera: Real-life demo" />
-                        </span>
+
+            <div class="col-12 mb-md-0 mb-4 text-center">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <div ng-controller="popupVideo" class="pb-4">
+                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                                data="https://www.youtube.com/embed/DiTfJTByFek">
+                                <img class="img-fluid panel-rounded" src="images/vera-video-thumb.jpg" 
+                                    alt="Video: Vera: Real-life demo"/>
+                            </span>
+                        </div>
+                        <span>Real-life demo: Multi-purpose</span>
                     </div>
-                    <span>Real-life demo: Multi-purpose</span>
-                </div>
-                <div class="grid-item">
-                    <div ng-controller="popupVideo" class="pb-4">
-                        <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/-t85x8gbqK4">
-                            <img class="img-fluid panel-rounded" src="images/ticketing-video-thumb.jpg" alt="Video: Ticketing system" />
-                        </span>
+                    <div class="grid-item">
+                        <div ng-controller="popupVideo" class="pb-4">
+                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                                data="https://www.youtube.com/embed/-t85x8gbqK4">
+                                <img class="img-fluid panel-rounded" src="images/ticketing-video-thumb.jpg" 
+                                    alt="Video: Ticketing system" />
+                            </span>
+                        </div>
+                        <span>Ticketing: Construction & maintenance</span>
                     </div>
-                    <span>Ticketing: Construction & maintenance</span>
-                </div>
-                <div class="grid-item">
-                    <div ng-controller="popupVideo" class="pb-4">
-                        <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/G-_elXgAJOA">
-                            <img class="img-fluid panel-rounded" src="images/concierge-video-thumb.jpg" alt="Video: Concierge" />
-                        </span>
+                    <div class="grid-item">
+                        <div ng-controller="popupVideo" class="pb-4">
+                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                                data="https://www.youtube.com/embed/G-_elXgAJOA">
+                                <img class="img-fluid panel-rounded" src="images/concierge-video-thumb.jpg" 
+                                    alt="Video: Concierge" />
+                            </span>
+                        </div>
+                        <span>Indoor navigation & concierge</span>
                     </div>
-                    <span>Indoor navigation & concierge</span>
-                </div>
-                <div class="grid-item">
-                    <div ng-controller="popupVideo" class="pb-4">
-                        <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/fQES9O65Llw">
-                            <img class="img-fluid panel-rounded" src="images/iot-video-thumb.jpg" alt="Video: IoT" />
-                        </span>
+                    <div class="grid-item">
+                        <div ng-controller="popupVideo" class="pb-4">
+                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                                data="https://www.youtube.com/embed/fQES9O65Llw">
+                                <img class="img-fluid panel-rounded" src="images/iot-video-thumb.jpg" 
+                                    alt="Video: IoT" />
+                            </span>
+                        </div>
+                        <span>IoT control</span>
                     </div>
-                    <span>IoT control</span>
-                </div>
-                <div class="grid-item">
-                    <div ng-controller="popupVideo" class="pb-4">
-                        <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/hsoWZlEwAHg">
-                            <img class="img-fluid panel-rounded" src="images/coffee-video-thumb.jpg" alt="Video: Coffee tutorial" />
-                        </span>
+                    <div class="grid-item">
+                        <div ng-controller="popupVideo" class="pb-4">
+                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                                data="https://www.youtube.com/embed/hsoWZlEwAHg">
+                                <img class="img-fluid panel-rounded" src="images/coffee-video-thumb.jpg" 
+                                    alt="Video: Coffee tutorial" />
+                            </span>
+                        </div>
+                        <span>Tutorials & how-to’s</span>
                     </div>
-                    <span>Tutorials & how-to’s</span>
-                </div>
-                <div class="grid-item">
-                    <div ng-controller="popupVideo" class="pb-4">
-                        <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/wN5UIwwHq7w">
-                            <img class="img-fluid panel-rounded" src="images/car-video-thumb.jpg" alt="Video: Car game" />
-                        </span>
+                    <div class="grid-item">
+                        <div ng-controller="popupVideo" class="pb-4">
+                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                                data="https://www.youtube.com/embed/wN5UIwwHq7w">
+                                <img class="img-fluid panel-rounded" src="images/car-video-thumb.jpg" 
+                                    alt="Video: Car game" />
+                            </span>
+                        </div>
+                        <span>Gamified experiences</span>
                     </div>
-                    <span>Gamified experiences</span>
                 </div>
-            </div>
+            </div>       
         </div>
     </div>
 </section>
