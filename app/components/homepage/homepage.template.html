@@ -43,7 +43,7 @@
                     Powered by advanced AI, Vera uses a complete and precise understanding of a 
                     building’s 3D structure as the foundation for an entirely new class of AR 
                     applications for the whole building lifecycle.<br><br>
-                    Vera offers scale – applications can adapt automatically to the
+                    It's a platform that scales – applications can adapt automatically to the
                     structure and context of any property.
                 </p>
             </div>
@@ -95,6 +95,11 @@
                         </div>
                         <span>Indoor navigation & concierge</span>
                     </div>
+                </div>
+                <div ng-init="showRowTwo = false" ng-hide="showRowTwo" ng-click="showRowTwo = true" class="row justify-content-center">
+                    <span class="col position-absolute pt-3 mimic-anchor">More videos</span>
+                </div>
+                <div ng-show="showRowTwo" class="grid-container">
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
                             <span ng-click="openContactForm($event)" class="video-thumb" 
@@ -226,7 +231,7 @@
                     <div class="img-wrapper">
                         <img class="py-3" width="55" src="images/Icon-adaptable.svg" alt="Adaptive-icon" />
                     </div>
-                    <p class="mb-1">Adaptive</p>
+                    <p class="mb-1">Scalable</p>
                     <span>Experiences adjust to the semantics of any environment.</span>
                 </div>
             </div>
