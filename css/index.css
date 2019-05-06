@@ -113,6 +113,9 @@ a:not([href]):not([tabindex]):hover {
 .mh-250 {
   min-height: 250px; }
 
+.ws-nowrap {
+  white-space: nowrap; }
+
 .panel p {
   font-size: 1.25rem;
   font-weight: 900; }
