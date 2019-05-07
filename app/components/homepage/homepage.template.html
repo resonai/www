@@ -47,8 +47,8 @@
                     structure and context of any property.
                 </p>
             </div>
-            <div class="text-center mb-4 mt-5">
-                <a class="btn btn-primary mt-2" href="/index.php#!/whitepaper">Download Vera whitepaper</a>
+            <div class="text-center mb-2 mt-3">
+                <a target="_blank" class="btn btn-primary mt-0 mt-md-2" href="/index.php#!/whitepaper">Download Vera white paper</a>
             </div>
             <div class="p-m-0 col-12 text-center">
                 <img src="images/building_sharp.gif" alt="building scan gif"/>
@@ -63,7 +63,7 @@
             <div class="col-12 mb-md-5 text-center">
                 <h2 class="h2 text-center my-3">Sample use cases</h2>
             </div>
-            <div class="col-12 mb-md-0 mb-4 text-center side-padding-sm-screen">
+            <div ng-init="showRowTwo = false" class="col-12 mb-md-0 mb-4 text-center side-padding-sm-screen">
                 <div class="grid-container">
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
@@ -96,15 +96,13 @@
                         <span>Indoor navigation & concierge</span>
                     </div>
                 </div>
-                <div ng-init="showRowTwo = false" ng-hide="showRowTwo" ng-click="showRowTwo = true" class="row justify-content-center">
-                    <span class="col position-absolute pt-3 mimic-anchor">More videos</span>
-                </div>
+
                 <div ng-show="showRowTwo" class="grid-container">
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                            <span ng-click="openContactForm($event)" class="video-thumb"
                                 data="https://www.youtube.com/embed/fQES9O65Llw">
-                                <img class="img-fluid panel-rounded" src="images/iot-video-thumb.jpg" 
+                                <img class="img-fluid panel-rounded" src="images/iot-video-thumb.jpg"
                                     alt="Video: IoT" />
                             </span>
                         </div>
@@ -112,9 +110,9 @@
                     </div>
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                            <span ng-click="openContactForm($event)" class="video-thumb"
                                 data="https://www.youtube.com/embed/hsoWZlEwAHg">
-                                <img class="img-fluid panel-rounded" src="images/coffee-video-thumb.jpg" 
+                                <img class="img-fluid panel-rounded" src="images/coffee-video-thumb.jpg"
                                     alt="Video: Coffee tutorial" />
                             </span>
                         </div>
@@ -122,13 +120,26 @@
                     </div>
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                            <span ng-click="openContactForm($event)" class="video-thumb"
                                 data="https://www.youtube.com/embed/wN5UIwwHq7w">
-                                <img class="img-fluid panel-rounded" src="images/car-video-thumb.jpg" 
+                                <img class="img-fluid panel-rounded" src="images/car-video-thumb.jpg"
                                     alt="Video: Car game" />
                             </span>
                         </div>
                         <span>Gamified experiences</span>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col pt-3">
+                        <span ng-click="showRowTwo ? showRowTwo = false : showRowTwo = true" class="position-relative mimic-anchor">
+                            <svg ng-show="showRowTwo" class="fa-rotate-180" width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 1 L19 12 L32 1" stroke="#00A8BA" stroke-width="3"/>
+                            </svg>
+                            <div>{{ showRowTwo ? "See less" : 'See More'}}</div>
+                            <svg ng-hide="showRowTwo" width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 1 L19 12 L32 1" stroke="#00A8BA" stroke-width="3"/>
+                            </svg>
+                        </span>
                     </div>
                 </div>
             </div>       
