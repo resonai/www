@@ -273,6 +273,8 @@ a:not([href]):not([tabindex]):hover {
 
 #use-cases {
   background-color: #ECF2F3; }
+  #use-cases .mimic-anchor {
+    color: #212529; }
   #use-cases .grid-container {
     margin-top: 2rem;
     display: grid; 

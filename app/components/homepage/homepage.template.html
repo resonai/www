@@ -130,14 +130,17 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col pt-3">
-                        <span ng-click="showRowTwo ? showRowTwo = false : showRowTwo = true" class="position-relative mimic-anchor">
-                            <svg ng-show="showRowTwo" class="fa-rotate-180" width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 1 L19 12 L32 1" stroke="#00A8BA" stroke-width="3"/>
+                    <div class="col pt-5">
+                        <span ng-click="showRowTwo ? showRowTwo = false : showRowTwo = true" 
+                            class="position-relative mimic-anchor">
+                            <svg ng-show="showRowTwo" class="fa-rotate-180" width="38" height="14" 
+                                viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 1 L19 12 L32 1" stroke="#212529" stroke-width="3"/>
                             </svg>
-                            <div>{{ showRowTwo ? "See less" : 'See More'}}</div>
-                            <svg ng-hide="showRowTwo" width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 1 L19 12 L32 1" stroke="#00A8BA" stroke-width="3"/>
+                            <div>{{ showRowTwo ? "See less" : 'See more'}}</div>
+                            <svg ng-hide="showRowTwo" width="38" height="14" viewBox="0 0 38 14" fill="none" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 1 L19 12 L32 1" stroke="#212529" stroke-width="3"/>
                             </svg>
                         </span>
                     </div>
