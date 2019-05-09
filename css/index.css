@@ -11,7 +11,7 @@
   left: calc(50% - 65px); }
 
 .animate-hover-container p {
-  color: #212529;
+  color: white;
 }
 
 .request-demo {
@@ -215,9 +215,10 @@ a:not([href]):not([tabindex]):hover {
 
 #discover-new-realities {
   max-height: 100vh;
+  color: white;
 }
 #discover-new-realities .content {
-  background-image: url("../images/Resonai_Hero_R2_full-size-optimize.jpg");
+  background-image: url("../images/Resonai_Hero_CommercialRealState-Fullsize.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top left; }
@@ -486,7 +487,7 @@ footer {
   transition-duration: 200ms; }
 .navbar .nav-link {
   position: relative;
-  color: #212529;
+  color: white;
   font-weight: normal;
   transition: color 250ms;
   padding-left: 0px;
@@ -627,3 +628,4 @@ footer {
     font-size: 1rem; } }
 
 /*# sourceMappingURL=index.css.map */
+}
