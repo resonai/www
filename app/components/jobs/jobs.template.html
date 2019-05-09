@@ -50,10 +50,14 @@
                      <section ng-init="showSec1 = true" class="sec-2">
                         <h1 class="h1-right-para pb-3">Open Positions</h1>
                         <div class="mt-2 mb-3">
-                          <span class="positions-style py-1 mr-4 math-position-link line mimic-anchor" ng-class="{ active: showSec1 == true }" ng-click="showSec1=true; showSec2=false;
+
+                          <span class="positions-style py-1 mr-4 mb-2 math-position-link line mimic-anchor d-block d-md-inline" ng-class="{ active: showSec1 == true }" ng-click="showSec1=true; showSec2=false;
                           showSec3=false; showSec4=false; showSec5=false;">Mathematicians </span>
-                          <span class="positions-style py-1 line mimic-anchor" ng-class="{ active: showSec2 == true }" ng-click="showSec2=true; showSec1=false; showSec3=false;
+                          <span class="positions-style py-1 mr-4 mb-2 line mimic-anchor d-block d-md-inline" ng-class="{ active: showSec2 == true }" ng-click="showSec2=true; showSec1=false; showSec3=false;
                           showSec4=false; showSec5=false;">Software developers</span>
+                            <span class="positions-style py-1 mb-2 mt-1 line mimic-anchor d-block d-md-inline-block ws-nowrap" ng-class="{ active: showSec3 == true }" ng-click="showSec2=false; showSec1=false; showSec3=true;
+                          showSec4=false; showSec5=false;">Global sales manager</span>
+
                         </div>
                     </section>
                     <section class="sec-3 position-absolute" ng-show="showSec1">
@@ -81,6 +85,23 @@
 				            <jobsform />
                         </div>
                         <!--<a class="positions-back-style mimic-anchor" ng-click="showSec2=false">Back to open positions</a>-->
+                    </section>
+                    <section class="sec-3 position-absolute ng-hide" ng-show="showSec3">
+                        <!--<h1 class="h1-right-para">Mathematicians</h1>-->
+                        <p ng-controller="popupVideo" class="h1-right-para right-para-text">Looking for a brilliant sales manager to bring
+                            <span ng-click="openContactForm($event)" class="mimic-anchor" data="https://www.youtube.com/embed/C1bQQYQn7Vc">
+                                Animaker
+                            </span>
+                            to new locations worldwide. Animaker enables artists to incorporate AI in their creations,
+                            inspiring imagination, curiosity, and creativity in people of all ages. You’re passionate about
+                            art and technology, love sales, and have excellent interpersonal and project management skills.
+                            BA/BS degree with 3-4 years in sales, preferably in the arts or events. Willing to travel.
+                            Based in Palo Alto, California. <a target="_blank" href="https://www.linkedin.com/jobs/view/1189579420/">View full description</a></p>
+                        <div class="jobs-form jobs-form-3-se">
+                            <h2>Apply now</h2>
+                            <jobsform />
+                        </div>
+                        <!--<span class="positions-back-style mimic-anchor" ng-click="showSec1=false">Back to open positions</span>-->
                     </section>
                     </div>
                     <!--<section class="sec-1 mobile-sec-1 col-12">-->

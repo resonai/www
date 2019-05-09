@@ -11,8 +11,7 @@
   left: calc(50% - 65px); }
 
 .animate-hover-container p {
-  color: white;
-}
+  color: white; }
 
 .request-demo {
   position: absolute; 
@@ -185,6 +184,9 @@ a:not([href]):not([tabindex]):hover {
 .mh-250 {
   min-height: 250px; }
 
+.ws-nowrap {
+  white-space: nowrap; }
+
 .panel p {
   font-size: 1.25rem;
   font-weight: 900; }
@@ -213,10 +215,11 @@ a:not([href]):not([tabindex]):hover {
   font-size: 0.5em;
   top: -1rem; }
 
+
 #discover-new-realities {
   max-height: 100vh;
-  color: white;
-}
+  color: white; }
+
 #discover-new-realities .content {
   background-image: url("../images/Resonai_Hero_CommercialRealState-Fullsize.jpg");
   background-repeat: no-repeat;
