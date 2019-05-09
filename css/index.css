@@ -479,7 +479,9 @@ footer {
   font-weight: normal; }
 @media screen and (max-width: 64rem) {
   .navbar {
-    background-color: rgba(248, 249, 250, 1); }}
+    background-color: rgba(248, 249, 250, 1); }
+  .navbar .nav-link {
+    color: #212529!important; }}
 .navbar.scrolled {
   background-color: rgba(248, 249, 250, 1); }
 .navbar .collapsed,
