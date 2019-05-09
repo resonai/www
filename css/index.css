@@ -104,6 +104,7 @@
     opacity: 1.0; }
   to {
     opacity: 0.0; } }
+  }
 .four-three {
   position: relative; }
   .four-three:before {
@@ -487,6 +488,8 @@ footer {
     color: #212529!important; }}
 .navbar.scrolled {
   background-color: rgba(248, 249, 250, 1); }
+.navbar.scrolled .nav-link {
+  color: #212529!important; }
 .navbar .collapsed,
 .navbar .show {
   transition-duration: 200ms; }
