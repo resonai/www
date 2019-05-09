@@ -1,5 +1,5 @@
 var app = angular.module('mainApp', ['revealer','ngDialog', 'ngTouch', 'duScroll','ui.router','app.homepage', 'app.contactus',
-'app.jobs','app.dollhouse','app.search', 'app.search4unity','ui.router.metatags']);
+'app.jobs','app.dollhouse','app.search', 'app.search4unity','app.whitepaper','ui.router.metatags']);
 
 app.config(function($stateProvider, $urlRouterProvider, UIRouterMetatagsProvider) {
 
@@ -75,6 +75,20 @@ app.config(function($stateProvider, $urlRouterProvider, UIRouterMetatagsProvider
                 keywords: 'Contact Resonai, Resonai demos, Resonai partnerships',
                 properties: {
                     'og:title': 'Resonai: Contact Us'
+                }
+            }
+        })
+
+        // VERA WHITEPAPER PAGE =================================
+        .state('whitepaper', {
+            url: '/whitepaper',
+            template: '<whitepaper />',
+            metaTags: {
+                title: 'Download Vera whitepaper',
+                description: 'There’s nothing like a good chat. If you’re interested in a demo of our products, partnerships, or just about anything in between, let us know.',
+                keywords: 'Contact Resonai, Resonai demos, Resonai partnerships',
+                properties: {
+                    'og:title': 'Resonai: Download Vera whitepaper'
                 }
             }
         });

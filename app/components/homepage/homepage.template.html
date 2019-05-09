@@ -7,9 +7,9 @@
                     <div class="col-12 text-center">
                         <h2 class="h1 mx-auto pt-md-5 pt-4 mb-3">Discover new realities.</h2>
                         <p class="w-50 px-md-5 mb-md-0 mb-5 py-2 mx-auto">
-                            Resonai brings visual perception to the platforms of today – and tomorrow –
-                            by understanding the digital and physical world in 3D. This unlocks exciting
-                            possibilities for augmented reality, and new realities for all.
+                            At Resonai, we believe that the physical structure in commercial 
+                            buildings provides a canvas for the next digital revolution, changing 
+                            what buildings can do for us and what we can do with them.
                         </p>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                             <p class="text-center mt-3">Vera for Buildings</p>
                             <p class="animate-hover">
                                 <svg width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 1 L19 12 L32 1" stroke="#212529" stroke-width="3"/>
+                                    <path d="M5 1 L19 12 L32 1" stroke="white" stroke-width="3"/>
                                 </svg>
                             </p>
                         </a>
@@ -43,17 +43,16 @@
                     Powered by advanced AI, Vera uses a complete and precise understanding of a 
                     building’s 3D structure as the foundation for an entirely new class of AR 
                     applications for the whole building lifecycle.<br><br>
-                    Vera also offers scale – applications can adapt automatically to the 
+                    It's a platform that scales – applications can adapt automatically to the
                     structure and context of any property.
                 </p>
+            </div>
+            <div class="text-center mb-2 mt-3">
+                <a target="_blank" class="btn btn-primary mt-0 mt-md-2" href="/index.php#!/whitepaper">Download Vera white paper</a>
             </div>
             <div class="p-m-0 col-12 text-center">
                 <img src="images/building_sharp.gif" alt="building scan gif"/>
             </div>
-            <!--<div class="text-center mb-4 mt-5">
-                <a target="_blank" class="btn btn-primary mt-2"
-                href="https://resonai.com/index.php#!/contactUs">Download Vera whitepaper</a>
-            </div>-->
         </div>
     </div>
 </section>
@@ -64,7 +63,7 @@
             <div class="col-12 mb-md-5 text-center">
                 <h2 class="h2 text-center my-3">Sample use cases</h2>
             </div>
-            <div class="col-12 mb-md-0 mb-4 text-center side-padding-sm-screen">
+            <div ng-init="showRowTwo = false" class="col-12 mb-md-0 mb-4 text-center side-padding-sm-screen">
                 <div class="grid-container">
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
@@ -96,11 +95,14 @@
                         </div>
                         <span>Indoor navigation & concierge</span>
                     </div>
+                </div>
+
+                <div ng-show="showRowTwo" class="grid-container fadeAnimation slideAnimation">
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                            <span ng-click="openContactForm($event)" class="video-thumb"
                                 data="https://www.youtube.com/embed/fQES9O65Llw">
-                                <img class="img-fluid panel-rounded" src="images/iot-video-thumb.jpg" 
+                                <img class="img-fluid panel-rounded" src="images/iot-video-thumb.jpg"
                                     alt="Video: IoT" />
                             </span>
                         </div>
@@ -108,9 +110,9 @@
                     </div>
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                            <span ng-click="openContactForm($event)" class="video-thumb"
                                 data="https://www.youtube.com/embed/hsoWZlEwAHg">
-                                <img class="img-fluid panel-rounded" src="images/coffee-video-thumb.jpg" 
+                                <img class="img-fluid panel-rounded" src="images/coffee-video-thumb.jpg"
                                     alt="Video: Coffee tutorial" />
                             </span>
                         </div>
@@ -118,13 +120,29 @@
                     </div>
                     <div class="grid-item">
                         <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
+                            <span ng-click="openContactForm($event)" class="video-thumb"
                                 data="https://www.youtube.com/embed/wN5UIwwHq7w">
-                                <img class="img-fluid panel-rounded" src="images/car-video-thumb.jpg" 
+                                <img class="img-fluid panel-rounded" src="images/car-video-thumb.jpg"
                                     alt="Video: Car game" />
                             </span>
                         </div>
                         <span>Gamified experiences</span>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col pt-5">
+                        <span ng-click="showRowTwo ? showRowTwo = false : showRowTwo = true" 
+                            class="position-relative mimic-anchor">
+                            <svg ng-show="showRowTwo" class="fa-rotate-180 noAnimation" width="38" height="14"
+                                viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 1 L19 12 L32 1" stroke="#212529" stroke-width="3"/>
+                            </svg>
+                            <div>{{ showRowTwo ? "See less" : 'See more'}}</div>
+                            <svg ng-hide="showRowTwo" class="noAnimation" width="38" height="14" viewBox="0 0 38 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 1 L19 12 L32 1" stroke="#212529" stroke-width="3"/>
+                            </svg>
+                        </span>
                     </div>
                 </div>
             </div>       
@@ -227,7 +245,7 @@
                     <div class="img-wrapper">
                         <img class="py-3" width="55" src="images/Icon-adaptable.svg" alt="Adaptive-icon" />
                     </div>
-                    <p class="mb-1">Adaptive</p>
+                    <p class="mb-1">Scalable</p>
                     <span>Experiences adjust to the semantics of any environment.</span>
                 </div>
             </div>
@@ -284,7 +302,7 @@
     <div class="container py-md-5">
         <div class="row py-md-5 py-4 justify-content-center">
             <div class="col-12">
-                <h2 class="h1 pb-2 pt-md-0 pt-4 text-center">Resonai Visual Search</h2>
+                <h2 class="h1 pb-2 pt-md-5 pt-4 text-center">Resonai Visual Search</h2>
                 <p class="h3 pb-2 text-center">Make your 3D content instantly searchable</p>
                 <div class="row position-relative justify-content-center text-center">
                     <div class="col-12">

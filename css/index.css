@@ -11,8 +11,7 @@
   left: calc(50% - 65px); }
 
 .animate-hover-container p {
-  color: #212529;
-}
+  color: white; }
 
 .request-demo {
   position: absolute; 
@@ -34,7 +33,67 @@
   :not(.noFade) .ng-hide-remove {
     animation-name: fade-in;
     animation-duration: 1500ms;
-    animation-iteration-count: 1; } }
+    animation-iteration-count: 1; }
+  #use-cases .ng-hide-add {
+    animation-name: slide-down; 
+    animation-duration: 1500ms;
+    animation-iteration-count: 1; }
+  #use-cases .ng-hide-remove {
+    animation: slide-up; 
+    animation-duration: 1500ms;
+    animation-iteration-count: 1; }
+    .noAnimation {
+      animation: none!important;
+    }
+
+    #use-cases .ng-hide-add.fadeAnimation {
+      animation-name: fade-out, slide-down;
+    }
+    #use-cases .ng-hide-remove.fadeAnimation {
+      animation-name: fade-in, slide-up;
+    }
+    #use-cases .ng-hide-add.slideAnimation.fadeAnimation {
+      animation-name: fade-out, slide-down, remove-margin;
+    }
+    #use-cases .ng-hide-remove.slideAnimation.fadeAnimation {
+      animation-name: fade-in, slide-up, add-margin;
+    }
+
+    @keyframes slide-down {
+      from {
+        max-height: 500px;
+      }
+      to {
+        max-height: 0;
+      }
+    }
+    @keyframes slide-up {
+      from {
+        max-height: 0;
+      }
+      to {
+        max-height: 500px;
+      }
+    }
+    @keyframes remove-margin {
+      0% {
+        margin-top: 2rem;
+      }
+      100% {
+        margin-top: 0;
+      }
+    }
+    @keyframes add-margin {
+      0% {
+        margin-top: 0;
+      }
+      10% {
+        margin-top: 0;
+      }
+      100% {
+        margin-top: 2rem;
+      }
+    }
 @keyframes fade-in {
   from {
     opacity: 0.0; }
@@ -45,6 +104,7 @@
     opacity: 1.0; }
   to {
     opacity: 0.0; } }
+  }
 .four-three {
   position: relative; }
   .four-three:before {
@@ -104,7 +164,6 @@ body {
   display: inline; }
 
 .pt-medium {
-  padding-top: 2.25rem; }
   padding-top: 4rem; }
 
 a,
@@ -160,10 +219,10 @@ a:not([href]):not([tabindex]):hover {
 
 #discover-new-realities {
   max-height: 100vh;
-}
+  color: white; }
 
 #discover-new-realities .content {
-  background-image: url("../images/Resonai_Hero_R2_full-size-optimize.jpg");
+  background-image: url("../images/Resonai_Hero_CommercialRealState-Fullsize.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top left; }
@@ -279,6 +338,8 @@ a:not([href]):not([tabindex]):hover {
 
 #use-cases {
   background-color: #ECF2F3; }
+  #use-cases .mimic-anchor {
+    color: #212529; }
   #use-cases .grid-container {
     margin-top: 2rem;
     display: grid; 
@@ -339,13 +400,6 @@ a:not([href]):not([tabindex]):hover {
 
 #animaker {
   background-color: #ECF2F3; }
-
-
-#unity {
-  background-color: #00717B;
-  color: #FFF; }
-  #unity .h2 span {
-    font-size: 1rem; }
 
 .unity-logo {
   position: relative;
@@ -429,15 +483,19 @@ footer {
   font-weight: normal; }
 @media screen and (max-width: 64rem) {
   .navbar {
-    background-color: rgba(248, 249, 250, 1); }}
+    background-color: rgba(248, 249, 250, 1); }
+  .navbar .nav-link {
+    color: #212529!important; }}
 .navbar.scrolled {
   background-color: rgba(248, 249, 250, 1); }
+.navbar.scrolled .nav-link {
+  color: #212529!important; }
 .navbar .collapsed,
 .navbar .show {
   transition-duration: 200ms; }
 .navbar .nav-link {
   position: relative;
-  color: #212529;
+  color: white;
   font-weight: normal;
   transition: color 250ms;
   padding-left: 0px;
@@ -524,7 +582,6 @@ footer {
 .positions-style.active {
   border-bottom: 2px solid #80b8bd; }
 
-
 @media screen and (max-width: 36rem) {
   .side-padding-sm-screen {
     padding-left: 0.75rem!important;
@@ -533,6 +590,7 @@ footer {
   .no-side-margins {
     margin-left: 0rem!important;
     margin-right: 0rem!important; }}
+
 /* ---- End Buttons ---- */
 .upload-cv,
 .upload-cv-selected {
@@ -578,3 +636,4 @@ footer {
     font-size: 1rem; } }
 
 /*# sourceMappingURL=index.css.map */
+}
