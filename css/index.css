@@ -209,17 +209,13 @@ a:not([href]):not([tabindex]):hover {
 .scale-0-9 {
   transform: scale(0.9); }
 
-.img-wrapper {
-  height: 90px; }
-
 .trade {
   font-size: 0.5em;
   top: -1rem; }
 
 
 #discover-new-realities {
-  /*max-height: 100vh;*/
-  height: 80vh;
+  max-height: 70vh;
   color: white; }
 
 #discover-new-realities .content {
@@ -233,7 +229,7 @@ a:not([href]):not([tabindex]):hover {
 @media screen and (max-width: 64rem) {
   #discover-new-realities .content {
     background-size: 120%; }
-  #discover-new-realities .w-50 {
+  #discover-new-realities .w-60 {
     width: 100% !important; }}
 @media screen and (max-width: 48rem) {
   #discover-new-realities .content {
@@ -241,8 +237,11 @@ a:not([href]):not([tabindex]):hover {
 @media screen and (max-width: 768px) {
   #discover-new-realities .content {
     background-position: top left; }}
+@media screen and (min-width: 64rem) {
+  #discover-new-realities .container {
+    padding-top: 10rem!important; }}
 
-
+/*
 #visual-search {
   background-color: #80b0ad;
   background-image: url("../images/Resonai_Web_VisualSearch_Background.jpg");
@@ -253,10 +252,12 @@ a:not([href]):not([tabindex]):hover {
     background-color: rgba(255, 255, 255, 0.8); }
   #visual-search .panel {
     background-color: rgba(255, 255, 255, 0.25); }
+  */
 
 #discover {
   background-color: rgba(0, 168, 187, 0.3567); }
 
+  /*
 #how-vera-works {
   background-color: #032225;
   color: #FFF;
@@ -335,7 +336,7 @@ a:not([href]):not([tabindex]):hover {
   width: 60%; }
 @media screen and (max-width: 64rem) {
   #vera img {
-    width: 100%; }}
+    width: 100%; }}*/
 
 #use-cases {
   background-color: #ECF2F3; }
@@ -364,48 +365,45 @@ a:not([href]):not([tabindex]):hover {
     #use-cases .grid-container {
       grid-template-columns: repeat(1, 1fr); }}
 
-#full-stack-os {
-  background-color: #d9e4e5; }
-  #full-stack-os p {
-    width: 100%;
-    font-weight: 600;
-    letter-spacing: 0.02rem; }
-  #full-stack-os span {
-    padding-bottom: 0.5rem; }
-  #full-stack-os .seperator {
-    background-color:white; 
-    height: 2.5px; }
-  #full-stack-os ul {
-    margin-bottom: 0; }
-  #full-stack-os .title {
-    border-radius: 8px;
-    background-color: white; 
-    color: #212529;
-  }
-  #full-stack-os .title p {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem; }
-
-#ar-with-vera {
+#solutions {
   background-color: #032225;
   color: #FFF; }
 
-#lets-build-together {
-  background-color: #ECF2F3; }
-  
-#unity {
-    background-color: #00717B;
-    color: #FFF; }
-    #unity .h2 span {
-      font-size: 1rem; }
-
-#animaker {
-  background-color: #ECF2F3; }
-
-.unity-logo {
+.img-wrapper {
   position: relative;
-  bottom: 1px;
-  width: 18rem; }
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.img-wrapper img {
+  height: 100%;
+  width: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#solutions li {
+  padding-bottom: 0.25rem;
+}
+
+#operations li, #retail li, #entertainment li {
+  padding-bottom: 0.75rem;
+}
+
+#operations {
+  background-color: #d9e4e5; }
+  
+#retail {
+  background-color: #ECF2F3; }
+
+#entertainment {
+    background-color: white;}
 
 .primary-background {
   background-color: #00717B; }
@@ -603,7 +601,7 @@ footer {
     display: block; } }
 
 @media screen and (max-width: 64rem) {
-  .w-50,
+  .w-60,
   .w-75 {
     width: 100% !important; }
 }
@@ -612,14 +610,11 @@ footer {
   .sec-3.position-absolute {
     position: relative !important; }
 
-  .unity-logo {
-    width: 15rem; }
-
   .mx-xs-6 {
     margin-left: 6rem !important;
     margin-right: 6rem !important; }
 
-  .w-50,
+  .w-60,
   .w-75 {
     width: 100% !important; }
 
