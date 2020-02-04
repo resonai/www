@@ -218,8 +218,7 @@ a:not([href]):not([tabindex]):hover {
 
 
 #discover-new-realities {
-  /*max-height: 100vh;*/
-  height: 80vh;
+  max-height: 100vh;
   color: white; }
 
 #discover-new-realities .content {
