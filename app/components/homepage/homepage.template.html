@@ -1,427 +1,297 @@
 <div ng-include='"app/templates/header.html"'></div>
-<section id="discover-new-realities" class="position-relative twentyfive-seventeen">
+<section id="vera-hero" class="position-relative">
     <div class="content">
-        <div class="position-absolute pt-5 w-100 top-0">
-            <div class="container mx-auto py-md-5 py-4 text-center justify-content-center">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h2 class="h1 mx-auto pt-md-5 pt-4 mb-3">Discover new realities.</h2>
-                        <p class="w-50 px-md-5 mb-md-0 mb-5 py-2 mx-auto">
-                            At Resonai, we believe that the physical structure in commercial 
-                            buildings provides a canvas for the next digital revolution, changing 
-                            what buildings can do for us and what we can do with them.
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="mr-5 absolute-vertical-center">
+                        <h1>
+                            Vera<sup>&trade;</sup>
+                        </h1>
+                        <p class="m-vertical-medium">
+                            Transforms Any Building Into an Intelligent Digital Space to Enable Mobile AR Apps with Endless Possibilities
                         </p>
+                        <a class="btn btn-primary" href="index.php#!/contactUs" role="button">Request a demo</a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="d-none d-md-block animate-hover-container">
-                        <a du-smooth-scroll du-scrollspy href="index.php#!/home#vera">
-                            <p class="text-center mt-3">Vera for Buildings</p>
-                            <p class="animate-hover">
-                                <svg width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 1 L19 12 L32 1" stroke="white" stroke-width="3"/>
-                                </svg>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="text-center pt-4 d-block d-md-none request-demo">
-                        <a class="btn btn-primary mt-3 mt-md-0" href="index.php#!/contactUs" role="button">Request a demo</a>
-                    </div>
+                <div class="col-12 col-md-6">
+                    <img src="images/Resonai_Hero_CommercialRealState_new.png" />
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="vera">
-    <div class="container py-md-5 py-4">
-        <div class="row no-gutters pt-md-4 justify-content-center">
-            <div class="col-12 text-center">
-                <h2 class="h1 mx-auto primary-color">Resonai Vera<sup class="trade">&trade;</sup></h2>
-                <p class="h3 my-3">The OS for commercial spaces.</p>
-                <p class="mx-auto w-50">
-                    Powered by advanced AI, Vera uses a complete and precise understanding of a 
-                    building’s 3D structure as the foundation for an entirely new class of AR 
-                    applications for the whole building lifecycle.<br><br>
-                    It's a platform that scales – applications can adapt automatically to the
-                    structure and context of any property.
-                </p>
-            </div>
-            <div class="text-center mb-2 mt-3">
-                <a target="_blank" class="btn btn-primary mt-0 mt-md-2" href="/index.php#!/whitepaper">Download Vera white paper</a>
-            </div>
-            <div class="p-m-0 col-12 text-center">
-                <img src="images/building_sharp.gif" alt="building scan gif"/>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="use-cases">
-    <div class="container py-md-5 py-4">
-        <div class="row no-gutters py-md-4 text-center justify-content-center">
-            <div class="col-12 mb-md-5 text-center">
-                <h2 class="h2 text-center my-3">Sample use cases</h2>
-            </div>
-            <div ng-init="showRowTwo = false" class="col-12 mb-md-0 mb-4 text-center side-padding-sm-screen">
-                <div class="grid-container">
-                    <div class="grid-item">
-                        <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
-                                data="https://www.youtube.com/embed/DiTfJTByFek">
-                                <img class="img-fluid panel-rounded" src="images/vera-video-thumb.jpg" 
-                                    alt="Video: Vera: Real-life demo"/>
-                            </span>
-                        </div>
-                        <span>Real-life demo: Multi-purpose</span>
-                    </div>
-                    <div class="grid-item">
-                        <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
-                                data="https://www.youtube.com/embed/-t85x8gbqK4">
-                                <img class="img-fluid panel-rounded" src="images/ticketing-video-thumb.jpg" 
-                                    alt="Video: Ticketing system" />
-                            </span>
-                        </div>
-                        <span>Ticketing: Construction & maintenance</span>
-                    </div>
-                    <div class="grid-item">
-                        <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb" 
-                                data="https://www.youtube.com/embed/G-_elXgAJOA">
-                                <img class="img-fluid panel-rounded" src="images/concierge-video-thumb.jpg" 
-                                    alt="Video: Concierge" />
-                            </span>
-                        </div>
-                        <span>Indoor navigation & concierge</span>
-                    </div>
-                </div>
-
-                <div ng-show="showRowTwo" class="grid-container fadeAnimation slideAnimation">
-                    <div class="grid-item">
-                        <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb"
-                                data="https://www.youtube.com/embed/fQES9O65Llw">
-                                <img class="img-fluid panel-rounded" src="images/iot-video-thumb.jpg"
-                                    alt="Video: IoT" />
-                            </span>
-                        </div>
-                        <span>IoT control</span>
-                    </div>
-                    <div class="grid-item">
-                        <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb"
-                                data="https://www.youtube.com/embed/hsoWZlEwAHg">
-                                <img class="img-fluid panel-rounded" src="images/coffee-video-thumb.jpg"
-                                    alt="Video: Coffee tutorial" />
-                            </span>
-                        </div>
-                        <span>Tutorials & how-to’s</span>
-                    </div>
-                    <div class="grid-item">
-                        <div ng-controller="popupVideo" class="pb-4">
-                            <span ng-click="openContactForm($event)" class="video-thumb"
-                                data="https://www.youtube.com/embed/wN5UIwwHq7w">
-                                <img class="img-fluid panel-rounded" src="images/car-video-thumb.jpg"
-                                    alt="Video: Car game" />
-                            </span>
-                        </div>
-                        <span>Gamified experiences</span>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col pt-5">
-                        <span ng-click="showRowTwo ? showRowTwo = false : showRowTwo = true" 
-                            class="position-relative mimic-anchor">
-                            <svg ng-show="showRowTwo" class="fa-rotate-180 noAnimation" width="38" height="14"
-                                viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 1 L19 12 L32 1" stroke="#212529" stroke-width="3"/>
-                            </svg>
-                            <div>{{ showRowTwo ? "See less" : 'See more'}}</div>
-                            <svg ng-hide="showRowTwo" class="noAnimation" width="38" height="14" viewBox="0 0 38 14" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 1 L19 12 L32 1" stroke="#212529" stroke-width="3"/>
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-            </div>       
-        </div>
-    </div>
-</section>
-
-<section id="full-stack-os">
-    <div class="container py-md-5 py-4">
-        <div class="row no-gutters pt-md-4">
-            <div class="col-12">
-                <h2 class="h2 text-center mb-md-5 my-3">Full-stack OS</h2>
-                <div class="container pt-4">
-                    <div class="row pb-md-4">
-                        <div class="col-md-3 col-12 panel">
-                            <div class="row text-center title pt-0 mb-4 side-padding-sm-screen no-side-margins" >
-                                <p class="">Developers</p>
-                            </div>
-                            <div class="row pb-4 side-padding-sm-screen">
-                                <p>Platform and SDK</p>
-                                <span>Create next-gen AR experiences leveraging:<br>
-                                    <ul>
-                                        <li>Advanced semantics: 3D object recognition and 3D scene reconstruction</li>
-                                        <li>Precise mesh understanding</li>
-                                        <li>Accurate registration and tracking.</li>
-                                    </ul>  
-                                </span>
-                            </div>
-                            <div class="row pb-4 side-padding-sm-screen">
-                                <p>Distribution<br></p>
-                                <span>Monetize apps in a large, fast-growing market.</span>
-                            </div>
-                        </div>
-                        <div class="col-md-7 offset-md-2 col-12 panel">
-                            <div class="row text-center title pt-0 mb-4 side-padding-sm-screen no-side-margins" >
-                                <p class="">Building owners and managers</p>
-                            </div>
-                            <div class="row side-padding-sm-screen">
-                                <div class="col-md-5">
-                                    <div class="row pb-4">
-                                        <p>Scanning services</p>
-                                        <span>Professional teams to create full 3D scans of your space.</span>
-                                    </div>
-                                    <div class="row pb-4">
-                                        <p>Admin tools and analytics</p>
-                                        <span>Central console to create, QA, preview, deploy, 
-                                                and manage Vera experiences across all your spaces. 
-                                                View analytics on how experiences are consumed.
-                                        </span>
-                                    </div>
-                                    <div class="row pb-4">
-                                        <p>Security & permissions</p>
-                                        <span>Manage viewing and editing rights for each experience.</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-5 offset-md-2">
-                                    <div class="row pb-4">
-                                        <p>App store</p>
-                                        <span>Robust marketplace of apps, tailored to the experiences for your business. For example:<br>
-                                            <ul>
-                                                <li>Indoor navigation</li>
-                                                <li>IoT control</li>
-                                                <li>AR-powered tutorials</li>
-                                                <li>Digital concierge</li>
-                                                <li>Contextual tickects for maintenance</li>
-                                            </ul>  
-                                        </span>
-                                    </div>
-                                    <div class="row pb-4">
-                                        <p>Cross-platform</p>
-                                        <span>Deploy Vera experiences for any mobile device.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="ar-with-vera">
-    <div class="container py-md-5">
-        <div class="row py-md-5 py-4 text-center justify-content-center">
-            <div class="col-12">
-                <h2 class="h2 text-center mb-md-5 my-3">AR with Vera</h2>
-            </div>
-            <div class="col-md-4 offset-md-1 col-12 py-4 mb-2 panel">
-                <div class="mx-xs-6 mx-md-0 mx-lg-5">
-                    <div class="img-wrapper">
-                        <img class="py-3" width="52" src="images/context-aware.svg" alt="Context-aware-icon" />
-                    </div>
-                    <p class="mb-1">Context-Aware</p>
-                    <span>Defined by objects in the environment and how they relate to each other.</span>
-                </div>
-            </div>
-            <div class="col-md-4 col-6 py-md-4 panel">
-                <div class="mx-lg-5">
-                    <div class="img-wrapper">
-                        <img class="py-3" width="55" src="images/Icon-adaptable.svg" alt="Adaptive-icon" />
-                    </div>
-                    <p class="mb-1">Scalable</p>
-                    <span>Experiences adjust to the semantics of any environment.</span>
-                </div>
-            </div>
-            <div class="col-1 d-none d-md-flex"></div>
-            <div class="col-md-4 py-md-4 mt-nd-2 col-6 panel">
-                <div class="mx-lg-5">
-                    <div class="img-wrapper">
-                        <img class="py-3" width="40" src="images/Icon-immersive.svg" alt="Immersive-icon" />
-                    </div>
-                    <p class="mb-1">Immersive</p>
-                    <span>Fine precision in how virtual objects interact with real ones.</span>
-                </div>
-            </div>
-            <div class="col-md-4 py-md-4 mt-2 col-6 panel">
-                <div class="mx-lg-5">
-                    <div class="img-wrapper">
-                        <img class="py-3" width="50" src="images/Icon-natural.svg" alt="Natural-icon" />
-                    </div>
-                    <p class="mb-1">Natural</p>
-                    <span>Real objects occlude virtual objects and vice versa, naturally.</span>
-                </div>
-            </div>
-            <div class="col-md-4 py-md-4 mt-2 col-6 panel">
-                <div class="mx-lg-5">
-                    <div class="img-wrapper">
-                        <img class="py-3" width="56" src="images/Icon-distributed.svg" alt="Distributed-icon" />
-                    </div>
-                    <p class="mb-1">Distributed</p>
-                    <span>Consumable by multiple users and multiple devices, across platforms.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="lets-build-together">
-    <div class="container py-md-5 py-4">
-        <div class="row no-gutters py-md-5 justify-content-center">
-            <div class="col-12 text-center">
-                <h2 class="h2 text-center my-3">Let's build something together.</h2>
-                <p class="mx-auto mt-4 w-50">
-                    With Vera, we'll help you take on the big challenges that make a 
-                    real difference in your business – in ways that weren't possible before. 
-                </p>
-                <p class="mb-2 mt-md-5 mt-3"><a target="_blank" class="btn btn-primary" 
-                    href="https://resonai.com/index.php#!/contactUs">Contact us</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="visual-search">
-    <div class="container py-md-5">
-        <div class="row py-md-5 py-4 justify-content-center">
-            <div class="col-12">
-                <h2 class="h1 pb-2 pt-md-5 pt-4 text-center">Resonai Visual Search</h2>
-                <p class="h3 pb-2 text-center">Make your 3D content instantly searchable</p>
-                <div class="row position-relative justify-content-center text-center">
-                    <div class="col-12">
-                        <p class="w-50 mx-auto">
-                            From gaming and entertainment to product design and manufacturing, our world is filled with
-                            3D content. Our AI-powered visual search engine lets you index, search, and monetize your
-                            scanned content, CAD assets, model sketches, and more.
-                        </p>
-                    </div>
-                    <div class="col-md-6 p-m-0 pt-4 col-12">
-                        <img class="img-fluid" src="images/Resonai_Web_VisualSearch_Chair.png" alt="3D chair cube: 3D-object-search" />
-                    </div>
-                    <div class="col-md-6 mt-md-5 col-12 scale-0-9">
-                        <div class="row my-5 mx-4 no-gutters rounded-12">
-                            <div class="col-12 headline-panel rounded-12-top">
-                                <p class="h3 mb-0 p-3">Results for scanned object:</p>
-                            </div>
-                            <div class="col-12 p-md-4 p-3 panel rounded-12-bottom">
-                                <div class="row no-gutters justify-content-center">
-                                    <div class=" p-1 col-4">
-                                        <img class="img-fluid panel-rounded" src="images/chair-1.jpg" alt="result 1" />
-                                    </div>
-                                    <div class=" p-1 col-4">
-                                        <img class="img-fluid panel-rounded" src="images/chair-2.jpg" alt="result 2" />
-                                    </div>
-                                    <div class=" p-1 col-4">
-                                        <img class="img-fluid panel-rounded" src="images/chair-3.jpg" alt="result 3" />
-                                    </div>
-                                    <div class=" p-1 col-4">
-                                        <img class="img-fluid panel-rounded" src="images/chair-4.jpg" alt="result 4" />
-                                    </div>
-                                    <div class=" p-1 col-4">
-                                        <img class="img-fluid panel-rounded" src="images/chair-5.jpg" alt="result 5" />
-                                    </div>
-                                    <div class=" p-1 col-4">
-                                        <img class="img-fluid panel-rounded" src="images/chair-6.jpg" alt="result 6" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="row text-center justify-content-center">
-                    <div class="col-4 col-offset-md-1 col-md-3 px-md-4">
-                        <img width="56" class="py-3" src="images/Icon-implentation.svg" alt="Easy-icon" />
-                        <p>Easy to implement</p>
-                    </div>
-                    <div class="col-4 col-md-3 px-md-4">
-                        <img width="56" class="py-3" src="images/Icon-visual-cues.svg" alt="Understands-icon" />
-                        <p>Understands precise geometry,<br />structure, and visual cues</p>
-                    </div>
-                    <div class="col-4 col-md-3 px-md-4">
-                        <img width="56" class="py-3" src="images/Icon-scalable.svg" alt="Scalable-icon" />
-                        <p>Fast and scalable</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="unity">
+<section id="vera-business" class="my-5">
     <div class="container py-md-5 py-4">
         <div class="row py-md-5 justify-content-center align-items-center">
+            <div class="col-md-6 col-12 text-right">
+                <img src="images/home/business/city.png" />
+            </div>
             <div class="col-md-6 col-12 text-md-left text-center order-0">
-                <p class="h2"><img class="unity-logo" src="images/Visual-Search-Logo-WHITE.png" alt="Unity" /></p>
-                <p>Unity is the world’s most popular gaming development platform. Resonai powers visual search for over a million 3D models and packages from the Asset Store within Unity Editor.</p>
-                <p><a target="_blank" class="btn btn-secondary mb-md-0 my-4" href="https://assetstore.unity.com/packages/tools/utilities/unity-visual-search-104059">Download</a></p>
-            </div>
-            <div ng-controller="popupVideo" class="col-md-6 col-12 text-right">
-                <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/RyokevisN6w">
-                    <img class="img-fluid panel-rounded" src="images/unity-search-video-thumb.jpg" alt="Video: 3D-search-video" />
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="animaker">
-    <div class="container py-md-5 py-4">
-        <div class="row py-md-5 py-4 justify-content-center align-items-center">
-            <div class="col-md-6 col-12">
-                <p class="h1 text-center text-md-left primary-color">Animaker</p>
-                <p class="h3 text-center text-md-left pb-2">Creating the future. And inspiring it.</p>
-                <p class="text-center text-md-left">
-                    We are witnessing the next revolution, where computer vision
-                    and machine learning fundamentally change how we connect and interact with our world.
-                </p>
-                <p class="text-center text-md-left">
-                    Partnering with The Tech Museum in Silicon Valley, we applied
-                    our 3D visual search technology to Animaker, an exhibit that brings together play, creativity,
-                    and AI for the young and the young at heart.
-                </p>
-            </div>
-            <div ng-controller="popupVideo" class="col-md-6 col-12 text-right">
-                <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/C1bQQYQn7Vc">
-                    <img class="img-fluid panel-rounded" src="images/animaker-video-thumb.jpg" alt="Video: Animaker-video" />
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="prefooter">
-    <div class="container pt-md-4">
-        <div class="row py-4 justify-content-center align-items-center">
-            <div class="col-md-5 col-12">
-                <div class="p-4 panel-rounded primary-dark-background">
-                    <p class="h3 mb-3">Do big things. Join Resonai.</p>
-                    <p>We’re working on some really cool stuff. If you want in, we want to hear from you.</p>
-                    <a class="btn btn-secondary mt-4" href="index.php#!/jobs">Open positions</a>
+                <div class="m-5">
+                    <p class="h2">Vera provides Advanced AI & AR technology to solve real business problems today.</p>
+                    <p class="my-5">One platform with access to multiple solutions that can scale across locations and provide real time data analytics & insights.</p>
+                    <p><a target="_blank" class="btn btn-primary mb-md-0" href="https://assetstore.unity.com/packages/tools/utilities/unity-visual-search-104059">Download Vera White Papers</a></p>
                 </div>
             </div>
-            <div class="col-md-5 mt-md-0 mt-4 col-12">
-                <div class="p-4 panel-rounded primary-background">
-                    <p class="h3 mb-3">Let’s talk.</p>
-                    <p>Interested in partnering with Resonai? Or just excited and curious about all things AR? Give us a shout. </p>
-                    <a class="btn btn-secondary mt-4" href="index.php#!/contactUs">Contact us</a>
+        </div>
+    </div>
+</section>
+
+<section id="solutions">
+    <div class="container py-md-5 py-4">
+        <div class="col-12 mb-md-5">
+            <h2 class="h2 my-3">Solutions</h2>
+        </div>
+        <div class="row py-md-5 justify-content-center">
+            <div class="col-4">
+                <div class="img-wrapper pb-3">
+                    <img class="panel-rounded img-fluid" src="/images/home/solutions/fm_placeholder.jpg" />
+                </div>
+                <p class="h3 mt-5 mb-4">Facilities Management</p>
+                <ul>
+                    <li>Lower maintenance costs</li>
+                    <li>Improve tenant satisfaction</li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <div class="img-wrapper pb-3">
+                    <img class="panel-rounded img-fluid" src="/images/home/solutions/retail.png" />
+                </div>
+                <p class="h3 mt-5 mb-4">Retail</p>
+                <ul>
+                    <li>Increase engagement</li>
+                    <li>Drive sales conversions</li>
+                    <li>Automate visual merchandising</li>
+                    <li>Gain new shopper insights</li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <div class="img-wrapper pb-3">
+                    <img class="panel-rounded img-fluid" src="/images/home/solutions/CES2020_1.jpg" />
+                </div>
+                <p class="h3 mt-5 mb-4">Entertainment</p>
+                <ul>
+                    <li>Extend brands into physical venues</li>
+                    <li>Create engaging AR games</li>
+                    <li>Access new analytics &amp; insights</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="facilities-management" class="section-highlights">
+    <div class="container py-md-5 py-4">
+        <div class="row no-gutters py-md-4 text-center justify-content-center">
+            <div class="col-12 headline py-5">
+                <p class="h2">Vera for Facilities Management</p>
+                <p class="p-4 w-75 m-auto">AR will help you automate processes & lower the costs of building maintenance while helping to create and manage smart building experiences to delight tenants and visitors.</p>
+            </div>
+            <div class="col-12 col-md-6 py-4">
+                <ul>
+                    <li class="active">
+                        <p class="h3">Smart Ticketing & Navigation</p>
+                        <P class="py-2 info">Simply point a mobile device at the item that needs repair and the problem is logged, maintenance data is retrieved and AR navigation directions are sent to technician. See ‘behind walls’ to find and make repairs more efficiently.</P>
+                    </li>
+                    <li>
+                        <p class="h3">AR Training &amp; AR Manuals</p>
+                        <P class="py-2 info">Provide employees with engaging & more personalized training, offer AR tutorials for a range of office equipment. Inject AR content remotely to decrease the cost of updating materials.</p>
+                    </li>
+                    <li>
+                        <p class="h3">Digital Concierge &amp; AR Navigation</p>
+                        <P class="py-2 info">Provide access control and AR navigation instructions anywhere in your building for employees, tenants & visitors.</P>
+                    </li>
+                    <li>
+                        <p class="h3">IoT controllers</p>
+                        <P class="py-2 info">Provide a more delightful, seamless work environment with one app to control all smart devices including monitors, HVAC systems, video conference devices, light switches and more.</P>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 py-4">
+                <div ng-controller="popupVideo" class="mx-3">
+                    <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/watch?v=DiTfJTByFek">
+                        <img class="img-fluid panel-rounded" src="/images/home/management/ticketing-video-thumb.png" alt="Building AR: Vera apps in our office building" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="retail" class="section-highlights">
+    <div class="container py-md-5 py-4">
+        <div class="row no-gutters py-md-4 text-center justify-content-center">
+            <div class="col-12 headline py-5">
+                <p class="h2">Vera for Retail</p>
+                <p class="p-4 w-75 m-auto">AR transforms physical stores into engaging digital experiences, while collecting data analytics that inform product flows and business processes.</p>
+            </div>
+            <div class="col-12 col-md-6 py-4">
+                <div class="img-wrapper mr-4">
+                    <img class="panel-rounded img-fluid" src="/images/home/solutions/retail.png" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 py-4">
+                <div class="ml-4">
+                    <ul class="ml-5">
+                        <li>
+                            <p class="h3">Smart Visual Merchandising</p>
+                            <p class="py-2 info">Save time and money in testing merchandising strategies for product placements, displays, and signage. Provide more engaging and visual merchandising instructions to each location & ensure store compliance.</p>
+                        </li>
+                        <li class="active">
+                            <p class="h3">Analytics &amp; Data Insights</p>
+                            <p class="py-2 info">Access a deeper level of in store data including traffic flow, traffic patterns, hot spots, and zone behaviors. Combine with other data to create a more complete shopper journey.</p>
+                        </li>
+                        <li>
+                            <p class="h3">AR Navigation &amp; Product Discovery</p>
+                            <p class="py-2 info">Provide unique, more personalized shopping experiences to key customer segments. Inject promotions with utmost precision as consumers navigate stores.</p>
+                        </li>
+                        <li>
+                            <p class="h3">AR Brand Experiences</p>
+                            <p class="py-2 info">Create immersive AR experiences to Increase consumer engagement with brands. Provide seasonal experiences and special promotions.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="entertainment" class="section-highlights">
+    <div class="container py-md-5 py-4">
+        <div class="row no-gutters py-md-4 text-center justify-content-center">
+            <div class="col-12 headline py-5">
+                <p class="h2">Vera for Entertainment</p>
+            </div>
+            <div class="col-12 col-md-6 py-4">
+                <ul>
+                    <li class="active">
+                        <p class="h3">AR Gaming</p>
+                        <p class="py-2 info">Create new AR games or promote existing titles to engage consumers longer with lobby entertainment, as they stand in lines at theme parks or when they navigate shopping malls.</p>
+                    </li>
+                    <li>
+                        <p class="h3">AR Brand Engagement</p>
+                        <p class="py-2 info">Extend brands into any physical location and create unique AR experiences in shopping malls, theaters, theme parks and more.</p>
+                    </li>
+                    <li>
+                        <p class="h3">Analytics &amp; Data Insights</p>
+                        <p class="py-2 info">Gain a deeper understanding with data insights as consumers interact with games, navigate venues, interact with content and products.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 py-4">
+                <div ng-controller="popupVideo" class="mx-3">
+                    <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/watch?v=DiTfJTByFek">
+                        <img class="img-fluid panel-rounded" src="/images/home/solutions/CES2020_1.jpg" alt="Building AR: Vera apps in our office building" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="created-on-vera">
+    <div class="container py-md-5 py-5 my-5">
+        <div class="row no-gutters no-wrap py-md-4">
+            <div class="col-12 headline py-5">
+                <p class="h2">Created on Vera</p>
+            </div>
+        </div>
+        <div class="row no-gutters no-wrap py-md-4 text-center justify-content-center">
+            <div class="col-4">
+                <div ng-controller="popupVideo" class="mx-3">
+                <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/watch?v=DiTfJTByFek">
+                    <img class="img-fluid panel-rounded" src="images/animaker-video-thumb.jpg" alt="Building AR: Vera apps in our office building" />
+                </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div ng-controller="popupVideo" class="mx-3">
+                <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/watch?v=fQES9O65Llw">
+                    <img class="img-fluid panel-rounded" src="/images/home/created/car-video-thumb.png" alt="Conference room IoT" />
+                </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div ng-controller="popupVideo" class="mx-3">
+                <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/watch?v=WG4MnbC70dQ"">
+                    <img class="img-fluid panel-rounded" src="/images/home/created/434.png" alt="AR tutorials: How to make coffee" />
+                </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div ng-controller="popupVideo" class="mx-3">
+                <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/watch?v=g7xCL8uNTGQ">
+                    <img class="img-fluid panel-rounded" src="images/animaker-video-thumb.jpg" alt="Video: Animaker-video" />
+                </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div ng-controller="popupVideo" class="mx-3">
+                <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/C1bQQYQn7Vc">
+                    <img class="img-fluid panel-rounded" src="images/animaker-video-thumb.jpg" alt="AR gaming: Shooter live demo" />
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="press">
+    <div class="container py-md-5 py-4">
+        <div class="row no-gutters no-wrap py-md-4">
+            <div class="col-12 headline py-5">
+                <p class="h2">Press</p>
+            </div>
+        </div>
+        <div class="row no-gutters no-wrap py-md-4 justify-content-center">
+            <div class="col-5">
+                <div class="panel-rounded px-5 py-4 mx-3">
+                    <div class="logo"><img src="/images/home/press/logo_clickz.png" alt="ClickZ"></div>
+                    <p class="py-4">Immersive AR is Coming to a Theatre Near You</p>
+                    <div class="btn-wrapper">
+                        <a class="btn-invert" href="https://www.clickz.com/immersive-ar-is-coming-to-a-movie-theater-near-you/259409/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="panel-rounded px-5 py-4 mx-3">
+                    <div class="logo"><img src="/images/home/press/SA-web-logo-300x58.png" alt="Silicon ANGLE"></div>
+                    <p class="py-4"> CJ 4DPLEX &amp; Resonai Join to push the AR envelope for entertainment</p>
+                    <div class="btn-wrapper">
+                        <a class="btn-invert" href="https://siliconangle.com/2020/01/07/resonai-cj-4dplex-push-envelope-augmented-reality-entertainment/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="panel-rounded px-5 py-4 mx-3">
+                    <div class="logo"><img src="/images/home/press/logo_business_insider.png" alt="Business Insider"></div>
+                    <p class="py-4">Founder who launched Facebook acquired company is back</p>
+                    <div class="btn-wrapper">
+                        <a class="btn-invert" href="https://www.businessinsider.com/facebook-vr-entrepreneur-brings-augmented-reality-commercial-real-estate-resonai-2019-11">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="panel-rounded px-5 py-4 mx-3">
+                    <div class="logo"></div>
+                    <p class="py-4">What is digital Real Estate?</p>
+                    <div class="btn-wrapper">
+                        <a class="btn-invert" href="http://www.digitaljournal.com/business/q-a-what-is-digital-real-estate/article/563911">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="panel-rounded px-5 py-4 mx-3">
+                    <div class="logo"></div>
+                    <p class="py-4">Computer vision platform creates intelligent 3D twin</p>
+                    <div class="btn-wrapper">
+                        <a class="btn-invert" href="https://www.smart2zero.com/news/computer-vision-platform-creates-intelligent-3d-twin-any-building">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
