@@ -59,12 +59,14 @@ body {
 
 .h2 {
   font-weight: 700;
-  font-size: rem(48);
+  font-size: rem(40);
+  letter-spacing: 0px;
 }
 
 .h3 {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: rem(22);
+  letter-spacing: 0;
 }
 
 .row {
@@ -89,6 +91,10 @@ a:not([href]):not([tabindex]):hover {
   color: $colorPrimaryLight;
   text-decoration: none;
   font-weight: 400;
+}
+
+.clicky {
+  cursor: pointer;
 }
 
 .no-wrap {
@@ -163,6 +169,10 @@ a:not([href]):not([tabindex]):hover {
 }
 
 #vera-hero {
+  overflow: hidden;
+  .container {
+    overflow: visible;
+  }
   h1 {
     font-size: 5rem;
     letter-spacing: 0;
@@ -180,11 +190,18 @@ a:not([href]):not([tabindex]):hover {
       margin-bottom: 2.5rem;
     }
   }
+  .hero-container {
+    height: 100vh;
+    width: 50vw;
+    background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
+    background-size: cover;
+  }
 }
 
 #vera-business {
   p:not(.h2) {
     font-size: 1.125rem;
+    letter-spacing: 0;
   }
 }
 
@@ -215,19 +232,44 @@ a:not([href]):not([tabindex]):hover {
     list-style-image: url('/images/home/check.svg');
     li {
       padding: 0 0 0 2rem;
-      margin: 0 0 3rem 0;
+      margin: 0 0 2.25rem 0;
+      p {
+        transition: all 500ms;
+        &:not(.h3) {
+          font-size: rem(15);
+          line-height: rem(24);
+        }
+      }
       &.active {
         list-style-image: url('/images/home/green-check.svg');
         .h3 {
           color: $colorPrimaryLight;
         }
         p.info {
-          display: block;
+          opacity: 1;
+          visibility: visible;
+          height: rem(115);
+          padding-top: .5rem!important;
+          padding-bottom: .5rem!important;
         }
       }
       p.info {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
       }
+    }
+  }
+}
+
+#created-on-vera {
+  .scrollable {
+    img {
+      max-height: rem(241);
+      width: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -251,6 +293,15 @@ a:not([href]):not([tabindex]):hover {
   }
   p:not(.h2) {
     font-size: rem(17);
+  }
+}
+
+.scrollable {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -283,7 +334,6 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .video-thumb {
-  cursor: pointer;
   position: relative;
   display: inline-block;
   &::before {
@@ -297,6 +347,7 @@ a:not([href]):not([tabindex]):hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
   }
   &::after {
     position: absolute;
@@ -310,6 +361,7 @@ a:not([href]):not([tabindex]):hover {
     top: calc(50% + 1px);
     left: calc(50% + 3px);
     transform: translate(-50%, -50%);
+    cursor: pointer;
   }
 }
 
@@ -364,12 +416,14 @@ footer {
 /* ---- NavBar ---- */
 
 .navbar {
+  transition: background-color 250ms;
   .collapsed,
   .show {
-    transition-duration: 200ms;
+    transition: all 200ms;
   }
   .nav-link {
     position: relative;
+    font-szie: rem(15);
     color: #FFFFFF;
     font-weight: 400;
     transition: color 250ms;
@@ -395,6 +449,12 @@ footer {
       transition: opacity 250ms;
     }
   }
+  &.scrolled {
+    background-color: #FFF;
+    .nav-link {
+      color: #7f7f7f;
+    }
+  }
 }
 
 .navbar-toggler {
@@ -418,14 +478,15 @@ footer {
 /* ---- Buttons ---- */
 
 .btn {
-  border-radius: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-size: rem(15);
+  border-radius: rem(20);
+  padding: rem(10) 1.5rem rem(11);
 }
 
 .btn-primary {
   background-color: $colorPrimaryLight;
   border: none;
+  box-shadow: 0 3px 15px #00A8BA52;
   &:hover {
     background-color: #35c0cf;
   }
@@ -433,12 +494,12 @@ footer {
 
 .btn-invert {
   background-color: #FFF;
-  padding: rem(10) 3rem rem(11);
   border: 1px solid $colorPrimaryLight;
   box-shadow: 0 3px 15px #00A8BA33;
-  border-radius: 20px;
+  padding: rem(9) rem(39) rem(10);
   &:hover {
     background-color: #35c0cf;
+    color: #FFF;
   }
 }
 

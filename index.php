@@ -85,7 +85,7 @@
         <section class="wrapper" ng-controller="smoothScroll">
             <!-- MAIN CONTENT -->
             <div class="resonai-content" ui-view></div>
-            <div ng-include='"app/templates/footer.html"'></div>
+            <div ng-include='"app/templates/footer.html"' class="pt-5"></div>
         </section>
     </body>
 </html>

@@ -167,12 +167,14 @@ body {
 
 .h2 {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  letter-spacing: 0px;
 }
 
 .h3 {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
+  letter-spacing: 0;
 }
 
 .row {
@@ -197,6 +199,10 @@ a:not([href]):not([tabindex]):hover {
   color: #00A8BA;
   text-decoration: none;
   font-weight: 400;
+}
+
+.clicky {
+  cursor: pointer;
 }
 
 .no-wrap {
@@ -264,6 +270,12 @@ a:not([href]):not([tabindex]):hover {
   transform: translateY(-50%);
 }
 
+#vera-hero {
+  overflow: hidden;
+}
+#vera-hero .container {
+  overflow: visible;
+}
 #vera-hero h1 {
   font-size: 5rem;
   letter-spacing: 0;
@@ -281,9 +293,16 @@ a:not([href]):not([tabindex]):hover {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
+#vera-hero .hero-container {
+  height: 100vh;
+  width: 50vw;
+  background-image: url("../images/Resonai_Hero_CommercialRealState_new.png");
+  background-size: cover;
+}
 
 #vera-business p:not(.h2) {
   font-size: 1.125rem;
+  letter-spacing: 0;
 }
 
 #solutions .img-wrapper {
@@ -311,7 +330,14 @@ a:not([href]):not([tabindex]):hover {
 }
 .section-highlights ul li {
   padding: 0 0 0 2rem;
-  margin: 0 0 3rem 0;
+  margin: 0 0 2.25rem 0;
+}
+.section-highlights ul li p {
+  transition: all 500ms;
+}
+.section-highlights ul li p:not(.h3) {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
 }
 .section-highlights ul li.active {
   list-style-image: url("/images/home/green-check.svg");
@@ -320,10 +346,24 @@ a:not([href]):not([tabindex]):hover {
   color: #00A8BA;
 }
 .section-highlights ul li.active p.info {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  height: 7.1875rem;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 .section-highlights ul li p.info {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#created-on-vera .scrollable img {
+  max-height: 15.0625rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 #press {
@@ -346,6 +386,15 @@ a:not([href]):not([tabindex]):hover {
 }
 #press p:not(.h2) {
   font-size: 1.0625rem;
+}
+
+.scrollable {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollable::-webkit-scrollbar {
+  display: none;
 }
 
 .unity-logo {
@@ -377,7 +426,6 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .video-thumb {
-  cursor: pointer;
   position: relative;
   display: inline-block;
 }
@@ -392,6 +440,7 @@ a:not([href]):not([tabindex]):hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .video-thumb::after {
   position: absolute;
@@ -405,6 +454,7 @@ a:not([href]):not([tabindex]):hover {
   top: calc(50% + 1px);
   left: calc(50% + 3px);
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 #prefooter {
@@ -457,12 +507,16 @@ footer .social img {
 
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
+.navbar {
+  transition: background-color 250ms;
+}
 .navbar .collapsed,
 .navbar .show {
-  transition-duration: 200ms;
+  transition: all 200ms;
 }
 .navbar .nav-link {
   position: relative;
+  font-szie: 0.9375rem;
   color: #FFFFFF;
   font-weight: 400;
   transition: color 250ms;
@@ -484,6 +538,12 @@ footer .social img {
   opacity: 0;
   transition: opacity 250ms;
 }
+.navbar.scrolled {
+  background-color: #FFF;
+}
+.navbar.scrolled .nav-link {
+  color: #7f7f7f;
+}
 
 .navbar-toggler:focus, .navbar-toggler:active {
   outline: none;
@@ -503,14 +563,15 @@ footer .social img {
 /* ---- End NavBar ---- */
 /* ---- Buttons ---- */
 .btn {
-  border-radius: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-size: 0.9375rem;
+  border-radius: 1.25rem;
+  padding: 0.625rem 1.5rem 0.6875rem;
 }
 
 .btn-primary {
   background-color: #00A8BA;
   border: none;
+  box-shadow: 0 3px 15px #00A8BA52;
 }
 .btn-primary:hover {
   background-color: #35c0cf;
@@ -518,13 +579,13 @@ footer .social img {
 
 .btn-invert {
   background-color: #FFF;
-  padding: 0.625rem 3rem 0.6875rem;
   border: 1px solid #00A8BA;
   box-shadow: 0 3px 15px #00A8BA33;
-  border-radius: 20px;
+  padding: 0.5625rem 2.4375rem 0.625rem;
 }
 .btn-invert:hover {
   background-color: #35c0cf;
+  color: #FFF;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,

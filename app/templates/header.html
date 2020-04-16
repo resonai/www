@@ -1,32 +1,40 @@
 <header ng-init="isOpen = true" class="header">
-    <nav class="navbar navbar-expand-lg py-4 position-absolute m-auto w-100 mobile-bottom">
+    <nav class="navbar navbar-expand-lg py-0 fixed-top mobile-bottom">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="container py-3">
-            <a class="navbar-brand position-relative" href="index.php#!/home#discover-new-realities"
-            du-smooth-scroll du-scrollspy>
-                <img class="nav-logo" alt="Resonai" src="images/logo_header.png">
-            </a>
+        <div class="container pb-1">
+            <div class="row no-gutters align-items-center">
+                <div class="col-6">
+                    <a class="navbar-brand position-relative" href="index.php#!/home#discover-new-realities"
+                       du-smooth-scroll du-scrollspy>
+                        <img class="nav-logo" alt="Resonai" src="images/logo_header.png">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <button ng-click="isOpen = !isOpen" ng-class="{collapsed: isOpen}" class="navbar-toggler mt-1 collapsed"
+                            type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div ng-class="{show: !isOpen}" class="collapse navbar-collapse pt-1 flex-grow-1 text-right"
+                         id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto flex-nowrap">
+                            <li class="nav-item px-2 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
+                                                              href="index.php#!/home#vera" du-smooth-scroll du-scrollspy>Facilities Management</a></li>
+                            <li class="nav-item px-2 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
+                                                              href="index.php#!/home#visual-search" du-smooth-scroll du-scrollspy>Retail</a></li>
+                            <li class="nav-item px-2 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
+                                                              href="index.php#!/home#visual-search" du-smooth-scroll du-scrollspy>Entertainment</a></li>
+                            <li class="nav-item px-2 py-2"><a class="nav-link" href="index.php#!/jobs"
+                                                              du-smooth-scroll du-scrollspy>Jobs</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div>
+
             <!--<a class="navbar-brand logo-mobile" href="index.php#!/home#home" du-smooth-scroll du-scrollspy><img alt="Resonai" src="images/logo-mobile.png"></a>-->
             <!--data-toggle="collapse" data-target="#navbarSupportedContent"-->
-            <button ng-click="isOpen = !isOpen" ng-class="{collapsed: isOpen}" class="navbar-toggler mt-1 collapsed"
-            type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div ng-class="{show: !isOpen}" class="collapse navbar-collapse pt-1 flex-grow-1 text-right"
-            id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto flex-nowrap">
-                    <li class="nav-item px-4 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
-                        href="index.php#!/home#vera" du-smooth-scroll du-scrollspy>Facilities Management</a></li>
-                    <li class="nav-item px-4 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
-                        href="index.php#!/home#visual-search" du-smooth-scroll du-scrollspy>Retail</a></li>
-                    <li class="nav-item px-4 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
-                                                      href="index.php#!/home#visual-search" du-smooth-scroll du-scrollspy>Entertainment</a></li>
-                    <li class="nav-item px-4 py-2"><a class="nav-link" href="index.php#!/jobs"
-                        du-smooth-scroll du-scrollspy>Jobs</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
+
         </div>
     </nav>
 </header>
