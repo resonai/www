@@ -185,6 +185,8 @@ a:not([href]):not([tabindex]):hover {
   }
   p {
     font-size: 1.5rem;
+    line-height: rem(32);
+    letter-spacing: 0;
     &.m-vertical-medium {
       margin-top: 2rem;
       margin-bottom: 2.5rem;
@@ -206,6 +208,10 @@ a:not([href]):not([tabindex]):hover {
 }
 
 #solutions {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .img-wrapper {
     height: initial;
     .panel-rounded {
@@ -265,6 +271,9 @@ a:not([href]):not([tabindex]):hover {
 }
 
 #created-on-vera {
+  .container {
+    position: relative;
+  }
   .scrollable {
     img {
       max-height: rem(241);
@@ -275,7 +284,9 @@ a:not([href]):not([tabindex]):hover {
 }
 
 #press {
-  position: relative;
+  .container {
+    position: relative;
+  }
   .panel-rounded {
     height: 100%;
     min-height: 230px;
@@ -300,8 +311,23 @@ a:not([href]):not([tabindex]):hover {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     display: none;
+  }
+  .action-control {
+    position: absolute;
+    line-height: rem(230);
+    font-size: 2.5rem;
+    color: $colorPrimaryLight;
+    z-index: 1;
+    cursor: pointer;
+    &.go-left {
+      left: -10px;
+    }
+    &.go-right {
+      right: -10px;
+    }
   }
 }
 

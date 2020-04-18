@@ -8,7 +8,7 @@
                         <h1>
                             Vera<sup>&trade;</sup>
                         </h1>
-                        <p class="m-vertical-medium">
+                        <p class="m-vertical-medium mr-5 pr-4">
                             Transforms Any Building Into an Intelligent Digital Space to Enable Mobile AR Apps with Endless Possibilities
                         </p>
                         <a class="btn btn-primary" href="index.php#!/contactUs" role="button">Request a demo</a>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-12 text-md-left text-center order-0">
-                <div class="my-5 mr-5 pr-3">
+                <div class="my-5 mr-5 pr-5">
                     <p class="h2">Vera provides Advanced AI & AR technology to solve real business problems today.</p>
                     <p class="my-5 pr-5">One platform with access to multiple solutions that can scale across locations and provide real time data analytics & insights.</p>
                     <p><a target="_blank" class="btn btn-primary mb-md-0" href="https://assetstore.unity.com/packages/tools/utilities/unity-visual-search-104059">Download Vera White Papers</a></p>
@@ -44,8 +44,8 @@
 </section>
 
 <section id="solutions">
-    <div class="container py-md-5 py-4">
-        <div class="col-12 mb-md-5">
+    <div class="container py-5">
+        <div class="col-12 mb-5">
             <h2 class="h2 my-3">Solutions</h2>
         </div>
         <div class="row no-gutters py-md-5 justify-content-center">
@@ -204,7 +204,13 @@
                 <p class="h2">Created on Vera</p>
             </div>
         </div>
-        <div class="row no-gutters no-wrap py-5 my-1 text-center justify-content-center scrollable">
+        <div ng-Controller="scrollHorizontal" class="row no-gutters no-wrap py-5 my-1 text-center scrollable">
+            <div ng-click="scrollLeft($event)" class="action-control go-left">
+                <i class="far fa-chevron-left"></i>
+            </div>
+            <div ng-click="scrollRight($event)" class="action-control go-right">
+                <i class="far fa-chevron-right"></i>
+            </div>
             <div class="col-5">
                 <div ng-controller="popupVideo" class="mx-3">
                 <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/DiTfJTByFek">
@@ -251,13 +257,19 @@
                 <p class="h2">Press</p>
             </div>
         </div>
-        <div class="row no-gutters no-wrap py-4 mb-2 justify-content-center scrollable">
+        <div ng-Controller="scrollHorizontal" class="row no-gutters no-wrap py-4 mb-2S scrollable">
+            <div ng-click="scrollLeft($event)" class="action-control go-left">
+                <i class="far fa-chevron-left"></i>
+            </div>
+            <div ng-click="scrollRight($event)" class="action-control go-right">
+                <i class="far fa-chevron-right"></i>
+            </div>
             <div class="col-5">
-                <div class="panel-rounded px-5 py-4 mx-3">
+                <div class="panel-rounded px-5 py-4 mr-3 ml-2">
                     <div class="logo"><img src="/images/home/press/logo_clickz.png" alt="ClickZ"></div>
                     <p class="py-4">Immersive AR is Coming to a Theatre Near You</p>
                     <div class="btn-wrapper">
-                        <a class="btn-invert" href="https://www.clickz.com/immersive-ar-is-coming-to-a-movie-theater-near-you/259409/">Read More</a>
+                        <a class="btn btn-invert" href="https://www.clickz.com/immersive-ar-is-coming-to-a-movie-theater-near-you/259409/">Read More</a>
                     </div>
                 </div>
             </div>

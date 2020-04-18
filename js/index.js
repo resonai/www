@@ -116,6 +116,15 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
   }
 ).value('duScrollOffset', 30);
 
+ app.controller('scrollHorizontal', function($scope, $document){
+     $scope.scrollRight = function($event) {
+         $event.currentTarget.parentNode.scrollBy( 462.5, 0, 'smooth');
+     }
+     $scope.scrollLeft = function($event) {
+         $event.currentTarget.parentNode.scrollBy( -462.5, 0, 'smooth');
+     }
+ });
+
 app.controller('popupVideo', function ($scope, ngDialog,$sce) {
 	$scope.openContactForm = function($event) {
         $scope.trustSrc = function(src) {
