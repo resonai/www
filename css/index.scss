@@ -62,13 +62,21 @@ body {
 .h2 {
   font-weight: 700;
   font-size: rem(40);
-  letter-spacing: 0px;
+  letter-spacing: 0;
+  @media screen and (max-width: rem(991)) {
+    font-size: rem(23);
+    line-height: rem(28);
+  }
 }
 
 .h3 {
   font-weight: 700;
   font-size: rem(22);
   letter-spacing: 0;
+  @media screen and (max-width: rem(991)) {
+    font-size: rem(18);
+    line-height: rem(22);
+  }
 }
 
 .row {
@@ -122,6 +130,10 @@ a:not([href]):not([tabindex]):hover {
 .headline {
   p:not(.h2) {
     font-size: rem(18);
+    @media screen and (max-width: rem(991)) {
+      font-size: rem(15);
+      line-height: rem(22);
+    }
   }
 }
 .panel {
@@ -171,18 +183,42 @@ a:not([href]):not([tabindex]):hover {
 }
 
 #vera-hero {
+  @media screen and (max-width: rem(991)){
+    color: #FFF;
+  }
   overflow: hidden;
   .container {
     overflow: visible;
+    @media screen and (max-width: rem(991)){
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
+      background-size: cover;
+    }
+  }
+  @media screen and (max-width: rem(991)) {
+    .mobile-full {
+      position: absolute;
+      top:0;
+      height: 100vh;
+    }
   }
   h1 {
     font-size: 5rem;
     letter-spacing: 0;
     font-weight: 900;
+    @media screen and (max-width: rem(991)) {
+      font-size: rem(35);
+    }
     sup {
       font-weight: 300;
       font-size: 1.875rem;
       top: -2.25rem;
+      @media screen and (max-width: rem(991)) {
+        font-size: rem(20);
+        top: -1.25rem;
+      }
     }
   }
   p {
@@ -192,6 +228,14 @@ a:not([href]):not([tabindex]):hover {
     &.m-vertical-medium {
       margin-top: 2rem;
       margin-bottom: 2.5rem;
+      @media screen and (max-width: rem(991)) {
+        margin-top: rem(20);
+        margin-bottom: rem(30);
+      }
+    }
+    @media screen and (max-width: rem(991)) {
+      font-size: rem(16);
+      line-height: rem(22);
     }
   }
   .hero-container {
@@ -199,6 +243,9 @@ a:not([href]):not([tabindex]):hover {
     width: 50vw;
     background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
     background-size: cover;
+    @media screen and (max-width: rem(991)){
+      background-image: none;
+    }
   }
 }
 
@@ -206,6 +253,15 @@ a:not([href]):not([tabindex]):hover {
   p:not(.h2) {
     font-size: 1.125rem;
     letter-spacing: 0;
+    @media screen and (max-width: rem(991)) {
+      font-size: rem(15);
+      line-height: rem(22);
+    }
+  }
+  @media screen and (max-width: rem(991)) {
+    .img-fluid {
+      padding: 1rem 4rem 0;
+    }
   }
 }
 
@@ -227,12 +283,21 @@ a:not([href]):not([tabindex]):hover {
     list-style-type: none;
     li {
       padding: 0;
-      margin: 0 0 0.875rem 0;
+      margin: 0 0 0.875rem;
+      @media screen and (max-width: rem(991)) {
+        margin: 0 0 0.25rem;
+      }
     }
   }
 }
 
 .section-highlights {
+  .container {
+    @media screen and (max-width: rem(991)) {
+      padding-left: rem(28);
+      padding-right: rem(28);
+    }
+  }
   ul {
     padding: 0;
     margin: 0;
@@ -241,11 +306,18 @@ a:not([href]):not([tabindex]):hover {
     li {
       padding: 0 0 0 2rem;
       margin: 0 0 2.25rem 0;
+      @media screen and (max-width: rem(991)) {
+        padding: 0 0 0 0.75rem;
+        letter-spacing: 0;
+      }
       p {
         transition: all 500ms;
         &:not(.h3) {
           font-size: rem(15);
           line-height: rem(24);
+          @media screen and (max-width: rem(991)) {
+            line-height: rem(22);
+          }
         }
       }
       &.active {
@@ -259,6 +331,9 @@ a:not([href]):not([tabindex]):hover {
           height: rem(115);
           padding-top: .5rem!important;
           padding-bottom: .5rem!important;
+          @media screen and (max-width: rem(991)){
+            height: rem(140);
+          }
         }
       }
       p.info {
@@ -279,10 +354,18 @@ a:not([href]):not([tabindex]):hover {
 #created-on-vera {
   .container {
     position: relative;
+    @media screen and (max-width: rem(991)) {
+      padding-left: rem(34);
+      padding-right: rem(34);
+    }
   }
   .col {
     min-width: 432px;
     max-width: 432px;
+    @media screen and (max-width: rem(991)) {
+      min-width: 301px;
+      max-width: 301px;
+    }
   }
   .scrollable {
     img {
@@ -296,6 +379,10 @@ a:not([href]):not([tabindex]):hover {
 #press {
   .container {
     position: relative;
+    @media screen and (max-width: rem(991)) {
+      padding-left: rem(34);
+      padding-right: rem(34);
+    }
   }
   .col {
     min-width: 432px;
@@ -458,6 +545,15 @@ footer {
 .navbar {
   padding-top: rem(50);
   transition: background-color 250ms, padding-top, 250ms;
+  @media screen and (max-width: rem(991)) {
+    padding-top: rem(31);
+    button {
+      color: #FFF;
+    }
+    .navbar-collapse {
+      position: absolute;
+    }
+  }
   .collapsed,
   .show {
     transition: all 200ms;
@@ -507,6 +603,25 @@ footer {
         background-color: $colorPrimaryLight;
       }
     }
+    @media screen and (max-width: rem(991)) {
+      button {
+        color: #000;
+      }
+      .nav-logo {
+        &.desktop {
+          display: initial;
+        }
+        &.mobile {
+          display: none;
+        }
+      }
+      .navbar-collapse {
+        width: 100%;
+        left: 0;
+        padding-right: 16px;
+        background-color: rgb(255, 255, 255);
+      }
+    }
   }
 }
 
@@ -534,6 +649,9 @@ footer {
   font-size: rem(15);
   border-radius: rem(20);
   padding: rem(10) 1.5rem rem(11);
+  @media screen and (max-width: rem(991)) {
+    font-size: rem(13);
+  }
 }
 
 .btn-primary {
@@ -650,13 +768,8 @@ footer {
     font-size: rem(28);
   }
 
-  #prefooter .h3,
-  .h2 {
+  #prefooter .h3 {
     font-size: rem(20);
-  }
-
-  .h3 {
-    font-size: 1rem;
   }
 }
 
@@ -681,3 +794,20 @@ body .ngdialog.ngdialog-theme-default .ngdialog-close:before {
 }
 
 /* ---- End ng Override CSS ---- */
+
+.desktop {
+  display: initial;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: rem(991)) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: initial;
+  }
+}

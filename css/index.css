@@ -169,13 +169,25 @@ body {
 .h2 {
   font-weight: 700;
   font-size: 2.5rem;
-  letter-spacing: 0px;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 61.9375rem) {
+  .h2 {
+    font-size: 1.4375rem;
+    line-height: 1.75rem;
+  }
 }
 
 .h3 {
   font-weight: 700;
   font-size: 1.375rem;
   letter-spacing: 0;
+}
+@media screen and (max-width: 61.9375rem) {
+  .h3 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 .row {
@@ -229,6 +241,12 @@ a:not([href]):not([tabindex]):hover {
 .headline p:not(.h2) {
   font-size: 1.125rem;
 }
+@media screen and (max-width: 61.9375rem) {
+  .headline p:not(.h2) {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
 
 .panel p {
   font-size: 1.125rem;
@@ -274,18 +292,50 @@ a:not([href]):not([tabindex]):hover {
 #vera-hero {
   overflow: hidden;
 }
+@media screen and (max-width: 61.9375rem) {
+  #vera-hero {
+    color: #FFF;
+  }
+}
 #vera-hero .container {
   overflow: visible;
+}
+@media screen and (max-width: 61.9375rem) {
+  #vera-hero .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    background-image: url("../images/Resonai_Hero_CommercialRealState_new.png");
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 61.9375rem) {
+  #vera-hero .mobile-full {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+  }
 }
 #vera-hero h1 {
   font-size: 5rem;
   letter-spacing: 0;
   font-weight: 900;
 }
+@media screen and (max-width: 61.9375rem) {
+  #vera-hero h1 {
+    font-size: 2.1875rem;
+  }
+}
 #vera-hero h1 sup {
   font-weight: 300;
   font-size: 1.875rem;
   top: -2.25rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  #vera-hero h1 sup {
+    font-size: 1.25rem;
+    top: -1.25rem;
+  }
 }
 #vera-hero p {
   font-size: 1.5rem;
@@ -296,16 +346,44 @@ a:not([href]):not([tabindex]):hover {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
+@media screen and (max-width: 61.9375rem) {
+  #vera-hero p.m-vertical-medium {
+    margin-top: 1.25rem;
+    margin-bottom: 1.875rem;
+  }
+}
+@media screen and (max-width: 61.9375rem) {
+  #vera-hero p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
 #vera-hero .hero-container {
   height: 100vh;
   width: 50vw;
   background-image: url("../images/Resonai_Hero_CommercialRealState_new.png");
   background-size: cover;
 }
+@media screen and (max-width: 61.9375rem) {
+  #vera-hero .hero-container {
+    background-image: none;
+  }
+}
 
 #vera-business p:not(.h2) {
   font-size: 1.125rem;
   letter-spacing: 0;
+}
+@media screen and (max-width: 61.9375rem) {
+  #vera-business p:not(.h2) {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+@media screen and (max-width: 61.9375rem) {
+  #vera-business .img-fluid {
+    padding: 1rem 4rem 0;
+  }
 }
 
 #solutions .container {
@@ -326,9 +404,20 @@ a:not([href]):not([tabindex]):hover {
 }
 #solutions ul li {
   padding: 0;
-  margin: 0 0 0.875rem 0;
+  margin: 0 0 0.875rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  #solutions ul li {
+    margin: 0 0 0.25rem;
+  }
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .section-highlights .container {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
 .section-highlights ul {
   padding: 0;
   margin: 0;
@@ -339,12 +428,23 @@ a:not([href]):not([tabindex]):hover {
   padding: 0 0 0 2rem;
   margin: 0 0 2.25rem 0;
 }
+@media screen and (max-width: 61.9375rem) {
+  .section-highlights ul li {
+    padding: 0 0 0 0.75rem;
+    letter-spacing: 0;
+  }
+}
 .section-highlights ul li p {
   transition: all 500ms;
 }
 .section-highlights ul li p:not(.h3) {
   font-size: 0.9375rem;
   line-height: 1.5rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  .section-highlights ul li p:not(.h3) {
+    line-height: 1.375rem;
+  }
 }
 .section-highlights ul li.active {
   list-style-image: url("/images/home/green-check.svg");
@@ -358,6 +458,11 @@ a:not([href]):not([tabindex]):hover {
   height: 7.1875rem;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
+}
+@media screen and (max-width: 61.9375rem) {
+  .section-highlights ul li.active p.info {
+    height: 8.75rem;
+  }
 }
 .section-highlights ul li p.info {
   opacity: 0;
@@ -375,9 +480,21 @@ a:not([href]):not([tabindex]):hover {
 #created-on-vera .container {
   position: relative;
 }
+@media screen and (max-width: 61.9375rem) {
+  #created-on-vera .container {
+    padding-left: 2.125rem;
+    padding-right: 2.125rem;
+  }
+}
 #created-on-vera .col {
   min-width: 432px;
   max-width: 432px;
+}
+@media screen and (max-width: 61.9375rem) {
+  #created-on-vera .col {
+    min-width: 301px;
+    max-width: 301px;
+  }
 }
 #created-on-vera .scrollable img {
   max-height: 15.0625rem;
@@ -387,6 +504,12 @@ a:not([href]):not([tabindex]):hover {
 
 #press .container {
   position: relative;
+}
+@media screen and (max-width: 61.9375rem) {
+  #press .container {
+    padding-left: 2.125rem;
+    padding-right: 2.125rem;
+  }
 }
 #press .col {
   min-width: 432px;
@@ -549,6 +672,17 @@ footer .social img {
   padding-top: 3.125rem;
   transition: background-color 250ms, padding-top, 250ms;
 }
+@media screen and (max-width: 61.9375rem) {
+  .navbar {
+    padding-top: 1.9375rem;
+  }
+  .navbar button {
+    color: #FFF;
+  }
+  .navbar .navbar-collapse {
+    position: absolute;
+  }
+}
 .navbar .collapsed,
 .navbar .show {
   transition: all 200ms;
@@ -595,6 +729,23 @@ footer .social img {
 .navbar.scrolled .nav-link.active:before, .navbar.scrolled .nav-link:active:before {
   background-color: #00A8BA;
 }
+@media screen and (max-width: 61.9375rem) {
+  .navbar.scrolled button {
+    color: #000;
+  }
+  .navbar.scrolled .nav-logo.desktop {
+    display: initial;
+  }
+  .navbar.scrolled .nav-logo.mobile {
+    display: none;
+  }
+  .navbar.scrolled .navbar-collapse {
+    width: 100%;
+    left: 0;
+    padding-right: 16px;
+    background-color: white;
+  }
+}
 
 .navbar-toggler:focus, .navbar-toggler:active {
   outline: none;
@@ -617,6 +768,11 @@ footer .social img {
   font-size: 0.9375rem;
   border-radius: 1.25rem;
   padding: 0.625rem 1.5rem 0.6875rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  .btn {
+    font-size: 0.8125rem;
+  }
 }
 
 .btn-primary {
@@ -729,13 +885,8 @@ footer .social img {
     font-size: 1.75rem;
   }
 
-  #prefooter .h3,
-.h2 {
+  #prefooter .h3 {
     font-size: 1.25rem;
-  }
-
-  .h3 {
-    font-size: 1rem;
   }
 }
 /* ---- ng Override CSS ---- */
@@ -758,5 +909,22 @@ body .ngdialog.ngdialog-theme-default .ngdialog-close:before {
 }
 
 /* ---- End ng Override CSS ---- */
+.desktop {
+  display: initial;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: initial;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
