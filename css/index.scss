@@ -190,11 +190,19 @@ a:not([href]):not([tabindex]):hover {
   .container {
     overflow: visible;
     @media screen and (max-width: rem(991)){
-      max-width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
-      background-size: cover;
+      &:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
+        background-size: cover;
+        filter: brightness(0.75);
+      }
     }
   }
   @media screen and (max-width: rem(991)) {
@@ -225,6 +233,7 @@ a:not([href]):not([tabindex]):hover {
     font-size: 1.5rem;
     line-height: rem(32);
     letter-spacing: 0;
+    max-width: 600px;
     &.m-vertical-medium {
       margin-top: 2rem;
       margin-bottom: 2.5rem;
@@ -552,6 +561,11 @@ footer {
     }
     .navbar-collapse {
       position: absolute;
+      left: 50%;
+      width: 100%;
+      padding-right: 16px;
+      max-width: 720px;
+      transform: translateX(-50%);
     }
   }
   .collapsed,
@@ -604,6 +618,8 @@ footer {
       }
     }
     @media screen and (max-width: rem(991)) {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
       button {
         color: #000;
       }
@@ -617,10 +633,13 @@ footer {
       }
       .navbar-collapse {
         width: 100%;
-        left: 0;
-        padding-right: 16px;
         background-color: rgb(255, 255, 255);
       }
+    }
+  }
+  &:not(.scrolled) {
+    .navbar-toggler-icon {
+      filter: invert(1);
     }
   }
 }
