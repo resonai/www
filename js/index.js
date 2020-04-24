@@ -116,14 +116,41 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
   }
 ).value('duScrollOffset', 30);
 
- app.controller('scrollHorizontal', function($scope, $document){
+ app.controller('dragScroll', function($scope){
+     $scope.isMouseDown = false;
+
+     $scope.setMouseDown = function($event) {
+         $scope.slider = $event.currentTarget;
+         $scope.isMouseDown = true;
+         $scope.slider.classList.add('scrolling');
+         $scope.startX = $event.pageX - $scope.slider.offsetLeft;
+         $scope.scrollLeft = $scope.slider.scrollLeft;
+     }
+
+     $scope.setMouseUp = function() {
+         $scope.isMouseDown = false;
+         $scope.slider.classList.remove('scrolling');
+     }
+
+    $scope.movePanel = function($event) {
+        if(!$scope.isMouseDown) return;
+        $event.preventDefault();
+        const x = $event.pageX - $scope.slider.offsetLeft;
+        const walk = (x - $scope.startX) * 3; //scroll-fast
+        $scope.slider.scrollLeft = $scope.scrollLeft - walk;
+        console.log(walk);
+    }
+ }
+);
+
+/* app.controller('scrollHorizontal', function($scope, $document){
      $scope.scrollRight = function($event) {
          $event.currentTarget.parentNode.scrollBy( 462.5, 0, 'smooth');
      }
      $scope.scrollLeft = function($event) {
          $event.currentTarget.parentNode.scrollBy( -462.5, 0, 'smooth');
      }
- });
+ });*/
 
 app.controller('popupVideo', function ($scope, ngDialog,$sce) {
 	$scope.openContactForm = function($event) {

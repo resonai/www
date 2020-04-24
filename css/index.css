@@ -546,9 +546,23 @@ a:not([href]):not([tabindex]):hover {
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-behavior: smooth;
+  cursor: grab;
+}
+.scrollable.scrolling {
+  cursor: grabbing;
 }
 .scrollable::-webkit-scrollbar {
   display: none;
+}
+.scrollable .col,
+.scrollable .col img {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
 }
 .scrollable .action-control {
   position: absolute;

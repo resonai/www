@@ -197,14 +197,14 @@
     </div>
 </section>
 
-<section id="created-on-vera">
+<section ng-controller="dragScroll" id="created-on-vera">
     <div class="full width pb-lg-4 mb-lg-1">
         <div class="row container m-auto no-gutters no-wrap pb-3">
             <div class="col-12 headline py-lg-4">
                 <p class="h2">Created on Vera</p>
             </div>
         </div>
-        <div ng-Controller="scrollHorizontal" class="row no-gutters no-wrap py-lg-5 my-lg-1 text-center scrollable">
+        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap py-lg-5 my-lg-1 text-center scrollable">
             <!--<div ng-click="scrollLeft($event)" class="action-control go-left">
                 <i class="far fa-chevron-left"></i>
             </div>
@@ -250,14 +250,14 @@
     </div>
 </section>
 
-<section id="press" class="pb-lg-3">
+<section ng-controller="dragScroll" id="press" class="pb-lg-3">
     <div class="full-width mb-lg-5 py-5">
         <div class="row container m-auto no-gutters no-wrap py-lg-4">
             <div class="col-12 headline py-lg-5">
                 <p class="h2">Press</p>
             </div>
         </div>
-        <div class="row no-gutters no-wrap py-lg-4 mb-2S scrollable">
+        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap py-lg-4 mb-2S scrollable">
             <div class="col col-3">
                 <div class="panel-rounded px-5 py-4 mr-3 ml-2">
                     <div class="logo"><img src="/images/home/press/logo_clickz.png" alt="ClickZ"></div>
