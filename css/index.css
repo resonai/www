@@ -544,6 +544,10 @@ a:not([href]):not([tabindex]):hover {
 #press p:not(.h2) {
   font-size: 1.0625rem;
 }
+#press img {
+  max-height: 20px;
+  object-fit: cover;
+}
 
 .scrollable {
   overflow: scroll;
