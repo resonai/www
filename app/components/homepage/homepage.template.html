@@ -3,18 +3,18 @@
     <div class="content">
         <div class="container">
             <div class="row no-gutters">
-                <div class="col-12 col-md-6">
-                    <div class="mr-5 absolute-vertical-center">
+                <div class="col-12 col-lg-6 mobile-full">
+                    <div class="mr-5 absolute-vertical-center ml-lg-0 ml-5">
                         <h1>
                             Vera<sup>&trade;</sup>
                         </h1>
-                        <p class="m-vertical-medium">
+                        <p class="m-vertical-medium mr-5 pr-4">
                             Transforms Any Building Into an Intelligent Digital Space to Enable Mobile AR Apps with Endless Possibilities
                         </p>
-                        <a class="btn btn-primary" href="index.php#!/contactUs" role="button">Request a demo</a>
+                        <a class="btn btn-primary" href="index.php#!/whitepaper" role="button">Download Vera white paper</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-lg-6">
                     <div class="hero-container"></div>
 <!--                    <img class="hero-image" src="images/Resonai_Hero_CommercialRealState_new.png" />-->
                 </div>
@@ -44,39 +44,39 @@
 </section>
 
 <section id="solutions">
-    <div class="container py-md-5 py-4">
-        <div class="col-12 mb-md-5">
+    <div class="container p-3 py-lg-5 px-lg-0">
+        <div class="col-12 mb-4 mb-lg-5">
             <h2 class="h2 my-3">Solutions</h2>
         </div>
-        <div class="row no-gutters py-md-5 justify-content-center">
-            <div class="col-4 px-3">
+        <div class="row no-gutters py-lg-5 justify-content-center">
+            <div class="col-12 col-lg-4 px-3">
                 <div class="img-wrapper pb-3">
                     <img class="panel-rounded img-fluid" src="/images/home/solutions/fm_placeholder.jpg" />
                 </div>
-                <p class="h3 mt-5 mb-4">Facilities Management</p>
-                <ul>
+                <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Facilities Management</p>
+                <ul class="mb-5">
                     <li>Lower maintenance costs</li>
                     <li>Improve tenant satisfaction</li>
                 </ul>
             </div>
-            <div class="col-4 px-3">
+            <div class="col-12 col-lg-4 px-3">
                 <div class="img-wrapper pb-3">
                     <img class="panel-rounded img-fluid" src="/images/home/solutions/retail.png" />
                 </div>
-                <p class="h3 mt-5 mb-4">Retail</p>
-                <ul>
+                <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Retail</p>
+                <ul class="mb-5">
                     <li>Increase engagement</li>
                     <li>Drive sales conversions</li>
                     <li>Automate visual merchandising</li>
                     <li>Gain new shopper insights</li>
                 </ul>
             </div>
-            <div class="col-4 px-3">
+            <div class="col-12 col-lg-4 px-3">
                 <div class="img-wrapper pb-3">
                     <img class="panel-rounded img-fluid" src="/images/home/solutions/CES2020_1.jpg" />
                 </div>
-                <p class="h3 mt-5 mb-4">Entertainment</p>
-                <ul>
+                <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Entertainment</p>
+                <ul class="mb-5">
                     <li>Extend brands into physical venues</li>
                     <li>Create engaging AR games</li>
                     <li>Access new analytics &amp; insights</li>
@@ -93,7 +93,7 @@
                 <p class="h2">Vera for Facilities Management</p>
                 <p class="py-4 w-50">AR will help you automate processes & lower the costs of building maintenance while helping to create and manage smart building experiences to delight tenants and visitors.</p>
             </div>
-            <div class="col-12 col-md-6 py-4 px-5">
+            <div class="col-12 col-lg-6 py-3 py-lg-4 px-3 px-lg-5 order-1">
                 <ul ng-init="activePanel = 0" class="ml-3">
                     <li ng-class="{ active: activePanel == 0 }">
                         <p class="h3 clicky" ng-click="activePanel = 0">Smart Ticketing & Navigation</p>
@@ -113,8 +113,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 py-4">
-                <div ng-controller="popupVideo" class="mx-3">
+            <div class="col-12 col-lg-6 py-3 py-lg-4 order-0">
+                <div ng-controller="popupVideo" class="mr-3 mx-lg-3">
                     <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/DiTfJTByFek">
                         <img class="img-fluid panel-rounded" src="/images/home/management/ticketing-video-thumb.png" alt="Building AR: Vera apps in our office building" />
                     </span>
@@ -132,14 +132,14 @@
                 <p class="h2">Vera for Retail</p>
                 <p class="p-4 w-75">AR transforms physical stores into engaging digital experiences, while collecting data analytics that inform product flows and business processes.</p>
             </div>
-            <div class="col-12 col-md-6 py-4 px-5">
+            <div class="col-12 col-lg-6 py-3 py-lg-4 px-lg-5">
                 <div class="img-wrapper mr-4">
                     <img class="panel-rounded img-fluid" src="/images/home/solutions/retail.png" alt="">
                 </div>
             </div>
-            <div class="col-12 col-md-6 py-4">
+            <div class="col-12 col-lg-6 py-3 py-lg-4 px-lg-5">
                 <div class="ml-4">
-                    <ul class="ml-5" ng-init="activeRetailPanel = 0">
+                    <ul class="ml-lg-5" ng-init="activeRetailPanel = 0">
                         <li ng-class="{ active: activeRetailPanel == 0 }">
                             <p class="h3 clicky" ng-click="activeRetailPanel = 0">Smart Visual Merchandising</p>
                             <p class="py-2 info">Save time and money in testing merchandising strategies for product placements, displays, and signage. Provide more engaging and visual merchandising instructions to each location & ensure store compliance.</p>
@@ -170,7 +170,7 @@
             <div class="col-12 headline py-5">
                 <p class="h2">Vera for Entertainment</p>
             </div>
-            <div class="col-12 col-md-6 p-5 my-5">
+            <div class="col-12 col-lg-6 py-3 px-3 px-lg-5 p-lg-5 my-lg-5 order-1">
                 <ul ng-init="activeEntertainmentPanel = 0" class="ml-3">
                     <li ng-class="{ active: activeEntertainmentPanel == 0 }">
                         <p class="h3 clicky" ng-click="activeEntertainmentPanel = 0">AR Gaming</p>
@@ -186,7 +186,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-md-6 py-4">
+            <div class="col-12 col-lg-6 py-3 py-lg-4 order-0">
                 <div ng-controller="popupVideo" class="mx-3 py-4">
                     <span ng-click="openContactForm($event)" class="video-thumb w-100" data="https://www.youtube.com/embed/DiTfJTByFek">
                         <img class="img-fluid panel-rounded w-100" src="/images/home/solutions/CES2020_1.jpg" alt="Building AR: Vera apps in our office building" />
@@ -197,43 +197,49 @@
     </div>
 </section>
 
-<section id="created-on-vera">
-    <div class="container pb-4 mb-1">
-        <div class="row no-gutters no-wrap pb-3">
-            <div class="col-12 headline py-4">
+<section ng-controller="dragScroll" id="created-on-vera">
+    <div class="full width pb-lg-4 mb-lg-1">
+        <div class="row container m-auto no-gutters no-wrap pb-3">
+            <div class="col-12 headline py-lg-4">
                 <p class="h2">Created on Vera</p>
             </div>
         </div>
-        <div class="row no-gutters no-wrap py-5 my-1 text-center justify-content-center scrollable">
-            <div class="col-5">
+        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap py-lg-5 my-lg-1 text-center scrollable">
+            <!--<div ng-click="scrollLeft($event)" class="action-control go-left">
+                <i class="far fa-chevron-left"></i>
+            </div>
+            <div ng-click="scrollRight($event)" class="action-control go-right">
+                <i class="far fa-chevron-right"></i>
+            </div>-->
+            <div class="col col-3">
                 <div ng-controller="popupVideo" class="mx-3">
                 <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/DiTfJTByFek">
                     <img class="img-fluid panel-rounded" src="images/animaker-video-thumb.jpg" alt="Building AR: Vera apps in our office building" />
                 </span>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col col-3">
                 <div ng-controller="popupVideo" class="mx-3">
                 <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/fQES9O65Llw">
                     <img class="img-fluid panel-rounded" src="/images/home/created/car-video-thumb.png" alt="Conference room IoT" />
                 </span>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col col-3">
                 <div ng-controller="popupVideo" class="mx-3">
                 <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/WG4MnbC70dQ"">
                     <img class="img-fluid panel-rounded" src="/images/home/created/434.png" alt="AR tutorials: How to make coffee" />
                 </span>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col col-3">
                 <div ng-controller="popupVideo" class="mx-3">
                 <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/g7xCL8uNTGQ">
                     <img class="img-fluid panel-rounded" src="images/animaker-video-thumb.jpg" alt="Video: Animaker-video" />
                 </span>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col col-3">
                 <div ng-controller="popupVideo" class="mx-3">
                 <span ng-click="openContactForm($event)" class="video-thumb" data="https://www.youtube.com/embed/C1bQQYQn7Vc">
                     <img class="img-fluid panel-rounded" src="images/animaker-video-thumb.jpg" alt="AR gaming: Shooter live demo" />
@@ -244,56 +250,56 @@
     </div>
 </section>
 
-<section id="press" class="pb-3">
-    <div class="container mb-5 py-5">
-        <div class="row no-gutters no-wrap py-4">
-            <div class="col-12 headline py-5">
+<section ng-controller="dragScroll" id="press" class="pb-lg-3">
+    <div class="full-width mb-lg-5 py-5">
+        <div class="row container m-auto no-gutters no-wrap py-lg-4">
+            <div class="col-12 headline py-lg-5">
                 <p class="h2">Press</p>
             </div>
         </div>
-        <div class="row no-gutters no-wrap py-4 mb-2 justify-content-center scrollable">
-            <div class="col-5">
-                <div class="panel-rounded px-5 py-4 mx-3">
+        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap py-lg-4 mb-2S scrollable">
+            <div class="col col-3">
+                <div class="panel-rounded px-5 py-4 mr-3 ml-2">
                     <div class="logo"><img src="/images/home/press/logo_clickz.png" alt="ClickZ"></div>
                     <p class="py-4">Immersive AR is Coming to a Theatre Near You</p>
                     <div class="btn-wrapper">
-                        <a class="btn-invert" href="https://www.clickz.com/immersive-ar-is-coming-to-a-movie-theater-near-you/259409/">Read More</a>
+                        <a class="btn btn-invert" target="_blank" href="https://www.clickz.com/immersive-ar-is-coming-to-a-movie-theater-near-you/259409/">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col col-3">
                 <div class="panel-rounded px-5 py-4 mx-3">
                     <div class="logo"><img src="/images/home/press/SA-web-logo-300x58.png" alt="Silicon ANGLE"></div>
                     <p class="py-4"> CJ 4DPLEX &amp; Resonai Join to push the AR envelope for entertainment</p>
                     <div class="btn-wrapper">
-                        <a class="btn btn-invert" href="https://siliconangle.com/2020/01/07/resonai-cj-4dplex-push-envelope-augmented-reality-entertainment/">Read More</a>
+                        <a class="btn btn-invert" target="_blank" href="https://siliconangle.com/2020/01/07/resonai-cj-4dplex-push-envelope-augmented-reality-entertainment/">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col col-3">
                 <div class="panel-rounded px-5 py-4 mx-3">
                     <div class="logo"><img src="/images/home/press/logo_business_insider.png" alt="Business Insider"></div>
                     <p class="py-4">Founder who launched Facebook acquired company is back</p>
                     <div class="btn-wrapper">
-                        <a class="btn btn-invert" href="https://www.businessinsider.com/facebook-vr-entrepreneur-brings-augmented-reality-commercial-real-estate-resonai-2019-11">Read More</a>
+                        <a class="btn btn-invert" target="_blank" href="https://www.businessinsider.com/facebook-vr-entrepreneur-brings-augmented-reality-commercial-real-estate-resonai-2019-11">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col col-3">
                 <div class="panel-rounded px-5 py-4 mx-3">
                     <div class="logo"></div>
                     <p class="py-4">What is digital Real Estate?</p>
                     <div class="btn-wrapper">
-                        <a class="btn btn-invert" href="http://www.digitaljournal.com/business/q-a-what-is-digital-real-estate/article/563911">Read More</a>
+                        <a class="btn btn-invert" target="_blank" href="http://www.digitaljournal.com/business/q-a-what-is-digital-real-estate/article/563911">Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col col-3">
                 <div class="panel-rounded px-5 py-4 mx-3">
                     <div class="logo"></div>
                     <p class="py-4">Computer vision platform creates intelligent 3D twin</p>
                     <div class="btn-wrapper">
-                        <a class="btn btn-invert" href="https://www.smart2zero.com/news/computer-vision-platform-creates-intelligent-3d-twin-any-building">Read More</a>
+                        <a class="btn btn-invert" target="_blank" href="https://www.smart2zero.com/news/computer-vision-platform-creates-intelligent-3d-twin-any-building">Read More</a>
                     </div>
                 </div>
             </div>
