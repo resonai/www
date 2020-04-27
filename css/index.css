@@ -545,7 +545,7 @@ a:not([href]):not([tabindex]):hover {
   font-size: 1.0625rem;
 }
 #press img {
-  max-height: 20px;
+  max-height: 1.5rem;
   object-fit: cover;
 }
 
@@ -727,7 +727,7 @@ footer .social img {
   position: relative;
   font-size: 0.9375rem;
   color: #FFFFFF;
-  font-weight: 300;
+  font-weight: 400;
   transition: color 250ms;
 }
 .navbar .nav-link:hover:before {
