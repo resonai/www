@@ -1,72 +1,78 @@
         <div ng-include='"app/templates/header.html"' class="other-menu"></div>
-        <div class="resonai-content pt-md-5">
-            <div class="contact-us-page pt-5">
-                <div ng-controller="contactFormContactus" class="container py-5">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-sm-5 col-12">
-                            <h1>Contact Us</h1>
+        
+        <section id="vera-business">
+            <div class="container py-md-5 py-4">
+                <div class="row no-gutters py-md-5">
+                    <div class="col-md-6 col-12">
+                            <div class="my-5 mr-5 pr-5 text-left">
+                                <p class="h2">Contact Us</p>
+                                <img class="my-5 pr-5 w-75" src="images/contact/Diagrams_contact-us.png" />
+                            </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="my-5 mr-5 pr-5 text-left">
                             <form name="userForm" novalidate ng-submit="insertData(userForm.$valid)">
-                               <label class="text-danger ng-hide" ng-show="errorMessage">{{errorMessage}}</label>
-                               <label class="text-success ng-hide" ng-show="successInsert">{{successInsert}}</label>
-                                <div ng-hide="successInsert != null">
-                                    <div class="cf-field-div">
-                                        <label for="username" >Name</label>
-                                        <input type="text" name="userName" ng-model="insert.user_name" class="form-control" ng-class="{
-                                    'has-error': userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }"
-                                               required>
-                                        <!--<span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>-->
-                                        <span class="valid-text ng-hide" ng-show="userForm.userName.$dirty && userForm.userName.$invalid">
-                                        <span ng-show="userForm.userName.$error.required">Name is required.</span>
-                                    </span>
-                                    </div>
-                                    <div class="cf-field-div">
-                                        <label for="companyName">Company name</label>
-                                        <input type="text" name="companyName" ng-model="insert.company_name" class="form-control"
-                                               ng-class="{'has-error' : userForm.companyName.$invalid && userForm.$submitted &&
-                                    userForm.companyName.$pristine }" required>
-                                        <!--<span class="text-danger" ng-show="errorCompanyname">{{errorCompanyname}}</span>-->
-                                        <span class="valid-text ng-hide" ng-show="userForm.companyName.$dirty && userForm.companyName.$invalid">
-                                        <span ng-show="userForm.companyName.$error.required">Company name is required.</span>
-                                    </span>
-                                    </div>
-                                    <div class="cf-field-div">
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" ng-model="insert.email" class="form-control" ng-class="{
-                                    'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
-                                        <!--<span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>-->
-                                        <span class="valid-text ng-hide" ng-show="userForm.email.$dirty && userForm.email.$invalid">
-                                        <span ng-show="userForm.email.$error.required">Email is required.</span>
-                                        <span ng-show="userForm.email.$error.email">Invalid email address.</span>
-                                    </span>
-                                    </div>
-                                    <div class="cf-field-div">
-                                        <label for="phone">Phone</label>
-                                        <input type="text" name="phone" ng-model="insert.phone" class="form-control" ng-class="{
-                                    'has-error' : userForm.phone.$invalid && userForm.$submitted && userForm.phone.$pristine }" required>
-                                        <!--<span class="text-danger" ng-show="errorPhone">{{errorPhone}}</span>-->
-                                        <span class="valid-text ng-hide" ng-show="userForm.phone.$dirty && userForm.phone.$invalid">
-                                        <span ng-show="userForm.phone.$error.required">Phone is required.</span>
-                                        <span ng-show="userForm.phone.$error.number">Valid phone number is required.</span>
-                                            <!--<span ng-show="userForm.phone.$error.minlength">Phone no not less that 10 char.</span>
-                                            <span ng-show="userForm.phone.$error.maxlength">Phone no not more than 10 char.</span>-->
-                                    </span>
-                                    </div>
-                                    <div class="cf-field-div">
-                                        <label for="message">Message</label>
-                                        <textarea name="message" ng-model="insert.message" class="form-control form-control-textarea"
-                                                  cols="30" rows="4" ng-class="{
-                                    'has-error' : userForm.message.$invalid && userForm.$submitted && userForm.message.$pristine }"
-                                                  required></textarea>
-                                        <!--<span class="text-danger" ng-show="errorMessageF">{{errorMessageF}}</span>-->
-                                        <span class="valid-text ng-hide" ng-show="userForm.message.$dirty && userForm.message.$invalid">
-                                        <span ng-show="userForm.message.$error.required">Message is required.</span>
-                                    </span>
-                                    </div>
-                                    <input type="submit" name="insert" class="button-style btn btn-primary my-5 cf-field-div" value="Send">
-                                </div>
-                            </form>      
-                        </div>  
-                    </div>  
-                </div>  
-            </div>  
-        </div>   
+                                <label class="text-danger ng-hide" ng-show="errorMessage">{{errorMessage}}</label>
+                                <label class="text-success ng-hide" ng-show="successInsert">{{successInsert}}</label>
+                                 <div ng-hide="successInsert != null">
+                                     <div class="cf-field-div">
+                                         <label for="username" >Name</label>
+                                         <input type="text" name="userName" ng-model="insert.user_name" class="form-control" ng-class="{
+                                     'has-error': userForm.userName.$invalid && userForm.$submitted && userForm.userName.$pristine }"
+                                                required>
+                                         <!--<span class="text-danger" ng-show="errorUsername">{{errorUsername}}</span>-->
+                                         <span class="valid-text ng-hide" ng-show="userForm.userName.$dirty && userForm.userName.$invalid">
+                                         <span ng-show="userForm.userName.$error.required">Name is required.</span>
+                                     </span>
+                                     </div>
+                                     <div class="cf-field-div">
+                                         <label for="companyName">Company name</label>
+                                         <input type="text" name="companyName" ng-model="insert.company_name" class="form-control"
+                                                ng-class="{'has-error' : userForm.companyName.$invalid && userForm.$submitted &&
+                                     userForm.companyName.$pristine }" required>
+                                         <!--<span class="text-danger" ng-show="errorCompanyname">{{errorCompanyname}}</span>-->
+                                         <span class="valid-text ng-hide" ng-show="userForm.companyName.$dirty && userForm.companyName.$invalid">
+                                         <span ng-show="userForm.companyName.$error.required">Company name is required.</span>
+                                     </span>
+                                     </div>
+                                     <div class="cf-field-div">
+                                         <label for="email">Email</label>
+                                         <input type="email" name="email" ng-model="insert.email" class="form-control" ng-class="{
+                                     'has-error' : userForm.email.$invalid && userForm.$submitted && userForm.email.$pristine }" required>
+                                         <!--<span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>-->
+                                         <span class="valid-text ng-hide" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+                                         <span ng-show="userForm.email.$error.required">Email is required.</span>
+                                         <span ng-show="userForm.email.$error.email">Invalid email address.</span>
+                                     </span>
+                                     </div>
+                                     <div class="cf-field-div">
+                                         <label for="phone">Phone</label>
+                                         <input type="text" name="phone" ng-model="insert.phone" class="form-control" ng-class="{
+                                     'has-error' : userForm.phone.$invalid && userForm.$submitted && userForm.phone.$pristine }" required>
+                                         <!--<span class="text-danger" ng-show="errorPhone">{{errorPhone}}</span>-->
+                                         <span class="valid-text ng-hide" ng-show="userForm.phone.$dirty && userForm.phone.$invalid">
+                                         <span ng-show="userForm.phone.$error.required">Phone is required.</span>
+                                         <span ng-show="userForm.phone.$error.number">Valid phone number is required.</span>
+                                             <!--<span ng-show="userForm.phone.$error.minlength">Phone no not less that 10 char.</span>
+                                             <span ng-show="userForm.phone.$error.maxlength">Phone no not more than 10 char.</span>-->
+                                     </span>
+                                     </div>
+                                     <div class="cf-field-div">
+                                         <label for="message">Message</label>
+                                         <textarea name="message" ng-model="insert.message" class="form-control form-control-textarea"
+                                                   cols="30" rows="4" ng-class="{
+                                     'has-error' : userForm.message.$invalid && userForm.$submitted && userForm.message.$pristine }"
+                                                   required></textarea>
+                                         <!--<span class="text-danger" ng-show="errorMessageF">{{errorMessageF}}</span>-->
+                                         <span class="valid-text ng-hide" ng-show="userForm.message.$dirty && userForm.message.$invalid">
+                                         <span ng-show="userForm.message.$error.required">Message is required.</span>
+                                     </span>
+                                     </div>
+                                     <input type="submit" name="insert" class="button-style btn btn-primary my-5 cf-field-div" value="Send">
+                                 </div>
+                             </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
