@@ -1,6 +1,6 @@
 angular
-    .module("app.retail_ebook", [])
-    .component("retail_ebook", {
+    .module("app.retailebook", [])
+    .component("retailebook", {
         templateUrl: "./app/components/retail_ebook/retail_ebook.template.html"
     })
 

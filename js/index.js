@@ -1,5 +1,5 @@
 var app = angular.module('mainApp', ['revealer','ngDialog', 'ngTouch', 'duScroll','ui.router','app.homepage', 'app.contactus',
-'app.jobs','app.dollhouse','app.search', 'app.search4unity','app.whitepaper', 'app.retail_ebook','ui.router.metatags']);
+'app.jobs','app.dollhouse','app.search', 'app.search4unity','app.whitepaper', 'app.retailebook','ui.router.metatags']);
 
 app.config(function($stateProvider, $urlRouterProvider, UIRouterMetatagsProvider) {
 
@@ -94,9 +94,9 @@ app.config(function($stateProvider, $urlRouterProvider, UIRouterMetatagsProvider
         })
 
         // RETAIL EBOOK PAGE =================================
-        .state('retail_ebook', {
-            url: '/retail_ebook',
-            template: '<retail_ebook />',
+        .state('retailebook', {
+            url: '/retailebook',
+            template: '<retailebook />',
             metaTags: {
                 title: 'Download Retail Ebook',
                 description: '.',
@@ -226,7 +226,7 @@ app.controller("contactFormPopupBeta", function($scope, $http){
  $scope.insert = {};
  $scope.insertData = function(isValid){
      if(!isValid) return false;
-	formRequest($http, "api/insert_contactFormPopupBeta.php", $scope.insert, 
+	formRequest($http, "api/insert_contactFormPopupBeta.php", $scope.insert,
 		function showGenericError(error) {
 			$scope.errorMessage = error;
 		},
@@ -287,12 +287,12 @@ function handleFormResult(data, showGenericError, showErrorFunc, showSuccessFunc
 // JOBS PAGE =================================
 
 app.controller('jobs', function($scope) {
-  
+
   $scope.hideMe = function(){
     console.log('hide the button');
     $scope.hide();
   }
-  
+
 });
 
 // DOLLHOUSE PAGE =================================
@@ -394,7 +394,7 @@ app.controller('dollhouse', ['$scope', function($scope) {
      $scope.insert = {};
      $scope.insertData = function(isValid){
          if(!isValid) return false;
-	formRequest($http, "api/insert_contactFormPopupDemo.php", $scope.insert, 
+	formRequest($http, "api/insert_contactFormPopupDemo.php", $scope.insert,
 		function showGenericError(error) {
 			$scope.errorMessage = error;
 		},
@@ -507,7 +507,7 @@ app.controller("contactFormContactus", function($scope, $http){
  $scope.insert = {};
  $scope.insertData = function(isValid){
      if(!isValid) return false;
-	formRequest($http, "api/insert_contactFormContactus.php", $scope.insert, 
+	formRequest($http, "api/insert_contactFormContactus.php", $scope.insert,
 		function showGenericError(error) {
 			$scope.errorMessage = error;
 		},
@@ -539,7 +539,7 @@ app.controller("contactFormJobs", function($scope, $http, $q){
 		if(!isValid || !$scope.fileToUpload) {
 			return false;
 		}
-		
+
 		var inAppEngine = true;
 		var promise = null;
 		if(inAppEngine) {
@@ -583,7 +583,7 @@ app.controller("contactFormJobs", function($scope, $http, $q){
 				}
 			);
 			$scope.$applyAsync();
-			 
+
 
 		      })
 		})
