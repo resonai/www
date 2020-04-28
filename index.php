@@ -54,7 +54,7 @@
         <script src="app/components/search/search.component.js"></script>
         <script src="app/components/search4unity/search4unity.component.js"></script>
         <script src="app/components/whitepaper/whitepaper.component.js"></script>
-        <script src="app/components/retail_ebook/retail_ebook.component.js"></script>
+        <script src="app/components/retailebook/retailebook.component.js"></script>
         <script src="js/index.js"></script>
 
         <!-- style css -->
