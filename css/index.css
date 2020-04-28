@@ -179,7 +179,7 @@ body {
 }
 
 .h3 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.375rem;
   letter-spacing: 0;
 }
@@ -345,7 +345,7 @@ a:not([href]):not([tabindex]):hover {
 }
 #vera-hero p {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.2rem;
   letter-spacing: 0;
   max-width: 600px;
 }
@@ -398,16 +398,19 @@ a:not([href]):not([tabindex]):hover {
   padding-right: 0;
 }
 #solutions .img-wrapper {
-  height: initial;
+  height: 15.0625rem;
 }
 #solutions .img-wrapper .panel-rounded {
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   box-shadow: none;
+  object-fit: cover;
 }
 #solutions ul {
   padding: 0;
   margin: 0;
-  list-style-type: none;
+  list-style-type: disc;
 }
 #solutions ul li {
   padding: 0;
@@ -504,6 +507,7 @@ a:not([href]):not([tabindex]):hover {
   }
 }
 #created-on-vera .scrollable img {
+  height: 100%;
   max-height: 15.0625rem;
   width: 100%;
   object-fit: cover;
@@ -545,6 +549,10 @@ a:not([href]):not([tabindex]):hover {
 }
 #press p:not(.h2) {
   font-size: 1.0625rem;
+}
+#press img {
+  max-height: 1.5rem;
+  object-fit: cover;
 }
 
 .scrollable {
@@ -614,6 +622,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .video-thumb {
+  height: 100%;
   position: relative;
   display: inline-block;
 }
@@ -716,7 +725,7 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
 }
 
 .navbar {
-  padding-top: 3.125rem;
+  padding-top: 1rem;
   transition: background-color 250ms, padding-top, 250ms;
 }
 @media screen and (max-width: 61.9375rem) {
@@ -745,7 +754,7 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
   position: relative;
   font-size: 0.9375rem;
   color: #032225;
-  font-weight: 300;
+  font-weight: 400;
   transition: color 250ms;
 }
 .navbar .nav-link:hover:before {
@@ -816,7 +825,7 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
 /* ---- Buttons ---- */
 .btn {
   font-size: 0.9375rem;
-  border-radius: 1.25rem;
+  border-radius: 2rem;
   padding: 0.625rem 1.5rem 0.6875rem;
 }
 @media screen and (max-width: 61.9375rem) {
@@ -828,7 +837,6 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
 .btn-primary {
   background-color: #00A8BA;
   border: none;
-  box-shadow: 0 3px 15px #00A8BA52;
 }
 .btn-primary:hover {
   background-color: #35c0cf;
@@ -837,7 +845,6 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
 .btn-invert {
   background-color: #FFF;
   border: 1px solid #00A8BA;
-  box-shadow: 0 3px 15px #00A8BA33;
   padding: 0.5625rem 2.4375rem 0.625rem;
 }
 .btn-invert:hover {
@@ -864,22 +871,25 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
 .btn-secondary {
   background-color: #FFF;
   color: #032225;
-  border: none;
+  border-color: transparent;
 }
 .btn-secondary:hover {
-  background-color: #e8fdff;
-  color: #032225;
+  background-color: #032225;
+  color: #FFF;
+  border-color: #FFF;
 }
 .btn-secondary:active, .btn-secondary:focus {
-  background-color: #80b8bd;
-  color: #032225;
+  background-color: #032225;
+  color: #FFF;
+  border-color: #FFF;
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
 .show > .btn-secondary.dropdown-toggle {
-  background-color: #80b8bd;
-  color: #032225;
+  background-color: #032225;
+  color: #FFF;
+  border-color: #FFF;
   box-shadow: none;
   text-outline: none;
   outline: none;
