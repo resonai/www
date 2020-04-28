@@ -51,7 +51,7 @@
         <div class="row no-gutters py-lg-5 justify-content-center">
             <div class="col-12 col-lg-4 px-3">
                 <div class="img-wrapper pb-3">
-                    <img class="panel-rounded" src="/images/home/solutions/fm-thumb.jpg" />
+                    <img class="img-fluid panel-rounded" src="/images/home/solutions/fm-thumb.jpg" />
                 </div>
                 <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Facilities Management</p>
                 <ul class="mb-5 pl-4">
@@ -62,7 +62,7 @@
             </div>
             <div class="col-12 col-lg-4 px-3">
                 <div class="img-wrapper pb-3">
-                    <img class="panel-rounded" src="/images/home/solutions/retail.jpg" />
+                    <img class="img-fluid panel-rounded" src="/images/home/solutions/retail.jpg" />
                 </div>
                 <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Retail</p>
                 <ul class="mb-5 pl-4">
@@ -74,7 +74,7 @@
             </div>
             <div class="col-12 col-lg-4 px-3">
                 <div class="img-wrapper pb-3">
-                    <img class="panel-rounded" src="/images/home/solutions/CES2020_1.jpg" />
+                    <img class="img-fluid panel-rounded" src="/images/home/solutions/CES2020_1.jpg" />
                 </div>
                 <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Entertainment</p>
                 <ul class="mb-5 pl-4">
@@ -133,13 +133,13 @@
                 <p class="h2">Vera for Retail</p>
                 <p class="pt-4 w-50">AR transforms physical stores into engaging digital experiences, while collecting data analytics that inform product flows and business processes.</p>
             </div>
-            <div class="col-12 col-lg-6 py-3 py-lg-4 order-1 text-right w-90">
+            <div class="col-12 col-lg-6 py-3 py-lg-4 text-right w-90">
                 <div class="img-wrapper mr-4">
                     <img class="panel-rounded img-fluid" src="/images/home/retail/retail.jpg" alt="">
                 </div>
             </div>
-            <div class="col-12 col-lg-6 py-3 py-lg-4 pr-lg-5 order-0">
-                <div class="">
+            <div class="col-12 col-lg-6 py-3 py-lg-4 pr-lg-5">
+                <div class="ml-4">
                     <ul class="ml-lg-5" ng-init="activeRetailPanel = 0">
                         <li ng-class="{ active: activeRetailPanel == 0 }">
                             <p class="h3 clicky" ng-click="activeRetailPanel = 0">Smart Visual Merchandising</p>
@@ -166,7 +166,7 @@
 
 
 <section id="entertainment" class="section-highlights">
-    <div class="container py-3 my-3">
+    <div class="container pt-3 pb-2 pb-lg-3 my-3">
         <div class="row no-gutters py-md-4">
             <div class="col-12 headline py-5">
                 <p class="h2">Vera for Entertainment</p>
@@ -202,12 +202,12 @@
             
 <section ng-controller="dragScroll" id="created-on-vera">
     <div class="full width pb-lg-4 mb-lg-1">
-        <div class="container py-4">
-            <div class="row headline no-gutters py-5">
+        <div class="container py-lg-4">
+            <div class="row headline no-gutters pb-4 py-lg-5">
                 <p class="h2">Created on Vera</p>
             </div>
         </div>
-        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap py-lg-5 my-lg-1 text-center scrollable">
+        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap py-lg-5 pl-4 pl-lg-0 my-lg-1 text-center scrollable">
             <!--<div ng-click="scrollLeft($event)" class="action-control go-left">
                 <i class="far fa-chevron-left"></i>
             </div>
@@ -247,15 +247,15 @@
 </section>
 
 <section ng-controller="dragScroll" id="press" class="pb-lg-3">
-    <div class="full-width mb-lg-5 py-5">
+    <div class="full-width mb-lg-5 py-lg-5">
         <div class="container py-4">
-            <div class="row headline no-gutters py-5">
+            <div class="row headline no-gutters py-lg-5">
                 <p class="h2">Press</p>
             </div>
         </div>
-        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap py-lg-4 mb-2S scrollable">
+        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap pl-4 pl-lg-0 py-lg-4 mb-2S scrollable">
             <div class="col col-3">
-                <div class="panel-rounded px-5 py-4 mx-3">
+                <div class="panel-rounded px-3 px-lg-5 py-2 py-lg-4 mx-lg-3">
                     <div class="logo"><img src="/images/home/press/SA-web-logo-300x58@2x.png" alt="Silicon ANGLE"></div>
                     <p class="py-3"> CJ 4DPLEX &amp; Resonai Join to Push the AR Envelope for Entertainment</p>
                     <div class="btn-wrapper">
@@ -264,7 +264,7 @@
                 </div>
             </div>
             <div class="col col-3">
-                <div class="panel-rounded px-5 py-4 mx-3">
+                <div class="panel-rounded px-3 px-lg-5 py-2 py-lg-4 mx-lg-3">
                     <div class="logo"><img src="/images/home/press/marketsinsider@2x.png" alt="Markets Insider"></div>
                     <p class="py-3">CJ 4DPLEX Partners with Resonai to Offer Immersive AR Experiences</p>
                     <div class="btn-wrapper">
@@ -273,7 +273,7 @@
                 </div>
             </div>
             <div class="col col-3">
-                <div class="panel-rounded px-5 py-4 mx-3">
+                <div class="panel-rounded px-3 px-lg-5 py-2 py-lg-4 mx-lg-3">
                     <div class="logo"><img src="/images/home/press/logo_business_insider@2x.png" alt="Business Insider"></div>
                     <p class="py-3">Founder Who Launched Facebook Acquired Company is Back</p>
                     <div class="btn-wrapper">
@@ -282,7 +282,7 @@
                 </div>
             </div>
             <div class="col col-3">
-                <div class="panel-rounded px-5 py-4 mx-3">
+                <div class="panel-rounded px-3 px-lg-5 py-2 py-lg-4 mx-lg-3">
                     <div class="logo"><img src="/images/home/press/aithority_logo1@2x.png" alt="AI authority"></div>
                     <p class="py-3">Resonai Launches Vera, to Create Intelligent Digital Twins of Buildings</p>
                     <div class="btn-wrapper">
@@ -291,7 +291,7 @@
                 </div>
             </div>
             <div class="col col-3">
-                <div class="panel-rounded px-5 py-4 mx-3">
+                <div class="panel-rounded px-3 px-lg-5 py-2 py-lg-4 mx-lg-3">
                     <div class="logo"><img src="/images/home/press/Big-Insider-thin@2x.png" alt="AR insider"></div>
                     <p class="py-3">Can Immersive Tech Save Industry Events?</p>
                     <div class="btn-wrapper">
@@ -300,7 +300,7 @@
                 </div>
             </div>
             <div class="col col-3">
-                <div class="panel-rounded px-5 py-4 mx-3">
+                <div class="panel-rounded px-3 px-lg-5 py-2 py-lg-4 mx-lg-3">
                     <div class="logo"><img src="/images/home/press/Digital-Journal-NEW@2x.png" alt="Digital journal"></div>
                     <p class="py-3">AR and Digital Twins' Impact on Real Estate</p>
                     <div class="btn-wrapper">
@@ -309,7 +309,7 @@
                 </div>
             </div>
             <div class="col col-3">
-                <div class="panel-rounded px-5 py-4 mx-3">
+                <div class="panel-rounded px-3 px-lg-5 py-2 py-lg-4 mx-lg-3">
                     <div class="logo"><img src="/images/home/press/marketscale@2x.png" alt="MarketScale"></div>
                     <p class="py-3">Revolutionizing Facility Management and Retail Spaces Through Analytics</p>
                     <div class="btn-wrapper">

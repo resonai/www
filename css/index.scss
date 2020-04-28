@@ -396,6 +396,10 @@ a:not([href]):not([tabindex]):hover {
   .col {
     min-width: 432px;
     max-width: 432px;
+    @media screen and (max-width: rem(991)) {
+      min-width: 301px;
+      max-width: 301px;
+    }
   }
   .panel-rounded {
     height: 100%;
@@ -561,22 +565,50 @@ footer {
 /* ---- Bootstrap Override CSS ---- */
 
 /* ---- NavBar ---- */
-
+homepage {
+  .navbar {
+    .nav-link {
+      color: #FFFFFF;
+    }
+    @media screen and (max-width: rem(991)) {
+      button {
+        color: #FFF;
+      }
+    }
+    &:not(.scrolled) {
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+      @media screen and (max-width: rem(991)) {
+        .nav-logo {
+          &.desktop {
+            display: none;
+          }
+          &.mobile {
+            display: initial;
+          }
+        }
+      }
+    }
+  }
+}
 .navbar {
   padding-top: rem(50);
   transition: background-color 250ms, padding-top, 250ms;
   @media screen and (max-width: rem(991)) {
     padding-top: rem(31);
     button {
-      color: #FFF;
+      color: #000;
     }
     .navbar-collapse {
       position: absolute;
       left: 50%;
       width: 100%;
-      padding-right: 16px;
       max-width: 720px;
       transform: translateX(-50%);
+      & > ul {
+        border-bottom: 1px solid #EEE;
+      }
     }
   }
   .collapsed,
@@ -586,7 +618,7 @@ footer {
   .nav-link {
     position: relative;
     font-size: rem(15);
-    color: #FFFFFF;
+    color: $textColor;
     font-weight: 300;
     transition: color 250ms;
     &:hover {
@@ -613,13 +645,20 @@ footer {
       background-color: #FFF;
     }
   }
+  .nav-logo {
+    &.desktop {
+      display: initial;
+    }
+    &.mobile {
+      display: none;
+    }
+  }
   &.scrolled {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #FFF;
     box-shadow: 0 3px 5px rgba(0,0,0,0.025);
     .nav-link {
-      color: $textColor;
       &:before {
         background-color: $textColor;
       }
@@ -631,26 +670,10 @@ footer {
     @media screen and (max-width: rem(991)) {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
-      button {
-        color: #000;
-      }
-      .nav-logo {
-        &.desktop {
-          display: initial;
-        }
-        &.mobile {
-          display: none;
-        }
-      }
       .navbar-collapse {
         width: 100%;
         background-color: rgb(255, 255, 255);
       }
-    }
-  }
-  &:not(.scrolled) {
-    .navbar-toggler-icon {
-      filter: invert(1);
     }
   }
 }

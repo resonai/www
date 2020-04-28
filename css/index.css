@@ -522,6 +522,12 @@ a:not([href]):not([tabindex]):hover {
   min-width: 432px;
   max-width: 432px;
 }
+@media screen and (max-width: 61.9375rem) {
+  #press .col {
+    min-width: 301px;
+    max-width: 301px;
+  }
+}
 #press .panel-rounded {
   height: 100%;
   min-height: 230px;
@@ -689,6 +695,26 @@ footer .social img {
 
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
+homepage .navbar .nav-link {
+  color: #FFFFFF;
+}
+@media screen and (max-width: 61.9375rem) {
+  homepage .navbar button {
+    color: #FFF;
+  }
+}
+homepage .navbar:not(.scrolled) .navbar-toggler-icon {
+  filter: invert(1);
+}
+@media screen and (max-width: 61.9375rem) {
+  homepage .navbar:not(.scrolled) .nav-logo.desktop {
+    display: none;
+  }
+  homepage .navbar:not(.scrolled) .nav-logo.mobile {
+    display: initial;
+  }
+}
+
 .navbar {
   padding-top: 3.125rem;
   transition: background-color 250ms, padding-top, 250ms;
@@ -698,15 +724,17 @@ footer .social img {
     padding-top: 1.9375rem;
   }
   .navbar button {
-    color: #FFF;
+    color: #000;
   }
   .navbar .navbar-collapse {
     position: absolute;
     left: 50%;
     width: 100%;
-    padding-right: 16px;
     max-width: 720px;
     transform: translateX(-50%);
+  }
+  .navbar .navbar-collapse > ul {
+    border-bottom: 1px solid #EEE;
   }
 }
 .navbar .collapsed,
@@ -716,7 +744,7 @@ footer .social img {
 .navbar .nav-link {
   position: relative;
   font-size: 0.9375rem;
-  color: #FFFFFF;
+  color: #032225;
   font-weight: 300;
   transition: color 250ms;
 }
@@ -740,14 +768,17 @@ footer .social img {
   transition: opacity 250ms;
   background-color: #FFF;
 }
+.navbar .nav-logo.desktop {
+  display: initial;
+}
+.navbar .nav-logo.mobile {
+  display: none;
+}
 .navbar.scrolled {
   padding-top: 0;
   padding-bottom: 0;
   background-color: #FFF;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.025);
-}
-.navbar.scrolled .nav-link {
-  color: #032225;
 }
 .navbar.scrolled .nav-link:before {
   background-color: #032225;
@@ -760,22 +791,10 @@ footer .social img {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-  .navbar.scrolled button {
-    color: #000;
-  }
-  .navbar.scrolled .nav-logo.desktop {
-    display: initial;
-  }
-  .navbar.scrolled .nav-logo.mobile {
-    display: none;
-  }
   .navbar.scrolled .navbar-collapse {
     width: 100%;
     background-color: white;
   }
-}
-.navbar:not(.scrolled) .navbar-toggler-icon {
-  filter: invert(1);
 }
 
 .navbar-toggler:focus, .navbar-toggler:active {
