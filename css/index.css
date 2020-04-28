@@ -179,7 +179,7 @@ body {
 }
 
 .h3 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.375rem;
   letter-spacing: 0;
 }
@@ -239,7 +239,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .headline p:not(.h2) {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 @media screen and (max-width: 61.9375rem) {
   .headline p:not(.h2) {
@@ -249,7 +249,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .panel p {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 900;
 }
 .panel p span {
@@ -345,7 +345,7 @@ a:not([href]):not([tabindex]):hover {
 }
 #vera-hero p {
   font-size: 1.5rem;
-  line-height: 2.2rem;
+  line-height: 2rem;
   letter-spacing: 0;
   max-width: 600px;
 }
@@ -378,7 +378,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 #vera-business p:not(.h2) {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   letter-spacing: 0;
 }
 @media screen and (max-width: 61.9375rem) {
@@ -398,19 +398,16 @@ a:not([href]):not([tabindex]):hover {
   padding-right: 0;
 }
 #solutions .img-wrapper {
-  height: 15.0625rem;
+  height: initial;
 }
 #solutions .img-wrapper .panel-rounded {
-  width: 100%;
-  height: 100%;
   border-radius: 5px;
   box-shadow: none;
-  object-fit: cover;
 }
 #solutions ul {
   padding: 0;
   margin: 0;
-  list-style-type: initial;
+  list-style-type: none;
 }
 #solutions ul li {
   padding: 0;
@@ -507,7 +504,6 @@ a:not([href]):not([tabindex]):hover {
   }
 }
 #created-on-vera .scrollable img {
-  height: 100%;
   max-height: 15.0625rem;
   width: 100%;
   object-fit: cover;
@@ -543,10 +539,6 @@ a:not([href]):not([tabindex]):hover {
 }
 #press p:not(.h2) {
   font-size: 1.0625rem;
-}
-#press img {
-  max-height: 1.5rem;
-  object-fit: cover;
 }
 
 .scrollable {
@@ -616,7 +608,6 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .video-thumb {
-  height: 100%;
   position: relative;
   display: inline-block;
 }
@@ -696,11 +687,10 @@ footer .social img {
   filter: contrast(0);
 }
 
-
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
 .navbar {
-  padding-top: 1rem;
+  padding-top: 3.125rem;
   transition: background-color 250ms, padding-top, 250ms;
 }
 @media screen and (max-width: 61.9375rem) {
@@ -727,7 +717,7 @@ footer .social img {
   position: relative;
   font-size: 0.9375rem;
   color: #FFFFFF;
-  font-weight: 400;
+  font-weight: 300;
   transition: color 250ms;
 }
 .navbar .nav-link:hover:before {
@@ -807,7 +797,7 @@ footer .social img {
 /* ---- Buttons ---- */
 .btn {
   font-size: 0.9375rem;
-  border-radius: 2rem;
+  border-radius: 1.25rem;
   padding: 0.625rem 1.5rem 0.6875rem;
 }
 @media screen and (max-width: 61.9375rem) {
@@ -819,6 +809,7 @@ footer .social img {
 .btn-primary {
   background-color: #00A8BA;
   border: none;
+  box-shadow: 0 3px 15px #00A8BA52;
 }
 .btn-primary:hover {
   background-color: #35c0cf;
@@ -827,6 +818,7 @@ footer .social img {
 .btn-invert {
   background-color: #FFF;
   border: 1px solid #00A8BA;
+  box-shadow: 0 3px 15px #00A8BA33;
   padding: 0.5625rem 2.4375rem 0.625rem;
 }
 .btn-invert:hover {
@@ -853,23 +845,22 @@ footer .social img {
 .btn-secondary {
   background-color: #FFF;
   color: #032225;
-  border-color: transparent;
+  border: none;
 }
 .btn-secondary:hover {
-  background-color: #032225;
-  color: #FFF;
-  border-color: white;
+  background-color: #e8fdff;
+  color: #032225;
 }
 .btn-secondary:active, .btn-secondary:focus {
-  background-color: #032225;
-  color: #FFF;
+  background-color: #80b8bd;
+  color: #032225;
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
 .show > .btn-secondary.dropdown-toggle {
-  background-color: #032225;
-  color: #FFF;
+  background-color: #80b8bd;
+  color: #032225;
   box-shadow: none;
   text-outline: none;
   outline: none;

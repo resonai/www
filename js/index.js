@@ -152,7 +152,6 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
         const x = $event.pageX - $scope.slider.offsetLeft;
         const walk = (x - $scope.startX) * 3; //scroll-fast
         $scope.slider.scrollLeft = $scope.scrollLeft - walk;
-        console.log(walk);
     }
  }
 );
