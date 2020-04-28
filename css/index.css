@@ -796,6 +796,9 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
 .navbar.scrolled .nav-link:before {
   background-color: #032225;
 }
+.navbar.scrolled .nav-link {
+  color: #032225;
+}
 .navbar.scrolled .nav-link.active:before, .navbar.scrolled .nav-link:active:before {
   background-color: #00A8BA;
 }
