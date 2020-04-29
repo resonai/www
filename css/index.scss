@@ -70,7 +70,7 @@ body {
 }
 
 .h3 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: rem(22);
   letter-spacing: 0;
   @media screen and (max-width: rem(991)) {
@@ -231,7 +231,7 @@ a:not([href]):not([tabindex]):hover {
   }
   p {
     font-size: 1.5rem;
-    line-height: rem(32);
+    line-height: 2.2rem;
     letter-spacing: 0;
     max-width: 600px;
     &.m-vertical-medium {
@@ -280,16 +280,19 @@ a:not([href]):not([tabindex]):hover {
     padding-right: 0;
   }
   .img-wrapper {
-    height: initial;
+    height: 15.0625rem;
     .panel-rounded {
+      width: 100%;
+      height: 100%;
       border-radius: 5px;
       box-shadow: none;
+      object-fit: cover;
     }
   }
   ul {
     padding: 0;
     margin: 0;
-    list-style-type: none;
+    list-style-type: disc;
     li {
       padding: 0;
       margin: 0 0 0.875rem;
@@ -362,10 +365,15 @@ a:not([href]):not([tabindex]):hover {
 }
 #created-on-vera {
   .container {
-    position: relative;
-    @media screen and (max-width: rem(991)) {
-      padding-left: rem(34);
-      padding-right: rem(34);
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      &:not(.scrollable) {
+        @media screen and (max-width: rem(991)) {
+          padding-left: rem(34);
+          padding-right: rem(34);
+        }
+      }
     }
   }
   .col {
@@ -378,6 +386,7 @@ a:not([href]):not([tabindex]):hover {
   }
   .scrollable {
     img {
+      height: 100%;
       max-height: rem(241);
       width: 100%;
       object-fit: cover;
@@ -387,19 +396,28 @@ a:not([href]):not([tabindex]):hover {
 
 #press {
   .container {
-    position: relative;
-    @media screen and (max-width: rem(991)) {
-      padding-left: rem(34);
-      padding-right: rem(34);
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      &:not(.scrollable) {
+        @media screen and (max-width: rem(991)) {
+          padding-left: rem(34);
+          padding-right: rem(34);
+        }
+      }
     }
   }
   .col {
     min-width: 432px;
     max-width: 432px;
     @media screen and (max-width: rem(991)) {
-      min-width: 301px;
-      max-width: 301px;
+      min-width: 380px;
+      max-width: 380px;
     }
+  }
+  .img {
+    max-height: 1.5rem;
+    object-fit: cover;
   }
   .panel-rounded {
     height: 100%;
@@ -418,6 +436,9 @@ a:not([href]):not([tabindex]):hover {
   }
   p:not(.h2) {
     font-size: rem(17);
+    @media screen and (max-width: 61.9375rem) {
+      font-size: 0.9375rem;
+    }
   }
 }
 
@@ -443,15 +464,22 @@ a:not([href]):not([tabindex]):hover {
   .action-control {
     position: absolute;
     line-height: rem(230);
-    font-size: 2.5rem;
-    color: $colorPrimaryLight;
+    font-size: 1.5rem;
     z-index: 1;
     cursor: pointer;
+    opacity: 1;
+    transition: opacity 125ms;
     &.go-left {
-      left: -10px;
+      left: -20px;
     }
     &.go-right {
-      right: -10px;
+      right: -25px;
+    }
+    &.inactive {
+      opacity: 0.5;
+    }
+    @media screen and (max-width: rem(575)) {
+      display: none;
     }
   }
 }
@@ -567,14 +595,6 @@ footer {
 /* ---- NavBar ---- */
 homepage {
   .navbar {
-    .nav-link {
-      color: #FFFFFF;
-    }
-    @media screen and (max-width: rem(991)) {
-      button {
-        color: #FFF;
-      }
-    }
     &:not(.scrolled) {
       .navbar-toggler-icon {
         filter: invert(1);
@@ -588,12 +608,15 @@ homepage {
             display: initial;
           }
         }
+        .navbar-collapse {
+          margin-top: 1.9375rem;
+        }
       }
     }
   }
 }
 .navbar {
-  padding-top: rem(50);
+  padding-top: 1rem;
   transition: background-color 250ms, padding-top, 250ms;
   @media screen and (max-width: rem(991)) {
     padding-top: rem(31);
@@ -606,6 +629,7 @@ homepage {
       width: 100%;
       max-width: 720px;
       transform: translateX(-50%);
+      background-color: rgb(255, 255, 255);
       & > ul {
         border-bottom: 1px solid #EEE;
       }
@@ -619,7 +643,7 @@ homepage {
     position: relative;
     font-size: rem(15);
     color: $textColor;
-    font-weight: 300;
+    font-weight: 400;
     transition: color 250ms;
     &:hover {
       &:before {
@@ -670,10 +694,6 @@ homepage {
     @media screen and (max-width: rem(991)) {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
-      .navbar-collapse {
-        width: 100%;
-        background-color: rgb(255, 255, 255);
-      }
     }
   }
 }
@@ -700,7 +720,7 @@ homepage {
 
 .btn {
   font-size: rem(15);
-  border-radius: rem(20);
+  border-radius: 2rem;
   padding: rem(10) 1.5rem rem(11);
   @media screen and (max-width: rem(991)) {
     font-size: rem(13);
@@ -710,7 +730,6 @@ homepage {
 .btn-primary {
   background-color: $colorPrimaryLight;
   border: none;
-  box-shadow: 0 3px 15px #00A8BA52;
   &:hover {
     background-color: #35c0cf;
   }
@@ -719,7 +738,6 @@ homepage {
 .btn-invert {
   background-color: #FFF;
   border: 1px solid $colorPrimaryLight;
-  box-shadow: 0 3px 15px #00A8BA33;
   padding: rem(9) rem(39) rem(10);
   &:hover {
     background-color: $colorPrimaryLight;
@@ -746,23 +764,26 @@ homepage {
 .btn-secondary {
   background-color: #FFF;
   color: $colorPrimaryDark;
-  border: none;
+  border-color: transparent;
   &:hover {
-    background-color: #e8fdff;
-    color: $colorPrimaryDark;
+    background-color: #032225;
+    color: #FFF;
+    border-color: #FFF;
   }
   &:active,
   &:focus {
-    background-color: #80b8bd;
-    color: $colorPrimaryDark;
+    background-color: #032225;
+    color: #FFF;
+    border-color: #FFF;
   }
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
 .show > .btn-secondary.dropdown-toggle {
-  background-color: #80b8bd;
-  color: $colorPrimaryDark;
+  background-color: #032225;
+  color: #FFF;
+  border-color: #FFF;
   box-shadow: none;
   text-outline: none;
   outline: none;

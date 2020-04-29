@@ -487,11 +487,12 @@ a:not([href]):not([tabindex]):hover {
   max-width: 100%;
 }
 
-#created-on-vera .container {
-  position: relative;
+#created-on-vera .container .container {
+  padding-left: 0;
+  padding-right: 0;
 }
 @media screen and (max-width: 61.9375rem) {
-  #created-on-vera .container {
+  #created-on-vera .container .container:not(.scrollable) {
     padding-left: 2.125rem;
     padding-right: 2.125rem;
   }
@@ -507,17 +508,18 @@ a:not([href]):not([tabindex]):hover {
   }
 }
 #created-on-vera .scrollable img {
-  height: 100%; 
+  height: 100%;
   max-height: 15.0625rem;
   width: 100%;
   object-fit: cover;
 }
 
-#press .container {
-  position: relative;
+#press .container .container {
+  padding-left: 0;
+  padding-right: 0;
 }
 @media screen and (max-width: 61.9375rem) {
-  #press .container {
+  #press .container .container:not(.scrollable) {
     padding-left: 2.125rem;
     padding-right: 2.125rem;
   }
@@ -531,6 +533,10 @@ a:not([href]):not([tabindex]):hover {
     min-width: 380px;
     max-width: 380px;
   }
+}
+#press .img {
+  max-height: 1.5rem;
+  object-fit: cover;
 }
 #press .panel-rounded {
   height: 100%;
@@ -552,12 +558,8 @@ a:not([href]):not([tabindex]):hover {
 }
 @media screen and (max-width: 61.9375rem) {
   #press p:not(.h2) {
-    font-size: 0.9375rem
+    font-size: 0.9375rem;
   }
-}
-#press img {
-  max-height: 1.5rem;
-  object-fit: cover;
 }
 
 .scrollable {
@@ -586,16 +588,25 @@ a:not([href]):not([tabindex]):hover {
 .scrollable .action-control {
   position: absolute;
   line-height: 14.375rem;
-  font-size: 2.5rem;
-  color: #00A8BA;
+  font-size: 1.5rem;
   z-index: 1;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 125ms;
 }
 .scrollable .action-control.go-left {
-  left: -10px;
+  left: -20px;
 }
 .scrollable .action-control.go-right {
-  right: -10px;
+  right: -25px;
+}
+.scrollable .action-control.inactive {
+  opacity: 0.5;
+}
+@media screen and (max-width: 35.9375rem) {
+  .scrollable .action-control {
+    display: none;
+  }
 }
 
 .unity-logo {
@@ -708,14 +719,6 @@ footer .social img {
 
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
-homepage .navbar .nav-link {
-  color: #FFFFFF;
-}
-@media screen and (max-width: 61.9375rem) {
-  homepage .navbar button {
-    color: #FFF;
-  }
-}
 homepage .navbar:not(.scrolled) .navbar-toggler-icon {
   filter: invert(1);
 }
@@ -725,6 +728,9 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
   }
   homepage .navbar:not(.scrolled) .nav-logo.mobile {
     display: initial;
+  }
+  homepage .navbar:not(.scrolled) .navbar-collapse {
+    margin-top: 1.9375rem;
   }
 }
 
@@ -745,6 +751,7 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
     width: 100%;
     max-width: 720px;
     transform: translateX(-50%);
+    background-color: white;
   }
   .navbar .navbar-collapse > ul {
     border-bottom: 1px solid #EEE;
@@ -796,9 +803,6 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
 .navbar.scrolled .nav-link:before {
   background-color: #032225;
 }
-.navbar.scrolled .nav-link {
-  color: #032225;
-}
 .navbar.scrolled .nav-link.active:before, .navbar.scrolled .nav-link:active:before {
   background-color: #00A8BA;
 }
@@ -806,10 +810,6 @@ homepage .navbar:not(.scrolled) .navbar-toggler-icon {
   .navbar.scrolled {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-  }
-  .navbar.scrolled .navbar-collapse {
-    width: 100%;
-    background-color: white;
   }
 }
 

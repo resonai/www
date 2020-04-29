@@ -130,7 +130,7 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
   }
 ).value('duScrollOffset', 30);
 
- app.controller('dragScroll', function($scope){
+ app.controller('scrollHorizontal', function($scope){
      $scope.isMouseDown = false;
 
      $scope.setMouseDown = function($event) {
@@ -141,9 +141,10 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
          $scope.scrollLeft = $scope.slider.scrollLeft;
      }
 
-     $scope.setMouseUp = function() {
+     $scope.setMouseUp = function($event) {
          $scope.isMouseDown = false;
          $scope.slider.classList.remove('scrolling');
+         $scope.setActionClass($event.currentTarget, $scope.scrollLeft);
      }
 
     $scope.movePanel = function($event) {
@@ -153,17 +154,49 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
         const walk = (x - $scope.startX) * 3; //scroll-fast
         $scope.slider.scrollLeft = $scope.scrollLeft - walk;
     }
- }
-);
 
-/* app.controller('scrollHorizontal', function($scope, $document){
-     $scope.scrollRight = function($event) {
-         $event.currentTarget.parentNode.scrollBy( 462.5, 0, 'smooth');
+     $scope.setActionClass = function(target, scrollAmount) {
+         const containerWidth = target.offsetWidth;
+         let scrollPosition = target.scrollLeft + scrollAmount;
+
+         let leftButton;
+         let rightButton;
+
+         target.querySelectorAll('.action-control').forEach(button => {
+             if (button.classList.contains('go-left')) {
+                 leftButton = button;
+             }
+             if (button.classList.contains('go-right')) {
+                 rightButton = button;
+             }
+         });
+
+         if (scrollPosition <= 0) {
+             leftButton.classList.add('inactive');
+         } else {
+             leftButton.classList.remove('inactive');
+         }
+
+         if (scrollPosition >= containerWidth - scrollAmount) {
+             rightButton.classList.add('inactive');
+         } else {
+             rightButton.classList.remove('inactive');
+         }
+
      }
-     $scope.scrollLeft = function($event) {
-         $event.currentTarget.parentNode.scrollBy( -462.5, 0, 'smooth');
+
+     $scope.doScrollRight = function($event) {
+         let scrollAmount = 462.5;
+         $event.currentTarget.parentNode.scrollBy( scrollAmount, 0, 'smooth');
+         $scope.setActionClass($event.currentTarget.parentNode, scrollAmount);
      }
- });*/
+
+     $scope.doScrollLeft = function($event) {
+         let scrollAmount = -462.5;
+         $event.currentTarget.parentNode.scrollBy( scrollAmount, 0, 'smooth');
+         $scope.setActionClass($event.currentTarget.parentNode, scrollAmount);
+     }
+ });
 
 app.controller('popupVideo', function ($scope, ngDialog,$sce) {
 	$scope.openContactForm = function($event) {

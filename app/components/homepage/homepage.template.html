@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-12 col-lg-6 mobile-full">
-                    <div class="mr-5 absolute-vertical-center ml-lg-0 ml-5">
+                    <div class="mr-5 absolute-vertical-center ml-lg-0 ml-4 ml-lg-5">
                         <h1>
                             Vera<sup>&trade;</sup>
                         </h1>
@@ -201,20 +201,20 @@
     </div>
 </section>
             
-<section ng-controller="dragScroll" id="created-on-vera">
-    <div class="full width pb-lg-4 mb-lg-1">
+<section ng-controller="scrollHorizontal" id="created-on-vera">
+    <div class="position-relative container pb-lg-4 mb-lg-1">
         <div class="container py-lg-4">
             <div class="row headline no-gutters pb-4 py-lg-5">
                 <p class="h2">Created on Vera</p>
             </div>
         </div>
-        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" class="row no-gutters no-wrap py-lg-5 pl-4 pl-lg-0 my-lg-1 text-center scrollable">
-            <!--<div ng-click="scrollLeft($event)" class="action-control go-left">
+        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp($event)" ng-mousemove="movePanel($event)" class="row container mx-auto no-gutters no-wrap py-lg-5 pl-4 pl-lg-0 my-lg-1 text-center scrollable">
+            <div ng-click="doScrollLeft($event)" class="action-control go-left inactive">
                 <i class="far fa-chevron-left"></i>
             </div>
-            <div ng-click="scrollRight($event)" class="action-control go-right">
+            <div ng-click="doScrollRight($event)" class="pl-2 action-control go-right">
                 <i class="far fa-chevron-right"></i>
-            </div>-->
+            </div>
             <div class="col col-3">
                 <div class="video-thumb mx-3" ng-controller="popupVideo">
                 <span ng-click="openContactForm($event)" data="https://www.youtube.com/embed/DiTfJTByFek">
@@ -247,15 +247,21 @@
     </div>
 </section>
 
-<section ng-controller="dragScroll" id="press" class="pb-lg-3">
-    <div class="full-width mb-lg-5 py-lg-5">
+<section ng-controller="scrollHorizontal" id="press" class="pb-lg-3">
+    <div class="position-relative container mb-lg-5 py-lg-5">
         <div class="container py-4">
             <div class="row headline no-gutters py-lg-5">
                 <p class="h2">Press</p>
             </div>
         </div>
         <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" 
-            class="row no-gutters no-wrap py-lg-4 mb-2S scrollable">
+            class="row container mx-auto no-gutters no-wrap py-lg-4 mb-2S scrollable">
+            <div ng-click="doScrollLeft($event)" class="action-control go-left inactive">
+                <i class="far fa-chevron-left"></i>
+            </div>
+            <div ng-click="doScrollRight($event)" class="pl-2 action-control go-right">
+                <i class="far fa-chevron-right"></i>
+            </div>
             <div class="col col-3">
                 <div class="panel-rounded px-5 py-4 mx-3">
                     <div class="logo"><img src="/images/home/press/SA-web-logo-300x58@2x.png" alt="Silicon ANGLE"></div>
