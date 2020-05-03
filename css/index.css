@@ -369,10 +369,6 @@ a:not([href]):not([tabindex]):hover {
     min-width: 380px;
     max-width: 380px; } }
 
-#press .img {
-  max-height: 1.5rem;
-  object-fit: cover; }
-
 #press .panel-rounded {
   height: 100%;
   min-height: 230px;
@@ -383,6 +379,10 @@ a:not([href]):not([tabindex]):hover {
 #press .panel-rounded.py-4 {
   padding-top: 2.25rem !important;
   padding-bottom: 2.25rem !important; }
+
+#press .panel-rounded img {
+  max-height: 1.5rem;
+  object-fit: cover; }
 
 #press .btn-wrapper {
   position: absolute;
