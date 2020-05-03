@@ -533,6 +533,14 @@ footer .social {
 footer .social img {
   filter: contrast(0); }
 
+.form_page img {
+  max-height: 60vh;
+  max-width: 70%; }
+
+@media screen and (max-width: 61.9375rem) {
+  .form_page img {
+    max-height: 40vh; } }
+
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
 homepage .navbar:not(.scrolled) .navbar-toggler-icon {

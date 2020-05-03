@@ -167,10 +167,6 @@ a:not([href]):not([tabindex]):hover {
   transform: scale(0.9);
 }
 
-.img-wrapper {
-  //height: 90px;
-}
-
 .trade {
   font-size: 0.5em;
   top: -1rem;
@@ -586,6 +582,18 @@ footer {
     filter: brightness(5);
     img {
       filter: contrast(0);
+    }
+  }
+}
+
+.form_page {
+  img {
+    max-height: 60vh;
+    max-width: 70%;
+  } 
+  @media screen and (max-width: rem(991)) {
+    img {
+      max-height: 40vh;
     }
   }
 }
