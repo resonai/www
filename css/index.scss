@@ -476,7 +476,7 @@ a:not([href]):not([tabindex]):hover {
       right: -25px;
     }
     &.inactive {
-      opacity: 0.5;
+      opacity: 0.1;
     }
     @media screen and (max-width: rem(575)) {
       display: none;
@@ -642,7 +642,7 @@ homepage {
   .nav-link {
     position: relative;
     font-size: rem(15);
-    color: $textColor;
+    color: #FFF;
     font-weight: 400;
     transition: color 250ms;
     &:hover {
@@ -683,6 +683,7 @@ homepage {
     background-color: #FFF;
     box-shadow: 0 3px 5px rgba(0,0,0,0.025);
     .nav-link {
+      color: $textColor;
       &:before {
         background-color: $textColor;
       }
