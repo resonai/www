@@ -131,7 +131,7 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
 ).value('duScrollOffset', 30);
 
  app.controller('scrollHorizontal', function($scope){
-     $scope.isMouseDown = false;
+     /*$scope.isMouseDown = false;
 
      $scope.setMouseDown = function($event) {
          $scope.slider = $event.currentTarget;
@@ -144,7 +144,7 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
      $scope.setMouseUp = function($event) {
          $scope.isMouseDown = false;
          $scope.slider.classList.remove('scrolling');
-         $scope.setActionClass($event.currentTarget, $scope.scrollLeft);
+         $scope.setActionClass($event.currentTarget, $event.currentTarget.scrollLeft);
      }
 
     $scope.movePanel = function($event) {
@@ -153,10 +153,14 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
         const x = $event.pageX - $scope.slider.offsetLeft;
         const walk = (x - $scope.startX) * 3; //scroll-fast
         $scope.slider.scrollLeft = $scope.scrollLeft - walk;
-    }
+    }*/
 
      $scope.setActionClass = function(target, scrollAmount) {
+         // const containerWidth = target.offsetWidth;
+         const panels = target.querySelectorAll('.col');
+         const combinePanelsWidth = panels.length * panels[0].offsetWidth;
          const containerWidth = target.offsetWidth;
+
          let scrollPosition = target.scrollLeft + scrollAmount;
 
          let leftButton;
@@ -177,7 +181,7 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
              leftButton.classList.remove('inactive');
          }
 
-         if (scrollPosition >= containerWidth - scrollAmount) {
+         if (scrollPosition >= combinePanelsWidth - containerWidth) {
              rightButton.classList.add('inactive');
          } else {
              rightButton.classList.remove('inactive');
@@ -186,15 +190,18 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
      }
 
      $scope.doScrollRight = function($event) {
-         let scrollAmount = 462.5;
-         $event.currentTarget.parentNode.scrollBy( scrollAmount, 0, 'smooth');
-         $scope.setActionClass($event.currentTarget.parentNode, scrollAmount);
+         $scope.doScroll($event.currentTarget.parentNode, false);
      }
 
      $scope.doScrollLeft = function($event) {
-         let scrollAmount = -462.5;
-         $event.currentTarget.parentNode.scrollBy( scrollAmount, 0, 'smooth');
-         $scope.setActionClass($event.currentTarget.parentNode, scrollAmount);
+         $scope.doScroll($event.currentTarget.parentNode,  true);
+     }
+
+     $scope.doScroll = function(target, goLeft) {
+         const panel = target.querySelector('.col');
+         let scrollAmount = goLeft ? -panel.offsetWidth : panel.offsetWidth;
+         target.scrollBy( scrollAmount, 0, 'smooth');
+         $scope.setActionClass(target, scrollAmount);
      }
  });
 

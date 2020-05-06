@@ -207,6 +207,9 @@ a:not([href]):not([tabindex]):hover {
       top:0;
       height: 100vh;
     }
+    .col-12:not(.mobile-full) {
+      z-index: -1;
+    }
   }
   h1 {
     font-size: 5rem;
@@ -443,9 +446,9 @@ a:not([href]):not([tabindex]):hover {
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  cursor: grab;
+  //cursor: grab;
   &.scrolling {
-    cursor: grabbing;
+    //cursor: grabbing;
   }
   &::-webkit-scrollbar {
     display: none;
@@ -465,17 +468,25 @@ a:not([href]):not([tabindex]):hover {
     cursor: pointer;
     opacity: 1;
     transition: opacity 125ms;
+    @media screen and (max-width: rem(575)) {
+      line-height: rem(186);
+    }
     &.go-left {
       left: -20px;
+      @media screen and (max-width: rem(575)) {
+        left: 10px;
+      }
     }
     &.go-right {
       right: -25px;
+      @media screen and (max-width: rem(575)) {
+        right: 10px;
+      }
     }
     &.inactive {
       opacity: 0.1;
     }
     @media screen and (max-width: rem(575)) {
-      display: none;
     }
   }
 }
@@ -511,6 +522,7 @@ a:not([href]):not([tabindex]):hover {
 .video-thumb {
   position: relative;
   display: inline-block;
+  cursor: pointer;
   &::before {
     position: absolute;
     display: block;
@@ -650,9 +662,12 @@ homepage {
   .nav-link {
     position: relative;
     font-size: rem(15);
-    color: #FFF;
     font-weight: 400;
     transition: color 250ms;
+    color: #FFF;
+    @media screen and (max-width: rem(991)) {
+      color: $textColor;
+    }
     &:hover {
       &:before {
         opacity: 1.0;
@@ -873,7 +888,9 @@ body .ngdialog.ngdialog-theme-default .ngdialog-content {
 
 body .ngdialog.ngdialog-theme-default .ngdialog-close:before {
   right: 0;
-  padding-top: 5px;
+  @media screen and (min-width: rem(768)) {
+    padding-top: 5px;
+  }
 }
 
 /* ---- End ng Override CSS ---- */
