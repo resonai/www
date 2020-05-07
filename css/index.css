@@ -262,7 +262,7 @@ a:not([href]):not([tabindex]):hover {
   z-index: 9;
 }
 .header .navbar {
-  z-index: 1;
+  z-index: 2;
 }
 
 .text-danger,
@@ -427,8 +427,8 @@ a:not([href]):not([tabindex]):hover {
 
 @media screen and (max-width: 61.9375rem) {
   .section-highlights .container {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 .section-highlights ul {
@@ -738,28 +738,15 @@ footer .social img {
 
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
-homepage .navbar:not(.scrolled) .navbar-toggler-icon {
-  filter: invert(1);
-}
-@media screen and (max-width: 61.9375rem) {
-  homepage .navbar:not(.scrolled) .nav-logo.desktop {
-    display: none;
-  }
-  homepage .navbar:not(.scrolled) .nav-logo.mobile {
-    display: initial;
-  }
-  homepage .navbar:not(.scrolled) .navbar-collapse {
-    margin-top: 1.9375rem;
-  }
-}
-
 .navbar {
   padding-top: 1rem;
   transition: background-color 250ms, padding-top, 250ms;
 }
 @media screen and (max-width: 61.9375rem) {
   .navbar {
-    padding-top: 1.9375rem;
+    background-color: #FFF;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   .navbar button {
     color: #000;

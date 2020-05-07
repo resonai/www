@@ -150,7 +150,7 @@ a:not([href]):not([tabindex]):hover {
 .header {
   z-index: 9;
   .navbar {
-    z-index: 1;
+    z-index: 2;
   }
 }
 
@@ -305,8 +305,8 @@ a:not([href]):not([tabindex]):hover {
 .section-highlights {
   .container {
     @media screen and (max-width: rem(991)) {
-      padding-left: rem(28);
-      padding-right: rem(28);
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
   }
   ul {
@@ -613,33 +613,13 @@ footer {
 /* ---- Bootstrap Override CSS ---- */
 
 /* ---- NavBar ---- */
-homepage {
-  .navbar {
-    &:not(.scrolled) {
-      .navbar-toggler-icon {
-        filter: invert(1);
-      }
-      @media screen and (max-width: rem(991)) {
-        .nav-logo {
-          &.desktop {
-            display: none;
-          }
-          &.mobile {
-            display: initial;
-          }
-        }
-        .navbar-collapse {
-          margin-top: 1.9375rem;
-        }
-      }
-    }
-  }
-}
 .navbar {
   padding-top: 1rem;
   transition: background-color 250ms, padding-top, 250ms;
   @media screen and (max-width: rem(991)) {
-    padding-top: rem(31);
+    background-color: #FFF;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     button {
       color: #000;
     }
