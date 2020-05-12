@@ -1,0 +1,91 @@
+jobs {
+  .image-container {
+    padding-top: 7rem;
+  }
+  .over-image {
+    top: -1.75rem;
+    position: relative;
+    height: 512px;
+    width: 338px;
+    z-index: 1;
+  }
+  .under-image {
+    position: relative;
+    z-index: 0;
+  }
+  .img-fit {
+    object-position: right;
+  }
+  .section-highlights ul li p.info {
+    opacity: 1;
+    visibility: visible;
+    height: initial;
+  }
+  .no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  #positions {
+    padding-top: 6rem;
+    padding-bottom: 8.5rem;
+    background-color: #f9f9f9;
+    .jobs-form {
+      transition: all 250ms;
+      &.active {
+        height: 280px;
+        opacity: 1;
+        visibility: visible;
+      }
+      &:not(.active) {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .arrow-container {
+      i {
+        transition: all 250ms;
+      }
+      &:not(.active) {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .description {
+    height: initial;
+    opacity: 1;
+    visibility: visible;
+    transition: all 250ms;
+    p {
+      height: 131px;
+      transition: height 250ms;
+    }
+    &:not(.active) {
+      p {
+        height: 0;
+      }
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  .btn {
+    transition: opacity 250ms;
+  }
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+  .h3 {
+    transition: color 250ms;
+    &.active {
+      color: #00A8BA;
+    }
+  }
+}

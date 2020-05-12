@@ -1,5 +1,6 @@
 @use 'animations';
 @use 'lato/stylesheet';
+@use 'jobs'; 
 
 $colorPrimary: #00717B;
 $colorPrimaryDark: #032225;
@@ -53,7 +54,9 @@ body {
 .bg-light-o-80 {
   background-color: rgba(255,255,255, 0.8);
 }
-
+.img-fit {
+  object-fit: cover;
+}
 .h1 {
   font-weight: 900;
   font-size: 3rem;
@@ -613,13 +616,46 @@ footer {
 /* ---- Bootstrap Override CSS ---- */
 
 /* ---- NavBar ---- */
+
+homepage {
+  .navbar {
+    &:not(.scrolled) {
+      &:not(.white) {
+        .navbar-toggler-icon {
+          filter: invert(1);
+        }
+        .nav-link {
+          color: #FFF;
+          @media screen and (max-width: rem(991)) {
+            color: $textColor;
+          }
+        }
+        @media screen and (max-width: rem(991)) {
+          .nav-logo {
+            &.desktop {
+              display: none;
+            }
+            &.mobile {
+              display: initial;
+            }
+          }
+          .navbar-collapse {
+            //margin-top: rem(12);
+          }
+        }
+      }
+    }
+  }
+}
 .navbar {
   padding-top: 1rem;
   transition: background-color 250ms, padding-top, 250ms;
   @media screen and (max-width: rem(991)) {
-    background-color: #FFF;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    &.white {
+      background-color: #FFF;
+    }
     button {
       color: #000;
     }
@@ -630,8 +666,14 @@ footer {
       max-width: 720px;
       transform: translateX(-50%);
       background-color: rgb(255, 255, 255);
-      & > ul {
-        border-bottom: 1px solid #EEE;
+      height: 0;
+      display: block;
+      visibility: hidden;
+      overflow: hidden;
+      transition: all 125ms;
+      &.show {
+        height: 166px;
+        visibility: visible;
       }
     }
   }
@@ -644,10 +686,7 @@ footer {
     font-size: rem(15);
     font-weight: 400;
     transition: color 250ms;
-    color: #FFF;
-    @media screen and (max-width: rem(991)) {
-      color: $textColor;
-    }
+    color: $textColor;
     &:hover {
       &:before {
         opacity: 1.0;
