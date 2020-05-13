@@ -1,3 +1,9 @@
+@media screen and (max-width: 991px) {
+  jobs section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 jobs .image-container {
   padding-top: 7rem;
 }
@@ -19,6 +25,7 @@ jobs .section-highlights ul li p.info {
   opacity: 1;
   visibility: visible;
   height: initial;
+  max-width: 338px;
 }
 jobs .no-gutters {
   padding-left: 0;
@@ -27,6 +34,23 @@ jobs .no-gutters {
 jobs .no-gutters .row {
   margin-left: 0;
   margin-right: 0;
+}
+jobs .hidden-clickable {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+jobs .fa.fa-paperclip {
+  color: #00A8BA;
+}
+jobs .btn-primary.disabled, jobs .btn-primary:disabled {
+  color: #fff;
+  background-color: #00A8BA;
+  border-color: #00A8BA;
 }
 jobs #positions {
   padding-top: 6rem;
@@ -59,15 +83,21 @@ jobs .description {
   transition: all 250ms;
 }
 jobs .description p {
-  height: 131px;
   transition: height 250ms;
 }
-jobs .description:not(.active) {
-  opacity: 0;
-  visibility: hidden;
+@media screen and (min-width: 768px) {
+  jobs .description p {
+    height: 131px;
+  }
 }
-jobs .description:not(.active) p {
-  height: 0;
+@media screen and (min-width: 768px) {
+  jobs .description:not(.active) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  jobs .description:not(.active) p {
+    height: 0;
+  }
 }
 jobs .btn {
   transition: opacity 250ms;
@@ -82,6 +112,11 @@ jobs .h3 {
 }
 jobs .h3.active {
   color: #00A8BA;
+}
+@media screen and (max-width: 768px) {
+  jobs .border-bottom {
+    border-bottom: 0 solid transparent !important;
+  }
 }
 
 /*# sourceMappingURL=jobs.css.map */

@@ -23,16 +23,17 @@ ng-controller="contactFormJobs">
         </span>
 	</div>
 	<div class="upload-file cf-field-div py-3">
-	    <div class="custom-file-upload p-1 d-inline-block border">
-		<input type="file" name="filecv" value="{{fileToUpload}}" ng-value="fileToUpload" file-model="testfile" set-file-data="fileToUpload=value;" />
-		<i class="fa fa-paperclip" aria-hidden="true"></i>
-		<p class="upload-cv py-1">Upload CV</p>
-		<p class="upload-cv-selected py-1" ng-if="fileToUpload.name">Selected file: <span>{{fileToUpload.name}}</span></p>
+	    <div class="custom-file-upload p-3 w-100 d-inline-block border position-relative">
+			<i class="fa fa-paperclip" aria-hidden="true"></i>
+			<span ng-if="fileToUpload == null" class="upload-cv p-1">Upload CV</span>
+			<span class="upload-cv-selected p-1" ng-if="fileToUpload.name">{{fileToUpload.name}}</span>
+			<input type="file" class="hidden-clickable" name="filecv" value="{{fileToUpload}}" ng-value="fileToUpload" file-model="testfile" set-file-data="fileToUpload=value;" />
+
 	    </div>
 	    <!--<span class="text-danger" ng-show="errorFilecv">{{errorFilecv}}</span>-->
 	    <span class="valid-text ng-hide" ng-show="userForm.filecv.$dirty && userForm.filecv.$invalid">
             <span ng-show="userForm.filecv.$error.required">File Upload is required.</span>
         </span>
 	</div>
-	<input type="submit" name="insert" class="jobs-button-style btn btn-primary mb-4 cf-field-div" value="Send">
+	<input ng-disabled="fileToUpload == null" type="submit" name="insert" class="jobs-button-style btn btn-primary mb-4 cf-field-div" value="Good Luck!">
 </form>
