@@ -111,6 +111,9 @@
   font-weight: 900;
   font-style: normal;
 }
+jobs .h1 {
+  font-size: 35px;
+}
 @media screen and (max-width: 991px) {
   jobs section {
     padding-left: 1.5rem;
@@ -133,6 +136,12 @@ jobs .under-image {
 }
 jobs .img-fit {
   object-position: right;
+}
+@media screen and (min-width: 991px) {
+  jobs .section-highlights ul li {
+    padding: 0 0 0 0.5rem;
+    margin-bottom: 4.24rem;
+  }
 }
 jobs .section-highlights ul li p.info {
   opacity: 1;
