@@ -552,6 +552,7 @@ app.controller("contactFormContactus", function($scope, $http){
 app.controller("contactFormJobs", function($scope, $http, $q){
 	$scope.insert = {};
 	$scope.insertData = function(isValid){
+	    $scope.sending = true;
 		if(!isValid || !$scope.fileToUpload) {
 			return false;
 		}
@@ -579,6 +580,7 @@ app.controller("contactFormJobs", function($scope, $http, $q){
 		      fd.append('email', $scope.insert.email);
 		      return $http.post(url, fd, { headers: {"Content-Type": undefined}})
 		      .then(function(response){
+                  $scope.sending = false;
 			handleFormResult(response.data,
 				function(err) {
 					$scope.errorMessage = error;
@@ -604,6 +606,7 @@ app.controller("contactFormJobs", function($scope, $http, $q){
 		      })
 		})
 		.catch(function(response){
+		    $scope.sending = false;
 			$scope.errorMessage = "Server error. Please try again later.";
 		})
 	};

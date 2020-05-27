@@ -209,6 +209,16 @@ jobs .description p {
 }
 @media screen and (min-width: 768px) {
   jobs .description p {
+    height: 230px;
+  }
+}
+@media screen and (min-width: 991px) {
+  jobs .description p {
+    height: 148px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  jobs .description p {
     height: 131px;
   }
 }
