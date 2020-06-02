@@ -422,7 +422,7 @@ a:not([href]):not([tabindex]):hover {
     min-height: 230px;
     background-color: #FFF;
     border-radius: 5px;
-    //box-shadow: 0 0 10px #B1B1B126;
+    box-shadow: 0 0 10px #B1B1B126;
     &.py-4 {
       padding-top: 2.25rem!important;
       padding-bottom: 2.25rem!important;
