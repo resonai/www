@@ -69,12 +69,12 @@ jobs {
     .jobs-form {
       transition: all 250ms;
       &.active {
-        height: 280px;
+        max-height: 280px;
         opacity: 1;
         visibility: visible;
       }
       &:not(.active) {
-        height: 0;
+        max-height: 0;
         opacity: 0;
         visibility: hidden;
       }
@@ -96,21 +96,13 @@ jobs {
     visibility: visible;
     transition: all 250ms;
     p {
-      transition: height 250ms;
-      @media screen and (min-width: 768px){
-        height: 230px;
-      }
-      @media screen and (min-width: 991px){
-        height: 148px;
-      }
-      @media screen and (min-width: 1200px) {
-        height: 131px;
-      }
+      transition: max-height 250ms;
+      max-height: 230px;
     }
     &:not(.active) {
       @media screen and (min-width: 768px){
         p {
-          height: 0;
+          max-height: 0;
         }
         opacity: 0;
         visibility: hidden;

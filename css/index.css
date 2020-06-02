@@ -183,12 +183,12 @@ jobs #positions .jobs-form {
   transition: all 250ms;
 }
 jobs #positions .jobs-form.active {
-  height: 280px;
+  max-height: 280px;
   opacity: 1;
   visibility: visible;
 }
 jobs #positions .jobs-form:not(.active) {
-  height: 0;
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
 }
@@ -205,22 +205,8 @@ jobs .description {
   transition: all 250ms;
 }
 jobs .description p {
-  transition: height 250ms;
-}
-@media screen and (min-width: 768px) {
-  jobs .description p {
-    height: 230px;
-  }
-}
-@media screen and (min-width: 991px) {
-  jobs .description p {
-    height: 148px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  jobs .description p {
-    height: 131px;
-  }
+  transition: max-height 250ms;
+  max-height: 230px;
 }
 @media screen and (min-width: 768px) {
   jobs .description:not(.active) {
@@ -228,7 +214,7 @@ jobs .description p {
     visibility: hidden;
   }
   jobs .description:not(.active) p {
-    height: 0;
+    max-height: 0;
   }
 }
 jobs .btn {
