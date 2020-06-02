@@ -1,7 +1,11 @@
 jobs {
-  .h1 {
-    font-size: 35px;
+
+  #jobs-hero {
+    img {
+      height: 70vh;
+    }
   }
+
   @media screen and (max-width: 991px) {
     section {
       padding-left: 1.5rem;
@@ -23,7 +27,7 @@ jobs {
     z-index: 0;
   }
   .img-fit {
-    object-position: right;
+    object-position: center;
   }
   .section-highlights ul li {
     @media screen and (min-width: 991px) {

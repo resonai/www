@@ -422,7 +422,7 @@ a:not([href]):not([tabindex]):hover {
     min-height: 230px;
     background-color: #FFF;
     border-radius: 5px;
-    box-shadow: 0 0 10px #B1B1B126;
+    //box-shadow: 0 0 10px #B1B1B126;
     &.py-4 {
       padding-top: 2.25rem!important;
       padding-bottom: 2.25rem!important;
@@ -569,7 +569,7 @@ a:not([href]):not([tabindex]):hover {
   -webkit-border-radius: rem(5);
   -moz-border-radius: rem(5);
   border-radius: rem(5);
-  box-shadow: 0 0 rem(8) rgba(0, 0, 0, 0.2);
+  //box-shadow: 0 0 rem(8) rgba(0, 0, 0, 0.2);
 }
 
 .nav-logo {

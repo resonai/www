@@ -1,7 +1,7 @@
 #Resonai Website 
 The Resonai website currently uses Angular 1.7 and utilizes Google Cloud infrastructure.
 
-The documentation for Angulat 1.7[^1] can be found here https://code.angularjs.org/1.7.5/docs/guide.
+The documentation for Angular 1.7[^1] can be found here https://code.angularjs.org/1.7.5/docs/guide.
 
 ## Instructions for Editing CSS
 
