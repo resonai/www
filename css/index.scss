@@ -410,8 +410,8 @@ a:not([href]):not([tabindex]):hover {
     }
   }
   .col {
-    min-width: 432px;
-    max-width: 432px;
+    min-width: 440px;
+    max-width: 440px;
     @media screen and (max-width: rem(991)) {
       min-width: 380px;
       max-width: 380px;
@@ -439,7 +439,7 @@ a:not([href]):not([tabindex]):hover {
   p:not(.h2) {
     font-size: rem(17);
     @media screen and (max-width: 61.9375rem) {
-      font-size: 0.9375rem;
+      font-size: 0.89rem;
     }
   }
 }

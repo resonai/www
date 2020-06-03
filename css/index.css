@@ -658,8 +658,8 @@ a:not([href]):not([tabindex]):hover {
   }
 }
 #press .col {
-  min-width: 432px;
-  max-width: 432px;
+  min-width: 440px;
+  max-width: 440px;
 }
 @media screen and (max-width: 61.9375rem) {
   #press .col {
@@ -691,7 +691,7 @@ a:not([href]):not([tabindex]):hover {
 }
 @media screen and (max-width: 61.9375rem) {
   #press p:not(.h2) {
-    font-size: 0.9375rem;
+    font-size: 0.89rem;
   }
 }
 
