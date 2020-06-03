@@ -13,18 +13,19 @@ jobs {
     }
   }
   .image-container {
-    padding-top: 7rem;
-  }
-  .over-image {
-    top: -1.75rem;
-    position: relative;
-    height: 512px;
-    width: 338px;
-    z-index: 1;
+    padding-top: 3rem;
+    img {
+      width: 70%;
+    }
   }
   .under-image {
+    top: -1.75rem;
     position: relative;
     z-index: 0;
+  }
+  .over-image {
+    position: relative;
+    z-index: 1;
   }
   .img-fit {
     object-position: center;

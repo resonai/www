@@ -121,18 +121,19 @@ jobs #jobs-hero img {
   }
 }
 jobs .image-container {
-  padding-top: 7rem;
+  padding-top: 3rem;
 }
-jobs .over-image {
-  top: -1.75rem;
-  position: relative;
-  height: 512px;
-  width: 338px;
-  z-index: 1;
+jobs .image-container img {
+  width: 70%;
 }
 jobs .under-image {
+  top: -1.75rem;
   position: relative;
   z-index: 0;
+}
+jobs .over-image {
+  position: relative;
+  z-index: 1;
 }
 jobs .img-fit {
   object-position: center;
