@@ -183,10 +183,12 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
  });
 
 app.controller('popupVideo', function ($scope, ngDialog,$sce) {
-	$scope.openContactForm = function($event) {
+	$scope.openPopupVideo = function($event) {
         $scope.trustSrc = function(src) {
             return $sce.trustAsResourceUrl(src);
         }
+        console.log($event);
+        console.log({src:$event.target.attributes.data.value});
         $scope.movie = {src:$event.target.attributes.data.value};
 		ngDialog.openConfirm({template: 'app/templates/index_popup_video.html',
 		  scope: $scope //Pass the scope object if you need to access in the template
@@ -391,7 +393,7 @@ app.controller('dollhouse', ['$scope', function($scope) {
     });
 
     //dollhouse, search & search4unity page contact form demo
-    app.controller('popupContactus', function ($scope, ngDialog) {
+    /*app.controller('popupContactus', function ($scope, ngDialog) {
         $scope.openContactForm = function() {
             ngDialog.openConfirm({template: 'app/templates/dollhouse_popup.html',
               scope: $scope //Pass the scope object if you need to access in the template
@@ -404,7 +406,7 @@ app.controller('dollhouse', ['$scope', function($scope) {
                 }
             );
         };
-    });
+    });*/
 
     app.controller("contactFormPopupDemo", function($scope, $http){
      $scope.insert = {};
