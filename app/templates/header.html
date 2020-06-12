@@ -1,4 +1,4 @@
-<header ng-init="isOpen = true" class="header">
+<header id="header" ng-init="isOpen = true" class="header">
     <nav class="navbar navbar-expand-lg fixed-top mobile-bottom" ng-class="{ white: !isOpen }">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container pb-1">
@@ -21,11 +21,11 @@
                          id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto flex-nowrap">
                             <li class="nav-item pl-2 pr-4 pr-lg-2 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
-                                                              href="#facilities-management" du-smooth-scroll du-scrollspy>Facilities Management</a></li>
+                                                              href="#!/home#facilities-management" du-smooth-scroll du-scrollspy>Facilities Management</a></li>
                             <li class="nav-item pl-2 pr-4 pr-lg-2 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
-                                                              href="#retail" du-smooth-scroll du-scrollspy>Retail</a></li>
+                                                              href="#!/home#retail" du-smooth-scroll du-scrollspy>Retail</a></li>
                             <li class="nav-item pl-2 pr-4 pr-lg-2 py-2"><a class="nav-link" ng-click="isOpen = !isOpen"
-                                                              href="#entertainment" du-smooth-scroll du-scrollspy>Entertainment</a></li>
+                                                              href="#!/home#entertainment" du-smooth-scroll du-scrollspy>Entertainment</a></li>
                             <!--<li class="nav-item px-2 py-2"><a class="nav-link" href="index.php#!/jobs"
                                                               du-smooth-scroll du-scrollspy>Jobs</a></li>-->
                         </ul>

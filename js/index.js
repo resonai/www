@@ -119,7 +119,7 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
 // HOME PAGE ========================================
  app.controller('smoothScroll', function($scope, $document){
     $scope.toTheTop = function() {
-      $document.scrollTopAnimated(0, 5000).then(function() {
+      $document.scrollTopAnimated(0, 125).then(function() {
         console && console.log('You just scrolled to the top!');
       });
     }

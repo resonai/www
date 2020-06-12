@@ -2,19 +2,19 @@
     <div class="footer container pt-5">
         <div class="row">
             <div class="col-12 col-md-6">
-                <div class="row">
+                <div ng-controller="smoothScroll" class="row">
                     <div class="col-10">
                         <div class="p-4 px-md-0">
                             <p class="h3 mb-3">Do big things. Join Resonai.</p>
                             <p>We’re working on some really cool stuff. If you are interested in working with us, we would love to hear from you.</p>
-                            <a class="btn btn-secondary mt-4" href="index.php#!/jobs">Open positions</a>
+                            <a class="btn btn-secondary mt-4" ng-click="toTheTop()" href="/#!/jobs">Open positions</a>
                         </div>
                     </div>
                     <div class="mt-md-0 mt-4 col-10">
                         <div class="pt-2 pb-5 pt-md-5 px-4 px-md-0">
                             <p class="h3 mb-3">Let’s talk.</p>
                             <p>Interested in partnering with Resonai? Or just excited and curious about all things AR? Give us a shout. </p>
-                            <a class="btn btn-secondary mt-4" href="index.php#!/contactUs">Contact us</a>
+                            <a class="btn btn-secondary mt-4" ng-click="toTheTop()" href="/#!/contactUs">Contact us</a>
                         </div>
                     </div>
                 </div>
