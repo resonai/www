@@ -198,7 +198,8 @@ a:not([href]):not([tabindex]):hover {
         height: 100%;
         top: 0;
         left: 0;
-        background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
+        //background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
+        background-image: url('/Users/galsharir/work/www/images/home/solutions/mockups_lamp.jpg');
         background-size: cover;
         filter: brightness(0.75);
       }
@@ -252,7 +253,8 @@ a:not([href]):not([tabindex]):hover {
   .hero-container {
     height: 100vh;
     width: 50vw;
-    background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
+    //background-image: url('../images/Resonai_Hero_CommercialRealState_new.png');
+    background-image: url('../images/home/solutions/mockups_lamp.jpg');
     background-size: cover;
     @media screen and (max-width: rem(991)){
       background-image: none;
@@ -282,7 +284,7 @@ a:not([href]):not([tabindex]):hover {
     padding-right: 0;
   }
   .img-wrapper {
-    height: 15.0625rem;
+    //height: 15.0625rem;
     .panel-rounded {
       width: 100%;
       height: 100%;

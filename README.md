@@ -10,6 +10,7 @@ The documentation for Angular 1.7[^1] can be found here https://code.angularjs.o
 To edit the css go to the [index.scss](/css/index.scss) file located in the css directory. 
 
 Once edited the file will need to be compiled. This will output the css file. 
+Command - sass filename.scss filename.css
 
 The index.scss file also cantains imports for the fonts and other pages css. 
 
