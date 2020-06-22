@@ -26,9 +26,6 @@
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
 
-
-
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 
@@ -36,7 +33,7 @@
         <script src="js/jquery-3.3.1.slim.min.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/bootstrap.min.js"></script>
-        
+
         <!-- JS (load angular, ui-router, and our custom js file) -->
         <script src="js/angular.min.js"></script>
         <script src="js/angular-ui-router.min.js"></script>
@@ -47,7 +44,7 @@
         <script src="js/angular-scroll.min.js"></script>
         <script src="js/revealer.js"></script>
         <script src="js/ui-router-metatags.min.js"></script>
-        
+
         <!-- components -->
         <script src="app/components/homepage/homepage.component.js"></script>
         <script src="app/components/contactus/contactus.component.js"></script>
@@ -57,28 +54,18 @@
         <script src="app/components/search/search.component.js"></script>
         <script src="app/components/search4unity/search4unity.component.js"></script>
         <script src="app/components/whitepaper/whitepaper.component.js"></script>
+        <script src="app/components/retailebook/retailebook.component.js"></script>
         <script src="js/index.js"></script>
-        
+
         <!-- style css -->
         <link rel="stylesheet" href="css/fontAwesome/css/all.min.css"/>
         <link rel="stylesheet" href="css/ngDialog.min.css"/>
         <link rel="stylesheet" href="css/ngDialog-theme-default.min.css"/>
         <link type="text/css" rel="stylesheet" href="css/index.css">
-<!--        <link type="text/css" rel="stylesheet" href="css/menu.css">-->
-<!--        <link type="text/css" rel="stylesheet" href="css/footer.css">-->
-<!--        <link type="text/css" rel="stylesheet" href="css/dollhouse.css">-->
-<!--        <link rel="stylesheet" type="text/css" href="css/dollhouseslider.css" />-->
-<!--        <link rel="stylesheet" type="text/css" href="css/revealer.css"/>-->
-<!--        <link type="text/css" rel="stylesheet" href="css/search.css">-->
-<!--        <link rel="stylesheet" href="css/searchslider.css">-->
-<!--        <link type="text/css" rel="stylesheet" href="css/search4unity.css">-->
-<!--        <link rel="stylesheet" href="css/sliderunity.css">-->
-<!--        <link type="text/css" rel="stylesheet" href="css/contactUs.css">-->
-<!--        <link type="text/css" rel="stylesheet" href="css/jobs.css">-->
-        
+
     </head>
     <body scroll ng-class="{sticky:boolChangeClass}">
-       <!-- Preloader 
+       <!-- Preloader
         <div id="preloader" style="display: none;">
             <div class="loader" style="display: none;"></div>
         </div>-->

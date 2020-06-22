@@ -1,39 +1,59 @@
 <footer class="desktop-footer pt-5">
-    <div class="footer container">
+    <div class="footer container pt-5">
         <div class="row">
-            <div class="col-12 mx-auto">
-                <div class="row">
-                    <div class="col-md-4 col-12 pb-4">
+            <div class="col-12 col-md-6">
+                <div ng-controller="smoothScroll" class="row">
+                    <div class="col-10">
+                        <div class="p-4 px-md-0">
+                            <p class="h3 mb-3">Do big things. Join Resonai.</p>
+                            <p>We’re working on some really cool stuff. If you are interested in working with us, we would love to hear from you.</p>
+                            <a class="btn btn-secondary mt-4" ng-click="toTheTop()" href="/#!/jobs">Open positions</a>
+                        </div>
+                    </div>
+                    <div class="mt-md-0 mt-4 col-10">
+                        <div class="pt-2 pb-5 pt-md-5 px-4 px-md-0">
+                            <p class="h3 mb-3">Let’s talk.</p>
+                            <p>Interested in partnering with Resonai? Or just excited and curious about all things AR? Give us a shout. </p>
+                            <a class="btn btn-secondary mt-4" ng-click="toTheTop()" href="/#!/contactUs">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row pt-md-4 px-4">
+                    <div class="col-12 col-md-6 pb-4">
                         <strong>HQ – Tel Aviv</strong><br />
                         HaTa’asiya 9, Tel Aviv<br />
                         6713909
                     </div>
-                    <div class="col-md-4 col-12 pb-4">
+                    <div class="col-12 pb-4 order-1 order-md-2">
                         <strong>Silicon Valley</strong><br />
                         824 San Antonio Rd.<br />
                         Palo Alto, CA 94303
                     </div>
-                    <div class="col-md-4 col-12 pb-4">
-                        <div class="row justify-content-md-end justify-content-start">
-                            <div class="col-auto social align-self-end">
-                                <a target="_blank" href="https://twitter.com/Resonai_XR">
-                                    <img height="auto" width="28" class="py-3" src="images/Social-twitter.svg" alt="Twitter" />
-                                </a>
-                            </div>
-                            <div class="col-auto social align-self-end">
-                                <a target="_blank" href="https://www.youtube.com/channel/UCazH-YOwdjOL0yUCFrZB6pw?view_as=subscriber">
-                                    <img height="auto" width="28" class="py-3" src="images/Social-youtube.svg" alt="YouTube" />
-                                </a>
-                            </div>
-                            <div class="col-auto social align-self-end">
-                                <a target="_blank" href="https://www.linkedin.com/company/18087360/">
-                                    <img height="auto" width="28" class="py-3" src="images/Social-linkedin.svg" alt="LinkedIn" />
-                                </a>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row px-4 px-md-0">
+            <div class="col-12 col-md-6 py-3 py-md-4 order-1 order-md-0">
+                <p id="copyright">Copyright © 2020 Resonai Inc. All rights reserved.</p>
+            </div>
+            <div class="col-12 col-md-6 pt-3 py-md-2 order-0 order-md-1">
+                <div class="row justify-content-md-end justify-content-start">
+                    <div class="col-auto social align-self-end">
+                        <a target="_blank" href="https://twitter.com/Resonai_XR">
+                            <img height="auto" width="28" class="py-3" src="images/Social-twitter.svg" alt="Twitter" />
+                        </a>
                     </div>
-                    <div class="col py-5">
-                        <p>Copyright © 2019 Resonai Inc. All rights reserved.</p>
+                    <div class="col-auto social align-self-end">
+                        <a target="_blank" href="https://www.youtube.com/channel/UCazH-YOwdjOL0yUCFrZB6pw?view_as=subscriber">
+                            <img height="auto" width="28" class="py-3" src="images/Social-youtube.svg" alt="YouTube" />
+                        </a>
+                    </div>
+                    <div class="col-auto social align-self-end">
+                        <a target="_blank" href="https://www.linkedin.com/company/18087360/">
+                            <img height="auto" width="28" class="py-3" src="images/Social-linkedin.svg" alt="LinkedIn" />
+                        </a>
                     </div>
                 </div>
             </div>

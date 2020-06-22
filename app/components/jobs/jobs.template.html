@@ -1,133 +1,171 @@
     <div ng-include='"app/templates/header.html"' class="other-menu"></div>
-    <div class="resonai-content py-5">
-        <div class="jobs-page py-md-5">
-            <div class="container">
-                <div class="row">
-                    <section class="sec-1 desktop-sec-1 py-5 col-md-6 col-12">
-                        <h1 class="pb-3">Do big things. <span class="tablet-break">Join Resonai.</span></h1>
-
-                        <p>
-                            <strong>Creating the future.</strong><br />
-                            If you want to be a part of something big, now is your time and this is your place. Our vision for augmented reality goes beyond game-changing experiences – for us, it’s about changing people’s lives in meaningful ways.
-                            <br /><br />
-                            <strong>Challenges worthy of your talents – and passions.</strong><br/>
-                            You get to do what you love here, while working on tough problems in impactful, cutting-edge fields, each and every day.
-                            <br /><br />
-                            <strong>A seat at the table.</strong><br />
-                            You can make a difference, from the common everyday decisions to pivotal, strategic ones. Whether you’re the founder or a first-day hire, you are essential to our success.
-                            <br /><br />
-                            <strong>People that bring out the best in you.</strong><br />
-                            We’re building a company that attracts the very best. And we seek those who aren’t just accomplished in their field, but ones who can make our whole team better. And the kind of folks you just enjoy being around.
-                            <br /><br />
-                            <strong>Where life and work just...work.</strong><br />
-                            Life and work go hand in hand. We believe in fostering a supportive and flexible environment where you can do great work, grow in your career, and live life to the fullest.
-                            <br /><br />
-                            If this is your kind of place, check out our open positions or just let us know what you’re interested in doing at <a href="mailto:jobs@resonai.com" class="mail-send">jobs@resonai.com</a>.
-                            <br /><br />
-                            <strong>About Resonai</strong><br />
-                            Founded in 2014, Resonai is backed by private investors and headquartered in Tel Aviv. Our U.S. office is in the heart of Silicon Valley in Palo Alto, California.
-                        </p>
-
-                        <!--<h1>About Resonai</h1>
-                        <p>  Resonai is dedicated to power the future of visual perception, and
-                           any machine that needs to understand its environment in real time. <br><br>
-                           We've built a work environment that brings together the best talent
-                           from mathematics, physics, brain science, computer science, machine learning, business and management.
-                           Together, we dissolve barriers
-                           between people and technology.
-                           <br><br>
-                           We embrace and encourage intellectual curiosity, collaboration,
-                           hard work, focus on making things happen, challenging of perceptions,
-                           and kindness.
-                           <br><br>
-                           We value the importance of a flexible and healthy work-life balance.
-                           <br><br><br>
-                           <span class="contact">Contact us at</span> <a href="mailto:jobs@resonai.com"
-                           class="mail-send">jobs@resonai.com</a>
-                        </p>-->
-                    </section>
-                    <div class="col-md-6 mh-250 top-0 py-md-5 col-12" ng-controller="jobs">
-                     <section ng-init="showSec1 = true" class="sec-2">
-                        <h1 class="h1-right-para pb-3">No Open Positions</h1>
-                        <!--<div class="mt-2 mb-3">
-
-                          <span class="positions-style py-1 mr-4 mb-2 math-position-link line mimic-anchor d-block d-md-inline" ng-class="{ active: showSec1 == true }" ng-click="showSec1=true; showSec2=false;
-                          showSec3=false; showSec4=false; showSec5=false;">Mathematicians </span>
-                          <span class="positions-style py-1 mr-4 mb-2 line mimic-anchor d-block d-md-inline" ng-class="{ active: showSec2 == true }" ng-click="showSec2=true; showSec1=false; showSec3=false;
-                          showSec4=false; showSec5=false;">Software Developers</span>
-                          <span class="positions-style py-1 mr-4 mb-2 line mimic-anchor d-block d-md-inline" ng-class="{ active: showSec3 == true }" ng-click="showSec3=true; showSec1=false; showSec2=false;
-                          showSec4=false; showSec5=false;">Web/Mobile/Front-End</span>
-
-                        </div>-->
-                    </section>
-                    <!--
-                    <section class="sec-3 position-absolute" ng-show="showSec1">
-                        <h1 class="h1-right-para">Mathematicians</h1>
-                        <p class="h1-right-para right-para-text">PhD with deep-level knowledge in at least one field of
-                            math (e.g. Ergodic theory, algebraic topology, probability). High skills in software programming,
-                            ability to learn new software languages, and development methodologies. Willingness and ability
-                            to participate in all aspects of development, software programming, and product design.
-                            <br>Based in Tel Aviv, Israel.</p>
-                        <div class="jobs-form jobs-form-3-se">
-                            <h2>Apply now</h2>
-                            <h2>Send your CV to jobs@resonai.com</h2>
+    <section id="jobs-hero" class="py-md-5 mb-5 mb-md-0">
+        <div class="container no-wrap pt-5">
+            <div class="row no-gutters">
+                <div class="py-lg-5 col-md-6 col-12 order-1 order-lg-0">
+                    <img class="img-fluid panel-rounded img-fit mr-0 mr-lg-5" src="/images/jobs/office_doodle.png" alt="" />
+                </div>
+                <div class="col-md-6 mh-250 top-0 py-md-5 col-12 order-0 order-lg-1">
+                    <div class="absolute-vertical-center mt-5 mt-md-0 ml-lg-5 w-100 text-lg-center">
+                        <div class="text-left d-inline-block">
+                         <p class="h1">Do big things.<br />Join Resonai.</p>
+                         <!--<p class="mt-3 mt-md-0">We have 3 open positions</p>-->
                         </div>
-                        <span class="positions-back-style mimic-anchor" ng-click="showSec1=false">Back to open positions</span>
-                    </section>
-                    <section class="sec-3 position-absolute ng-hide" ng-show="showSec2">
-                        <h1 class="h1-right-para">Software developers</h1>
-                        <p class="h1-right-para right-para-text">
-                        Passion for math, algorithms and software engineering.
-                        Strong background in math and algorithms.
-                        Ability to program in any language.
-                        Willingness and ability to participate in all aspects of development,
-                        from mathematical theory all the way to product design.
-                        <br>Based in Tel Aviv, Israel.</p>
-                        <div class="jobs-form jobs-form-3-se">
-                            <h2>Apply now</h2>
-                            <h2>Send your CV to jobs@resonai.com</h2>
-                        </div>
-                        <a class="positions-back-style mimic-anchor" ng-click="showSec2=false">Back to open positions</a>
-                    </section>
-                    <section class="sec-3 position-absolute ng-hide" ng-show="showSec3">
-                        <h1 class="h1-right-para">Software developers</h1>
-                        <p class="h1-right-para right-para-text">
-                            We are looking for an experienced front-end developer to
-                            join our team in a challenging position developing AR experiences.<br>
-                            Requirements: 3+ years of work experience including web skills
-                            and at least one major application, bachelor's degree in CS with
-                            honors, self-learner, and independent worker.<br>
-                            Preferred: experience with three.js or other 3d visualization
-                            tools, mobile application development.
-                        <br>Based in Tel Aviv, Israel.</p>
-                        <div class="jobs-form jobs-form-3-se">
-                            <h2>Apply now</h2>
-                            <h2>Send your CV to jobs@resonai.com</h2>
-                        </div>
-                        <a class="positions-back-style mimic-anchor" ng-click="showSec2=false">Back to open positions</a>
-                    </section>
-                    -->
                     </div>
-                    <!--<section class="sec-1 mobile-sec-1 col-12">-->
-                        <!--<h1 class="mobile-sec-1-h1">ABOUT RESONAI</h1>-->
-                        <!--<p class="bkg-img">Resonai is dedicated to power the future of visual perception, and-->
-                           <!--any machine that needs to understand its environment in real time. <br><br>-->
-                           <!--We've built a work environment that brings together the best talent-->
-                           <!--from mathematics, physics, brain science, computer science, machine learning, business and management.-->
-                           <!--Together, we dissolve barriers-->
-                           <!--between people and technology.-->
-                           <!--<br><br>-->
-                           <!--We embrace and encourage intellectual curiosity, collaboration,-->
-                           <!--hard work, focus on making things happen, challenging of perceptions,-->
-                           <!--and kindness.-->
-                           <!--<br><br>-->
-                           <!--We value the importance of a flexible and healthy work-life balance.-->
-                           <!--<br><br><br>-->
-                           <!--<span class="contact">Contact us at</span> <a href="mailto:jobs@resonai.com"-->
-                           <!--class="mail-send">jobs@resonai.com</a>-->
-                        <!--</p>-->
-                    <!--</section>-->
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="perks" class="py-md-5">
+        <div class="container no-wrap">
+            <div class="row no-gutters">
+                <div class="py-5 col-md-6 col-12 desktop">
+                    <p class="h2 pb-5">We Offer You</p>
+                    <div class="image-container">
+                        <img class="panel-rounded over-image mr-md-4 float-right" src="/images/jobs/dreidels_ots_gif.gif" />
+                        <img class="panel-rounded under-image" src="/images/jobs/dreidels_gif.gif" />
+                    </div>
+                </div>
+                <div class="col-12 mobile">
+                    <p class="h2 pt-5 pb-4">We Offer You</p>
+                    <!--<img class="panel-rounded img-fluid" src="/images/jobs/brooke-cagle-g1Kr4Ozfoac-unsplash.png" />-->
+                </div>
+                <div class="pt-5 pb-0 pb-md-5 col-md-6 col-12">
+                    <div class="section-highlights mt-md-2 ml-md-3 pl-md-1">
+                        <div class="col-12 mx-lg-5">
+                            <ul class="ml-3">
+                                <li>
+                                    <p class="h3">Creating the future.</p>
+                                    <P class="py-2 info">
+                                        If you want to be a part of something big, now is your time and this is your place. Our vision for augmented reality goes beyond game-changing experiences – for us, it’s about changing people’s lives in meaningful ways.
+                                    </P>
+                                </li>
+                                <li>
+                                    <p class="h3">Challenges worthy of your<br />talents – and passions.</p>
+                                    <P class="py-2 info">
+                                        You get to do what you love here, while working on tough problems in impactful, cutting-edge fields, each and every day.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="h3">A seat at the table.</p>
+                                    <P class="py-2 info">
+                                        You can make a difference, from the common everyday decisions to pivotal, strategic ones. Whether you’re the founder or a first-day hire, you are essential to our success.
+                                    </P>
+                                </li>
+                                <li>
+                                    <p class="h3">People that bring out<br />the best in you.</p>
+                                    <P class="py-2 info">
+                                        We’re building a company that attracts the very best. And we seek those who aren’t just accomplished in their field, but ones who can make our whole team better. And the kind of folks you just enjoy being around.
+                                    </P>
+                                </li>
+                                <li>
+                                    <p class="h3">Where life and work<br />just...work.</p>
+                                    <P class="py-2 info">
+                                        Life and work go hand in hand. We believe in fostering a supportive and flexible environment where you can do great work, grow in your career, and live life to the fullest.
+                                    </P>
+                                </li>
+                                <li style="list-style: none;">
+                                    <p class="h3">Sounds interesting?</p>
+                                    <P class="py-2 info">
+                                        Contact us at <a href = "mailto: jobs@resonai.com">jobs@resonai.com</a>
+                                    </P>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mobile">
+                    <!--<img class="panel-rounded img-fit img-fluid h-100" src="/images/jobs/austin-distel-mpN7xjKQ_Ns-unsplash.png" />-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<section ng-init="activePanel = 0; showForm = 0" id="positions" class="py-6">
+        <div class="container mx-auto no-wrap py-5">
+            <div class="row  no-gutters">
+                <div class="col-12 pb-0 pb-md-5">
+                    <p class="h2 pb-2">Open Positions</p>
+                </div>
+                <div class="col-12">
+                    <div class="container no-wrap no-gutters">
+                        <div class="row border-bottom pt-4 pb-4">
+                            <div class="col-12 col-md-5 pt-3 pl-0">
+                                <p class="h3 clicky" ng-click="activePanel != 1 ? activePanel = 1 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 1 }">Mathematician</p>
+                                <p>Tel Aviv, Isreal</p>
+                            </div>
+                            <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
+                                <div class="description" ng-class="{ active: activePanel == 1 }">
+                                    <p>
+                                        PhD with deep-level knowledge in at least one field of
+                                        math (e.g. Ergodic theory, algebraic topology, probability). High skills in software programming,
+                                        ability to learn new software languages, and development methodologies. Willingness and ability
+                                        to participate in all aspects of development, software programming, and product design.
+                                    </p>
+                                    <div>
+                                        <div class="jobs-form" ng-class="{ active: showForm == 1 }">
+                                            <jobsform parentActive="showForm" />
+                                        </div>
+                                        <span ng-click="showForm = 1" ng-class="{ hidden: showForm == 1 }" class="btn btn-primary clicky">Apply now</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 1 }">
+                                <i ng-click="activePanel != 1 ? activePanel = 1 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
+                            </div>
+                        </div>
+                        <div class="row border-bottom pt-4 pb-4">
+                            <div class="col-12 col-md-5 pt-3 pl-0">
+                                <p class="h3 clicky" ng-click="activePanel != 2 ? activePanel = 2 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 2 }">Software Developers</p>
+                                <p>Tel Aviv, Isreal</p>
+                            </div>
+                            <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
+                                <div class="description" ng-class="{ active: activePanel == 2 }">
+                                    <p>
+                                        Passion for math, algorithms and software engineering.
+                                        Strong background in math and algorithms.
+                                        Ability to program in any language.
+                                        Willingness and ability to participate in all aspects of development,
+                                        from mathematical theory all the way to product design.
+                                    </p>
+                                    <div>
+                                        <div class="jobs-form" ng-class="{ active: showForm == 2}">
+                                            <jobsform />
+                                        </div>
+                                        <span ng-click="showForm = 2" ng-class="{ hidden: showForm == 2 }" class="btn btn-primary clicky">Apply now</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 2 }">
+                                <i ng-click="activePanel != 2 ? activePanel = 2 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
+                            </div>
+                        </div>
+                        <div class="row border-bottom pt-4 pb-4">
+                            <div class="col-12 col-md-5 pt-3 pl-0">
+                                <p class="h3 clicky" ng-click="activePanel != 3 ? activePanel = 3 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 3 }">Web/Mobile/Front-End</p>
+                                <p>Tel Aviv, Isreal</p>
+                            </div>
+                            <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
+                                <div class="description" ng-class="{ active: activePanel == 3 }">
+                                    <p>
+                                        PhD with deep-level knowledge in at least one field of math (e.g. Ergodic theory,
+                                        algebraic topology, probability). High skills in software programming, ability to
+                                        learn new software languages, and development methodologies. Willingness and
+                                        ability to participate in all aspects of development, software programming, and product design.
+                                    </p>
+                                    <div>
+                                        <div class="jobs-form" ng-class="{ active: showForm == 3 }">
+                                            <jobsform />
+                                        </div>
+                                        <span ng-click="showForm = 3" ng-class="{ hidden: showForm == 3 }" class="btn btn-primary clicky">Apply now</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 3 }">
+                                <i ng-click="activePanel != 3 ? activePanel = 3 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->

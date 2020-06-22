@@ -1,5 +1,5 @@
 var app = angular.module('mainApp', ['revealer','ngDialog', 'ngTouch', 'duScroll','ui.router','app.homepage', 'app.contactus',
-'app.jobs','app.dollhouse','app.search', 'app.search4unity','app.whitepaper','ui.router.metatags']);
+'app.jobs','app.dollhouse','app.search', 'app.search4unity','app.whitepaper', 'app.retailebook','ui.router.metatags']);
 
 app.config(function($stateProvider, $urlRouterProvider, UIRouterMetatagsProvider) {
 
@@ -91,6 +91,20 @@ app.config(function($stateProvider, $urlRouterProvider, UIRouterMetatagsProvider
                     'og:title': 'Resonai: Download Vera whitepaper'
                 }
             }
+        })
+
+        // RETAIL EBOOK PAGE =================================
+        .state('retailebook', {
+            url: '/retailebook',
+            template: '<retailebook />',
+            metaTags: {
+                title: 'Download Retail Ebook',
+                description: '.',
+                keywords: '',
+                properties: {
+                    'og:title': 'Resonai: Retail Ebook'
+                }
+            }
         });
 });
 
@@ -105,7 +119,7 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
 // HOME PAGE ========================================
  app.controller('smoothScroll', function($scope, $document){
     $scope.toTheTop = function() {
-      $document.scrollTopAnimated(0, 5000).then(function() {
+      $document.scrollTopAnimated(0, 125).then(function() {
         console && console.log('You just scrolled to the top!');
       });
     }
@@ -116,11 +130,65 @@ app.run(['$rootScope', 'MetaTags', runBlock]);
   }
 ).value('duScrollOffset', 30);
 
+ app.controller('scrollHorizontal', function($scope){
+
+     $scope.setActionClass = function(target, scrollAmount) {
+         // const containerWidth = target.offsetWidth;
+         const panels = target.querySelectorAll('.col');
+         const combinePanelsWidth = panels.length * panels[0].offsetWidth;
+         const containerWidth = target.offsetWidth;
+
+         let scrollPosition = target.scrollLeft + scrollAmount;
+
+         let leftButton;
+         let rightButton;
+
+         target.querySelectorAll('.action-control').forEach(button => {
+             if (button.classList.contains('go-left')) {
+                 leftButton = button;
+             }
+             if (button.classList.contains('go-right')) {
+                 rightButton = button;
+             }
+         });
+
+         if (scrollPosition <= 0) {
+             leftButton.classList.add('inactive');
+         } else {
+             leftButton.classList.remove('inactive');
+         }
+
+         if (scrollPosition >= combinePanelsWidth - containerWidth) {
+             rightButton.classList.add('inactive');
+         } else {
+             rightButton.classList.remove('inactive');
+         }
+
+     }
+
+     $scope.doScrollRight = function($event) {
+         $scope.doScroll($event.currentTarget.parentNode, false);
+     }
+
+     $scope.doScrollLeft = function($event) {
+         $scope.doScroll($event.currentTarget.parentNode,  true);
+     }
+
+     $scope.doScroll = function(target, goLeft) {
+         const panel = target.querySelector('.col');
+         let scrollAmount = goLeft ? -panel.offsetWidth : panel.offsetWidth;
+         target.scrollBy( scrollAmount, 0, 'smooth');
+         $scope.setActionClass(target, scrollAmount);
+     }
+ });
+
 app.controller('popupVideo', function ($scope, ngDialog,$sce) {
-	$scope.openContactForm = function($event) {
+	$scope.openPopupVideo = function($event) {
         $scope.trustSrc = function(src) {
             return $sce.trustAsResourceUrl(src);
         }
+        console.log($event);
+        console.log({src:$event.target.attributes.data.value});
         $scope.movie = {src:$event.target.attributes.data.value};
 		ngDialog.openConfirm({template: 'app/templates/index_popup_video.html',
 		  scope: $scope //Pass the scope object if you need to access in the template
@@ -176,7 +244,7 @@ app.controller("contactFormPopupBeta", function($scope, $http){
  $scope.insert = {};
  $scope.insertData = function(isValid){
      if(!isValid) return false;
-	formRequest($http, "api/insert_contactFormPopupBeta.php", $scope.insert, 
+	formRequest($http, "api/insert_contactFormPopupBeta.php", $scope.insert,
 		function showGenericError(error) {
 			$scope.errorMessage = error;
 		},
@@ -237,12 +305,12 @@ function handleFormResult(data, showGenericError, showErrorFunc, showSuccessFunc
 // JOBS PAGE =================================
 
 app.controller('jobs', function($scope) {
-  
+
   $scope.hideMe = function(){
     console.log('hide the button');
     $scope.hide();
   }
-  
+
 });
 
 // DOLLHOUSE PAGE =================================
@@ -325,7 +393,7 @@ app.controller('dollhouse', ['$scope', function($scope) {
     });
 
     //dollhouse, search & search4unity page contact form demo
-    app.controller('popupContactus', function ($scope, ngDialog) {
+    /*app.controller('popupContactus', function ($scope, ngDialog) {
         $scope.openContactForm = function() {
             ngDialog.openConfirm({template: 'app/templates/dollhouse_popup.html',
               scope: $scope //Pass the scope object if you need to access in the template
@@ -338,13 +406,13 @@ app.controller('dollhouse', ['$scope', function($scope) {
                 }
             );
         };
-    });
+    });*/
 
     app.controller("contactFormPopupDemo", function($scope, $http){
      $scope.insert = {};
      $scope.insertData = function(isValid){
          if(!isValid) return false;
-	formRequest($http, "api/insert_contactFormPopupDemo.php", $scope.insert, 
+	formRequest($http, "api/insert_contactFormPopupDemo.php", $scope.insert,
 		function showGenericError(error) {
 			$scope.errorMessage = error;
 		},
@@ -457,7 +525,7 @@ app.controller("contactFormContactus", function($scope, $http){
  $scope.insert = {};
  $scope.insertData = function(isValid){
      if(!isValid) return false;
-	formRequest($http, "api/insert_contactFormContactus.php", $scope.insert, 
+	formRequest($http, "api/insert_contactFormContactus.php", $scope.insert,
 		function showGenericError(error) {
 			$scope.errorMessage = error;
 		},
@@ -486,10 +554,11 @@ app.controller("contactFormContactus", function($scope, $http){
 app.controller("contactFormJobs", function($scope, $http, $q){
 	$scope.insert = {};
 	$scope.insertData = function(isValid){
+	    $scope.sending = true;
 		if(!isValid || !$scope.fileToUpload) {
 			return false;
 		}
-		
+
 		var inAppEngine = true;
 		var promise = null;
 		if(inAppEngine) {
@@ -513,6 +582,7 @@ app.controller("contactFormJobs", function($scope, $http, $q){
 		      fd.append('email', $scope.insert.email);
 		      return $http.post(url, fd, { headers: {"Content-Type": undefined}})
 		      .then(function(response){
+                  $scope.sending = false;
 			handleFormResult(response.data,
 				function(err) {
 					$scope.errorMessage = error;
@@ -533,11 +603,12 @@ app.controller("contactFormJobs", function($scope, $http, $q){
 				}
 			);
 			$scope.$applyAsync();
-			 
+
 
 		      })
 		})
 		.catch(function(response){
+		    $scope.sending = false;
 			$scope.errorMessage = "Server error. Please try again later.";
 		})
 	};
