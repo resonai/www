@@ -1085,14 +1085,12 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
   .unity-logo {
     width: 15rem;
   }
-
   .mx-xs-6 {
     margin-left: 6rem !important;
     margin-right: 6rem !important;
   }
 
-  .w-50,
-.w-75 {
+  .w-50, .w-75 {
     width: 100% !important;
   }
 
