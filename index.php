@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html ng-app="mainApp">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64361267-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
+          gtag('config', 'UA-64361267-6');
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title ng-bind="MetaTags.title">Resonai: Discover new realities. Vera for AR + 3D visual search.</title>
