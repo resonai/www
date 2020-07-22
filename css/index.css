@@ -311,13 +311,13 @@ body {
 
 .h3 {
   font-weight: 700;
-  font-size: 1.375rem;
+  font-size: 1.2rem;
   letter-spacing: 0;
 }
 @media screen and (max-width: 61.9375rem) {
   .h3 {
     font-size: 1.125rem;
-    line-height: 1.375rem;
+    line-height: 1.2rem;
   }
 }
 
@@ -370,7 +370,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .headline p:not(.h2) {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 @media screen and (max-width: 61.9375rem) {
   .headline p:not(.h2) {
@@ -534,9 +534,6 @@ a:not([href]):not([tabindex]):hover {
   padding-left: 0;
   padding-right: 0;
 }
-#solutions .img-wrapper {
-  height: 15.0625rem;
-}
 #solutions .img-wrapper .panel-rounded {
   width: 100%;
   height: 100%;
@@ -582,7 +579,7 @@ a:not([href]):not([tabindex]):hover {
   }
 }
 .section-highlights ul li p {
-  transition: all 500ms;
+  transition: opacity 1s, height 500ms, padding-top 500ms, padding-bottom 500ms;
 }
 .section-highlights ul li p:not(.h3) {
   font-size: 0.9375rem;
@@ -602,13 +599,13 @@ a:not([href]):not([tabindex]):hover {
 .section-highlights ul li.active p.info {
   opacity: 1;
   visibility: visible;
-  height: 7.1875rem;
+  height: fit-content;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
 @media screen and (max-width: 61.9375rem) {
   .section-highlights ul li.active p.info {
-    height: 8.75rem;
+    height: fit-content;
   }
 }
 .section-highlights ul li p.info {
@@ -1085,12 +1082,14 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
   .unity-logo {
     width: 15rem;
   }
+
   .mx-xs-6 {
     margin-left: 6rem !important;
     margin-right: 6rem !important;
   }
 
-  .w-50, .w-75 {
+  .w-50,
+.w-75 {
     width: 100% !important;
   }
 

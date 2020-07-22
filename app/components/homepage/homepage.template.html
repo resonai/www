@@ -41,6 +41,50 @@
     </div>
 </section>
 
+<section id="admin_console" class="section-highlights">
+    <div class="container py-2">
+        <div class="row no-gutters py-md-4">
+            <div class="col-12 headline pt-5 pb-md-5">
+                <p class="h2">Vera Admin Console</p>
+                <p class="pt-4 w-50">The Vera Admin Console is central control for better management of buildings and all devices and equipment within them.</p>
+            </div>
+            <div class="col-12 col-lg-6 py-3 py-lg-4 text-right w-90 order-0 order-md-1">
+                <div class="text-left" ng-controller="popupVideo">
+                    <div class="video-thumb w-100" ng-click="openPopupVideo($event)" data="https://www.youtube.com/embed/-t85x8gbqK4">
+                        <img class="w-100 panel-rounded" src="/images/home/admin_console.png" alt="Vera Admin Console" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 py-3 py-lg-4 pr-lg-5 order-1 order-md-0">
+                <div class="ml-4 ml-md-0 pr-lg-5">
+                    <ul class="ml-lg-5" ng-init="activeAdminConsolePanel = 0">
+                        <li ng-class="{ active: activeAdminConsolePanel == 0 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 0">Visualization</p>
+                            <p class="py-2 info">The admin console provides several visualization options and views for greater flexibility - A 360 panoramic view, highly accurate 3D mesh and a 2D floor plan.</p>
+                        </li>
+                        <li ng-class="{ active: activeAdminConsolePanel == 1 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 1">App Configuration</p>
+                            <p class="py-2 info">Administrators can select from a growing list of business or consumer facing applications, remotely set them up the app for one or more locations, and preview visualizations for testing before launching the app into the physical space.</p>
+                        </li>
+                        <li ng-class="{ active: activeAdminConsolePanel == 2 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 2">Access &amp; Permissions</p>
+                            <p class="py-2 info">It's easy to manage access and permissions for each building, floor or even a specific room. This can be managed by user types such as tenants, technicians, and visitors or for each individual.</p>
+                        </li>
+                        <li ng-class="{ active: activeAdminConsolePanel == 3 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 3">Tools</p>
+                            <p class="py-2 info">The 3D data is scaled accurately so it allows to measure distances and angles without requiring an on site presence.</p>
+                        </li>
+                        <li ng-class="{ active: activeAdminConsolePanel == 4 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 4">Data Analytics</p>
+                            <p class="py-2 info">Vera captures accurate details on user interactions, app usage and performance, as well as tenant satisfaction and building condition.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="solutions">
     <div class="container py-3 px-4 py-lg-5 px-lg-0">
         <div class="col-12 mb-4 mb-lg-5">
@@ -49,7 +93,7 @@
         <div class="row no-gutters py-lg-5 justify-content-center">
             <div class="col-12 col-lg-4 px-3">
                 <div class="img-wrapper pb-3">
-                    <img class="panel-rounded" src="/images/home/solutions/fm-thumb.jpg" />
+                    <img class="panel-rounded" src="/images/home/solutions/mockups_lamp.jpg" />
                 </div>
                 <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Facilities Management</p>
                 <ul class="mb-5 pl-4">
@@ -60,7 +104,7 @@
             </div>
             <div class="col-12 col-lg-4 px-3">
                 <div class="img-wrapper pb-3">
-                    <img class="panel-rounded" src="/images/home/solutions/retail.jpg" />
+                    <img class="panel-rounded" src="/images/home/solutions/mockups_retail-8.jpg" />
                 </div>
                 <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Retail</p>
                 <ul class="mb-5 pl-4">
@@ -99,25 +143,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 py-3 py-lg-4 px-2 px-md-3 px-lg-5 order-1">
-                <ul ng-init="activePanel = 0" class="ml-3">
-                    <li ng-class="{ active: activePanel == 0 }">
-                        <p class="h3 clicky" ng-click="activePanel = 0">Smart Ticketing & Navigation</p>
-                        <P class="py-2 info">Simply point a mobile device at the item that needs repair and the problem is logged, maintenance data is retrieved and AR navigation directions are sent to technician. See ‘behind walls’ to find and make repairs more efficiently.</P>
-                    </li>
-                    <li ng-class="{ active: activePanel == 1 }">
-                        <p class="h3 clicky" ng-click="activePanel = 1">AR Training &amp; AR Manuals</p>
-                        <P class="py-2 info">Provide employees with engaging & more personalized training, offer AR tutorials for a range of office equipment. Inject AR content remotely to decrease the cost of updating materials.</p>
-                    </li>
-                    <li ng-class="{ active: activePanel == 2 }">
-                        <p class="h3 clicky" ng-click="activePanel = 2">Digital Concierge &amp; AR Navigation</p>
-                        <P class="py-2 info">Provide access control and AR navigation instructions anywhere in your building for employees, tenants & visitors.</P>
-                    </li>
-                    <li ng-class="{ active: activePanel == 3 }">
-                        <p class="h3 clicky" ng-click="activePanel = 3">IoT controllers</p>
-                        <P class="py-2 info">Provide a more delightful, seamless work environment with one app to control all smart devices including monitors, HVAC systems, video conference devices, light switches and more.</P>
-                    </li>
-                </ul>
+            <div class="col-12 col-lg-6 py-3 py-lg-4 px-lg-5 order-1">
+                <div class="ml-2 ml-md-4 pr-lg-5">
+                    <ul ng-init="activePanel = 0" class="ml-3">
+                        <li ng-class="{ active: activePanel == 0 }">
+                            <p class="h3 clicky" ng-click="activePanel = 0">Smart Ticketing & Navigation</p>
+                            <P class="py-2 info">Simply point a mobile device at the item that needs repair and the problem is logged, maintenance data is retrieved and AR navigation directions are sent to technician. See ‘behind walls’ to find and make repairs more efficiently.</P>
+                        </li>
+                        <li ng-class="{ active: activePanel == 1 }">
+                            <p class="h3 clicky" ng-click="activePanel = 1">AR Training &amp; AR Manuals</p>
+                            <P class="py-2 info">Provide employees with engaging & more personalized training, offer AR tutorials for a range of office equipment. Inject AR content remotely to decrease the cost of updating materials.</p>
+                        </li>
+                        <li ng-class="{ active: activePanel == 2 }">
+                            <p class="h3 clicky" ng-click="activePanel = 2">Digital Concierge &amp; AR Navigation</p>
+                            <P class="py-2 info">Provide access control and AR navigation instructions anywhere in your building for employees, tenants & visitors.</P>
+                        </li>
+                        <li ng-class="{ active: activePanel == 3 }">
+                            <p class="h3 clicky" ng-click="activePanel = 3">IoT controllers</p>
+                            <P class="py-2 info">Provide a more delightful, seamless work environment with one app to control all smart devices including monitors, HVAC systems, video conference devices, light switches and more.</P>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -137,7 +183,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 pr-lg-5 order-1 order-md-0">
-                <div class="ml-4 ml-md-0">
+                <div class="ml-4 ml-md-0 pr-lg-5">
                     <ul class="ml-lg-5" ng-init="activeRetailPanel = 0">
                         <li ng-class="{ active: activeRetailPanel == 0 }">
                             <p class="h3 clicky" ng-click="activeRetailPanel = 0">Smart Visual Merchandising</p>
@@ -171,34 +217,28 @@
                 <p class=""><!--PLACE FOR SUBHEADER. DO NOT REMOVE--></p> 
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 px-lg-5 order-1">
-                <div class="ml-2 ml-md-4">
-                <ul ng-init="activeEntertainmentPanel = 0" class="ml-3">
-                    <li ng-class="{ active: activeEntertainmentPanel == 0 }">
-                        <p class="h3 clicky" ng-click="activeEntertainmentPanel = 0">AR Gaming</p>
-                        <p class="py-2 info">Create new AR games or promote existing titles to engage consumers longer with lobby entertainment, as they stand in lines at theme parks or when they navigate shopping malls.</p>
-                    </li>
-                    <li ng-class="{ active: activeEntertainmentPanel == 1 }">
-                        <p class="h3 clicky" ng-click="activeEntertainmentPanel = 1">AR Brand Engagement</p>
-                        <p class="py-2 info">Extend brands into any physical location and create unique AR experiences in shopping malls, theaters, theme parks and more.</p>
-                    </li>
-                    <li ng-class="{ active: activeEntertainmentPanel == 2 }">
-                        <p class="h3 clicky" ng-click="activeEntertainmentPanel = 2">Analytics &amp; Data Insights</p>
-                        <p class="py-2 info">Gain a deeper understanding with data insights as consumers interact with games, navigate venues, interact with content and products.</p>
-                    </li>
-                </ul>
-            </div>
+                <div class="ml-2 ml-md-4 pr-lg-5">
+                    <ul ng-init="activeEntertainmentPanel = 0" class="ml-3">
+                        <li ng-class="{ active: activeEntertainmentPanel == 0 }">
+                            <p class="h3 clicky" ng-click="activeEntertainmentPanel = 0">AR Gaming</p>
+                            <p class="py-2 info">Create new AR games or promote existing titles to engage consumers longer with lobby entertainment, as they stand in lines at theme parks or when they navigate shopping malls.</p>
+                        </li>
+                        <li ng-class="{ active: activeEntertainmentPanel == 1 }">
+                            <p class="h3 clicky" ng-click="activeEntertainmentPanel = 1">AR Brand Engagement</p>
+                            <p class="py-2 info">Extend brands into any physical location and create unique AR experiences in shopping malls, theaters, theme parks and more.</p>
+                        </li>
+                        <li ng-class="{ active: activeEntertainmentPanel == 2 }">
+                            <p class="h3 clicky" ng-click="activeEntertainmentPanel = 2">Analytics &amp; Data Insights</p>
+                            <p class="py-2 info">Gain a deeper understanding with data insights as consumers interact with games, navigate venues, interact with content and products.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 order-0 text-right w-90">
                 <div class="text-left" ng-controller="popupVideo">
                     <div class="video-thumb w-100" ng-click="openPopupVideo($event)" data="https://www.youtube.com/embed/aFHoJvKim8w">
                         <img class="w-100 panel-rounded" src="/images/home/entertainment/CES2020_2.png" alt="Vera for entertainment" />
                     </div>
-                    <p class="h3 mb-4">Entertainment</p>
-                    <ul>
-                        <li>Extend brands into physical venues</li>
-                        <li>Create engaging AR games</li>
-                        <li>Access new analytics & insights</li>
-                    </ul>
                 </div>
             </div>
         </div>

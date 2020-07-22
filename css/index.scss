@@ -74,11 +74,11 @@ body {
 
 .h3 {
   font-weight: 700;
-  font-size: rem(22);
+  font-size: 1.2rem;
   letter-spacing: 0;
   @media screen and (max-width: rem(991)) {
     font-size: rem(18);
-    line-height: rem(22);
+    line-height: 1.2rem;
   }
 }
 
@@ -132,7 +132,7 @@ a:not([href]):not([tabindex]):hover {
 }
 .headline {
   p:not(.h2) {
-    font-size: rem(18);
+    font-size: 1rem;
     @media screen and (max-width: rem(991)) {
       font-size: rem(15);
       line-height: rem(22);
@@ -285,7 +285,7 @@ a:not([href]):not([tabindex]):hover {
     padding-right: 0;
   }
   .img-wrapper {
-    height: 15.0625rem;
+    //height: 15.0625rem;
     .panel-rounded {
       width: 100%;
       height: 100%;
@@ -328,7 +328,7 @@ a:not([href]):not([tabindex]):hover {
         letter-spacing: 0;
       }
       p {
-        transition: all 500ms;
+        transition: opacity 1s, height 500ms, padding-top 500ms, padding-bottom 500ms;
         &:not(.h3) {
           font-size: rem(15);
           line-height: rem(24);
@@ -345,11 +345,11 @@ a:not([href]):not([tabindex]):hover {
         p.info {
           opacity: 1;
           visibility: visible;
-          height: rem(115);
+          height: fit-content;
           padding-top: .5rem!important;
           padding-bottom: .5rem!important;
           @media screen and (max-width: rem(991)){
-            height: rem(140);
+            height: fit-content;
           }
         }
       }
