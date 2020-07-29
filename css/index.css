@@ -208,6 +208,7 @@ jobs .description {
 jobs .description p {
   transition: max-height 250ms;
   max-height: 230px;
+  font-size: 0.9375rem;
 }
 @media screen and (min-width: 768px) {
   jobs .description:not(.active) {
