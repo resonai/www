@@ -531,9 +531,19 @@ a:not([href]):not([tabindex]):hover {
   width: 80% !important;
 }
 
-#solutions .container {
-  padding-left: 0;
+#solutions .container .container {
   padding-right: 0;
+  padding-left: 0;
+}
+@media screen and (max-width: 61.9375rem) {
+  #solutions .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #solutions .container .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 #solutions .img-wrapper .panel-rounded {
   width: 100%;
@@ -623,13 +633,17 @@ a:not([href]):not([tabindex]):hover {
 }
 
 #created-on-vera .container .container {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 @media screen and (max-width: 61.9375rem) {
-  #created-on-vera .container .container:not(.scrollable) {
-    padding-left: 2.125rem;
-    padding-right: 2.125rem;
+  #created-on-vera .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #created-on-vera .container .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 #created-on-vera .col {
@@ -650,13 +664,17 @@ a:not([href]):not([tabindex]):hover {
 }
 
 #press .container .container {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 @media screen and (max-width: 61.9375rem) {
-  #press .container .container:not(.scrollable) {
-    padding-left: 2.125rem;
-    padding-right: 2.125rem;
+  #press .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #press .container .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 #press .col {
