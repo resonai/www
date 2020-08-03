@@ -22,16 +22,16 @@
     </div>
 </section>
 
-<section id="vera-business">
-    <div class="container py-md-5 py-4">
-        <div class="row no-gutters py-md-5 justify-content-center align-items-center">
-            <div class="col-md-6 col-12 text-right">
+<section id="vera-business" class="py-5">
+    <div class="container py-5">
+        <div class="row no-gutters justify-content-center align-items-center pt-5">
+            <div class="col-md-6 col-12">
                 <div class="text-left">
                     <img class="" src="images/home/business/Diagrams_main_new.jpg" />
                 </div>
             </div>
             <div class="col-md-6 col-12 text-md-left text-center">
-                <div class="my-5 mr-4 ml-4 mr-md-5 pr-md-5">
+                <div class="mr-4 ml-4 mr-md-5 pr-md-5">
                     <p class="h2">Vera Provides Advanced AI & AR Technology to Solve Real Business Problems Today.</p>
                     <p class="my-5">One platform with access to multiple solutions that can scale across locations and provide real time data analytics & insights.</p>
                     <p><a target="_blank" class="btn btn-primary mb-md-0" href="index.php#!/whitepaper">Download Vera White Paper</a></p>
@@ -41,41 +41,87 @@
     </div>
 </section>
 
-<section id="solutions">
-    <div class="container py-3 px-4 py-lg-5 px-lg-0">
-        <div class="col-12 mb-4 mb-lg-5">
-            <h2 class="h2 my-3">Solutions</h2>
+<section id="admin_console" class="section-highlights py-5">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-12 headline py-lg-5">
+                <p class="h2">Vera Admin Console</p>
+                <p class="pt-4 w-50">One place to remotely manage buildings, devices, and equipment to control access, inform preventive 
+                    maintenance planning, and increase building efficiencies.</p>
+            </div>
+            <div class="col-12 col-lg-6 py-3 py-lg-4 text-right w-90 order-0 order-md-1">
+                <div class="text-left" ng-controller="popupVideo">
+                    <div class="video-thumb w-100" ng-click="openPopupVideo($event)" data="https://www.youtube.com/embed/zwH7C2I4s3g">
+                        <img class="w-100 panel-rounded" src="/images/home/admin_console.png" alt="Vera Admin Console" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 py-3 py-lg-4 pr-lg-5 order-1 order-md-0">
+                <div class="ml-4 ml-md-0 pr-lg-5">
+                    <ul class="ml-lg-5" ng-init="activeAdminConsolePanel = 0">
+                        <li ng-class="{ active: activeAdminConsolePanel == 0 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 0">Visualization</p>
+                            <p class="py-2 info">Access multiple views including a 360 panoramic view, a highly accurate 3D mesh that is to 
+                                scale, allowing distance measurements and remote walkthroughs, and a simple 2D floor plan.</p>
+                        </li>
+                        <li ng-class="{ active: activeAdminConsolePanel == 1 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 1">Launch Mobile Apps</p>
+                            <p class="py-2 info">Select from a growing list of mobile apps - such as Smart Maintenance, IoT Device Controller, 
+                                AR Training, Digital Concierge and more, plus remotely configure, visualize and test before launching.</p>
+                        </li>
+                        <li ng-class="{ active: activeAdminConsolePanel == 2 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 2">Manage Access &amp; Permissions</p>
+                            <p class="py-2 info">Manage access and permissions for each building, floor or even a specific room, for each user 
+                                type such as tenants, technicians, and visitors or for each individual.</p>
+                        </li>
+                        <li ng-class="{ active: activeAdminConsolePanel == 3 }">
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 3">Access Real Time Data</p>
+                            <p class="py-2 info">Vera captures data and provides real time analytics including precise location data, equipment 
+                                and device details, application usage and performance and much more.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="row no-gutters py-lg-5 justify-content-center">
-            <div class="col-12 col-lg-4 px-3">
+    </div>
+</section>
+
+<section id="solutions" class="py-5">
+    <div class="position-relative container">
+        <div class="container">
+            <div class="row headline no-gutters py-lg-5">
+                <p class="h2 mb-5 mb-lg-0">Solutions</p>
+            </div>
+        <div class="row no-gutters py-lg-4 mb-2S justify-content-center">
+            <div class="col-12 col-lg-4 px-lg-3 pb-5 pb-lg-0">
                 <div class="img-wrapper pb-3">
-                    <img class="panel-rounded" src="/images/home/solutions/fm-thumb.jpg" />
+                    <img class="panel-rounded" src="/images/home/solutions/mockups_plant.jpg" />
                 </div>
                 <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Facilities Management</p>
-                <ul class="mb-5 pl-4">
+                <ul class="pl-4">
                     <li>Lower maintenance costs</li>
                     <li>Improve tenant satisfaction</li>
                     <li>Increase building efficiencies</li>
                 </ul>
             </div>
-            <div class="col-12 col-lg-4 px-3">
+            <div class="col-12 col-lg-4 px-lg-3 pb-5 pb-lg-0">
                 <div class="img-wrapper pb-3">
-                    <img class="panel-rounded" src="/images/home/solutions/retail.jpg" />
+                    <img class="panel-rounded" src="/images/home/solutions/mockups_retail-8.jpg" />
                 </div>
                 <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Retail</p>
-                <ul class="mb-5 pl-4">
+                <ul class="pl-4">
                     <li>Increase engagement</li>
                     <li>Drive sales conversions</li>
                     <li>Automate visual merchandising</li>
                     <li>Gain new shopper insights</li>
                 </ul>
             </div>
-            <div class="col-12 col-lg-4 px-3">
+            <div class="col-12 col-lg-4 px-lg-3 pb-5 pb-lg-0">
                 <div class="img-wrapper pb-3">
-                    <img class="panel-rounded" src="/images/home/solutions/CES2020_1.jpg" />
+                    <img class="panel-rounded" src="/images/home/solutions/mockups_entertainment.jpg" />
                 </div>
                 <p class="h3 mt-3 mt-lg-5 mb-3 mb-lg-4">Entertainment</p>
-                <ul class="mb-5 pl-4">
+                <ul class="pl-4">
                     <li>Extend brands into physical venues</li>
                     <li>Create engaging AR games</li>
                     <li>Access new analytics &amp; insights</li>
@@ -85,12 +131,13 @@
     </div>
 </section>
 
-<section id="facilities-management" class="section-highlights">
-    <div class="container py-4">
-        <div class="row no-gutters py-md-4">
-            <div class="col-12 headline pt-5 pb-md-5">
+<section id="facilities-management" class="section-highlights py-5">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-12 headline py-lg-5">
                 <p class="h2">Vera for Facilities Management</p>
-                <p class="pt-4 w-50">Vera can automate processes to lower costs for building maintenance, while providing smarter buildings and more delightful experiences for tenants and visitors.</p>
+                <p class="pt-4 w-50">Vera can automate processes to lower costs for building maintenance, 
+                    while providing smarter buildings and more delightful experiences for tenants and visitors.</p>
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 order-0 text-right w-90">
                 <div class="text-left" ng-controller="popupVideo">
@@ -99,37 +146,39 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 py-3 py-lg-4 px-2 px-md-3 px-lg-5 order-1">
-                <ul ng-init="activePanel = 0" class="ml-3">
-                    <li ng-class="{ active: activePanel == 0 }">
-                        <p class="h3 clicky" ng-click="activePanel = 0">Smart Ticketing & Navigation</p>
-                        <P class="py-2 info">Simply point a mobile device at the item that needs repair and the problem is logged, maintenance data is retrieved and AR navigation directions are sent to technician. See ‘behind walls’ to find and make repairs more efficiently.</P>
-                    </li>
-                    <li ng-class="{ active: activePanel == 1 }">
-                        <p class="h3 clicky" ng-click="activePanel = 1">AR Training &amp; AR Manuals</p>
-                        <P class="py-2 info">Provide employees with engaging & more personalized training, offer AR tutorials for a range of office equipment. Inject AR content remotely to decrease the cost of updating materials.</p>
-                    </li>
-                    <li ng-class="{ active: activePanel == 2 }">
-                        <p class="h3 clicky" ng-click="activePanel = 2">Digital Concierge &amp; AR Navigation</p>
-                        <P class="py-2 info">Provide access control and AR navigation instructions anywhere in your building for employees, tenants & visitors.</P>
-                    </li>
-                    <li ng-class="{ active: activePanel == 3 }">
-                        <p class="h3 clicky" ng-click="activePanel = 3">IoT controllers</p>
-                        <P class="py-2 info">Provide a more delightful, seamless work environment with one app to control all smart devices including monitors, HVAC systems, video conference devices, light switches and more.</P>
-                    </li>
-                </ul>
+            <div class="col-12 col-lg-6 py-3 py-lg-4 px-lg-5 order-1">
+                <div class="ml-2 ml-md-4 pr-lg-5">
+                    <ul ng-init="activePanel = 0" class="ml-3">
+                        <li ng-class="{ active: activePanel == 0 }">
+                            <p class="h3 clicky" ng-click="activePanel = 0">Smart Ticketing & Navigation</p>
+                            <P class="py-2 info">Simply point a mobile device at the item that needs repair and the problem is logged, maintenance data is retrieved and AR navigation directions are sent to technician. See ‘behind walls’ to find and make repairs more efficiently.</P>
+                        </li>
+                        <li ng-class="{ active: activePanel == 1 }">
+                            <p class="h3 clicky" ng-click="activePanel = 1">AR Training &amp; AR Manuals</p>
+                            <P class="py-2 info">Provide employees with engaging & more personalized training, offer AR tutorials for a range of office equipment. Inject AR content remotely to decrease the cost of updating materials.</p>
+                        </li>
+                        <li ng-class="{ active: activePanel == 2 }">
+                            <p class="h3 clicky" ng-click="activePanel = 2">Digital Concierge &amp; AR Navigation</p>
+                            <P class="py-2 info">Provide access control and AR navigation instructions anywhere in your building for employees, tenants & visitors.</P>
+                        </li>
+                        <li ng-class="{ active: activePanel == 3 }">
+                            <p class="h3 clicky" ng-click="activePanel = 3">IoT controllers</p>
+                            <P class="py-2 info">Provide a more delightful, seamless work environment with one app to control all smart devices including monitors, HVAC systems, video conference devices, light switches and more.</P>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-
-<section id="retail" class="section-highlights">
-    <div class="container py-2">
-        <div class="row no-gutters py-md-4">
-            <div class="col-12 headline pt-5 pb-md-5">
+<section id="retail" class="section-highlights py-5">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-12 headline py-lg-5">
                 <p class="h2">Vera for Retail</p>
-                <p class="pt-4 w-50">AR transforms physical stores into engaging digital experiences, while collecting data analytics that inform product flows and business processes.</p>
+                <p class="pt-4 w-50">AR transforms physical stores into engaging digital experiences, 
+                    while collecting data analytics that inform product flows and business processes.</p>
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 text-right w-90 order-0 order-md-1">
                 <div class="img-wrapper mr-4">
@@ -137,7 +186,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 pr-lg-5 order-1 order-md-0">
-                <div class="ml-4 ml-md-0">
+                <div class="ml-4 ml-md-0 pr-lg-5">
                     <ul class="ml-lg-5" ng-init="activeRetailPanel = 0">
                         <li ng-class="{ active: activeRetailPanel == 0 }">
                             <p class="h3 clicky" ng-click="activeRetailPanel = 0">Smart Visual Merchandising</p>
@@ -163,56 +212,50 @@
 </section>
 
 
-<section id="entertainment" class="section-highlights">
-    <div class="container pt-3 pb-2 pb-lg-3 my-3">
-        <div class="row no-gutters py-md-4">
-            <div class="col-12 headline pt-5 pb-md-5">
+<section id="entertainment" class="section-highlights py-5">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-12 headline py-lg-5">
                 <p class="h2">Vera for Entertainment</p>
-                <p class=""><!--PLACE FOR SUBHEADER. DO NOT REMOVE--></p> 
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 px-lg-5 order-1">
-                <div class="ml-2 ml-md-4">
-                <ul ng-init="activeEntertainmentPanel = 0" class="ml-3">
-                    <li ng-class="{ active: activeEntertainmentPanel == 0 }">
-                        <p class="h3 clicky" ng-click="activeEntertainmentPanel = 0">AR Gaming</p>
-                        <p class="py-2 info">Create new AR games or promote existing titles to engage consumers longer with lobby entertainment, as they stand in lines at theme parks or when they navigate shopping malls.</p>
-                    </li>
-                    <li ng-class="{ active: activeEntertainmentPanel == 1 }">
-                        <p class="h3 clicky" ng-click="activeEntertainmentPanel = 1">AR Brand Engagement</p>
-                        <p class="py-2 info">Extend brands into any physical location and create unique AR experiences in shopping malls, theaters, theme parks and more.</p>
-                    </li>
-                    <li ng-class="{ active: activeEntertainmentPanel == 2 }">
-                        <p class="h3 clicky" ng-click="activeEntertainmentPanel = 2">Analytics &amp; Data Insights</p>
-                        <p class="py-2 info">Gain a deeper understanding with data insights as consumers interact with games, navigate venues, interact with content and products.</p>
-                    </li>
-                </ul>
-            </div>
+                <div class="ml-2 ml-md-4 pr-lg-5">
+                    <ul ng-init="activeEntertainmentPanel = 0" class="ml-3">
+                        <li ng-class="{ active: activeEntertainmentPanel == 0 }">
+                            <p class="h3 clicky" ng-click="activeEntertainmentPanel = 0">AR Gaming</p>
+                            <p class="py-2 info">Create new AR games or promote existing titles to engage consumers longer with lobby entertainment, as they stand in lines at theme parks or when they navigate shopping malls.</p>
+                        </li>
+                        <li ng-class="{ active: activeEntertainmentPanel == 1 }">
+                            <p class="h3 clicky" ng-click="activeEntertainmentPanel = 1">AR Brand Engagement</p>
+                            <p class="py-2 info">Extend brands into any physical location and create unique AR experiences in shopping malls, theaters, theme parks and more.</p>
+                        </li>
+                        <li ng-class="{ active: activeEntertainmentPanel == 2 }">
+                            <p class="h3 clicky" ng-click="activeEntertainmentPanel = 2">Analytics &amp; Data Insights</p>
+                            <p class="py-2 info">Gain a deeper understanding with data insights as consumers interact with games, navigate venues, interact with content and products.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 order-0 text-right w-90">
                 <div class="text-left" ng-controller="popupVideo">
                     <div class="video-thumb w-100" ng-click="openPopupVideo($event)" data="https://www.youtube.com/embed/aFHoJvKim8w">
                         <img class="w-100 panel-rounded" src="/images/home/entertainment/CES2020_2.png" alt="Vera for entertainment" />
                     </div>
-                    <p class="h3 mb-4">Entertainment</p>
-                    <ul>
-                        <li>Extend brands into physical venues</li>
-                        <li>Create engaging AR games</li>
-                        <li>Access new analytics & insights</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-            
-<section ng-controller="scrollHorizontal" id="created-on-vera">
-    <div class="position-relative container px-0 px-md-3 pb-lg-4 mb-lg-1">
-        <div class="container py-lg-4">
-            <div class="row headline no-gutters pb-4 py-lg-5">
-                <p class="h2">Created on Vera</p>
+
+<section ng-controller="scrollHorizontal" id="created-on-vera" class="py-5">
+    <div class="position-relative container">
+        <div class="container">
+            <div class="row headline no-gutters py-lg-5">
+                <p class="h2 mb-5 mb-lg-0">Created on Vera</p>
             </div>
         </div>
-        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp($event)" ng-mousemove="movePanel($event)" class="row container mx-auto no-gutters no-wrap py-lg-5 pl-4 pl-lg-0 my-lg-1 text-center scrollable">
+        <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp($event)" ng-mousemove="movePanel($event)" 
+            class="row container mx-auto no-gutters no-wrap py-lg-4 mb-2S scrollable">
             <div ng-click="doScrollLeft($event)" class="action-control go-left inactive">
                 <i class="far fa-chevron-left"></i>
             </div>
@@ -272,11 +315,11 @@
     </div>
 </section>
 
-<section ng-controller="scrollHorizontal" id="press" class="pb-lg-3 pt-5">
-    <div class="position-relative container px-0 px-md-3 mb-lg-5 py-lg-5">
-        <div class="container py-4">
+<section ng-controller="scrollHorizontal" id="press" class="py-5">
+    <div class="position-relative container">
+        <div class="container">
             <div class="row headline no-gutters py-lg-5">
-                <p class="h2">Press</p>
+                <p class="h2 mb-5 mb-lg-0">Press</p>
             </div>
         </div>
         <div ng-mousedown="setMouseDown($event)" ng-mouseup="setMouseUp()" ng-mousemove="movePanel($event)" 
@@ -286,6 +329,24 @@
             </div>
             <div ng-click="doScrollRight($event)" class="pl-2 action-control go-right">
                 <i class="far fa-chevron-right"></i>
+            </div>
+            <div class="col col-3">
+                <div class="panel-rounded px-5 py-4 mx-3">
+                    <div class="logo"><img src="/images/home/press/ARPost@2x.png" alt="FMLink"></div>
+                    <p class="py-3">Modernizing Retail Centers With Vera</p>
+                    <div class="btn-wrapper">
+                        <a class="btn btn-invert" target="_blank" href="https://arpost.co/2020/06/17/retail-centers-vera-resonai-augmented-reality/">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-3">
+                <div class="panel-rounded px-5 py-4 mx-3">
+                    <div class="logo"><img src="/images/home/press/totalretail.png" alt="FMLink"></div>
+                    <p class="py-3">5 Ways AR Can Change Brick-and-Mortar Retail</p>
+                    <div class="btn-wrapper">
+                        <a class="btn btn-invert" target="_blank" href="https://www.mytotalretail.com/article/5-ways-ar-can-change-brick-and-mortar-retail/">Read More</a>
+                    </div>
+                </div>
             </div>
             <div class="col col-3">
                 <div class="panel-rounded px-5 py-4 mx-3">

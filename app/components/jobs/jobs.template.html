@@ -1,171 +1,174 @@
-    <div ng-include='"app/templates/header.html"' class="other-menu"></div>
-    <section id="jobs-hero" class="py-md-5 mb-5 mb-md-0">
-        <div class="container no-wrap pt-5">
-            <div class="row no-gutters">
-                <div class="py-lg-5 col-md-6 col-12 order-1 order-lg-0">
-                    <img class="img-fluid panel-rounded img-fit mr-0 mr-lg-5" src="/images/jobs/office_doodle.png" alt="" />
+<div ng-include='"app/templates/header.html"' class="other-menu"></div>
+<section id="jobs-hero" class="py-md-5 mb-5 mb-md-0">
+    <div class="container no-wrap pt-5">
+        <div class="row no-gutters">
+            <div class="py-lg-5 col-md-6 col-12 order-1 order-lg-0">
+                <img class="img-fluid panel-rounded img-fit mr-0 mr-lg-5" src="/images/jobs/office_doodle.png" alt="" />
+            </div>
+            <div class="col-md-6 mh-250 top-0 py-md-5 col-12 order-0 order-lg-1">
+                <div class="absolute-vertical-center mt-5 mt-md-0 ml-lg-5 w-100 text-lg-center">
+                    <div class="text-left d-inline-block">
+                        <p class="h1">Do big things.<br />Join Resonai.</p>
+                        <!--<p class="mt-3 mt-md-0">We have 3 open positions</p>-->
+                    </div>
                 </div>
-                <div class="col-md-6 mh-250 top-0 py-md-5 col-12 order-0 order-lg-1">
-                    <div class="absolute-vertical-center mt-5 mt-md-0 ml-lg-5 w-100 text-lg-center">
-                        <div class="text-left d-inline-block">
-                         <p class="h1">Do big things.<br />Join Resonai.</p>
-                         <!--<p class="mt-3 mt-md-0">We have 3 open positions</p>-->
+            </div>
+        </div>
+    </div>
+</section>
+<section id="perks" class="py-md-5">
+    <div class="container no-wrap">
+        <div class="row no-gutters">
+            <div class="py-5 col-md-6 col-12 desktop">
+                <p class="h2 pb-5">We Offer You</p>
+                <div class="image-container">
+                    <img class="panel-rounded over-image mr-md-4 float-right" src="/images/jobs/dreidels_ots_gif.gif" />
+                    <img class="panel-rounded under-image" src="/images/jobs/dreidels_gif.gif" />
+                </div>
+            </div>
+            <div class="col-12 mobile">
+                <p class="h2 pt-5 pb-4">We Offer You</p>
+                <!--<img class="panel-rounded img-fluid" src="/images/jobs/brooke-cagle-g1Kr4Ozfoac-unsplash.png" />-->
+            </div>
+            <div class="pt-5 pb-0 pb-md-5 col-md-6 col-12">
+                <div class="section-highlights mt-md-2 ml-md-3 pl-md-1">
+                    <div class="col-12 mx-lg-5">
+                        <ul class="ml-3">
+                            <li>
+                                <p class="h3">Creating the future.</p>
+                                <P class="py-2 info">
+                                    If you want to be a part of something big, now is your time and this is your place. Our vision for augmented reality goes beyond game-changing experiences – for us, it’s about changing people’s lives in meaningful ways.
+                                </P>
+                            </li>
+                            <li>
+                                <p class="h3">Challenges worthy of your<br />talents – and passions.</p>
+                                <P class="py-2 info">
+                                    You get to do what you love here, while working on tough problems in impactful, cutting-edge fields, each and every day.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="h3">A seat at the table.</p>
+                                <P class="py-2 info">
+                                    You can make a difference, from the common everyday decisions to pivotal, strategic ones. Whether you’re the founder or a first-day hire, you are essential to our success.
+                                </P>
+                            </li>
+                            <li>
+                                <p class="h3">People that bring out<br />the best in you.</p>
+                                <P class="py-2 info">
+                                    We’re building a company that attracts the very best. And we seek those who aren’t just accomplished in their field, but ones who can make our whole team better. And the kind of folks you just enjoy being around.
+                                </P>
+                            </li>
+                            <li>
+                                <p class="h3">Where life and work<br />just...work.</p>
+                                <P class="py-2 info">
+                                    Life and work go hand in hand. We believe in fostering a supportive and flexible environment where you can do great work, grow in your career, and live life to the fullest.
+                                </P>
+                            </li>
+                            <li style="list-style: none;">
+                                <p class="h3">Sounds interesting?</p>
+                                <P class="py-2 info">
+                                    Contact us at <a href = "mailto: jobs@resonai.com">jobs@resonai.com</a>
+                                </P>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mobile">
+                <!--<img class="panel-rounded img-fit img-fluid h-100" src="/images/jobs/austin-distel-mpN7xjKQ_Ns-unsplash.png" />-->
+            </div>
+        </div>
+    </div>
+</section>
+<!--<section ng-init="activePanel = 0; showForm = 0" id="positions" class="py-6">
+    <div class="container mx-auto no-wrap py-5">
+        <div class="row  no-gutters">
+            <div class="col-12 pb-0 pb-md-5">
+                <p class="h2 pb-2">Open Positions</p>
+            </div>
+            <div class="col-12">
+                <div class="container no-wrap no-gutters">
+                    <div class="row border-bottom pt-4 pb-4">
+                        <div class="col-12 col-md-5 pt-3 pl-0">
+                            <p class="h3 clicky" ng-click="activePanel != 1 ? activePanel = 1 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 1 }">Marketing Manager</p>
+                            <p>Palo Alto, California</p>
+                        </div>
+                        <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
+                            <div class="description" ng-class="{ active: activePanel == 1 }">
+                                <p>
+                                    Experienced and versatile marketer. Our ideal candidate is excited about marketing emerging 
+                                    technologies and has experience in developing and executing marketing campaigns to target, 
+                                    engage and convert new audiences, while collaborating across functional teams. They will be 
+                                    comfortable with developing some strategy as well as provide excellent and detailed execution of all programs.
+                                </p>
+                                <p>
+                                    <a href = "mailto: jobs@resonai.com">Download full description</a>
+                                </p>
+                                <div>
+                                    <div class="jobs-form pt-3" ng-class="{ active: showForm == 1 }">
+                                        <jobsform parentActive="showForm" />
+                                    </div>
+                                    <span ng-click="showForm = 1" ng-class="{ hidden: showForm == 1 }" class="btn btn-primary clicky">Apply now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 1 }">
+                            <i ng-click="activePanel != 1 ? activePanel = 1 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
+                        </div>
+                    </div>
+                    <div class="row border-bottom pt-4 pb-4">
+                        <div class="col-12 col-md-5 pt-3 pl-0">
+                            <p class="h3 clicky" ng-click="activePanel != 2 ? activePanel = 2 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 2 }">Software Developers</p>
+                            <p>Tel Aviv, Isreal</p>
+                        </div>
+                        <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
+                            <div class="description" ng-class="{ active: activePanel == 2 }">
+                                <p>
+                                    Passion for math, algorithms and software engineering.
+                                    Strong background in math and algorithms.
+                                    Ability to program in any language.
+                                    Willingness and ability to participate in all aspects of development,
+                                    from mathematical theory all the way to product design.
+                                </p>
+                                <div>
+                                    <div class="jobs-form" ng-class="{ active: showForm == 2}">
+                                        <jobsform />
+                                    </div>
+                                    <span ng-click="showForm = 2" ng-class="{ hidden: showForm == 2 }" class="btn btn-primary clicky">Apply now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 2 }">
+                            <i ng-click="activePanel != 2 ? activePanel = 2 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
+                        </div>
+                    </div>
+                    <div class="row border-bottom pt-4 pb-4">
+                        <div class="col-12 col-md-5 pt-3 pl-0">
+                            <p class="h3 clicky" ng-click="activePanel != 3 ? activePanel = 3 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 3 }">Web/Mobile/Front-End</p>
+                            <p>Tel Aviv, Isreal</p>
+                        </div>
+                        <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
+                            <div class="description" ng-class="{ active: activePanel == 3 }">
+                                <p>
+                                    PhD with deep-level knowledge in at least one field of math (e.g. Ergodic theory,
+                                    algebraic topology, probability). High skills in software programming, ability to
+                                    learn new software languages, and development methodologies. Willingness and
+                                    ability to participate in all aspects of development, software programming, and product design.
+                                </p>
+                                <div>
+                                    <div class="jobs-form" ng-class="{ active: showForm == 3 }">
+                                        <jobsform />
+                                    </div>
+                                    <span ng-click="showForm = 3" ng-class="{ hidden: showForm == 3 }" class="btn btn-primary clicky">Apply now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 3 }">
+                            <i ng-click="activePanel != 3 ? activePanel = 3 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section id="perks" class="py-md-5">
-        <div class="container no-wrap">
-            <div class="row no-gutters">
-                <div class="py-5 col-md-6 col-12 desktop">
-                    <p class="h2 pb-5">We Offer You</p>
-                    <div class="image-container">
-                        <img class="panel-rounded over-image mr-md-4 float-right" src="/images/jobs/dreidels_ots_gif.gif" />
-                        <img class="panel-rounded under-image" src="/images/jobs/dreidels_gif.gif" />
-                    </div>
-                </div>
-                <div class="col-12 mobile">
-                    <p class="h2 pt-5 pb-4">We Offer You</p>
-                    <!--<img class="panel-rounded img-fluid" src="/images/jobs/brooke-cagle-g1Kr4Ozfoac-unsplash.png" />-->
-                </div>
-                <div class="pt-5 pb-0 pb-md-5 col-md-6 col-12">
-                    <div class="section-highlights mt-md-2 ml-md-3 pl-md-1">
-                        <div class="col-12 mx-lg-5">
-                            <ul class="ml-3">
-                                <li>
-                                    <p class="h3">Creating the future.</p>
-                                    <P class="py-2 info">
-                                        If you want to be a part of something big, now is your time and this is your place. Our vision for augmented reality goes beyond game-changing experiences – for us, it’s about changing people’s lives in meaningful ways.
-                                    </P>
-                                </li>
-                                <li>
-                                    <p class="h3">Challenges worthy of your<br />talents – and passions.</p>
-                                    <P class="py-2 info">
-                                        You get to do what you love here, while working on tough problems in impactful, cutting-edge fields, each and every day.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p class="h3">A seat at the table.</p>
-                                    <P class="py-2 info">
-                                        You can make a difference, from the common everyday decisions to pivotal, strategic ones. Whether you’re the founder or a first-day hire, you are essential to our success.
-                                    </P>
-                                </li>
-                                <li>
-                                    <p class="h3">People that bring out<br />the best in you.</p>
-                                    <P class="py-2 info">
-                                        We’re building a company that attracts the very best. And we seek those who aren’t just accomplished in their field, but ones who can make our whole team better. And the kind of folks you just enjoy being around.
-                                    </P>
-                                </li>
-                                <li>
-                                    <p class="h3">Where life and work<br />just...work.</p>
-                                    <P class="py-2 info">
-                                        Life and work go hand in hand. We believe in fostering a supportive and flexible environment where you can do great work, grow in your career, and live life to the fullest.
-                                    </P>
-                                </li>
-                                <li style="list-style: none;">
-                                    <p class="h3">Sounds interesting?</p>
-                                    <P class="py-2 info">
-                                        Contact us at <a href = "mailto: jobs@resonai.com">jobs@resonai.com</a>
-                                    </P>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 mobile">
-                    <!--<img class="panel-rounded img-fit img-fluid h-100" src="/images/jobs/austin-distel-mpN7xjKQ_Ns-unsplash.png" />-->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--<section ng-init="activePanel = 0; showForm = 0" id="positions" class="py-6">
-        <div class="container mx-auto no-wrap py-5">
-            <div class="row  no-gutters">
-                <div class="col-12 pb-0 pb-md-5">
-                    <p class="h2 pb-2">Open Positions</p>
-                </div>
-                <div class="col-12">
-                    <div class="container no-wrap no-gutters">
-                        <div class="row border-bottom pt-4 pb-4">
-                            <div class="col-12 col-md-5 pt-3 pl-0">
-                                <p class="h3 clicky" ng-click="activePanel != 1 ? activePanel = 1 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 1 }">Mathematician</p>
-                                <p>Tel Aviv, Isreal</p>
-                            </div>
-                            <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
-                                <div class="description" ng-class="{ active: activePanel == 1 }">
-                                    <p>
-                                        PhD with deep-level knowledge in at least one field of
-                                        math (e.g. Ergodic theory, algebraic topology, probability). High skills in software programming,
-                                        ability to learn new software languages, and development methodologies. Willingness and ability
-                                        to participate in all aspects of development, software programming, and product design.
-                                    </p>
-                                    <div>
-                                        <div class="jobs-form" ng-class="{ active: showForm == 1 }">
-                                            <jobsform parentActive="showForm" />
-                                        </div>
-                                        <span ng-click="showForm = 1" ng-class="{ hidden: showForm == 1 }" class="btn btn-primary clicky">Apply now</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 1 }">
-                                <i ng-click="activePanel != 1 ? activePanel = 1 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
-                            </div>
-                        </div>
-                        <div class="row border-bottom pt-4 pb-4">
-                            <div class="col-12 col-md-5 pt-3 pl-0">
-                                <p class="h3 clicky" ng-click="activePanel != 2 ? activePanel = 2 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 2 }">Software Developers</p>
-                                <p>Tel Aviv, Isreal</p>
-                            </div>
-                            <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
-                                <div class="description" ng-class="{ active: activePanel == 2 }">
-                                    <p>
-                                        Passion for math, algorithms and software engineering.
-                                        Strong background in math and algorithms.
-                                        Ability to program in any language.
-                                        Willingness and ability to participate in all aspects of development,
-                                        from mathematical theory all the way to product design.
-                                    </p>
-                                    <div>
-                                        <div class="jobs-form" ng-class="{ active: showForm == 2}">
-                                            <jobsform />
-                                        </div>
-                                        <span ng-click="showForm = 2" ng-class="{ hidden: showForm == 2 }" class="btn btn-primary clicky">Apply now</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 2 }">
-                                <i ng-click="activePanel != 2 ? activePanel = 2 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
-                            </div>
-                        </div>
-                        <div class="row border-bottom pt-4 pb-4">
-                            <div class="col-12 col-md-5 pt-3 pl-0">
-                                <p class="h3 clicky" ng-click="activePanel != 3 ? activePanel = 3 : activePanel = 0; showForm = 0" ng-class="{ active: activePanel == 3 }">Web/Mobile/Front-End</p>
-                                <p>Tel Aviv, Isreal</p>
-                            </div>
-                            <div class="col-12 col-md-6 px-0 px-md-3 pt-3">
-                                <div class="description" ng-class="{ active: activePanel == 3 }">
-                                    <p>
-                                        PhD with deep-level knowledge in at least one field of math (e.g. Ergodic theory,
-                                        algebraic topology, probability). High skills in software programming, ability to
-                                        learn new software languages, and development methodologies. Willingness and
-                                        ability to participate in all aspects of development, software programming, and product design.
-                                    </p>
-                                    <div>
-                                        <div class="jobs-form" ng-class="{ active: showForm == 3 }">
-                                            <jobsform />
-                                        </div>
-                                        <span ng-click="showForm = 3" ng-class="{ hidden: showForm == 3 }" class="btn btn-primary clicky">Apply now</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-1 d-none d-md-inline-block arrow-container text-right pt-3" ng-class="{ active: activePanel == 3 }">
-                                <i ng-click="activePanel != 3 ? activePanel = 3 : activePanel = 0; showForm = 0" class="fal fa-chevron-down clicky"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
+    </div>
+</section>-->
