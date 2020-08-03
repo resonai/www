@@ -46,12 +46,12 @@
         <div class="row no-gutters">
             <div class="col-12 headline py-lg-5">
                 <p class="h2">Vera Admin Console</p>
-                <p class="pt-4 w-50">The Vera Admin Console is central control for better management of buildings and 
-                    all devices and equipment within them.</p>
+                <p class="pt-4 w-50">One place to remotely manage buildings, devices, and equipment to control access, inform preventive 
+                    maintenance planning, and increase building efficiencies.</p>
             </div>
             <div class="col-12 col-lg-6 py-3 py-lg-4 text-right w-90 order-0 order-md-1">
                 <div class="text-left" ng-controller="popupVideo">
-                    <div class="video-thumb w-100" ng-click="openPopupVideo($event)" data="https://www.youtube.com/embed/-t85x8gbqK4">
+                    <div class="video-thumb w-100" ng-click="openPopupVideo($event)" data="https://www.youtube.com/embed/zwH7C2I4s3g">
                         <img class="w-100 panel-rounded" src="/images/home/admin_console.png" alt="Vera Admin Console" />
                     </div>
                 </div>
@@ -61,23 +61,23 @@
                     <ul class="ml-lg-5" ng-init="activeAdminConsolePanel = 0">
                         <li ng-class="{ active: activeAdminConsolePanel == 0 }">
                             <p class="h3 clicky" ng-click="activeAdminConsolePanel = 0">Visualization</p>
-                            <p class="py-2 info">The admin console provides several visualization options and views for greater flexibility - A 360 panoramic view, highly accurate 3D mesh and a 2D floor plan.</p>
+                            <p class="py-2 info">Access multiple views including a 360 panoramic view, a highly accurate 3D mesh that is to 
+                                scale, allowing distance measurements and remote walkthroughs, and a simple 2D floor plan.</p>
                         </li>
                         <li ng-class="{ active: activeAdminConsolePanel == 1 }">
-                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 1">App Configuration</p>
-                            <p class="py-2 info">Administrators can select from a growing list of business or consumer facing applications, remotely set them up the app for one or more locations, and preview visualizations for testing before launching the app into the physical space.</p>
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 1">Launch Mobile Apps</p>
+                            <p class="py-2 info">Select from a growing list of mobile apps - such as Smart Maintenance, IoT Device Controller, 
+                                AR Training, Digital Concierge and more, plus remotely configure, visualize and test before launching.</p>
                         </li>
                         <li ng-class="{ active: activeAdminConsolePanel == 2 }">
-                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 2">Access &amp; Permissions</p>
-                            <p class="py-2 info">It's easy to manage access and permissions for each building, floor or even a specific room. This can be managed by user types such as tenants, technicians, and visitors or for each individual.</p>
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 2">Manage Access &amp; Permissions</p>
+                            <p class="py-2 info">Manage access and permissions for each building, floor or even a specific room, for each user 
+                                type such as tenants, technicians, and visitors or for each individual.</p>
                         </li>
                         <li ng-class="{ active: activeAdminConsolePanel == 3 }">
-                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 3">Tools</p>
-                            <p class="py-2 info">The 3D data is scaled accurately so it allows to measure distances and angles without requiring an on site presence.</p>
-                        </li>
-                        <li ng-class="{ active: activeAdminConsolePanel == 4 }">
-                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 4">Data Analytics</p>
-                            <p class="py-2 info">Vera captures accurate details on user interactions, app usage and performance, as well as tenant satisfaction and building condition.</p>
+                            <p class="h3 clicky" ng-click="activeAdminConsolePanel = 3">Access Real Time Data</p>
+                            <p class="py-2 info">Vera captures data and provides real time analytics including precise location data, equipment 
+                                and device details, application usage and performance and much more.</p>
                         </li>
                     </ul>
                 </div>
