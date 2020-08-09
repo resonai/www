@@ -123,12 +123,12 @@ jobs {
     opacity: 0;
     height: 0;
   }
-  .h3 {
+  /* .h3 {
     transition: color 250ms;
     &.active {
       color: #00A8BA;
     }
-  }
+  } */
   @media screen and (max-width: 768px) {
     .border-bottom {
       border-bottom:0 solid transparent!important;

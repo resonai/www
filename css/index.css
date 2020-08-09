@@ -114,6 +114,7 @@
 jobs #jobs-hero img {
   height: 70vh;
 }
+
 @media screen and (max-width: 991px) {
   jobs section {
     padding-left: 1.5rem;
@@ -123,21 +124,26 @@ jobs #jobs-hero img {
 jobs .image-container {
   padding-top: 3rem;
 }
+
 jobs .image-container img {
   width: 70%;
 }
+
 jobs .under-image {
   top: -1.75rem;
   position: relative;
   z-index: 0;
 }
+
 jobs .over-image {
   position: relative;
   z-index: 1;
 }
+
 jobs .img-fit {
   object-position: center;
 }
+
 @media screen and (min-width: 991px) {
   jobs .section-highlights ul li {
     padding: 0 0 0 0.5rem;
@@ -150,14 +156,17 @@ jobs .section-highlights ul li p.info {
   height: initial;
   max-width: 338px;
 }
+
 jobs .no-gutters {
   padding-left: 0;
   padding-right: 0;
 }
+
 jobs .no-gutters .row {
   margin-left: 0;
   margin-right: 0;
 }
+
 jobs .hidden-clickable {
   position: absolute;
   top: 0;
@@ -167,54 +176,66 @@ jobs .hidden-clickable {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
+
 jobs .fa.fa-paperclip {
   color: #00A8BA;
 }
+
 jobs .btn-primary.disabled, jobs .btn-primary:disabled {
   color: #fff;
   background-color: #00A8BA;
   border-color: #00A8BA;
 }
+
 jobs #positions {
   padding-top: 6rem;
   padding-bottom: 8.5rem;
   background-color: #f9f9f9;
 }
+
 jobs #positions .jobs-form {
   transition: all 250ms;
 }
+
 jobs #positions .jobs-form.active {
   max-height: 280px;
   opacity: 1;
   visibility: visible;
 }
+
 jobs #positions .jobs-form:not(.active) {
   max-height: 0;
   opacity: 0;
   visibility: hidden;
 }
+
 jobs #positions .arrow-container i {
   transition: all 250ms;
 }
+
 jobs #positions .arrow-container:not(.active) i {
   transform: rotate(180deg);
 }
+
 jobs .description {
   height: initial;
   opacity: 1;
   visibility: visible;
   transition: all 250ms;
 }
+
 jobs .description p {
   transition: max-height 250ms;
   max-height: 230px;
   font-size: 0.9375rem;
 }
+
 @media screen and (min-width: 768px) {
   jobs .description:not(.active) {
     opacity: 0;
     visibility: hidden;
   }
+
   jobs .description:not(.active) p {
     max-height: 0;
   }
@@ -222,32 +243,29 @@ jobs .description p {
 jobs .btn {
   transition: opacity 250ms;
 }
+
 jobs .hidden {
   visibility: hidden;
   opacity: 0;
   height: 0;
 }
-jobs .h3 {
-  transition: color 250ms;
-}
-jobs .h3.active {
-  color: #00A8BA;
-}
+
 @media screen and (max-width: 768px) {
   jobs .border-bottom {
     border-bottom: 0 solid transparent !important;
   }
 }
-
 .four-three {
   position: relative;
 }
+
 .four-three:before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 75%;
 }
+
 .four-three > .content {
   position: absolute;
   top: 0;
@@ -259,12 +277,14 @@ jobs .h3.active {
 .twentyfive-seventeen {
   position: relative;
 }
+
 .twentyfive-seventeen:before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 68%;
 }
+
 .twentyfive-seventeen > .content {
   position: absolute;
   top: 0;
@@ -303,25 +323,25 @@ body {
   font-size: 2.5rem;
   letter-spacing: 0;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .h2 {
     font-size: 1.4375rem;
     line-height: 1.75rem;
   }
 }
-
 .h3 {
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 0;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .h3 {
     font-size: 1.125rem;
     line-height: 1.2rem;
   }
 }
-
 .row {
   width: 100%;
 }
@@ -373,17 +393,18 @@ a:not([href]):not([tabindex]):hover {
 .headline p:not(.h2) {
   font-size: 1rem;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .headline p:not(.h2) {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
-
 .panel p {
   font-size: 1.125rem;
   font-weight: 900;
 }
+
 .panel p span {
   display: block;
   font-size: 0.9375rem;
@@ -393,6 +414,7 @@ a:not([href]):not([tabindex]):hover {
 .header {
   z-index: 9;
 }
+
 .header .navbar {
   z-index: 2;
 }
@@ -424,6 +446,7 @@ a:not([href]):not([tabindex]):hover {
 #vera-hero {
   overflow: hidden;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #vera-hero {
     color: #FFF;
@@ -432,6 +455,7 @@ a:not([href]):not([tabindex]):hover {
 #vera-hero .container {
   overflow: visible;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #vera-hero .container:before {
     content: " ";
@@ -453,6 +477,7 @@ a:not([href]):not([tabindex]):hover {
     top: 0;
     height: 100vh;
   }
+
   #vera-hero .col-12:not(.mobile-full) {
     z-index: -1;
   }
@@ -462,6 +487,7 @@ a:not([href]):not([tabindex]):hover {
   letter-spacing: 0;
   font-weight: 900;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #vera-hero h1 {
     font-size: 2.1875rem;
@@ -472,6 +498,7 @@ a:not([href]):not([tabindex]):hover {
   font-size: 1.875rem;
   top: -2.25rem;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #vera-hero h1 sup {
     font-size: 1.25rem;
@@ -484,10 +511,12 @@ a:not([href]):not([tabindex]):hover {
   letter-spacing: 0;
   max-width: 600px;
 }
+
 #vera-hero p.m-vertical-medium {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #vera-hero p.m-vertical-medium {
     margin-top: 1.25rem;
@@ -506,16 +535,17 @@ a:not([href]):not([tabindex]):hover {
   background-image: url("../images/Resonai_Hero_CommercialRealState_new.png");
   background-size: cover;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #vera-hero .hero-container {
     background-image: none;
   }
 }
-
 #vera-business p:not(.h2) {
   font-size: 1.125rem;
   letter-spacing: 0;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #vera-business p:not(.h2) {
     font-size: 0.9375rem;
@@ -535,11 +565,13 @@ a:not([href]):not([tabindex]):hover {
   padding-right: 0;
   padding-left: 0;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #solutions .container {
     padding-right: 0;
     padding-left: 0;
   }
+
   #solutions .container .container {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -552,21 +584,23 @@ a:not([href]):not([tabindex]):hover {
   box-shadow: none;
   object-fit: cover;
 }
+
 #solutions ul {
   padding: 0;
   margin: 0;
   list-style-type: disc;
 }
+
 #solutions ul li {
   padding: 0;
   margin: 0 0 0.875rem;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #solutions ul li {
     margin: 0 0 0.25rem;
   }
 }
-
 @media screen and (max-width: 61.9375rem) {
   .section-highlights .container {
     padding-left: 2.5rem;
@@ -579,10 +613,12 @@ a:not([href]):not([tabindex]):hover {
   text-align: left;
   list-style-image: url("/images/home/check.svg");
 }
+
 .section-highlights ul li {
   padding: 0 0 0 2rem;
   margin: 0 0 2.25rem 0;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .section-highlights ul li {
     padding: 0 0 0 0.75rem;
@@ -592,10 +628,12 @@ a:not([href]):not([tabindex]):hover {
 .section-highlights ul li p {
   transition: opacity 1s, height 500ms, padding-top 500ms, padding-bottom 500ms;
 }
+
 .section-highlights ul li p:not(.h3) {
   font-size: 0.9375rem;
   line-height: 1.5rem;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .section-highlights ul li p:not(.h3) {
     line-height: 1.375rem;
@@ -604,9 +642,11 @@ a:not([href]):not([tabindex]):hover {
 .section-highlights ul li.active {
   list-style-image: url("/images/home/green-check.svg");
 }
+
 .section-highlights ul li.active .h3 {
   color: #00A8BA;
 }
+
 .section-highlights ul li.active p.info {
   opacity: 1;
   visibility: visible;
@@ -614,6 +654,7 @@ a:not([href]):not([tabindex]):hover {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .section-highlights ul li.active p.info {
     height: fit-content;
@@ -636,11 +677,13 @@ a:not([href]):not([tabindex]):hover {
   padding-right: 0;
   padding-left: 0;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #created-on-vera .container {
     padding-right: 0;
     padding-left: 0;
   }
+
   #created-on-vera .container .container {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -650,6 +693,7 @@ a:not([href]):not([tabindex]):hover {
   min-width: 432px;
   max-width: 432px;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #created-on-vera .col {
     min-width: 301px;
@@ -667,11 +711,13 @@ a:not([href]):not([tabindex]):hover {
   padding-right: 0;
   padding-left: 0;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #press .container {
     padding-right: 0;
     padding-left: 0;
   }
+
   #press .container .container {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -681,6 +727,7 @@ a:not([href]):not([tabindex]):hover {
   min-width: 440px;
   max-width: 440px;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #press .col {
     min-width: 380px;
@@ -694,36 +741,42 @@ a:not([href]):not([tabindex]):hover {
   border-radius: 5px;
   box-shadow: 0 0 10px #B1B1B126;
 }
+
 #press .panel-rounded.py-4 {
   padding-top: 2.25rem !important;
   padding-bottom: 2.25rem !important;
 }
+
 #press .panel-rounded img {
   max-height: 1.5rem;
   object-fit: cover;
 }
+
 #press .btn-wrapper {
   position: absolute;
   bottom: 2.25rem;
 }
+
 #press p:not(.h2) {
   font-size: 1.0625rem;
 }
+
 @media screen and (max-width: 61.9375rem) {
   #press p:not(.h2) {
     font-size: 0.89rem;
   }
 }
-
 .scrollable {
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
+
 .scrollable::-webkit-scrollbar {
   display: none;
 }
+
 .scrollable .col,
 .scrollable .col img {
   -webkit-user-select: none;
@@ -734,6 +787,7 @@ a:not([href]):not([tabindex]):hover {
   /* IE 10+ */
   user-select: none;
 }
+
 .scrollable .action-control {
   position: absolute;
   line-height: 14.375rem;
@@ -743,6 +797,7 @@ a:not([href]):not([tabindex]):hover {
   opacity: 1;
   transition: opacity 125ms;
 }
+
 @media screen and (max-width: 35.9375rem) {
   .scrollable .action-control {
     line-height: 11.625rem;
@@ -751,6 +806,7 @@ a:not([href]):not([tabindex]):hover {
 .scrollable .action-control.go-left {
   left: -20px;
 }
+
 @media screen and (max-width: 35.9375rem) {
   .scrollable .action-control.go-left {
     left: 10px;
@@ -759,6 +815,7 @@ a:not([href]):not([tabindex]):hover {
 .scrollable .action-control.go-right {
   right: -25px;
 }
+
 @media screen and (max-width: 35.9375rem) {
   .scrollable .action-control.go-right {
     right: 10px;
@@ -767,6 +824,7 @@ a:not([href]):not([tabindex]):hover {
 .scrollable .action-control.inactive {
   opacity: 0.1;
 }
+
 .unity-logo {
   position: relative;
   bottom: 1px;
@@ -800,6 +858,7 @@ a:not([href]):not([tabindex]):hover {
   display: inline-block;
   cursor: pointer;
 }
+
 .video-thumb::before {
   content: "";
   position: absolute;
@@ -814,12 +873,12 @@ a:not([href]):not([tabindex]):hover {
   color: #FFF;
   background-color: #d9e4e5;
 }
+
 @media screen and (min-width: 61.9375rem) and (max-width: 74.9375rem) {
   #prefooter .panel-rounded {
     min-height: 14.5rem;
   }
 }
-
 .panel-rounded {
   -webkit-border-radius: 0.3125rem;
   -moz-border-radius: 0.3125rem;
@@ -832,15 +891,16 @@ a:not([href]):not([tabindex]):hover {
   bottom: -6px;
   position: absolute;
 }
+
 @media screen and (max-width: 64rem) {
   .nav-logo {
     height: 1.5rem;
   }
+
   .nav-logo.position-absolute {
     position: relative;
   }
 }
-
 .invert {
   filter: invert(100%) brightness(150%);
 }
@@ -849,10 +909,12 @@ footer {
   background-color: #032225;
   color: #FFF;
 }
+
 footer .social {
   opacity: 1;
   filter: brightness(5);
 }
+
 footer .social img {
   filter: contrast(0);
 }
@@ -861,20 +923,22 @@ footer .social img {
   max-height: 60vh;
   max-width: 70%;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .form_page img {
     max-height: 40vh;
   }
 }
-
 /* ---- Bootstrap Override CSS ---- */
 /* ---- NavBar ---- */
 homepage .navbar:not(.scrolled):not(.white) .navbar-toggler-icon {
   filter: invert(1);
 }
+
 homepage .navbar:not(.scrolled):not(.white) .nav-link {
   color: #FFF;
 }
+
 @media screen and (max-width: 61.9375rem) {
   homepage .navbar:not(.scrolled):not(.white) .nav-link {
     color: #032225;
@@ -884,26 +948,30 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
   homepage .navbar:not(.scrolled):not(.white) .nav-logo.desktop {
     display: none;
   }
+
   homepage .navbar:not(.scrolled):not(.white) .nav-logo.mobile {
     display: initial;
   }
 }
-
 .navbar {
   padding-top: 1rem;
   transition: background-color 250ms, padding-top, 250ms;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .navbar {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
   .navbar.white {
     background-color: #FFF;
   }
+
   .navbar button {
     color: #000;
   }
+
   .navbar .navbar-collapse {
     position: absolute;
     left: 50%;
@@ -917,6 +985,7 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
     overflow: hidden;
     transition: all 125ms;
   }
+
   .navbar .navbar-collapse.show {
     height: 166px;
     visibility: visible;
@@ -926,6 +995,7 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
 .navbar .show {
   transition: all 200ms;
 }
+
 .navbar .nav-link {
   position: relative;
   font-size: 0.9375rem;
@@ -933,15 +1003,19 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
   transition: color 250ms;
   color: #032225;
 }
+
 .navbar .nav-link:hover:before {
   opacity: 1;
 }
+
 .navbar .nav-link.active {
   font-weight: bold;
 }
+
 .navbar .nav-link.active:before, .navbar .nav-link:active:before {
   background-color: #00A8BA;
 }
+
 .navbar .nav-link:before {
   position: absolute;
   content: "";
@@ -953,49 +1027,57 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
   transition: opacity 250ms;
   background-color: #FFF;
 }
+
 .navbar .nav-logo.desktop {
   display: initial;
 }
+
 .navbar .nav-logo.mobile {
   display: none;
 }
+
 .navbar.scrolled {
   padding-top: 0;
   padding-bottom: 0;
   background-color: #FFF;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.025);
 }
+
 .navbar.scrolled .nav-link {
   color: #032225;
 }
+
 .navbar.scrolled .nav-link:before {
   background-color: #032225;
 }
+
 .navbar.scrolled .nav-link.active:before, .navbar.scrolled .nav-link:active:before {
   background-color: #00A8BA;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .navbar.scrolled {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
 }
-
 .navbar-toggler:focus, .navbar-toggler:active {
   outline: none;
 }
+
 .navbar-toggler.collapsed .navbar-toggler-icon {
   background-image: url("../images/Icon-Menu.svg");
 }
+
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("../images/Icon-Close.svg");
 }
+
 @media screen and (max-width: 48rem) {
   .navbar-toggler {
     font-size: 1rem;
   }
 }
-
 /* ---- End NavBar ---- */
 /* ---- Buttons ---- */
 .btn {
@@ -1003,16 +1085,17 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
   border-radius: 2rem;
   padding: 0.625rem 1.5rem 0.6875rem;
 }
+
 @media screen and (max-width: 61.9375rem) {
   .btn {
     font-size: 0.8125rem;
   }
 }
-
 .btn-primary {
   background-color: #00A8BA;
   border: none;
 }
+
 .btn-primary:hover {
   background-color: #35c0cf;
 }
@@ -1022,6 +1105,7 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
   border: 1px solid #00A8BA;
   padding: 0.5625rem 2.4375rem 0.625rem;
 }
+
 .btn-invert:hover {
   background-color: #00A8BA;
   color: #FFF;
@@ -1048,11 +1132,13 @@ homepage .navbar:not(.scrolled):not(.white) .nav-link {
   color: #032225;
   border-color: transparent;
 }
+
 .btn-secondary:hover {
   background-color: #032225;
   color: #FFF;
   border-color: #FFF;
 }
+
 .btn-secondary:active, .btn-secondary:focus {
   background-color: #032225;
   color: #FFF;
@@ -1141,12 +1227,12 @@ body .ngdialog.ngdialog-theme-default .ngdialog-content {
 body .ngdialog.ngdialog-theme-default .ngdialog-close:before {
   right: 0;
 }
+
 @media screen and (min-width: 48rem) {
   body .ngdialog.ngdialog-theme-default .ngdialog-close:before {
     padding-top: 5px;
   }
 }
-
 /* ---- End ng Override CSS ---- */
 .desktop {
   display: initial;
@@ -1165,5 +1251,7 @@ body .ngdialog.ngdialog-theme-default .ngdialog-close:before {
     display: initial;
   }
 }
+/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=index.scss.map */
 
 /*# sourceMappingURL=index.css.map */
